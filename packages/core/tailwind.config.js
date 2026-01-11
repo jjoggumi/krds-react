@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import krdsPlugin from '@krds-ui/tailwindcss-plugin';
+import base from '../../tailwind.config.js';
 
 export default {
+  ...base,
   content: ['./lib/**/*.{js,ts,jsx,tsx}'],
-  theme: {},
-  plugins: [krdsPlugin],
 };

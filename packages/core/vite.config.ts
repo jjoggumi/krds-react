@@ -1,15 +1,16 @@
-import { defineConfig } from 'vite';
+import { defineConfig, mergeConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import tailwindcss from 'tailwindcss';
+import shared from '../../vite.config.shared';
 /*
 This is for debugging rollup only.
 import { visualizer } from 'rollup-plugin-visualizer';
 */
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default mergeConfig(shared, defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, './lib/index.ts'),
@@ -46,4 +47,4 @@ export default defineConfig({
       plugins: [tailwindcss],
     },
   },
-});
+}));
