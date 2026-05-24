@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>하이클래스 워크시트 신청서</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--        <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--        <meta name="writer" content="i-Scream Media">-->
+<!--        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>-->
+
+        <link rel="stylesheet" href="../asset/css/fontawesome.css" />
+        <link rel="stylesheet" href="../asset/css/normalize.css" />
+        <link rel="stylesheet" href="../asset/css/select2.css" />
+        <link rel="stylesheet" href="../asset/css/spectrum.css" />
+        <link rel="stylesheet" href="../asset/css/bootstrap.css" />
+        <link rel="stylesheet" href="../asset/css/style.make.css" />
+        <link rel="stylesheet" href="../asset/css/style.make.new.css" />
+        <link rel="stylesheet" href="../asset/css/style.worksheet.css" />
+        <link rel="stylesheet" href="../asset/js/worksheet/mediaelement/build/mediaelementplayer.css" />
+        <link rel="stylesheet" href="/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <script type="text/javascript" src="../asset/js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="../asset/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../asset/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="../asset/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-api-init.js"></script><!-- 환경에 따른 API 주소 초기화 js-->
+
+		<style>
+			input:-webkit-autofill { -webkit-box-shadow: 0 0 0 30px #fff inset ; -webkit-text-fill-color: #000; }
+			input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active { transition: background-color 5000s ease-in-out 0s; }
+		
+			body {
+				letter-spacing: 0 !important; 
+			}
+		
+            body.stop-dragging
+            {
+                -ms-user-select: none;
+                -moz-user-select: -moz-none;
+                -khtml-user-select: none;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            
+            body.text,
+            body.line,
+            body.eraser,
+            body.textbox,
+            body.essay,
+            body.radio,
+            body.check,
+            body.select,
+            body.linematch,
+            body.toggle,
+            body.esign, /* 20211018 추가 */
+            body.approvalsign, /* 20211018 추가 */
+            body.fx {
+            	cursor: crosshair!important;
+            }
+
+            .line {
+                cursor: pointer;
+            }
+
+            .line.selected, .ui-dialog {
+                cursor: move;
+            }
+
+            .dot {
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background-color: crimson;
+                cursor: crosshair;
+                display: none;
+            }
+
+            .pointer .layer.selected {
+                cursor: move;
+            }
+
+            .layer .ques-number {
+                position: absolute;
+                top: -30px;
+                left: -5px;
+            }
+            
+            /*.layer.text-layer:hover,
+            .layer.image-layer:hover,
+            .layer.textbox-layer:hover,
+            .layer.essay-layer:hover,
+            .layer.toggle-layer:hover,
+            .layer.esign-layer:hover, !* 20211018 추가 *!
+            .layer.fx-layer:hover {
+                border: 4px solid #000!important;
+            }*/
+
+            .layer.youtube-layer {
+            	border: 10px solid #000!important;
+            }
+            
+            .layer.select-layer{
+            	border: 4px solid #000!important;
+            }
+
+            .dot-left-top { cursor:nw-resize; left: -3px; top: -3px; }
+            .dot-center-top { cursor:n-resize; left: calc(50% - 3px); top: -3px; }
+            .dot-right-top { cursor:ne-resize; right: -3px; top: -3px; }
+            .dot-left-middle { cursor:e-resize; left: -3px; top: calc(50% - 3px); }
+            .dot-right-middle { cursor:e-resize; right: -3px; top: calc(50% - 3px); }
+            .dot-left-bottom { cursor:ne-resize; left: -3px; bottom: -3px; }
+            .dot-center-bottom { cursor:n-resize; left: calc(50% - 3px); bottom: -3px; }
+            .dot-right-bottom { cursor:nw-resize; right: -3px; bottom: -3px; }
+
+            textarea {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: none;
+                background: transparent;
+                resize: none;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            body.pointer .selected .dot {
+                display: block;
+            }
+
+            .tool-sub {
+                display: none;
+            }
+
+            body.pointer .tool-sub {
+                display: flex;
+            }
+
+            .dot.selected {
+                display: block;
+            }
+
+            .layer.linematch-layer div.label,
+            .layer.radio-layer div.label,
+            .layer.check-layer div.label {
+                position: relative;
+                /*width: 0;*/
+            }
+
+            .layer.linematch-layer div.label .arrows,
+            .layer.radio-layer div.label .arrows,
+            .layer.check-layer div.label .arrows {
+                position: absolute;
+                opacity: 0;
+                left: -10px;
+                top: -10px;
+                cursor: move;
+                font-size: 13px;
+                transition: .3s ease;
+            }
+
+            .layer.linematch-layer.selected div.label .arrows,
+            .layer.radio-layer.selected div.label .arrows,
+            .layer.check-layer.selected div.label .arrows {
+                opacity: .5;
+            }
+
+            .layer.linematch-layer.selected div.label .arrows:hover,
+            .layer.radio-layer.selected div.label .arrows:hover,
+            .layer.check-layer.selected div.label .arrows:hover {
+                opacity: 1;
+            }
+
+            .layer.eraser-layer {
+                border: none;
+                background-color: #FFF;
+            }
+
+            /* 20211018 추가 */
+            .tooltip {
+                margin-top: 20px;
+            }
+            .tooltip.show {
+                opacity: .85;
+            }
+            .tooltip-inner {
+                max-width: 350px;
+                background-color: #3d4655;
+                font-size: 13px;
+                line-height: 1.6;
+                text-align: left;
+                padding: .5rem;
+            }
+            .bs-tooltip-bottom .arrow::before,
+            .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+                border-bottom-color: #3d4655;
+            }
+            /* //20211018 추가 */
+
+            /* 20211027 추가 */
+            .layer.text-layer,
+            .layer.essay-layer,
+            .layer.radio-layer,
+            .layer.check-layer,
+            .layer.esign-layer {
+                z-index: 1;
+            }
+            .layer.eraser-layer {
+                z-index: 0;
+            }
+            /* //20211027 추가 */
+
+            .layer textarea[disabled] {
+                color: inherit;
+                -webkit-text-fill-color: currentColor;
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Google Tag Manager (noscript) -->
+<!--        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTJ5V3G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+        <!-- End Google Tag Manager (noscript) -->
+
+        <div class="accessibility">
+            <a href="#skipToContents">콘텐츠 바로가기</a>
+        </div>
+
+        <div class="make editor">
+            <!-- 20210927 삭제
+            <header class="make-header">
+                <h1>워크시트 에디터</h1>
+                <div class="make-header-fnc">
+                    <button type="button" data-role="btnSaveWorksheet">완료</button>
+                    <button type="button" data-role="btnTempSaveWorksheet">임시 저장</button>
+                    <button type="button" data-role="btnClose" class="btn-close">홈으로</button>
+                </div>
+            </header>
+            -->
+            <button id="btnTempSaveWorksheet" type="button" data-role="btnTempSaveWorksheet" style="display: none;">임시 저장</button>
+            <button id="btnSaveWorksheet" type="button" data-role="btnSaveWorksheet" style="display: none;">완료</button>
+            <button id="btnClose" type="button" data-role="btnClose" class="btn-close" style="display: none;">홈으로</button>
+
+            <div class="make-body">
+                <a href="#" id="skipToContents">Start Contents</a>
+                <div class="contents">
+
+                    <div class="tkbell-editor">
+                        <div class="tkbell-editor-header">
+                            <div class="inner">
+                                <!-- 20210927 삭제
+                                <div class="question-num"><span class="naviQuestion">0</span>문항 / <span class="naviScore">0</span>점</div>
+                                -->
+                                <div class="tool">
+                                    <div class="item">
+                                        <a href="#" class="main-tool" data-toggle="tooltip" data-placement="top" data-role="btnPreview"><i class="ic-preview"><span>미리보기</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool" data-toggle="tooltip" data-placement="top" data-role-id="undo" data-role="btnUndo"><i class="ic-undo"><span>이전</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool" data-toggle="tooltip" data-placement="top" data-role-id="redo" data-role="btnRedo"><i class="ic-redo"><span>다음</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <!-- <div class="bar"><div> 20211018 제거 -->
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="pointer" data-role="btnPointer"><i class="ic-focus"><span>선택</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="text"><i class="ic-text"><span>설명</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <!-- 20210927
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="line"><i class="ic-pen"><span class="hidden">선 긋기</span></i></a>
+                                    </div>
+                                    -->
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="eraser"><i class="ic-eraser"><span>지우개</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <!-- 20210927
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="image"><i class="ic-imgadd"><span class="hidden">이미지 삽입</span></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="serverimage"><i class="ic-imgsearch"><span class="hidden">이미지 검색</span></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="sound"><i class="ic-sound"><span class="hidden">사운드</span></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="youtube"><i class="ic-youtube"><span class="hidden">유튜브</span></i></a>
+                                    </div>
+                                    <div class="bar"></div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="textbox"><i class="ic-short"><span class="hidden">주관식 (Alt + 1)</span></i></a>
+                                    </div>
+                                    -->
+                                    <!-- <div class="bar"><div> 20211018 제거 -->
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="essay" data-html="true" data-original-title="텍스트 <br>단축키: Alt + 1">
+                                            <i class="ic-textbox"><span>텍스트</span></i>
+                                        </a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <div class="item">
+                                        <div class="tool-select no-arrow no-change">
+                                            <a href="#" class="main-tool on" data-toggle="tooltip" data-placement="top" data-html="true" data-original-title="단일선택 <br>단축키: Alt + 2">
+                                                <i class="ic-radiobtn"><span>단일선택</span></i>
+                                            </a> <!-- 20211018 수정 -->
+                                            <div class="custom-select" style="width:115px;">
+                                                <ul>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="1">1</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="2">2</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="3">3</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="4">4</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="5">5</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="6">6</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="7">7</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="8">8</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="9">9</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="radio" data-item-value="10">10</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tool-select no-arrow no-change">
+                                            <a href="#" class="main-tool on" data-toggle="tooltip" data-placement="top" data-html="true" data-original-title="복수선택 <br>단축키: Alt + 3">
+                                                <i class="ic-checkbox"><span>복수선택</span></i>
+                                            </a> <!-- 20211018 수정 -->
+                                            <div class="custom-select" style="width:115px;">
+                                                <ul>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="1">1</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="2">2</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="3">3</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="4">4</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="5">5</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="6">6</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="7">7</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="8">8</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="9">9</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="check" data-item-value="10">10</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 20210927
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="select"><i class="ic-dropdown"><span class="hidden">드롭다운 (Alt + 5)</span></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="linematch"><i class="ic-connetline"><span class="hidden">선 잇기 (Alt + 6)</span></i></a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tool-select no-arrow no-change">
+                                            <a href="#" class="main-tool on" data-toggle="tooltip" data-placement="top">O/X<span class="hidden">O/X (Alt + 7)</span></a>
+                                            <div class="custom-select" style="width:115px;">
+                                                <ul>
+                                                    <li><a href="#" class="tool-button" data-role-id="toggle" data-item-value="ox">O/X</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="toggle" data-item-value="tf">참/거짓</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="toggle" data-item-value="yn">예/아니오</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tool-select no-arrow no-change">
+                                            <a href="#" class="main-tool on" data-toggle="tooltip" data-placement="top">수식<span class="hidden">수식 (Alt + 8)</span></a>
+                                            <div class="custom-select" style="width:115px;">
+                                                <ul>
+                                                    <li><a href="#" class="tool-button" data-role-id="fx" data-item-value="A">진/가분수</a></li>
+                                                    <li><a href="#" class="tool-button" data-role-id="fx" data-item-value="B">대분수</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                    <!-- <div class="bar"></div> 20211018 제거 -->
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-html="true" data-original-title="제출자의 서명영역을 지정할 수 있습니다. <br>신청서 제출 시 제출자의 서명정보가 자동으로 표시됩니다. <br>단축키: Alt + 4" data-role-id="esign"><i class="ic-esign"><span>제출자서명</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <!-- 20211018 추가 -->
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-html="true" data-original-title="신청서를 결재 완료한 선생님의 서명만 자동 표시합니다.<br>(결재서명은 마이페이지> 개인정보 화면에서 변경가능) <br>단축키: Alt + 5" data-role-id="approvalsign"><i class="ic-approvalsign"><span>결재서명</span></i></a>
+                                    </div>
+                                    <!-- //20211018 추가 -->
+                                    <div class="item">
+                                        <a href="#" class="main-tool tool-button" data-toggle="tooltip" data-placement="top" data-role-id="setting"><i class="ic-setting"><span>설정</span></i></a> <!-- 20211018 수정 -->
+                                    </div>
+                                    <div class="bar"></div>
+                                    <div class="item">
+                                        <a href="#" class="main-tool" data-toggle="tooltip" data-placement="top" data-role-id="deleteform" data-role="btnDeleteform"><i class="ic-deleteform"><span>전체양식삭제</span></i></a>
+                                    </div>
+                                    <!-- TODO: zoom 버튼 숨김 처리 -->
+                                    <div class="bar" style="display: none"></div>
+                                    <div class="item" style="display: none">
+                                        <a href="#" class="main-tool" data-toggle="tooltip" data-placement="top" data-role-id="changeZoom" data-role="btnChangeZoom"><i class="ic-preview"><span>zoom</span></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tkbell-editor-body">
+                            <div class="editor-box">
+
+                                <input type="hidden" id="quizIdx" value=""/>
+                                <input type="hidden" id="idToken" value=""/>
+
+                                <div id="quizWorksheetVO"></div>
+
+                            </div>
+
+                            <div id="quickView"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //site-body -->
+
+            <div class="lnk_top">
+                <a href="#top">TOP</a>
+            </div>
+
+        </div>
+
+        <!-- 옵션박스 -->
+        <div class="tool-sub">
+            <div class="selected-tool">
+                <div class="option option-text"><i class="ic-text"><span class="hidden">텍스트</span></i></div>
+<!--                <div class="option option-line"><i class="ic-pen"><span class="hidden">선 긋기</span></i></div>-->
+                <div class="option option-eraser"><i class="ic-eraser"><span class="hidden">지우개</span></i></div>
+<!--                <div class="option option-image"><i class="ic-imgadd"><span class="hidden">이미지 삽입</span></i></div>-->
+<!--                <div class="option option-serverimage"><i class="ic-imgsearch"><span class="hidden">이미지 검색</span></i></div>-->
+<!--                <div class="option option-sound"><i class="ic-sound"><span class="hidden">사운드</span></i></div>-->
+<!--                <div class="option option-youtube"><i class="ic-youtube"><span class="hidden">유튜브</span></i></div>-->
+<!--                <div class="option option-textbox"><i class="ic-short"><span class="hidden">주관식</span></i></div>-->
+                <div class="option option-essay"><i class="ic-essay"><span class="hidden">서술형</span></i></div>
+                <div class="option option-radio"><i class="ic-radiobtn"><span class="hidden">단일선택형</span></i></div>
+                <div class="option option-check"><i class="ic-checkbox"><span class="hidden">복수선택형</span></i></div>
+<!--                <div class="option option-select"><i class="ic-dropdown"><span class="hidden">드롭다운</span></i></div>-->
+<!--                <div class="option option-linematch"><i class="ic-connetline"><span class="hidden">선 잇기</span></i></div>-->
+<!--                <div class="option option-toggle">O/X</div>-->
+<!--                <div class="option option-fx">수식</div>-->
+                <div class="option option-esign"><i class="ic-esign"><span class="hidden">제출자서명</span></i></div> <!-- 20211018 추가 -->
+                <div class="option option-approvalsign"><i class="ic-approvalsign"><span class="hidden">결재서명</span></i></div> <!-- 20211018 추가 -->
+            </div>
+            <div class="bar"></div>
+            <div class="option option-text option-textbox option-essay option-select">
+                <div class="tool-select">
+                    <a href="#" class="on" id="selectedFontFamily">바탕</a>
+                    <div class="custom-select" style="width:105px;">
+                        <ul>
+                            <li><a data-role="btnFontFamily" data-value="바탕"        href="#" style="font-family: 바탕;">바탕</a></li>
+                            <li><a data-role="btnFontFamily" data-value="굴림"         href="#" style="font-family: 굴림;">굴림</a></li>
+                            <li><a data-role="btnFontFamily" data-value="돋움"         href="#" style="font-family: 돋움;">돋움</a></li>
+                            <li><a data-role="btnFontFamily" data-value="궁서"         href="#" style="font-family: 궁서;">궁서</a></li>
+                            <li><a data-role="btnFontFamily" data-value="Sans-Serif"    href="#" style="font-family: Sans-Serif;">Sans-Serif</a></li>
+                            <li><a data-role="btnFontFamily" data-value="Serif"         href="#" style="font-family: Serif;">Serif</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="option option-text option-textbox option-essay option-radio option-check option-select">
+                <div class="tool-select">
+                    <a href="#" class="on" id="selectedFontSize">18</a>
+                    <div class="custom-select" style="width:60px;">
+                        <ul>
+                            <li><a data-role="btnFontSize" data-value="8" href="#">8</a></li>
+                            <li><a data-role="btnFontSize" data-value="9" href="#">9</a></li>
+                            <li><a data-role="btnFontSize" data-value="10" href="#">10</a></li>
+                            <li><a data-role="btnFontSize" data-value="11" href="#">11</a></li>
+                            <li><a data-role="btnFontSize" data-value="12" href="#">12</a></li>
+                            <li><a data-role="btnFontSize" data-value="14" href="#">14</a></li>
+                            <li><a data-role="btnFontSize" data-value="16" href="#">16</a></li>
+                            <li><a data-role="btnFontSize" data-value="18" href="#">18</a></li>
+                            <li><a data-role="btnFontSize" data-value="24" href="#">24</a></li>
+                            <li><a data-role="btnFontSize" data-value="36" href="#">36</a></li>
+                            <li><a data-role="btnFontSize" data-value="48" href="#">48</a></li>
+                            <li><a data-role="btnFontSize" data-value="60" href="#">60</a></li>
+                            <li><a data-role="btnFontSize" data-value="72" href="#">72</a></li>
+                            <li><a data-role="btnFontSize" data-value="96" href="#">96</a></li>
+                            <li><a data-role="btnFontSize" data-value="120" href="#">120</a></li>
+                            <li><a data-role="btnFontSize" data-value="144" href="#">144</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-role="btnFontWeight" class="option option-text"><a href="#" id="selectedFontBold" style="font-weight: 700;">가</a></div>
+            <div data-role="btnFontItalic" class="option option-text"><a href="#" id="selectedFontItalic" style="font-style:italic">나</a></div>
+            <div data-role="btnFontUnderline" class="option option-text"><a href="#" id="selectedFontUnderline" style="text-decoration: underline;">다</a></div>
+            <div data-role="btnFontColor" class="font-colorpicker option option-text option-textbox option-essay option-radio option-check option-select"><a href="#" class="t-textcolor">가<span class="underline" id="selectedFontColor" style="background: #000;"></span></a></div>
+            <div class="bar option option-radio option-check"></div>
+            <div class="tool-select no-arrow option option-line">
+                <input type="hidden" name="arrowStart" value="" />
+                <a href="#" class="on text-center" id="selectedArrowStart"><i class="fas fa-horizontal-rule" style="font-size:15px"></i></a>
+                <div class="custom-select" style="width:55px;">
+                    <ul>
+                        <li><a data-role="btnArrowStart" data-value="" href="#" class="text-center"><i class="fas fa-horizontal-rule" style="font-size:15px"></i></a></li>
+                        <li><a data-role="btnArrowStart" data-value="arrow" href="#" class="text-center"><i class="fas fa-long-arrow-alt-left"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tool-select no-arrow option option-line">
+                <input type="hidden" name="arrowEnd" value="" />
+                <a href="#" class="on text-center" id="selectedArrowEnd"><i class="fas fa-horizontal-rule" style="font-size:15px"></i></a>
+                <div class="custom-select" style="width:55px;">
+                    <ul>
+                        <li><a data-role="btnArrowEnd" data-value="" href="#" class="text-center"><i class="fas fa-horizontal-rule" style="font-size:15px"></i></a></li>
+                        <li><a data-role="btnArrowEnd" data-value="arrow" href="#" class="text-center"><i class="fas fa-long-arrow-alt-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bar option option-line"></div>
+            <div class="tool-select no-change no-arrow option option-line">
+                <input type="hidden" name="lineWeight" value="5" />
+                <a href="#" class="on"><i class="fad fa-grip-lines" style="border-color:#4959eb;"><span class="hidden">선두께</span></i></a>
+                <div class="custom-select" style="width:45px;">
+                    <ul>
+                        <!-- <li><a data-role="btnLineWeight" data-value="1" href="#">1</a></li>
+                        <li><a data-role="btnLineWeight" data-value="2" href="#">2</a></li> -->
+                        <li><a data-role="btnLineWeight" data-value="3" href="#">3</a></li>
+                        <li><a data-role="btnLineWeight" data-value="4" href="#">4</a></li>
+                        <li><a data-role="btnLineWeight" data-value="5" href="#">5</a></li>
+                        <li><a data-role="btnLineWeight" data-value="6" href="#">6</a></li>
+                        <li><a data-role="btnLineWeight" data-value="7" href="#">7</a></li>
+                        <li><a data-role="btnLineWeight" data-value="8" href="#">8</a></li>
+                        <li><a data-role="btnLineWeight" data-value="9" href="#">9</a></li>
+                        <li><a data-role="btnLineWeight" data-value="10" href="#">10</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="btnLineColor" class="line-colorpicker option option-line">
+                <input type="hidden" name="lineColor" value="#000" />
+                <a href="#"><i class="ic-outline" style="border-color:#000;"><span class="hidden">선 색상</span></i></a>
+            </div>
+            <div class="tool-select no-arrow option option-line">
+                <input type="hidden" name="lineType" value="" />
+                <a href="#" class="on"><i class="ic-line-solid"><span class="hidden">실선</span></i></a>
+                <div class="custom-select" style="width:45px;">
+                    <ul>
+                        <li><a data-role="btnLineType" data-value="" href="#"><i class="ic-line-solid"><span class="hidden">실선</span></i></a></li>
+                        <li><a data-role="btnLineType" data-value="10,10" href="#"><i class="ic-line-dashed"><span class="hidden">점선</span></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bar option option-text option-line option-textbox"></div>
+            <div class="tool-select no-change no-arrow option option-text option-eraser option-textbox option-radio option-check option-linematch">
+                <a href="#" class="on"><i class="fad fa-grip-lines" style="border-color:#4959eb;"><span class="hidden">선두께</span></i></a>
+                <div class="custom-select" style="width:45px;">
+                    <ul>
+                        <li><a data-role="btnBorderWeight" data-value="0" href="#">0</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="1" href="#">1</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="2" href="#">2</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="3" href="#">3</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="4" href="#">4</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="5" href="#">5</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="6" href="#">6</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="7" href="#">7</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="8" href="#">8</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="9" href="#">9</a></li>
+                        <li><a data-role="btnBorderWeight" data-value="10" href="#">10</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="btnBorderColor" class="border-colorpicker option option-text option-eraser option-textbox option-essay option-linematch"><a href="#"><i class="ic-outline" id="selectedBorderColor" style="border-color:#000;"><span class="hidden">윤곽선</span></i></a></div>
+            <div data-role="btnRectFill" class="rectfill-colorpicker option option-text option-textbox option-essay option-eraser"><a href="#"><i class="ic-fill" id="selectedRectFill" style="background: #FFF"><span class="hidden">채우기</span></i></a></div>
+            <div data-role="btnRectOpacity" class="tool-select no-arrow option option-text option-eraser option-toggle">
+                <a href="#" class="on"><i class="ic-opacity"><span class="hidden">투명도</span></i></a>
+                <div class="custom-select" style="width:150px;height:30px;line-height:30px;text-align:center;">
+                    <input type="range" min="0" max="100" name="opacity" value="100" />
+                </div>
+            </div>
+            <div class="bar option option-text option-eraser option-textbox option-check option-select option-linematch option-toggle"></div>
+            <div data-role="btnElementSetting" data-toggle="tooltip" data-placement="top" title="설정" class="option option-textbox option-essay option-radio option-check option-select option-linematch option-toggle option-fx"><a href="#"><i class="far fa-cog"><span class="hidden">설정</span></i></a></div> <!-- 20211018 수정 -->
+            <div data-role="btnElementCopy" class="option option-text option-line option-eraser option-image option-serverimage option-sound option-youtube option-textbox option-essay option-radio option-check option-select option-linematch option-toggle option-fx option-esign option-approvalsign"><a href="#"><i class="ic-copy"><span class="hidden">복제</span></i></a></div> <!-- 20211018 수정 -->
+            <div data-role="btnElementDelete" class="option option-text option-line option-eraser option-image option-serverimage option-sound option-youtube option-textbox option-essay option-radio option-check option-select option-linematch option-toggle option-fx option-esign option-approvalsign"><a href="#"><i class="ic-delete"><span class="hidden">삭제</span></i></a></div> <!-- 20211018 수정 -->
+            <div>
+                <div><i class="far fa-arrows"><span class="hidden">툴 이동</span></i></div>
+            </div>
+        </div>
+
+        <!-- 선 잇기 도구 -->
+        <div class="line-connect" style="display:none;">
+            <div class="row">
+<!--                <div class="col">
+                    <a href="#" class="item" data-role="btnLinematch" data-item-value="2,2,"><img src="/asset/images/make/2x2.png" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#" class="item" data-role="btnLinematch" data-item-value="3,3,"><img src="/asset/images/make/2x3.png" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#" class="item" data-role="btnLinematch" data-item-value="4,4,"><img src="/asset/images/make/2x4.png" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#" class="item" data-role="btnLinematch" data-item-value="2,2,2"><img src="/asset/images/make/3x2.png" alt=""></a>
+                </div>
+                <div class="col">
+                    <a href="#" class="item" data-role="btnLinematch" data-item-value="3,3,3"><img src="/asset/images/make/3x3.png" alt=""></a>
+                </div>-->
+                <div class="col-auto">
+                    <div class="custom">
+                        <div class="tit">
+                            <span>직접입력</span>
+                            <a href="#" data-toggle="tooltip" data-placement="right" title="시작점과 연결할 끝점의 개수를 입력하세요."><i class="fal fa-question-circle"><span class="hidden">도움말</span></i></a>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select name="linematch">
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select name="linematch">
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <select name="linematch">
+                                    <option value="">선택</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn spot4" data-role="btnLineMatchCreate">생성</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 이미지 검색 팝업 -->
+        <div id="dialog-serverimage" title="이미지 검색" style="display:none;">
+        	<input type="hidden" name="dlCurPage" value="1" />
+        	<input type="hidden" name="dlLastPage" value="1" />
+        	<input type="hidden" name="searchText" value="" />
+            <div class="img-search">
+                <div class="search-bar">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="dlSearchText" title="검색어 입력" class="search-ipt" placeholder="검색어를 입력하세요">
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" title="검색" class="sch-smit" data-role="btnDlSearch"><span>검색</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="count">아이스크림 이미지 검색결과 <span id="dlSICnt">0</span>개</div>
+                <div class="album">
+                    <ul>
+                    </ul>
+                    <div class="album-nav">
+                        <a href="#" class="prev" data-role="btnDlImagePrev"><i class="far fa-chevron-left"><span class="sr-only">이전페이지</span></i></a>
+                        <a href="#" class="next" data-role="btnDlImageNext"><i class="far fa-chevron-right"><span class="sr-only">다음페이지</span></i></a>
+                    </div>
+                </div>
+                <div class="page" id="dlPage">1/1</div>
+            </div>
+        </div>
+
+        <!-- 유튜브 팝업 -->
+        <div id="dialog-youtube" title="유튜브 추가" style="display:none;">
+            <div class="img-search">
+                <div class="search-bar">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="dlYoutubeText" title="유튜브 URL" class="search-ipt" placeholder="유튜브 URL(링크)을 입력하세요.">
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" title="추가" class="sch-smit" data-role="btnDlYoutubeSearch"><span>추가</span></button>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-warning mt-3" id="youtubeAlert">유효한 URL이 아닙니다. 확인 후 다시 입력해주세요.</p>
+            </div>
+        </div>
+
+        <!-- 주관식 옵션 설정 -->
+        <div id="dialog-textbox" title="주관식 옵션 설정" style="display:none;">
+            <div class="option-setting">
+                <div class="option">
+                    <p>배점을 선택하세요.</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                        <option value="71">71</option>
+                        <option value="72">72</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="76">76</option>
+                        <option value="77">77</option>
+                        <option value="78">78</option>
+                        <option value="79">79</option>
+                        <option value="80">80</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="90">90</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                    <label><input type="checkbox" name="allotFlag" value="Y"> 모든 문항에 동일하게 적용</label>
+                </div>
+                <div class="answer">
+                    <p>정답을 입력하세요. 엔터키로 추가 입력 가능 합니다.</p>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="box-style answer-inputbox" placeholder="30자까지 입력가능합니다." maxlength="30">
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn-sm spot4" data-role="btnTextboxConfirm"><span>확인</span></button>
+                        </div>
+                    </div>
+                    <ul class="answer-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 20210927 수정 : 서술형 옵션 설정 -->
+        <div id="dialog-essay" title="텍스트 설정 옵션" style="display:none;">
+            <div class="option-setting">
+                <div class="answer">
+                    <label><input type="checkbox" name="essential" value="false">필수입력</label>
+                    <p class="mid-desc">안내 메시지를 입력하세요 (선택)</p>
+                    <div class="row">
+                        <div class="col">
+                            <!-- <input type="text" class="box-style essay-txt" maxLength="50"> -->
+                            <textarea class="box-style essay-txt" placeholder="내용의 입력 예제를 기입하세요.&#13;&#10;(ex.이름 입력)&#13;&#10;(ex.2000.00.00)">결석 사유를 정확히 작성해주세요.</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  20210927 수정 : 단일선택형 옵션 설정 -->
+        <div id="dialog-radio" title="단일선택형 옵션" style="display:none;">
+            <div class="option-setting">
+                <!-- 20210927 삭제
+                <div class="option">
+                    <p>배점을 선택하세요.</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                        <option value="71">71</option>
+                        <option value="72">72</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="76">76</option>
+                        <option value="77">77</option>
+                        <option value="78">78</option>
+                        <option value="79">79</option>
+                        <option value="80">80</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="90">90</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                    <label><input type="checkbox" name="allotFlag" value="Y"> 모든 문항에 동일하게 적용</label>
+                </div>
+                -->
+                <div class="answer">
+                    <label><input type="checkbox" name="essential" value="false">필수입력</label>
+                    <p class="mid-desc">보기개수를 선택하세요.</p>
+                    <select name="exampleNumber">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- 20210927 수정 : 복수선택형 옵션 설정 -->
+        <div id="dialog-check" title="복수선택형 옵션" style="display:none;">
+            <div class="option-setting">
+                <!-- 20210927 삭제
+                <div class="option">
+                    <p>배점을 선택하세요.</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                        <option value="71">71</option>
+                        <option value="72">72</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="76">76</option>
+                        <option value="77">77</option>
+                        <option value="78">78</option>
+                        <option value="79">79</option>
+                        <option value="80">80</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="90">90</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                    <label><input type="checkbox" name="allotFlag" value="Y"> 모든 문항에 동일하게 적용</label>
+                </div>
+                -->
+                <div class="answer">
+                    <label><input type="checkbox" name="essential" value="false">필수입력</label>
+                    <p class="mid-desc">보기개수를 선택하세요.</p>
+                    <select name="exampleNumber">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- 드롭다운 옵션 설정 -->
+        <div id="dialog-select" title="드롭다운 옵션 설정" style="display:none;">
+            <div class="option-setting">
+                <div class="option">
+                    <p>배점을 선택하세요.</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                        <option value="71">71</option>
+                        <option value="72">72</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="76">76</option>
+                        <option value="77">77</option>
+                        <option value="78">78</option>
+                        <option value="79">79</option>
+                        <option value="80">80</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="90">90</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                    <label><input type="checkbox" name="allotFlag" value="Y"> 모든 문항에 동일하게 적용</label>
+                </div>
+                <div class="answer">
+                    <p>보기와 정답을 입력하세요.</p>
+                    <div class="mt-2" id="boxDlSelectExample">
+                        <div class="item">
+                            <label>
+                                <input type="radio" name="dlselect" value="1">
+                                <input type="text" name="dltext" class="box-style" placeholder="보기를 입력하세요. (30자 제한)" style="display:inline-block;width:70%" maxlength="30">
+                            </label>
+                        </div>
+                        <div class="item">
+                            <label>
+                                <input type="radio" name="dlselect" value="2">
+                                <input type="text" name="dltext" class="box-style" placeholder="보기를 입력하세요. (30자 제한)" style="display:inline-block;width:70%" maxlength="30">
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn-sm spot4" data-role="btnDlSelectAddExample">보기추가</button>
+                </div>
+                <p class="text-warning mt-3" id="boxDlSelectWarning"></p>
+            </div>
+        </div>
+
+        <!-- 선 잇기 옵션 설정 -->
+        <div id="dialog-linematch" title="선 잇기 옵션 설정" style="display:none">
+            <div class="option-setting">
+                <div class="option">
+                    <p>배점을 선택하세요.</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                        <option value="71">71</option>
+                        <option value="72">72</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="76">76</option>
+                        <option value="77">77</option>
+                        <option value="78">78</option>
+                        <option value="79">79</option>
+                        <option value="80">80</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="90">90</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                    <label><input type="checkbox" name="allotFlag" value="Y"> 모든 문항에 동일하게 적용</label>
+                </div>
+                <!-- <p class="text-warning mt-3">연결되지 않은 보기가 있습니다.</p> -->
+                <!-- <p class="text-warning">연결되지 않은 보기가 있는 경우 점수가 반영되지 않습니다.</p> -->
+            </div>
+        </div>
+
+        <!-- O/X 옵션 설정 -->
+        <div id="dialog-toggle" title="O/X 옵션 설정" style="display:none">
+            <div class="option-setting">
+                <div class="option">
+                    <p>배점을 선택하세요.</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                        <option value="71">71</option>
+                        <option value="72">72</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="76">76</option>
+                        <option value="77">77</option>
+                        <option value="78">78</option>
+                        <option value="79">79</option>
+                        <option value="80">80</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="90">90</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                    <label><input type="checkbox" name="allotFlag" value="Y"> 모든 문항에 동일하게 적용</label>
+                </div>
+                <div class="option">
+                    <p>보기타입을 선택하세요.</p>
+                    <select name="quesType">
+                        <option value="ox">O/X</option>
+                        <option value="tf">참/거짓</option>
+                        <option value="yn">예/아니오</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- 수식 옵션 설정 -->
+        <div id="dialog-fx" title="수식 설정" style="display:none;">
+            <div class="option-setting">
+                <div class="option">
+                    <p>배점을 선택하세요.</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                        <option value="64">64</option>
+                        <option value="65">65</option>
+                        <option value="66">66</option>
+                        <option value="67">67</option>
+                        <option value="68">68</option>
+                        <option value="69">69</option>
+                        <option value="70">70</option>
+                        <option value="71">71</option>
+                        <option value="72">72</option>
+                        <option value="73">73</option>
+                        <option value="74">74</option>
+                        <option value="75">75</option>
+                        <option value="76">76</option>
+                        <option value="77">77</option>
+                        <option value="78">78</option>
+                        <option value="79">79</option>
+                        <option value="80">80</option>
+                        <option value="81">81</option>
+                        <option value="82">82</option>
+                        <option value="83">83</option>
+                        <option value="84">84</option>
+                        <option value="85">85</option>
+                        <option value="86">86</option>
+                        <option value="87">87</option>
+                        <option value="88">88</option>
+                        <option value="89">89</option>
+                        <option value="90">90</option>
+                        <option value="91">91</option>
+                        <option value="92">92</option>
+                        <option value="93">93</option>
+                        <option value="94">94</option>
+                        <option value="95">95</option>
+                        <option value="96">96</option>
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99">99</option>
+                    </select>
+                    <label><input type="checkbox" name="allotFlag" value="Y"> 모든 문항에 동일하게 적용</label>
+                </div>
+                <div class="answer">
+                    <p>정답을 입력하세요.</p>
+                    <div class="fraction mt-2">
+                        <div class="row align-items-center">
+                            <div class="col-auto fx-option-b">
+                                <input type="text" name="fxFirst" class="box-style" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="?">
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" name="fxSecond" class="box-style" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="?">
+                                <span class="bar"></span>
+                                <input type="text" name="fxThird" class="box-style" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="?">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 20210927 수정 : 설정 -->
+        <div id="dialog-setting" title="설정" style="display:none;"> <!-- 20211018 수정 -->
+            <div class="option-setting">
+                <!-- <div class="option">
+                    <p>문항별 점수 기본값:</p>
+                    <select name="allot">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div> -->
+                <!-- 20210927 삭제
+                <div class="option">
+                    <p>선택문항 점수 적용:</p>
+                    <select name="selectAllotAll">
+                        <option value="0">없음</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <div class="ml-3"><span class="naviQuestion">0</span>문항 / <span class="naviScore">0</span>점</div>
+                </div>
+                <div class="tbl-list">
+                    <div class="overflow-y">
+                        <table>
+                            <caption class="blind">진행한 띵커벨 목록</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">
+                                    <label class="hdn-txt"><input type="checkbox" name="dlSettingCheckAll"></label>
+                                </th>
+                                <th scope="col">문항번호</th>
+                                <th scope="col">유형</th>
+                                <th scope="col">점수</th>
+                            </tr>
+                            </thead>
+                            <tbody class="question-box">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-2">
+                        <label style="font-size:14px;"><input type="checkbox" name="equipartition" value="true"> 100점 만점 자동 배분</label><br />
+                        <span style="font-size:14px;">* 저장 버튼을 클릭해야 적용됩니다.</span>
+                    </div>
+                </div>
+                -->
+                <div class="option">
+                    <p>신청서 제출시 필수 입력항목을 선택하세요.</p>
+                </div>
+                <div class="tbl-list">
+                    <div class="overflow-y">
+                        <table>
+                            <caption class="blind">필수값 및 옵션</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">문항번호</th>
+                                <th scope="col">유형</th>
+                                <th scope="col">필수입력</th>
+                            </tr>
+                            </thead>
+                            <tbody class="table-body">
+<!--                            <tr>
+                                <td>1</td>
+                                <td>텍스트</td>
+                                <td><label class="hdn-txt"><input type="checkbox" name=""></label></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>복수선택형</td>
+                                <td><label class="hdn-txt"><input type="checkbox" name=""></label></td>
+                            </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- AJAX 이미지 업로드용 -->
+        <input type="file" name="tempFile" style="display:none;" accept=".gif, .jpg, .png, .bmp, jpeg">
+        <!-- AJAX 사운드 업로드용 -->
+        <input type="file" name="soundFile" style="display:none;" accept=".mp3">
+        <!-- 요소 기본 값 -->
+        <input type="hidden" name="fontFamily" value="바탕" />
+        <input type="hidden" name="fontSize" value="18" />
+        <input type="hidden" name="fontWeight" value="500" />
+        <input type="hidden" name="fontStyle" value="000" />
+        <input type="hidden" name="borderSize" value="2" />
+        <input type="hidden" name="borderColor" value="#000" />
+        <input type="hidden" name="rectFill" value="transparent" />
+        <input type="hidden" name="opacity" value="1" />
+
+        <script type="text/javascript">
+            var objectArr = []; // 도구 전역 배열
+
+            var selectedPage;   // 선택된 페이지
+            var dragElement;    // 마우스 드래그 이벤트 요소
+            var targetElement;  // 선택 요소
+            var dragFlag;       // 드래그 여부 플래그
+            var selectedItem;   // 선택된 아이템 ID
+            var createTime;     // 생성시간 Idx로 사용
+            var startObj = {};  // 드래그 시작시 속성값 저장용
+            var selectedObj;    // 선택된 오브젝트
+            var btnPointer = $("a[data-role=btnPointer]");  // 선택 버튼
+            var selectedCnt;    // 선택한 갯수(라디오, 체크, 드롭다운, 선잇기 전용)
+            var allotFlag;      // 모든 문항에 동일하게 적용
+            var allotScore = 1; // 모든 문항에 동일하게 적용할 점수 (초기값: 1)
+            var allotShareFlag = false; // 100점 자동 배분 플래그
+            var isCtrl = false; // CTRL 눌림 여부
+            var isAlt = false; // ALT 눌림 여부
+            var downKey;		// 키 Code 저장용
+            var checkload = true; // 이전키 저장용
+            var delay = 400;	// 더블클릭 Delay
+            var clicks = 0;		// 더블클릭 수
+            var moveFlag = false;	// Dialog Move Flag
+            var moveSize;	// Dialog Move Flag
+            
+            // Undo - Redo 전역변수 관련
+            var historyArr = [JSON.stringify([])]; // 히스토리 변수
+            var pointerIdx = 0; // 포인터 변수 - 현재 가르키고 있는 index를 저장
+            var maxLength = 10; // 히스토리 배열의 최대 사이즈
+
+            var isWriting = false;
+            var isSaving = false;   // 저장 중
+
+            var curSheetStatus = null
+
+            window.addEventListener('message', message => {
+              console.warn(`message.data => `, message.data)
+
+              try {
+                var payload = message.data
+                switch (payload.dispatchEvent) {
+                  case 'click': {
+                    if (payload.sheetStatus)
+                      curSheetStatus = payload.sheetStatus
+
+                    $('#' + payload.name).click()
+                    break
+                  }
+                  case 'call': {
+                    if (payload.name === 'saveToken') {
+                      for (const [key, value] of Object.entries(payload.data)) {
+                        localStorage.setItem(key, value)
+                      }
+                    }
+                    break
+                  }
+                  case 'set': {
+                    if (payload.name === 'apiUrl') {
+                      apiUrl = payload.data.value
+                    }
+                    break
+                  }
+                }
+              } catch (e) {
+                console.warn(e)
+              }
+            })
+        </script>
+
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script><!-- 도구 : 선그리기 헬퍼 -->
+        <script type="text/javascript" src="../asset/js/worksheet/select2.js"></script><!-- 도구 : 선택박스 헬퍼 -->
+        <script type="text/javascript" src="../asset/js/worksheet/spectrum.js"></script><!-- 컬러픽커 -->
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-rendering.js"></script><!-- 도구 그려주는 js -->
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-functions.js"></script><!-- 각종 함수 모음 js -->
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-editor-init.js"></script><!-- 에디터 init js -->
+        <!-- TODO: 'ws-mouse-draw.js' 의 경우 $(".editor-layer") 요소를 필요로 하므로 'ws-worksheets-editor-init.js' 내에서 lazy load 처리 -->
+        <!-- <script defer type="text/javascript" src="../asset/js/worksheets/ws-mouse-draw.js"></script> --><!-- 마우스 그리기 관련 -->
+         <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-editor.js?ver=20211104"></script><!-- 에디터 js -->
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-option.js"></script><!-- 옵션버튼 & 자동조절 js-->
+        <script type="text/javascript" src="../asset/js/worksheet/ws-checkbox.js"></script><!-- 체크박스 & 라디오박스 커스터마이징 js -->
+        <script type="text/javascript" src="../asset/js/worksheet/mediaelement/build/mediaelement-and-player.js"></script><!-- 사운드 플레이어 js -->
+        <script type="text/javascript" src="../asset/js/worksheet/mediaelement/build/lang/ko.js"></script><!-- 사운드 플레이어 LANG js -->
+    </body>
+</html>

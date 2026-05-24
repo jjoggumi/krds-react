@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>주의집중</title>
+    <!-- <script src="./js/sm.js"></script> -->
+    <link rel="stylesheet" href="css/style4.css">
+    <script src="js/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="bellcontainer">
+      <div id="bell">1</div>
+      <div id="ringbell"></div>
+      <div id="close" onclick="attentionClose()">&times;</div>
+    </div>
+
+    <div id="selectcontainer">
+      <div id="soundtitle">소리선택</div>
+      <div id="soundselector">
+        <label class="radio">
+          <input type="radio" name="radio" value="0" onclick="changeSnd(this.value); attentionUpdate(this.value);">
+          <span class="ico"></span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" value="1" onclick="changeSnd(this.value); attentionUpdate(this.value);">
+          <span class="ico"></span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" value="2" onclick="changeSnd(this.value); attentionUpdate(this.value);">
+          <span class="ico"></span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" value="3" onclick="changeSnd(this.value); attentionUpdate(this.value);">
+          <span class="ico"></span>
+        </label>
+      </div>
+      <div id="volumecontainer">
+        <a href="#" id="volumeoff" onclick="muteOn()"></a>
+        <div class="volume_panel" id="volume_panel">
+          <div class="volume_slider">
+            <div class="handle" id="handle"></div>
+          </div>
+        </div>
+        <a href="#" id="volumeon" onclick="muteOff()"></a>
+      </div>
+    </div>
+
+<!--    <p id="demo"></p>-->
+
+    <script>
+      var volumeoff = document.getElementById("volumeoff");
+      var volumeon = document.getElementById("volumeon");
+      var bellsnd = document.createElement("audio");
+      var bellimg = document.getElementById("bell");
+      var ringbell = document.getElementById("ringbell");
+      var curVolume = 0.5;
+      var maxRange = 105 - 15; //총바길이 - 핸들폭(90)
+      var interval;
+      var t1,t2,t3; //timeout 중지에 필요한 변수
+      var muteOnOff = "OFF"; //음소거여부
+      bellsnd.type = "audio/mpeg";
+      bellsnd.src = "./assets/snd/1.mp3";
+
+      var handle = document.getElementById("handle");
+      var volume_panel = document.getElementById("volume_panel");
+      var start = 0, end = 0;
+      handle.style.left = maxRange/2 + "px";
+      handle.onmousedown = dragMouseDown;
+      // console.log("handle.offsetLeft:" + handle.offsetLeft);
+
+      function dragMouseDown(e){
+        // console.log("onmousedown");
+        e = e || window.event;
+        end = e.clientX;
+        document.onmousemove = elementDrag;
+        document.onmouseup = closeDragElement;
+        e.preventDefault();
+      }
+
+      function elementDrag(e){
+        // console.log("onmousemove");
+        e = e || window.event;
+        start = end - e.clientX;
+        end = e.clientX;
+        var left = handle.offsetLeft - start;
+        if(left < 0){
+          handle.style.left = "0px";
+        }else if(left > 90){
+          handle.style.left = "90px";
+        }else{
+          handle.style.left = (handle.offsetLeft - start) + "px";
+        }
+        // console.log("handle.offsetLeft:" + handle.offsetLeft);
+        var percent = (handle.offsetLeft / maxRange) * 100;
+        // console.log("percent:" + percent);
+        changeVol(percent);
+      }
+
+      function closeDragElement(){
+        // console.log("onmouseup");
+        document.onmousemove = null;
+        document.onmouseup = null;
+      }
+
+      //볼륨바꾸는 함수
+      function changeVol(vol){
+        console.log(vol);
+        bellsnd.volume = vol / 100;
+        curVolume = bellsnd.volume; //현재 볼륨 저장
+        if(bellsnd.volume == 0){
+          volumeon.style.opacity = 0.5;
+          volumeoff.style.opacity = 1;
+        }else{
+          volumeon.style.opacity = 1;
+          volumeoff.style.opacity = 0.5;
+        }
+        console.log("percent:" + vol);
+      }
+      bellsnd.onended = function(){
+        console.log("ended");
+        ringbell.style.backgroundImage = "none";
+        clearInterval(interval);
+        clearTimeout(t1);
+        clearTimeout(t2);
+        clearTimeout(t3);
+      }
+      //사운드 선택하는 함수
+      function changeSnd(value){
+        bellsnd.src = "./assets/snd/" + value + ".mp3";
+        bellimg.innerHTML = Number(value) + 1;
+        bellsnd.play();
+        bellsnd.volume = curVolume;
+        handle.style.left = curVolume * 90 + "px";
+        volumeon.style.opacity = 1;
+        volumeoff.style.opacity = 0.5;
+        muteOnOff = "OFF";
+        muteOff();
+        // bellimg.setAttribute("src", "assets/img/bell_image0002.png");
+        clearInterval(interval);
+        interval = setInterval(ringing, 400);
+      }
+      function muteOn(){
+        if(bellsnd.volume != 0){
+          volumeon.style.opacity = 0.5;
+          volumeoff.style.opacity = 1;
+          bellsnd.volume = 0;
+          handle.style.left = 0;
+          muteOnOff = "ON";
+        }
+      }
+      function muteOff(){
+        if(bellsnd.volume == 0){
+          volumeon.style.opacity = 1;
+          volumeoff.style.opacity = 0.5;
+          if(muteOnOff == "ON"){
+            bellsnd.volume = curVolume;
+            handle.style.left = curVolume * 90 + "px";
+            console.log(curVolume * 90);
+          }else if(muteOnOff == "OFF"){
+            bellsnd.volume = 0.5;
+            curVolume = bellsnd.volume;
+            handle.style.left = curVolume * 90 + "px";
+          }
+        }
+      }
+
+      function ringing(){
+        t1 = setTimeout(function(){
+          ringbell.style.backgroundImage =  "url(./assets/img/bell_image_ring0001.png)";
+        }, 100);
+        t2 = setTimeout(function(){
+          ringbell.style.backgroundImage =  "url(./assets/img/bell_image_ring0002.png)";
+        }, 200);
+        t3 = setTimeout(function(){
+          ringbell.style.backgroundImage =  "url(./assets/img/bell_image_ring0003.png)";
+        }, 300);
+      }
+
+      ////////////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////////////
+
+      /**
+       * 주의 집중 시작
+       */
+      function attention() {
+        var bellData = localStorage.getItem('bellData')
+
+        if (bellData) {
+          bellData = JSON.parse(bellData)
+        } else {
+          bellData = {
+            bellType: "0",
+            bellVolume: "50"
+          };
+        }
+
+        changeVol(Number(bellData.bellVolume));
+        changeSnd(Number(bellData.bellType));
+
+        $("input:radio[name='radio']").each(function() {
+          if($(this).val() == Number(bellData.bellType)) {
+            $(this).attr("checked","checked");
+          }
+        });
+      }
+
+      /**
+       * 주의 집중 타입 변경
+       */
+      function attentionUpdate(val) {
+        var bellData = {
+          "bellType": val,
+          "bellVolume": Math.round(bellsnd.volume * 100)
+        }
+
+        localStorage.setItem('bellData', JSON.stringify(bellData))
+      }
+
+      /**
+       * 주의 집중 팝업 닫기
+       */
+      function attentionClose() {
+        muteOn()
+        window.parent.postMessage('clickItem|close', '*');
+      }
+
+      /**
+       *  window on load function
+       */
+      window.onload = function () {
+        attention()
+      }
+
+      window.onunload = function () {
+        muteOn()
+      }
+
+      ////////////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////////////
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+	"webcredentials": {
+	  "apps": ["7C22KDQ3EX.com.iscreammedia.app.hiclass.ios"]
+	},
+	"applinks": {
+	  "details": [{
+		 "appIDs": ["7C22KDQ3EX.com.iscreammedia.app.hiclass.ios"],
+		 "components": [
+			{
+			  "/": "/sru/*",
+			  "comment": "Matches any URL beginning with /sru/"
+			},
+			{
+			  "/": "/m/*",
+			  "comment": "Matches any URL beginning with /m/ (MMS link)"
+			}
+		 ]
+	  }]
+	}
+ }

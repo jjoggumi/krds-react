@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@import url('https://download.hiclass.net/static/assets/css/nanumsquare.css');
+/* button */
+[class*="btn-bg-"] {
+    display: inline-block;
+    min-width: 96px;
+    height: 38px;
+    line-height: 38px;
+    font-family: "NanumSquare", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "segoe ui emoji", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transform: skew(.2deg);
+    -webkit-transform: skew(.2deg);
+    padding: 0 20px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+[class*="btn-bg-"]:hover,
+[class*="btn-bg-"]:focus,
+[class*="btn-bg-"]:active {
+    color: inherit;
+    box-shadow: none;
+}
+[class*="btn-bg"].dis,
+[class*="btn-bg"]:disabled {
+    background-color: #dadde2;
+    cursor: default;
+    color: #fff !important;
+    border-color: #dadde2;
+}
+.btn-bg-c {
+    color: #fff !important;
+    background-color: #4777de;
+}
+.btn-bg-w {
+    background-color: transparent;
+    border: 1px solid #aaa;
+    color: #444 !important;
+}
+.btn-bg-w2 {
+    background-color: transparent;
+    border: 1px solid #4777de;
+    color: #4777de !important;
+}
+
+/* preview */
+.make-header-title {
+    text-align: center;
+}
+.make-header-title .title {
+    color: #232323;
+    font-family: "NanumSquare", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "segoe ui emoji", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+}
+.make-header .right-wrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 22px;
+    line-height: 70px;
+    font-size: 0;
+}
+.make-header .right-wrap input[type="text"] {
+    width: 150px;
+    height: 36px;
+    font-size: 16px;
+    padding: 0 15px;
+    border: 1px solid #4777de;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    vertical-align: middle;
+}
+.make-header .right-wrap [class*="btn-bg"] {
+
+}
+.make-header .right-wrap .btn-bg-c {
+    border-radius: 0 4px 4px 0;
+    margin-right: 8px;
+    border: 1px solid #4777de;
+}
+.make-header .right-wrap .btn-bg-c.ani {
+    -webkit-animation: highlight 1s infinite alternate;
+    animation: highlight 1s infinite alternate;
+}
+@-webkit-keyframes highlight {
+    from { background-color: #4777de;border-color: #4777de; }
+    to { background-color: #4d98ff;border-color: #4d98ff; }
+}
+@keyframes highlight {
+    from { background-color: #4777de;border-color: #4777de;  }
+    to { background-color: #4d98ff;border-color: #4d98ff; }
+}
+.preview-tooltip {
+    position: fixed;
+    top: 70px;
+    right: 100px;
+    width: 422px;
+    opacity: 1;
+    background-color: rgba(61, 70, 85, .85);
+    padding: 14px 18px;
+    border-radius: 5px;
+}
+.preview-tooltip::after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 90px;
+    border: 8px solid transparent;
+    border-bottom-color: rgba(61, 70, 85, .85);
+}
+.preview-tooltip span {
+    color: #fff;
+    font-size: 14px;
+}
+.preview-tooltip .close {
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 12px;
+    height: 12px;
+    border: 0;
+    background-color: transparent;
+}
+.preview-tooltip .close::before,
+.preview-tooltip .close::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 1px;
+    height: 15px;
+    background-color: #fff;
+}
+.preview-tooltip .close::before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.preview-tooltip .close::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}

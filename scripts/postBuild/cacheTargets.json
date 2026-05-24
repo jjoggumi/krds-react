@@ -1,0 +1,34 @@
+{
+  "onBuild": [
+    {"file": "/app.*"},
+    {"file": "/index.html", "alias": ["/[a-zA-Z0-9_./-]+[a-zA-Z0-9]$"], "additional": {"content-type": "text/html"}},
+    {"file": "/files/js/jquery-3.3.1.min.js"},
+    {"file": "/files/js/masonry.min.js"},
+    {"file": "/files/js/slick.min.js"},
+    {"file": "/files/js/signature_pad.min.js"},
+    {"file": "/files/js/srcdoc-polyfill.min.js"},
+    {"file": "/files/js/worksheet-webview.js"}
+  ],
+  "defaultList": [
+    {
+      "url": "https://download.hiclass.net/static/assets/css/nanumsquare.css",
+      "hash": "c378e0994b3f7f4c51abbd8378cf6610"
+    },
+    {
+      "url": "https://download.hiclass.net/static/assets/css/SpoqaHanSansNeo.css",
+      "hash": "284510b16419b068b343c3b5b2759729"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css?family=Noto+Color+Emoji",
+      "hash": "0c4e318311b24917dd6ec5967546259e"
+    },
+    {
+      "url": "https://download.hiclass.net/static/assets/css/nanumsquareround.css",
+      "hash": "da70f89f6eefd1bb5a3cc26f1b741f74"
+    },
+    {
+      "url": "https://download.hiclass.net/static/assets/font/NanumSquareB.woff2",
+      "hash": "f829f8cf8a102634124d09aeb7246c68"
+    }
+  ]
+}

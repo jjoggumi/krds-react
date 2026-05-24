@@ -1,0 +1,35 @@
+{
+  "name": "@hiclass/core",
+  "version": "1.0.0",
+  "description": "HiClass Core API and Types Package",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "hiclass",
+    "api",
+    "typescript",
+    "framework-agnostic"
+  ],
+  "dependencies": {
+    "axios": "^0.27.2",
+    "qs": "^6.9.6",
+    "axios-progress-bar": "^1.2.0",
+    "jwt-decode": "^^3.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "@types/node": "16.11.7"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+} 

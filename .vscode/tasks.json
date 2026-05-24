@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Merge into Stage",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "git checkout stage; git pull; git merge - --no-edit"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never"
+      }
+    },
+    {
+      "label": "Merge into dev",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-Command",
+        "git checkout dev; git pull; git merge - --no-edit"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never"
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <title>하이클래스 워크시트 신청서</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="writer" content="i-Scream Media">
+        <meta name="viewport" content="width=990,initial-scale=1"/>
+
+        <link rel="stylesheet" href="../asset/css/select2.css" />
+        <link rel="stylesheet" href="../asset/css/bootstrap.css"/>
+        <link rel="stylesheet" href="../asset/css/style.student.new.css"/>
+        <link rel="stylesheet" href="../asset/css/style.worksheet.css" />
+
+        <link rel="stylesheet" href="/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <script type="text/javascript" src="../asset/js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="../asset/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../asset/js/lodash/lodash.min.js"></script>
+
+        <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
+
+		<style>
+			input {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+            .layer textarea {
+                color: inherit;
+                -webkit-text-fill-color: currentColor;
+                opacity: 1;
+                border: none;
+                overflow: hidden;
+            }
+
+            .editor-layer { background-color: #FFF; height: 1153px; position: relative; }
+            .editor-layer:first-of-type { border-top: 0; }
+            .editor-layer:first-of-type::before { border-top: 0; }
+            .editor-layer::before { content: none !important; }
+
+            @page {
+                size: auto;
+            }
+            @media screen {
+                body {
+                    -webkit-print-color-adjust: exact;
+                    background-color: white !important;
+                }
+                .layer,
+                .layer.esign-layer .text-esign {
+                    border-color: transparent !important;
+                    background-color: rgba(255, 255, 255, 0) !important;
+                    //background-position: center center !important;
+                    width: 100%;
+                    height: 100%;
+                }
+                .layer .text-esign.hide-approvalsign {
+                    display: none;
+                }
+                .text-esign {
+                    background-image: none !important;
+                }
+                .text-esign img {
+                    width: 100% !important;;
+                    height: 100% !important;
+                    display: -webkit-box;
+                }
+                .layer i.fa.text-primary.fa-circle-o,
+                .layer i.fa.text-primary.fa-square-o {
+                    display: none;
+                }
+                .fa-circle:before {
+                    content: "●";
+                    font-size: 16px;
+                }
+            }
+		</style>
+	</head>
+	
+	<body>
+        <section class="make-view" data-question-idx="0">
+			<div class="editor-box" style="width:990px; height:1153px; margin: 0 auto; position:relative;">
+                <div id="quizWorksheetVO"></div>
+	    	</div>
+		</section>
+
+        <script type="text/javascript">
+          let selectedItems = []
+          let selectedSheetObj = null
+          let mode = 'print'
+
+          let objectArrWithApplyId = null   // 각 신청서의 도구 전역 배열
+
+          let objectArr = [];  // 도구 전역 배열
+
+          let existsSignObj = {     // 전자서명, 결제서명 양식 포함 여부
+            esign: false,           // 전자서명: esign
+            approvalsign: false     // 결재서명: approvalsign
+          };
+          let applyUserId = null;   // null 일 경우 제출자가 없음. 신규 작성
+          let applyUserSignObject = {};
+          let approvalUserSignObject = {};
+
+          window.addEventListener('message', async message => {
+            // console.warn(`message.data => `, message.data)
+
+            try {
+              var payload = message.data
+              switch (payload.dispatchEvent) {
+                case 'click': {
+                  $('#' + payload.name).click()
+                  break
+                }
+                case 'call': {
+                  dispatchEventCall(payload)
+                  break
+                }
+                case 'set': {
+                  if (payload.name === 'apiUrl') {
+                    apiUrl = payload.data.value
+                  }
+                  break
+                }
+
+              }
+            } catch (e) {
+              console.warn(e)
+            }
+          })
+
+          // 현재페이지 외부에서 요청한 command 처리
+          async function dispatchEventCall(payload) {
+            const command = payload.name
+
+            switch (command) {
+              case 'saveToken': {
+                for (const [key, value] of Object.entries(payload.data)) {
+                  localStorage.setItem(key, value)
+                }
+                break
+              }
+              case 'doPrint': {
+                window.print()
+                break
+              }
+              case 'initPrintItem': {
+                initPrintItem(payload)
+                break
+
+              }
+
+            }
+          }
+
+          function initPrintItem(payload) {
+            selectedItems = payload.selectedItems
+            selectedSheetObj = payload.selectedSheetObj
+            mode = payload.mode
+            // initSheet 은 동기 함수
+            initSheet()
+          }
+
+        </script>
+
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/select2.js"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/ws-checkbox.js"></script>
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-rendering-view.js?ver=20211202"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-print-init.js?ver=20251103"></script><!-- 신청서 인쇄 init js -->
+	</body>
+</html>

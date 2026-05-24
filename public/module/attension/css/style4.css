@@ -1,0 +1,199 @@
+body{
+  margin: 0;
+  width: 171px;
+  height: 174px;
+  font-family: NanumBarunGothic,NanumGothic,'나눔고딕',Dotum,Helvetica,sans-serif;
+}
+#bellcontainer{
+  display: table;
+  position: relative;
+  width: 171px;
+  height: 108px;
+  background-color: rgb(60, 41, 29);
+  border-radius: 10px 10px 0 0;
+  z-index: 0;
+}
+#close{
+  position: absolute;
+  background-color: rgba(255,255,255,0.12);
+  font-size: 30px;
+  /* font-weight: bold; */
+  color: #CFAB9D;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 37px;
+  width: 33px;
+  height: 33px;
+  right: 0;
+  top: 0;
+  border-radius: 0 10px 0 10px;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  cursor: pointer;
+}
+#bell{
+  position: absolute;
+  display: table-cell;
+  top: 50%;
+  width: 92px;
+  height: 73px;
+  left: 37px;
+  top: 15px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #b1a033;
+  vertical-align: middle;
+  line-height: 70px;
+  background-image: url("../assets/img/bell_image.png");
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  cursor: default;
+}
+#ringbell{
+  position: absolute;
+  left: 37px;
+  top: 30px;
+  width: 92px;
+  height: 32px;
+  z-index: 0;
+}
+#selectcontainer{
+  position: relative;
+  background-color: #1C0C0C;
+  text-align: center;
+  height: 76px;
+  border-radius: 0 0 10px 10px;
+}
+#soundtitle{
+  background-color: rgb(60, 41, 29);
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  /* font-weight: bold; */
+  text-align: center;
+  padding: 2px 7px;
+  z-index: 0;
+  position: absolute;
+  margin-left: 54px;
+  margin-top: -9px;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  cursor: default;
+  letter-spacing: 1px;
+}
+#soundselector{
+  /* z-index: 0; */
+  position: relative;
+  top: 17px;
+}
+.radio {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  height: 21px;
+  margin-right: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.radio input {
+  overflow: hidden;
+  display: none;
+}
+.radio .ico {
+  position: absolute;
+  left: -1px;
+  top: 0px;
+  width: 22px;
+  height: 22px;
+  background: url("../assets/img/ico_radio.png") no-repeat 0 0;
+}
+.radio {
+  display: inline-block;
+  padding-left: 21px;
+}
+.radio input:checked+.ico {
+  background-position: 0 -22px;
+}
+#volumecontainer{
+  position: absolute;
+  width: 100%;
+  margin-top: 20px;
+}
+#volumeoff{
+  background-image: url("../assets/img/volume_off.png");
+  width: 22px;
+  height: 22px;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  opacity: 0.5;
+  /* transition: opacity .2s; */
+}
+#volumeon{
+  background-image: url("../assets/img/volume_on.png");
+  width: 22px;
+  height: 22px;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 2px;
+  opacity : 1;
+  /* transition: opacity .2s; */
+}
+.volume_panel{
+  float: left;
+  width: 105px;
+  height: 36px;
+  outline: 0;
+  margin-top: -15px;
+  margin-left: -1px;
+  z-index: 0;
+}
+.volume_slider{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  /* background: #444; */
+}
+.handle{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0px 0.5px 1px rgba(0,0,0,0.2);
+  border: none;
+  cursor: pointer;
+  z-index: 0;
+}
+.handle::before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 105px;
+  height: 2px;
+  background-color: #ff653a;
+  left: -105px;
+  margin-top: -1px;
+}
+.handle::after{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 105px;
+  height: 2px;
+  background-color: #A6A9AE;
+  left: 15px;
+  margin-top: -1px;
+}

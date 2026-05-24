@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": false,
+  "prettier.bracketSameLine": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  }
+}

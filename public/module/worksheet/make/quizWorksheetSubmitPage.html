@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <title>하이클래스 워크시트 신청서</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="writer" content="i-Scream Media">
+        <meta name="viewport" content="width=990,initial-scale=0.5,minimum-scale=0.5"/>
+	
+        <link rel="stylesheet" href="../asset/css/select2.css" />
+	    <link rel="stylesheet" href="../asset/css/bootstrap.css"/>
+	    <link rel="stylesheet" href="../asset/css/style.student.new.css"/>
+	    <link rel="stylesheet" href="../asset/css/style.worksheet.css" />
+<!--	    <link rel="stylesheet" href="../asset/js/worksheet/mediaelement/build/mediaelementplayer.css" />-->
+        <link rel="stylesheet" href="/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	    <script type="text/javascript" src="../asset/js/jquery-1.12.4.min.js"></script>
+	    <script type="text/javascript" src="../asset/js/jquery-ui.min.js"></script>
+
+        <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
+
+        <script src="../asset/js/jwt-decode/build/jwt-decode.min.js"></script>
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-api-init.js"></script><!-- 환경에 따른 API 주소 초기화 js-->
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+		<style>
+			input {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+      body {
+          background-color: #F4F5F9;
+      }
+      .layer textarea.focused {
+          outline: 2px solid #4777de;
+      }
+      .layer textarea[disabled] {
+          color: inherit;
+          -webkit-text-fill-color: currentColor;
+          opacity: 1;
+      }
+      /*input:disabled, textarea:disabled, input:disabled::placeholder, textarea:disabled::placeholder {*/
+      /*    -webkit-text-fill-color: currentcolor; !* 1. sets text fill to current `color` for safari *!*/
+      /*    opacity: 1; !* 2. correct opacity on iOS *!*/
+      /*}*/
+
+      /* 20211025 에디터 요소 1페이지만 위치하는 버그 수정 */
+      .editor-layer { background-color: #FFF; height: 1153px; /*margin-bottom: 10px;*/ position: relative; /*border-top: 1px dashed #ddd;*/ }
+      .editor-layer::before { display: block; content: attr(data-page-index); border: 1px solid #ddd; border-left: 0; width: 25px; line-height: 25px; color: #888; text-align: center; position: absolute; left: 0; top: -1px; border-radius: 0 0 5px 0; }
+      .editor-layer:first-of-type { border-top: 0; }
+      .editor-layer:first-of-type::before { border-top: 0; }
+      .editor-layer.active { z-index: 9999; }
+		</style>
+	</head>
+	
+	<body>
+        <section class="make-view" data-question-idx="0">
+			<div class="editor-box" style="width:990px; height:1153px; margin: 0 auto; position:relative;">
+                <input type="hidden" id="quizIdx" value=""/>
+                <input type="hidden" id="idToken" value=""/>
+                <input type="hidden" id="applyId" value=""/>
+                <input type="hidden" id="viewType" value=""/>
+                <input type="hidden" id="classId" value=""/>
+                <input type="hidden" id="userId" value=""/>
+                <input type="hidden" id="totalPages" value="1"/>
+
+                <div id="quizWorksheetVO"></div>
+	    	</div>
+		</section>
+
+        <script type="text/javascript">
+          let objectArr = [];  // 도구 전역 배열
+          let returnObject;
+          let isReadonly = false;
+          let isMemberRoleManager = false;
+          let isPageLoadComplete = false;
+          let isReadyApproval = false;      // 신청서 승인 가능한 상태 여부
+
+          let existsSignObj = {     // 전자서명, 결제서명 양식 포함 여부
+            esign: false,           // 전자서명: esign
+            approvalsign: false     // 결재서명: approvalsign
+          };
+          let applyUserId = null;   // null 일 경우 제출자가 없음. 신규 작성
+          let applyUserSignObject = {};
+          let approvalUserSignObject = {};
+          let curUserClazzSubscribeView = null;
+          let lastApplyStatus = null;
+
+          let changedValueSheetItemHistory = {};
+          let lastFocusedTabIndex = 1
+
+          window.addEventListener('message', async message => {
+            console.warn(`message.data => `, message.data)
+            if (message.data.name && message.data.name === 'isDimLoading') {
+              console.log('61405 work-sheet-loading-error response: ', message.data.payload)
+            }
+
+            try {
+              var payload = message.data
+              switch (payload.dispatchEvent) {
+                case 'click': {
+                  $('#' + payload.name).click()
+                  break
+                }
+                case 'call': {
+                  dispatchEventCall(payload)
+                  break
+                }
+                case 'set': {
+                  if (payload.name === 'apiUrl') {
+                    apiUrl = payload.data.value
+                  }
+                  break
+                }
+                case 'create': {
+                  if (payload.name === 'applyId') {
+                    $('#' + payload.name).val(payload.value)
+
+                    var returnObj = await submitData();
+                    returnObject = returnObj;
+
+                    // 저장 프로세스
+                    if (returnObj['responseFlag']) {
+                      submit('create')
+                    } else {
+                      const message = {
+                        name: 'getSubmitData',
+                        payload: returnObj
+                      }
+                      window.parent.postMessage(message, '*');
+                    }
+                  }
+                  break
+                }
+                case 'update': {
+                  if (payload.name === 'applyId') {
+                    $('#' + payload.name).val(payload.value)
+
+                    var returnObj = await submitData();
+                    returnObject = returnObj;
+
+                    // 수정 프로세스
+                    if (returnObj['responseFlag']) {
+                      submit('update')
+                    } else {
+                      const message = {
+                        name: 'getSubmitData',
+                        payload: returnObj
+                      }
+                      window.parent.postMessage(message, '*');
+                    }
+                  }
+                  break
+                }
+              }
+            } catch (e) {
+              console.warn(e)
+            }
+          })
+
+          // 홈으로
+          $("button[data-role=btnClose]").click(function () {
+            window.parent.postMessage('goto|back', '*');
+          });
+
+          $(window).scroll(function(){
+            // select 삭제
+          });
+
+          // 900자 제한
+          $(document).on("keyup change paste", ".essay-textbox", function(){
+            var length = $(this).val().length;
+            if(length > 901){
+              const message = {
+                command: 'alert',
+                msgData: {
+                  message: '900자 까지 입력 가능합니다.',
+                  icon: 'warning'
+                },
+              }
+              window.parent.postMessage(message, '*')
+              var truncateString = $(this).val().substring(0, 899)
+              $(this).val(truncateString)
+            }
+          });
+
+          $(".tel").keyup(function () {
+            if ($(this).val().length == $(this).attr('maxlength')) {
+              $(this).parent().next().find('.tel').focus();
+            };
+          });
+
+          $(".onlynum").keyup(function () {
+            $(this).val($(this).val().replace(/[^0-9]/g, ""));
+          });
+
+          $(".num").keyup(function () {
+            if ($(".num").val().trim() != "") {
+              valueCheck1 = true;
+
+              if (valueCheck1 && valueCheck2) $("#btn-start").prop("disabled", false);
+            } else {
+              valueCheck1 = false;
+              $("#btn-start").prop("disabled", true);
+            }
+          });
+
+          $(".name").keyup(function () {
+            if ($(".name").val().trim() != "") {
+              valueCheck2 = true;
+
+              if (valueCheck1 && valueCheck2) $("#btn-start").prop("disabled", false);
+            } else {
+              valueCheck2 = false;
+              $("#btn-start").prop("disabled", true);
+            }
+          });
+
+          // 사용자의 클래스 구독정보 초기화
+          async function initCurUserClazzSubscribeView(classId, userId) {
+            const clazzSubscribeView = await getCurUserClazzSubscribeView(classId, userId)
+            if (clazzSubscribeView) {
+              setCurUserClazzSubscribeView(clazzSubscribeView)
+              initMemberRoleManager(clazzSubscribeView)
+            }
+          }
+
+          // 사용자의 클래스 구독정보 가져오기
+          function getCurUserClazzSubscribeView(classId, userId) {
+            const requestObject = {
+              method: 'POST',
+              url: `${apiUrl}/clazzSubscribeViews/!q`,
+              params: {
+                classId,
+                userId
+              },
+              headers: {
+                Authorization: `Bearer ${$("#idToken").val()}`
+              }
+            }
+
+            return $axios(requestObject)
+              .then(res => {
+                return res.data._embedded.clazzSubscribeViews.length > 0
+                    ? res.data._embedded.clazzSubscribeViews[0]
+                    : null
+              })
+              .catch(err => {
+                console.warn('getCurUserClazzSubscribeView() err => ', err)
+              })
+          }
+
+          // 사용자의 클래스 구독정보 전역 변수에 세팅
+          function setCurUserClazzSubscribeView(clazzSubscribeView) {
+            curUserClazzSubscribeView = clazzSubscribeView
+          }
+
+          // 사용자의 클래스 관리자 여부 초기화
+          function initMemberRoleManager(clazzSubscribeView) {
+            const memberRoleManagerArr = ['OWNER', 'MANAGER']
+            isMemberRoleManager = memberRoleManagerArr.includes(clazzSubscribeView.memberRole)
+          }
+
+          // 신청서 가져오기
+          function getClazzApply(applyId) {
+            const requestObject = {
+              method: 'GET',
+              url: `${apiUrl}/v2/clazzApplies/${applyId}`,
+              headers: {
+                Authorization: `Bearer ${$("#idToken").val()}`
+              }
+            }
+
+            return $axios(requestObject)
+              .then(res => res.data)
+              .catch(err => {
+                console.warn('getClazzApply() err => ', err)
+              })
+          }
+
+          // 신청서 수정하기
+          function updateClazzApply(applyId, data) {
+            const axiosRequest = {
+              method: 'PATCH',
+              url: apiUrl + '/clazzApplies/' + applyId,
+              data: data,
+              headers: {
+                Authorization: 'Bearer ' + localStorage.idToken
+              }
+            }
+
+            return $axios(axiosRequest)
+              .then(res => {
+                console.warn(res)
+              })
+              .catch(err => {
+                console.warn(err)
+              })
+              .finally(() => {})
+
+          }
+
+          // 응답 전송
+          async function submit(type){
+            const sheetResponses = returnObject['responses']
+
+            const applyId = $('#applyId').val()
+            const data = {
+              applyId,
+              sheetResponses
+            }
+
+            const axiosRequest = {
+              method: type === 'update' ? 'PATCH ' : 'POST',
+              url: apiUrl + '/sheets/submit',
+              data: data,
+              headers: {
+                Authorization: 'Bearer ' + localStorage.idToken
+              }
+            }
+
+            if (type === 'update') {
+              axiosRequest.method = 'PATCH'
+              axiosRequest.url += `/${data.applyId}`
+            }
+
+            $axios(axiosRequest)
+                .then(async res => {
+                  console.warn(res)
+
+                  let updateFail = false
+
+                  if (type === 'create') {
+                    try {
+                      const responseData = await getClazzApply(data.applyId)
+                      responseData.applyStatus = 'UNIDENTIFIED'
+                      responseData.applyTimestamp = new Date().valueOf()
+
+                      await updateClazzApply(data.applyId, responseData)
+                        .catch(() => {
+                          updateFail = true
+                        })
+
+                    } catch (e) {
+                      updateFail = true
+                    }
+                  }
+
+                  if (updateFail) {
+
+                    const payload = returnObject
+                    payload.resultCode = '98'
+                    const message = {
+                      name: 'requestFail',
+                      payload: payload
+                    }
+                    window.parent.postMessage(message, '*');
+
+                  } else {
+                    const payload = returnObject
+                    payload.resultCode = '100'
+                    const message = {
+                      name: 'requestSuccess',
+                      payload: payload
+                    }
+                    window.parent.postMessage(message, '*');
+                  }
+
+                })
+                .catch(err => {
+                  console.warn(err)
+
+                  const payload = returnObject
+                  payload.resultCode = '99'
+                  const message = {
+                    name: 'requestFail',
+                    payload: payload
+                  }
+                  window.parent.postMessage(message, '*');
+                })
+                .finally(() => {})
+          }
+
+          // 응답 취합
+          async function submitData(){
+            var responses = [];
+
+            $(objectArr).each(function(idx, data){
+              if(// data.answerCnt > 0 ||
+                data.toolCd === "essay"
+                || data.toolCd === "radio"
+                || data.toolCd === "check"
+              ){
+                responses.push(data);
+              }
+            });
+            
+            var resultCode = null;      // 오류 코드 지정
+            var responseFlag = true;    // 미응답 내역 존재 여부
+            let responseFlagCount = 0
+
+            $(responses).each(function(idx, data){
+              var result = "N";
+
+              switch(data.toolCd){
+                case "essay":
+                  var response = $("textarea[name=essay-" + data.toolSeq + "]").val();
+                  data["response"] = response;
+                  // data["result"] = "P"; // PASS
+
+                  // 필수값 체크
+                  // 미응답 내역 조회 - 필수 체크 제외
+                  if (data["essential"]) {
+                    if(response.replace(/ /g,"") === ""){
+                      // $("textarea[name=essay-" + data.toolSeq + "]").closest("div.layer").css("border", "1px solid red");
+                      responseFlag = false;
+                      responseFlagCount++;
+                    }
+                  }
+                  break;
+
+                case "radio":
+                  var allot = data.allot;
+                  // 라디오 시트 넘버 추가 (박종철)
+                   //var response = $("input[name=radio-" + data.toolSeq + "-1]:checked").val();
+                   var response = $("input[name=radio-" + data.toolSeq + "-"+data.sheetPage+"]:checked").val();
+                  if(typeof response == "undefined"){
+                    response = "";
+                  }
+
+                  data["response"] = response;
+
+                  // 필수 값의 미응답 내역 조회
+                  if (data["essential"]) {
+                    if(typeof response == "undefined" || response == ""){
+                      // $("input[name=radio-" + data.toolSeq + "]").closest("div.layer").css("border", "1px solid red");
+                      responseFlag = false;
+                      responseFlagCount++;
+                    }
+                  }
+
+                  break;
+
+                case "check":
+                  var allot = data.allot;
+
+                  var f = true;
+                  var response = "";
+                  $("input[name=check-" + data.toolSeq + "]:checked").each(function(){
+                    if(f){
+                      response = response + $(this).val();
+                      f = false;
+                    } else {
+                      response = response + "," + $(this).val();
+                    }
+                  });
+
+                  data["response"] = response;
+
+                  f = true;
+
+                  // 필수값의 미응답 내역 조회
+                  if (data["essential"]) {
+                    if(typeof response == "undefined" || response == ""){
+                      // $("input[name=check-" + data.toolSeq + "]").closest("div.layer").css("border", "1px solid red");
+                      responseFlag = false;
+                      responseFlagCount++;
+                    }
+                  }
+                  break;
+              }
+            });
+
+            renderingAnswerValidateHiClass(objectArr, responses)
+
+            // todo: 신규 작성이거나 제출자 본인이 수정할 경우에만 전자서명 체크
+            // todo: 신청서 제출자 서명이 삭제되었을 경우 어떻게 처리? (회원 탈퇴 등으로)
+            // console.warn(applyUserId, $("#userId").val())
+            // if (applyUserId === null || applyUserId === $("#userId").val()) {
+            // }
+            if (isReadyApproval === false) {
+              const resultExistsSign = await checkExistsSignObj('esign')
+                .catch(() => { resultCode = '02' })
+
+              if (!resultExistsSign)
+                resultCode = '02'
+            }
+
+            return {
+              "responses": responses,
+              "responseFlag": responseFlag,
+              "resultCode": resultCode,
+              "responseFlagCount": responseFlagCount
+            };
+          }
+
+          async function validateApply(applyStatus) {
+            let resultCode = '00'   // 오류 코드 지정
+            lastApplyStatus = applyStatus
+
+            switch (applyStatus) {
+              case 'UNIDENTIFIED':
+              case 'REJECT': {
+                await setApprovalSignWithLastApplyStatus()
+                break
+              }
+              case 'COMPLETE': {
+                const approvalUser = {
+                  userId: $("#userId").val()
+                }
+                await setApprovalUserSign(approvalUser)
+
+                const resultExistsSign = await checkExistsSignObj('approvalsign')
+                  .catch(() => { resultCode = '02' })
+
+                if (!resultExistsSign)
+                  resultCode = '02'
+
+                break
+              }
+            }
+
+            return {
+              "resultCode": resultCode
+            };
+          }
+
+          // 현재페이지 외부에서 요청한 command 처리
+          async function dispatchEventCall(payload) {
+            const command = payload.name
+
+            switch (command) {
+              case 'saveToken': {
+                for (const [key, value] of Object.entries(payload.data)) {
+                  localStorage.setItem(key, value)
+                }
+                break
+              }
+              case 'getSubmitData': {
+                if (!isPageLoadComplete) {
+                  const sendData = {
+                    command: 'validateSheetResponse',
+                    messageType: 'SHEET',
+                    resultCode: '05'
+                  }
+                  doSendDataToNative(sendData.command, sendData.messageType, sendData.resultCode)
+                  return false
+                }
+
+                const res = await submitData()
+                const message = {
+                  name: 'getSubmitData',
+                  payload: res
+                }
+                window.parent.postMessage(message, '*');
+                break
+              }
+              case 'validateApply': {
+                if (!isPageLoadComplete) {
+                  const sendData = {
+                    command: 'validateApplyResponse',
+                    messageType: 'APPLY',
+                    resultCode: '05'
+                  }
+                  doSendDataToNative(sendData.command, sendData.messageType, sendData.resultCode)
+                  return false
+                }
+
+                const applyStatus = payload.applyStatus
+                const message = {
+                  name: 'validateApplyResponse',
+                  payload: await validateApply(applyStatus)
+                }
+
+                window.parent.postMessage(message, '*');
+                break
+              }
+              case 'setTextarea': {
+                const htmlTextAreaElement = document.querySelector(`textarea[name=essay-${payload.itemId}]`)
+                // APP 에서 데이터 전달 시 900자 제한
+                const length = payload.value.length;
+                if (length > 901){
+                  const message = {
+                    command: 'alert',
+                    msgData: {
+                      message: '900자 까지 입력 가능합니다.',
+                      icon: 'warning'
+                    },
+                  }
+                  window.parent.postMessage(message, '*')
+                  payload.value = payload.value.substring(0, 899)
+                }
+
+                // typeof HTMLTextAreaElement
+                htmlTextAreaElement.value = payload.value
+
+                const data = {
+                  itemId: payload.itemId,
+                  value: payload.value
+                }
+                // 필수, 비필수 값 입력 여부를 즉시 반영
+                renderingAnswerValidateSheetItem(data)
+                break
+              }
+              case 'doFocusItem': {
+                doFocusItem(payload)
+                break
+              }
+              case 'doFocusOutItem': {
+                doFocusOutItem(payload)
+                break
+              }
+              case 'doReloadSign': {
+                doReloadSign(payload)
+                break
+              }
+              case 'doRemoveSign': {
+                doRemoveSign(payload)
+                break
+              }
+              case 'doPrint': {
+                await doPrint()
+                break
+              }
+              case 'doPdfDownload': {
+                await doPdfDownload(payload.applyInfo)
+                break
+              }
+            }
+          }
+
+          // 포커스 핸들러
+          function doFocusItem(payload) {
+
+            // itemId 가 있을 경우
+            if (payload.itemId) {
+              const textareaSelector = $("textarea[name=essay-" + payload.itemId + "]")
+
+              if (textareaSelector) {
+                textareaSelector.triggerHandler('focus')
+                textareaSelector.trigger('focus')
+
+                if (!textareaSelector.hasClass("focused"))
+                  textareaSelector.addClass("focused")
+              }
+
+              // itemId 는 없고 action 이 있을 경우
+            } else if (payload.action) {
+              const focusedTextareaSelector = $("textarea[tabindex=" + lastFocusedTabIndex + "]")
+              let curTabIndex = 1
+
+              if (focusedTextareaSelector) {
+                curTabIndex = parseInt(focusedTextareaSelector.attr('tabindex'), 10)
+                let doFocusTabIndex = payload.action === 'next' ? curTabIndex + 1 : curTabIndex -1
+
+                // unlimited focus loop
+                const lastTabIndex = $("textarea.essay-textbox[tabindex]").length
+
+                if (doFocusTabIndex > lastTabIndex)
+                  doFocusTabIndex = 1
+                else if (doFocusTabIndex === 0)
+                  doFocusTabIndex = lastTabIndex
+                // -- unlimited focus loop
+
+                const doFocusTextareaSelector = $("textarea.essay-textbox[tabindex="+ doFocusTabIndex + "]")
+
+                if (doFocusTextareaSelector) {
+                  doFocusTextareaSelector.triggerHandler('focus')
+                  doFocusTextareaSelector.trigger('focus')
+
+                  if (!doFocusTextareaSelector.hasClass("focused"))
+                    doFocusTextareaSelector.addClass("focused")
+                }
+              }
+
+            }
+
+          }
+
+          // 포커스 아웃 핸들러
+          function doFocusOutItem(payload) {
+            lastFocusedTabIndex = -1
+
+            const focusedTextareaSelector = $(payload.type + ".focused")
+            if (focusedTextareaSelector) {
+              focusedTextareaSelector.removeClass("focused")
+            }
+          }
+
+          // 서명 새로고침
+          async function doReloadSign(payload) {
+            switch (payload.signType) {
+              case 'esign': {
+                const applyUser = {
+                  userId: $("#userId").val()
+                }
+                await initApplyUserSign(applyUser, true)
+
+                const payload = { resultCode: '101' }
+                const message = {
+                  name: 'changedUserSign',
+                  payload: payload
+                }
+                window.parent.postMessage(message, '*');
+                break
+              }
+              case 'approvalsign': {
+                switch (lastApplyStatus) {
+                  case 'UNIDENTIFIED':
+                  case 'REJECT': {
+                    await setApprovalSignWithLastApplyStatus()
+                    break
+                  }
+                  case 'COMPLETE': {
+                    const approvalUser = {
+                      userId: $("#userId").val()
+                    }
+                    await initApprovalUserSign(approvalUser)
+                    break
+                  }
+                }
+
+                const payload = { resultCode: '102' }
+                const message = {
+                  name: 'changedApprovalUserSign',
+                  payload: payload
+                }
+                window.parent.postMessage(message, '*');
+                break
+              }
+              // todo: signType 이 없는 경우
+              default: {
+              }
+            }
+          }
+
+          async function doRemoveSign(payload) {
+            payload.userId = $("#userId").val()
+            await removeSign(payload)
+          }
+
+          async function setApprovalSignWithLastApplyStatus() {
+            approvalUserSignObject = null
+
+            switch (lastApplyStatus) {
+              case 'UNIDENTIFIED':
+                await initUnidentifiedApprovalSign()
+                break
+              case 'REJECT':
+                await initRejectApprovalSign()
+                break
+            }
+          }
+
+          function doPrint() {
+            if (window.matchMedia && !approvalUserSignObject.userApprovalSignImagePath) {
+              const mediaQueryList = window.matchMedia('print')
+              mediaQueryList.addEventListener('change', onChangePrint)
+            }
+
+            let printContent = window.document.body.cloneNode(true)
+
+            const textAreaArr = window.document.body.querySelectorAll('textarea')
+            for (let i = 0; i < textAreaArr.length; i++) {
+              textAreaArr[i].style.height = textAreaArr[i].scrollHeight + 'px'
+              const div = document.createElement('div')
+              div.innerHTML = textAreaArr[i].value.replace(/\n/g, '<br>')
+              div.style.cssText = textAreaArr[i].style.cssText
+              div.style.backgroundColor = 'rgba(255, 255, 255, 0)'
+              div.style.lineHeight = '1.15'
+              div.style.letterSpacing = '-1px'
+              div.style.whiteSpace = 'pre-wrap'
+              textAreaArr[i].replaceWith(div)
+            }
+
+            setTimeout(() => {
+              window.print()
+              window.document.body = printContent
+            }, 0)
+          }
+
+          function onChangePrint(mql) {
+            if (mql.matches) {
+              const filteredObjectArr = objectArr.filter(obj => obj.toolCd === 'approvalsign')
+              filteredObjectArr.forEach(obj => {
+                hideApprovalUserSign(obj)
+              })
+            } else {
+              const filteredObjectArr = objectArr.filter(obj => obj.toolCd === 'approvalsign')
+              filteredObjectArr.forEach(obj => {
+                showApprovalUserSign(obj)
+              })
+            }
+          }
+
+          async function doPdfDownload(applyInfo) {
+            const { jsPDF } = window.jspdf;
+
+            try {
+              let printContent = document.body.cloneNode(true)
+
+              const downloadCss = `
+                  input {
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                  }
+
+                  .editor-layer { background-color: #FFF; height: 1153px; position: relative; }
+                  .editor-layer:first-of-type { border-top: 0; }
+                  .editor-layer:first-of-type::before { border-top: 0; }
+                  .editor-layer::before { content: none !important; }
+
+                  @page {
+                      size: auto;
+                  }
+                  @media screen {
+                      body {
+                          -webkit-print-color-adjust: exact;
+                          background-color: white !important;
+                      }
+                      .layer,
+                      .layer.esign-layer .text-esign {
+                          border-color: transparent !important;
+                          background-color: rgba(255, 255, 255, 0) !important;
+                          width: 100%;
+                          height: 100%;
+                      }
+                      .hide-approvalsign {
+                          display: none;
+                      }
+                      .text-esign {
+                          background-image: none !important;
+                      }
+                      .text-esign img {
+                          width: 100% !important;;
+                          height: 100% !important;
+                          display: -webkit-box;
+                      }
+                      .layer i.fa.text-primary.fa-circle-o,
+                      .layer i.fa.text-primary.fa-square-o {
+                          display: none;
+                      }
+                      .fa-circle:before {
+                          content: "●";
+                          font-size: 16px;
+                      }
+                      .layer i.fa.text-primary.fa-check-square-o::before {
+                          content: "\\f00c"
+                      }
+                  }
+              `
+              let downloadStyle = document.createElement('style')
+              downloadStyle.textContent = downloadCss
+              printContent.appendChild(downloadStyle)
+
+              const offscreen = document.createElement("div");
+              offscreen.style.position = "fixed";
+              offscreen.style.top = "-9999px";
+              offscreen.style.left = "-9999px";
+              offscreen.appendChild(printContent);
+              document.body.appendChild(offscreen);
+
+              // textarea 개행문자 치환
+              const textAreaArr = printContent.querySelectorAll('textarea')
+              for (let i = 0; i < textAreaArr.length; i++) {
+                const div = document.createElement('div')
+                div.innerHTML = textAreaArr[i].value.replace(/\n/g, '<br>')
+                div.style.cssText = textAreaArr[i].style.cssText
+                div.style.backgroundColor = 'rgba(255, 255, 255, 0)'
+                div.style.lineHeight = '1.15'
+                div.style.letterSpacing = '-1px'
+                div.style.whiteSpace = 'pre-wrap'
+                textAreaArr[i].replaceWith(div)
+              }
+
+              // 확인완료 상태가 아니면 결재서명 영역 미표시
+              if (applyInfo.applyStatus !== 'COMPLETE') {
+                printContent.querySelector('.text-esign div')?.classList.add('hide-approvalsign')
+              }
+
+              const pdf = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' })
+
+              const pages = printContent.querySelectorAll('.editor-layer')
+              for (let i = 0; i < pages.length; i++) {
+                if (i > 0) {
+                  pdf.addPage()
+                }
+                const page = pages[i]
+                const canvas = await html2canvas(page, { useCORS: true, scale: 1, backgroundColor: '#ffffff' })
+
+                const imgData = canvas.toDataURL('image/png')
+                const pageWidth  = pdf.internal.pageSize.getWidth()
+                const pageHeight  = pdf.internal.pageSize.getHeight()
+
+                const imgWidth = canvas.width
+                const imgHeight = canvas.height
+
+                const ratio = Math.min(pageWidth / imgWidth, pageHeight / imgHeight)
+                const newWidth = imgWidth * ratio
+                const newHeight = imgHeight * ratio
+
+                const scaleFactor = 1.17
+                const scaledWidth = newWidth * scaleFactor
+                const scaledHeight = newHeight * scaleFactor
+
+                const x = (pageWidth - scaledWidth) / 2
+                const y = (pageHeight - scaledHeight) / 2
+
+                pdf.addImage(imgData, 'PNG', x, y, scaledWidth, scaledHeight)
+              }
+
+              pdf.save(`${applyInfo.sheetTitle}_${applyInfo.studentName}.pdf`)
+
+              if (window.parent)
+                window.parent.postMessage({command: 'toggle-download-loading', value: false}, '*')
+
+              document.body.removeChild(offscreen);
+
+            } catch (e) {
+              console.warn(e)
+              if (window.parent)
+                window.parent.postMessage({command: 'toggle-download-loading', value: false}, '*')
+            }
+          }
+
+        </script>
+
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/select2.js"></script>
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-rendering-view.js?ver=20211116"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-submit.js"></script><!-- 신청서 제출 js -->
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-submit-init.js"></script><!-- 신청서 제출 init js -->
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-checkbox.js"></script>
+
+        <!-- 사운드 플레이어 js, LANG js -->
+<!--        <script type="text/javascript" src="../asset/js/worksheet/mediaelement/build/mediaelement-and-player.js"></script>-->
+<!--        <script type="text/javascript" src="../asset/js/worksheet/mediaelement/build/lang/ko.js"></script>-->
+
+	</body>
+</html>

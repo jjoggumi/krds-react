@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" id="myViewport">
+<!--  <meta name="viewport" content="width=1440, initial-scale=0.3">-->
+  <meta name="referrer" content="origin">
+  <meta name="robots" content="<%= VUE_APP_META_ROBOTS %>">
+
+  <meta name="description" content="<%= VUE_APP_BASE_META_DESCRIPTION %>">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>하이클래스 HiClass</title>
+
+  <meta property="og:url" content="https://www.hiclass.net" />
+  <meta property="og:site_name" content="HiClass" />
+  <meta property="og:title" content="하이클래스 Hiclass" />
+  <meta property="og:description" content="<%= VUE_APP_BASE_META_DESCRIPTION %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.hiclass.net/files/img/logo_index.png" />
+  <meta property="hiclass:key" content="2413fb3709"></meta>
+
+
+  <!-- load oembed-component -->
+  <!-- <script defer async src="https://cdn.jsdelivr.net/npm/oembed-component/dist/oEmbed.js"></script> -->
+  
+  <!-- 애플로그인 스크립트 -->
+  <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+  <!-- 서명 : IE 11 호환성 위해 스크립트 로딩 처리 -->
+  <script type="text/javascript" src="/files/js/signature_pad.min.js"></script>
+
+  <!-- 워크시트 APP-WEB 인터페이스 js -->
+  <script type="text/javascript" src="/files/js/worksheet-webview.js"></script>
+
+  <!-- iframe srcdoc attribute poly-fill : IE 11 지원 -->
+  <script type="text/javascript" src="/files/js/srcdoc-polyfill.min.js"></script>
+
+  <!-- PDF.js CDN 로드 -->
+
+  <script type="module">
+    import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/legacy/build/pdf.min.mjs';
+
+    // PDF.js 워커 설정
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/legacy/build/pdf.worker.min.mjs';
+    window.pdfjsLib = pdfjsLib
+  </script>
+
+  <!-- 리뉴얼 index body -->
+  <script type="text/javascript" src="/files/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="/files/js/masonry.min.js"></script>
+  <script type="text/javascript" src="/files/js/slick.min.js"></script>
+
+  <script>
+    // IE 브라우저로 진입 시 Edge 브라우저로 이동
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      alert('이 브라우저는 더 이상 지원되지 않습니다.\n\n하이클래스(HiClass)를 이용하시려면 Chrome(크롬), Edge(엣지) 등으로 접속해주세요.')
+      window.location = 'microsoft-edge:' + window.location;
+      setTimeout(function() {
+        window.location = 'https://www.microsoft.com/ko-kr/edge/download';
+      }, 500);
+    }
+  </script>
+  <style>
+    .my-class {}
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but v0 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <!-- VITE DIST BEGIN -->
+    <!-- VITE DIST END -->
+</body>
+
+</html>

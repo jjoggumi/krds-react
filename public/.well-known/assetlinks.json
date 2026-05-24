@@ -1,0 +1,14 @@
+[
+   {
+      "relation": [
+         "delegate_permission/common.handle_all_urls"
+      ],
+      "target": {
+         "namespace": "android_app",
+         "package_name": "com.iscreammedia.app.hiclass.android",
+         "sha256_cert_fingerprints": [
+         "A8:63:5D:53:41:42:18:E3:7B:E9:D9:56:18:B8:9E:7D:1C:E4:A5:37:B9:B3:44:CA:BF:7D:E4:51:68:56:77:37"
+         ]
+      }
+   }
+]

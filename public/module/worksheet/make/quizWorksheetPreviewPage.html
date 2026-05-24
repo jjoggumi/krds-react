@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+        <title>하이클래스 워크시트 신청서</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="writer" content="i-Scream Media">
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	
+        <link rel="stylesheet" href="../asset/css/select2.css" />
+	    <link rel="stylesheet" href="../asset/css/bootstrap.css"/>
+	    <link rel="stylesheet" href="../asset/css/style.student.new.css"/>
+	    <link rel="stylesheet" href="../asset/css/style.worksheet.css" />
+        <link rel="stylesheet" href="../asset/css/style.hiclass.css" />
+	    <link rel="stylesheet" href="../asset/js/worksheet/mediaelement/build/mediaelementplayer.css" />
+        <link rel="stylesheet" href="/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	    <script type="text/javascript" src="../asset/js/jquery-1.12.4.min.js"></script>
+	    <script type="text/javascript" src="../asset/js/jquery-ui.min.js"></script>
+
+        <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/axios@0.21.4/dist/axios.min.js"></script>
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-api-init.js"></script><!-- 환경에 따른 API 주소 초기화 js-->
+
+		<style>
+            /* 20211019 추가 */
+            body,
+            fieldset {
+                padding: 0;
+                border: 0;
+                margin: 0;
+            }
+
+            body {
+                background-color: #f4f5f9;
+                margin: 0;
+            }
+			input {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+		
+			/* make header */
+			.make-header {
+			    position:fixed;
+			    left:0;
+			    right:0;
+			    top:0;
+			    /*width:100%;*/
+			    height:70px;
+			    overflow:hidden;
+			    padding:0 20px;
+			    color:#8a8a8a;
+			    background:#f4f5f9;
+			    line-height:70px;
+			    border-bottom:1px solid #cfcfcf;
+			    box-sizing:border-box;
+			    transition:all .5s;
+			    z-index:100;
+			}
+			.make-header h1 {
+				color:#333;
+				text-align:center;
+				font-size:24px;
+				font-weight:400;
+				padding-top:24px;
+			}
+			.make-header a {
+			    color:#8a8a8a;
+			}
+			.make-header a:hover {
+			    color:#000;
+			}
+			.make-header-fnc {
+			    position:absolute;
+			    right:20px;
+			    top:50%;
+			    -webkit-transform: translateY(-50%);
+			    -moz-transform:  translateY(-50%);
+			    -ms-transform:  translateY(-50%);
+			    -o-transform:  translateY(-50%);
+			    transform:  translateY(-50%);
+			    font-size:0;
+			}
+			.make-header-fnc button:not(.btn-close) {
+			    display:inline-block;
+			    font-size:16px;
+			    vertical-align:middle;
+			    cursor:pointer;
+			    margin-left:10px;
+			    padding:4px 15px 5px;
+			    color:#ff6858;
+			    background:rgba(255,104,88,0);
+			    border-radius:2em;
+			    transition:all .3s;
+			}
+            /* 20211019 추가 */
+            /*.make-view {
+                padding: 50px 0 100px;
+            }*/
+
+            .make-view {
+                padding: 100px 0;
+            }
+
+            .layer textarea[disabled] {
+                color: inherit;
+                -webkit-text-fill-color: currentColor;
+                opacity: 1;
+            }
+
+            /* 20211025 에디터 요소 1페이지만 위치하는 버그 수정 */
+            .editor-layer { background-color: #FFF; height: 1153px; /*margin-bottom: 10px;*/ position: relative; /*border-top: 1px dashed #ddd;*/ }
+            .editor-layer::before { display: block; content: attr(data-page-index); border: 1px solid #ddd; border-left: 0; width: 25px; line-height: 25px; color: #888; text-align: center; position: absolute; left: 0; top: -1px; border-radius: 0 0 5px 0; }
+            .editor-layer:first-of-type { border-top: 0; }
+            .editor-layer:first-of-type::before { border-top: 0; }
+            .editor-layer.active { z-index: 9999; }
+		</style>
+	</head>
+	
+	<body>
+		<header class="make-header" style="display: none;">
+            <div id="makeHeaderTitle"></div>
+		</header>
+
+        <div class="tooltip preview-tooltip" style="display: none">
+            <span><strong>예제 텍스트를 입력하고 적용해보세요!</strong><br>텍스트가 잘리는 경우 폰트 사이즈 또는 텍스트박스 크기를 조정해주세요.</span>
+            <button class="close"></button>
+        </div>
+
+        <section class="make-view" data-question-idx="0">
+			<div class="editor-box" style="width:990px; height:1153px; margin: 0 auto; position:relative;">
+                <input type="hidden" id="quizIdx" value=""/>
+                <input type="hidden" id="idToken" value=""/>
+                <input type="hidden" id="hideMakeHeader" value=""/>
+
+                <div id="quizWorksheetVO"></div>
+	    	</div>
+		</section>
+
+        <script type="text/javascript">
+          var objectArr = [];  // 도구 전역 배열
+          let isReadonly = false;
+
+          window.addEventListener('message', message => {
+            console.warn(`message.data => `, message.data)
+
+            try {
+              var payload = message.data
+              switch (payload.dispatchEvent) {
+                case 'click': {
+                  $('#' + payload.name).click()
+                  break
+                }
+                case 'call': {
+                  if (payload.name === 'saveToken') {
+                    for (const [key, value] of Object.entries(payload.data)) {
+                      localStorage.setItem(key, value)
+                    }
+                  }
+                  break
+                }
+                case 'set': {
+                  if (payload.name === 'apiUrl') {
+                    apiUrl = payload.data
+                  }
+                  break
+                }
+              }
+            } catch (e) {
+              console.warn(e)
+            }
+          })
+        </script>
+
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('.preview-tooltip .close').on('click', function() {
+              $('.preview-tooltip').hide();
+              $('.right-wrap .btn-bg-c').removeClass('ani');
+            });
+          });
+        </script>
+
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/select2.js"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/ws-rendering-view.js"></script>
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-worksheet-view-init.js"></script><!-- 에디터 뷰어 init js -->
+
+        <script type="text/javascript" src="../asset/js/worksheet/ws-checkbox.js"></script>
+        <script type="text/javascript" src="../asset/js/worksheet/mediaelement/build/mediaelement-and-player.js"></script><!-- 사운드 플레이어 js -->
+        <script type="text/javascript" src="../asset/js/worksheet/mediaelement/build/lang/ko.js"></script><!-- 사운드 플레이어 LANG js -->
+	
+	</body>
+</html>

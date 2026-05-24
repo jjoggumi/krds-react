@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mobile/assets/style.css" preload="true">
+</head>
+<body class="mobile-help">
+  <div id="mobile-app">
+    <div class="skeleton">
+      <header class="m-header">
+        <button class="m-btn-left hi-btn btn-link" onClick="goBack()">
+          <i class="ico-size-24 ico-prev"></i>
+        </button>
+        <h1>자주 묻는 질문</h1>
+      </header>
+      <div class="m-search-area">
+        <div class="m-top-search">
+          <input type="search" placeholder="궁금한 점을 검색해보세요">
+          <button class="m-btn-search">검색</button>
+        </div>
+      </div>
+      <div data-v-0a99b996="" class="m-category-area">
+        <div data-v-0a99b996="" class="tit">질문유형</div>
+      </div>
+    </div>
+  </div>
+  <script>jsAssets='<%= htmlWebpackPlugin.options.jsAssets %>'</script>
+  <script>
+
+    async function loadScript(src) {
+      return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+      });
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        (async () => {
+          await Promise.all(jsAssets.split(',').map(loadScript));
+          setTimeout(() => {
+            (window.app || {$mount: () => {}}).$mount('#mobile-app');
+          }, 10);
+
+        })();
+      }, 1);
+    });
+
+    const isMobileObj = {android: [/Android/i], apple: [/iPhone|iPad|iPod/i], any: [/Android|iPhone|iPad|iPod/i], };
+    const anyOf = obj => Object.values(obj).some(reg => reg.test(navigator.userAgent));
+    const mobileDevice = anyOf(isMobileObj.android) ? 'android' : anyOf(isMobileObj.apple) ? 'apple' : 'unknown';
+    console.log('mobileDevice:', mobileDevice);
+    const iosPostMessage = command => window.webkit.messageHandlers.iOSHandler.postMessage({ command })
+    const execute = command => ({android: () => AOSHandler[command],
+        apple: () => iosPostMessage(command)}[mobileDevice] || (() => {}))();
+
+    const goBack = () => execute('goBack');
+  </script>
+</body>
+</html>
