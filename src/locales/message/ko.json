@@ -1,0 +1,882 @@
+{
+  "hiclass": "하이클래스",
+
+  "save": "저장",
+  "ok": "확인",
+  "cancel": "취소",
+  "update": "수정",
+  "updated": "수정됨",
+  "register": "등록",
+  "submit": "제출",
+
+  "teacher": "선생님, 교직원",
+  "parents": "학부모",
+  "student": "학생",
+
+  "button": {
+    "save": "@:save",
+    "ok": "@:ok",
+    "cancel": "@:cancel",
+    "update": "@:update"
+  },
+
+  "userType": {
+    "teacher": "@:teacher",
+    "parents": "@:parents",
+    "student": "@:student"
+  },
+
+  "message": {
+    "updated": "@:updated"
+  },
+
+  "common": {
+    "error": {
+      "save": "저장하는데 실패하였습니다."
+    },
+    "footer": {
+      "copyright": "ⓒ i-Screammedia Corp."
+    }
+  },
+
+  "index": {
+    "section": {
+      "intro": {
+        "title": {
+          "text1": "우리가 만나는 ",
+          "text2": "또 다른 교실 하이클래스"
+        },
+        "banner": {
+          "text": "선생님, 학부모, 학생, 학교관계자, 교육기관 <br>누구나 <strong>모든 서비스를 무료로 이용</strong>하세요."
+        },
+        "teacher": {
+          "doLogin": "로그인 하기",
+          "description": "선생님 계정은 <br>자녀의 학부모로도 <br class='m-br'>이용 가능합니다."
+        },
+        "parents": {
+          "doLogin": "로그인 하기",
+          "description": "학부모이자 선생님인 경우, <br>선생님으로 시작하세요."
+        },
+        "student": {
+          "doLogin": "로그인 하기",
+          "description": "초중등, 유치원, 대학교"
+        },
+        "gnb": {
+          "doLogin": "교육청 아이디로 로그인",
+          "description": "교육청 사이트에서 사용중인 아이디가 있다면?"
+        }
+      },
+      "intro-electron": {
+        "title": {
+          "text1": "우리가 만나는 ",
+          "text2": "또 다른 교실 하이클래스"
+        },
+        "banner": {
+          "text": "선생님, 학부모, 학생, 학교관계자, 교육기관 <br>누구나 <strong>모든 서비스를 무료로 이용</strong>하세요."
+        },
+        "teacher": {
+          "doLogin": "로그인 하기",
+          "description": "선생님이자<br>학부모인 경우"
+        },
+        "parents": {
+          "doLogin": "로그인 하기",
+          "description": "자녀가 있는<br>학부모인 경우"
+        },
+        "student": {
+          "doLogin": "로그인 하기",
+          "description": "초중등, 유치원, 대학교에<br>다니는 학생인 경우"
+        },
+        "gnb": {
+          "doLogin": "교육청 아이디로 로그인",
+          "description": "교육청 사이트에서 사용중인 아이디가 있다면?"
+        }
+      }
+    },
+    "footer": {
+      "link": {
+        "termsTitle": "이용약관",
+        "privacyPolicyTitle": "개인정보처리방침",
+        "contactUsTitle": "광고 및 제휴문의"
+      },
+      "nameCorporation": "(주)아이스크림미디어",
+      "ceo": "대표이사 : 허주환, 현준우",
+      "address": "주소 : 경기도 성남시 분당구 판교역로 225-20",
+      "businessLicenseNumber": "사업자등록번호 : 120-86-33565",
+      "mailOrderBusinessReferenceNumber": "통신판매업신고번호 : 제2011-경기성남-1785호",
+      "email": "이메일 : hiclass@hiclass.net",
+      "tel": "고객센터 : 1811-0910",
+      "teachTel": "고객센터 : 1811-0919",
+      "copyright": "Copyright © (주)아이스크림미디어.All Right Reserved"
+    }
+  },
+
+  "main": {
+    "clazzes": {
+      "lnb": {
+        "heading1": "게시판",
+        "heading2": "수업관리",
+        "heading3": "클래스 관리"
+      },
+      "rnb": {
+        "searchKeyword": {
+          "placeholder": "클래스 게시글 찾기"
+        }
+      }
+    },
+    "schools": {
+      "lnb": {
+        "heading": "학교 게시판"
+      },
+      "rnb": {
+        "searchKeyword": {
+          "placeholder": "학교 게시글 찾기"
+        }
+      }
+    }
+  },
+
+  "analytics": {
+    "login": {
+      "choice": {
+        "mount": "브릿지화면_web",
+        "recertification": "기존_회원_재로그인_web",
+        "join": "신규_회원가입_web"
+      },
+      "recertification": {
+        "success": "휴대폰번호_재_인증하기_완료_web"
+      }
+    },
+    "home": {
+      "bi": {
+        "click": "홈BI_web"
+      },
+      "myClass": {
+        "create": {
+          "click": "홈_새클래스만들기_web"
+        },
+        "invitecode": {
+          "click": "홈_초대코드가입하기_{userTypeStr}_web"
+        },
+        "search": {
+          "click": "홈_클래스학교찾기_{userTypeStr}_web"
+        },
+        "guide": {
+          "click": "홈_최초가입_이용가이드_{userTypeStr}_web"
+        }
+      },
+      "download": {
+        "item1": {
+          "click": "홈_다운로드_자료1_{userTypeStr}_web"
+        },
+        "item2": {
+          "click": "홈_다운로드_자료2_{userTypeStr}_web"
+        },
+        "item3": {
+          "click": "홈_다운로드_자료3_{userTypeStr}_web"
+        }
+      },
+      "myNews": {
+        "more": {
+          "click": "홈_내소식_더보기_web"
+        },
+        "item": {
+          "click": "홈_내소식_리스트_web"
+        }
+      },
+      "meal": {
+        "more": {
+          "click": "홈_급식_더보기_web"
+        },
+        "item": {
+          "click": "홈_급식_상세_web"
+        }
+      },
+      "guide": {
+        "shortcut": {
+          "click": "홈_이용가이드_바로가기_web"
+        },
+        "item": {
+          "click": "홈_이용가이드_리스트_web"
+        },
+        "movie": {
+          "click": "홈_이용가이드_동영상_web"
+        }
+      },
+      "tabThumbnail": {
+        "item": {
+          "click": "홈_{value1}_{userTypeStr}_web"
+        }
+      },
+      "thumbnail": {
+        "item": {
+          "click": "홈_{value1}_{userTypeStr}_web"
+        }
+      },
+      "textBar": {
+        "item": {
+          "click": "급상승_web"
+        }
+      },
+      "banner": {
+        "item": {
+          "click": "홈_{value1}_{value2}_{userTypeStr}_web"
+        }
+      },
+      "quickMenu": {
+        "create": {
+          "click": "홈_퀵메뉴_새클래스만들기_web"
+        },
+        "invitecode": {
+          "click": "홈_퀵메뉴_초대코드가입하기_{userTypeStr}_web"
+        },
+        "search": {
+          "click": "홈_퀵메뉴_클래스학교찾기_{userTypeStr}_web"
+        },
+        "item": {
+          "click": "홈_퀵메뉴_{value1}_{userTypeStr}_web"
+        }
+      },
+      "store": {
+        "focus": {
+          "item": {
+            "click": "홈_하이스토어_메인상품_web",
+            "show": "홈_하이스토어_메인상품(노출수)_web"
+          }
+        },
+        "sub": {
+          "item": {
+            "click": "홈_하이스토어_연관상품_web",
+            "show": "홈_하이스토어_연관상품(노출수)_web"
+          }
+        }
+      }
+    },
+    "header": {
+      "topBanner": {
+        "click": "탑배너_web"
+      },
+      "gnbMyPage": {
+        "logout": {
+          "click": "로그아웃_web"
+        },
+        "myPage": {
+          "click": "마이페이지_web"
+        },
+        "help": {
+          "click": "고객센터_web"
+        }
+      }
+    },
+    "class": {
+      "post": {
+        "remind": {
+          "click": "{value1}_수신확인_web",
+          "complete": "리마인드푸시_{value1}_web"
+        }
+      }
+    },
+    "upload": {
+      "location": {
+        "class": "클래스_파일업로드_web",
+        "class_comment": "클래스댓글_파일업로드_web",
+        "hitalk": "하이톡_파일업로드_web",
+        "survey": "설문_파일업로드_web"
+      }
+    }
+  },
+
+  "main.text.name": "이름",
+  "main.text.confirm": "확인",
+  "main.text.unconfirmed": "읽지 않음",
+  "main.text.request": "인증요청",
+  "main.text.re_request": "재요청",
+  "main.text.reg": "등록",
+  "main.text.select": "선택",
+  "main.text.complete": "완료",
+  "main.text.cancel": "취소",
+  "main.text.add": "추가",
+  "main.text.onlynum": "휴대폰 번호 (숫자만)",
+  "main.text.reqphonenum": "휴대폰 번호를 입력해 주세요",
+  "main.text.alreadyUsedPhoneNum": "이미 사용중인 번호입니다.",
+  "main.text.req6lennum": "인증번호 6자리",
+  "main.text.sendauthmsg": "인증번호가 전송되었습니다",
+  "main.text.authTimeout": "제한 시간이 초과되었습니다. 인증 번호를 재요청해주세요.",
+  "main.text.authComplete": "인증 되었습니다",
+  "main.text.authNumber.please": "인증 번호를 입력해주세요.",
+  "main.text.authWrongNumber": "인증 번호가 틀렸습니다. 다시 입력해주세요",
+  "main.text.termsOfUse": "이용약관",
+  "main.text.collectionPersonalInfo": "개인정보 수집 및 이용",
+  "main.text.agree": "동의",
+  "main.text.disagree": "미동의",
+  "main.text.agreeAll": "전체 동의",
+  "main.text.mandatory": "(필수)",
+  "main.text.optional": "(선택)",
+  "main.text.agree0": "만 14세 이상입니다.",
+  "main.text.agree1": "이용약관 동의",
+  "main.text.agree2": "개인정보 수집 및 이용 동의",
+  "main.text.agree3": "마케팅 정보 수신 동의",
+  "main.text.agree4": "이벤트, 당첨자 안내 등 마케팅 SMS, 앱 푸시 알림 수신에 동의합니다.",
+  "main.text.showContent": "내용보기",
+  "main.text.next": "다음",
+  "main.text.input.mandatory": "필수 입력 사항",
+  "main.text.input.optional": "선택 입력 사항",
+  "main.text.delicious": "맛있어요",
+  "main.text.scrap": "스크랩",
+  "main.text.scrap.cancel": "스크랩",
+  "main.text.like": "좋아요",
+  "main.text.comment": "댓글",
+  "main.text.comment.placeholder": "댓글을 남겨주세요.",
+  "main.text.comment.prev.show": "이전 댓글 더보기",
+  "main.text.homeworkUserComment.placeholder": "과제 피드백을 작성할 수 있습니다.",
+  "main.text.reply.add": "답글쓰기",
+  "main.text.reply.add2": "답글",
+  "main.text.reply.show": "답글 보기",
+  "main.text.reply.more": "답글 더보기",
+  "main.text.unit": "개",
+  "main.text.share": "공유하기",
+  "main.text.kakaostory": "카카오스토리",
+  "main.text.kakaotalk": "카카오톡",
+  "main.text.band": "밴드",
+  "main.text.facebook": "페이스북",
+  "main.text.event": "이벤트",
+  "main.text.eduinfo": "추천정보",
+  "main.text.copyurl": "URL 복사",
+  "main.text.modify": "수정",
+  "main.text.update": "수정",
+  "main.text.delete": "삭제",
+  "main.text.report": "신고",
+  "main.text.parents": "학부모",
+  "main.text.teacher": "선생님",
+  "main.text.student": "학생",
+  "main.text.delete.you.want": "삭제하시겠습니까?",
+  "main.text.delete.complete": "삭제가 완료되었습니다.",
+  "main.text.error.ask.admin": "문제가 생겼습니다. 관리자에게 문의해주세요.",
+  "main.text.error.upload": "파일 업로드 에러",
+  "main.text.error.comment": "댓글 등록에 실패했습니다.\n다시 시도해주세요.",
+  "main.text.post.notFound": "등록된 게시물이 없습니다.",
+  "main.text.album.notFound": "등록된 사진 또는 동영상이 없습니다.",
+  "main.text.post.search.notFound": "검색된 게시물이 없습니다.",
+  "main.text.post.search.notFound2": "검색결과가 없습니다.",
+  "main.text.receiving.target": "수신대상",
+
+  "main.ssemtube": "쌤튜브",
+
+  "main.link.button1": "활용방법",
+  "main.link.button2": "고객센터",
+  "main.link.button3": "광고 및 제휴문의",
+  "main.link.button4": "서비스 제안하기",
+
+  "main.lnb.button.createClass": "새 클래스 만들기",
+  "main.lnb.button.joinInviteCode": "초대코드로 가입하기",
+  "main.lnb.button.searchClass": "클래스 찾기",
+
+  "main.info.link1": "클래스 소개",
+  "main.info.link2": "아이스크림",
+  "main.info.link3": "연수원",
+  "main.info.link4": "쌤튜브",
+  "main.info.link5": "교육상품몰",
+  "main.info.link6": "코딩교육",
+
+  "main.header.clazzes": "클래스",
+  "main.header.chat": "하이톡",
+  "main.header.education": "추천정보",
+  "main.header.alarmplus": "학교알리미",
+  "main.header.behavior": "학급기록",
+  "main.header.timetable": "시간표",
+  "main.header.text": "문자",
+
+  "main.clazzes.header.text.member": "구성원관리",
+  "main.clazzes.header.text.setting": "설정",
+  "main.clazzes.header.text.invite": "초대하기",
+
+  "main.clazzes.member.text.classSubscribeApply": "클래스 가입요청",
+  "main.clazzes.member.text.classSubscribeAcceptList": "구성원 목록",
+  "main.clazzes.member.button.denial": "거부",
+  "main.clazzes.member.button.accept": "수락",
+  "main.clazzes.member.button.selectAll": "전체 선택",
+  "main.clazzes.member.button.unsubscribed": "탈퇴시키기",
+  "main.clazzes.member.button.startChat": "하이톡",
+  "main.clazzes.member.item.text.parents": "학부모",
+  "main.clazzes.member.student.title.createAccount": "임시 학생 계정 만들기",
+  "main.clazzes.member.student.message.helpToast": "여건상 회원 가입이 여의치 않은 학생은 계정을 직접 만들어 주세요.\n선생님이 만들어 준 계정은 해당 클래스만 이용 가능하며, 새 학년이\n될 경우 이용할 수 없습니다.",
+  "main.clazzes.member.student.button.addStudent": "추가하기",
+  "main.clazzes.member.student.description.name": "이름",
+  "main.clazzes.member.student.description.number": "번호 (숫자만)",
+  "main.clazzes.member.student.description.id": "아이디 (영문, 숫자만 입력:6~12자)",
+  "main.clazzes.member.student.description.password": "비밀번호 (영문, 숫자만 입력:6자 이상)",
+  "main.clazzes.member.student.validation.id": "사용할 수 없는 아이디입니다.",
+  "main.clazzes.member.student.validation.password": "8자 이상의 숫자만 입력해주세요.",
+  "main.clazzes.member.student.id.dupl": "이미 사용 중인 아이디입니다.",
+  "main.clazzes.member.student.password.notSame": "비밀번호가 일치하지 않습니다.",
+  "main.clazzes.member.student.sort.number": "번호순",
+  "main.clazzes.member.student.sort.name": "이름순",
+
+  "main.clazzes.member.parents.sort.number": "번호순",
+  "main.clazzes.member.parents.sort.name": "이름순",
+
+  "main.clazzes.invite.freeSms.page": "페이지",
+  "main.clazzes.invite.freeSms.button.print": "인쇄",
+  "main.clazzes.invite.freeSms.text1": "에서",
+  "main.clazzes.invite.freeSms.text.invited1": "초대합니다.",
+  "main.clazzes.invite.freeSms.text.invited2": "초대코드를 입력하여 클래스에 가입해보세요!",
+  "main.clazzes.invite.freeSms.myClass.inviteCode": "우리 반 초대코드",
+  "main.clazzes.invite.freeSms.title": "무료 문자 발송",
+  "main.clazzes.invite.freeSms.content1": "클래스에 초대할 구성원(학생, 학부모) 핸드폰 번호를 입력해 주세요.",
+  "main.clazzes.invite.freeSms.content2": "발송되는 문자는 하이클래스 서비스 번호로 무료 발송되며,",
+  "main.clazzes.invite.freeSms.content3": "발송하시는 분의 번호는 노출되지 않습니다.",
+  "main.clazzes.invite.freeSms.button.confirm": "전송",
+
+  "main.clazzes.form.empty.list.text": "신청내역이 없습니다.",
+
+  "main.post.top.badge.necessary": "필독",
+  "main.post.top.badge.reservation": "예약",
+
+  "main.schools.meal.allergy.title": "알레르기 정보",
+  "main.schools.meal.allergy.content": "1.난류 2.우유 3.메밀 4.땅콩 5.대두 6.밀 7.고등어 8.게 9.새우 10.돼지고기 11.복숭아 12.토마토 13.아황산류 14.호두 15.닭고기16.쇠고기 17.오징어 18.조개류(굴,전복,홍합 포함) 19.잣",
+
+  "main.create.title": "새 클래스 만들기",
+  "main.create.text.select": "선택",
+  "main.create.text.anyYear": "연도 무관",
+  "main.create.text.anyGrade": "학년 무관",
+  "main.create.text.uploadImage": "사진 올리기",
+  "main.create.label.school": "학교/단체",
+  "main.create.label.year": "연도",
+  "main.create.label.grade": "학년",
+  "main.create.label.classroom": "반",
+  "main.create.label.className": "클래스 명",
+  "main.create.label.profileImage": "대표 이미지",
+  "main.create.message.profileImage": "사진을 선택하거나<br>원하는 사진을 직접<br>올려주세요.",
+  "main.create.description.school": "학교 검색",
+  "main.create.description.className": "1반, 하늘반, 방과후 수학",
+  "main.create.message.schoolsNotFound": "검색 결과가 없습니다.<br/>다른 키워드로 검색하거나 학교/단체 추가를 신청해주세요",
+  "main.create.message.schoolsNotFound2": "원하시는 검색 결과가 없으신가요?<br>다른 키워드로 검색하거나 학교/단체 추가를 신청해주세요",
+  "main.create.button.addNewSchool": "학교/단체 추가 신청",
+  "main.create.complete.title": "새 클래스가 만들어졌습니다.",
+  "main.create.complete.button.clazz.setting": "클래스 설정하기",
+  "main.create.complete.description.clazz.setting": "앨범 기능, 게시판 기능, 댓글 기능 사용 여부를 설정할 수 있습니다.",
+  "main.create.complete.button.clazz.invite": "무료문자로 초대장 보내기",
+  "main.create.complete.description.clazz.invite": "학생, 학부모에게 초대코드와 클래스 가입 안내가 담긴 초대장을 무료문자로 보내거나 인쇄할 수 있습니다.",
+  "main.create.schools.title": "신규 학교 / 단체 추가 신청",
+  "main.create.schools.label.schoolName": "학교/ 단체명",
+  "main.create.schools.label.schoolAddress1": "도로명",
+  "main.create.schools.label.schoolAddress2": "상세 주소",
+  "main.create.schools.label.schoolHomepage": "홈페이지 주소",
+  "main.create.schools.label.schoolTel": "대표 전화번호",
+  "main.create.schools.description.schoolAddress1": "주소 검색",
+  "main.create.schools.description.schoolAddress2": "상세 주소",
+  "main.create.schools.text.oldAddress": "구 주소",
+  "main.create.schools.message.addressNotFound": "검색 결과가 없습니다",
+
+  "main.chat.detail.header.chatSetting": "상담 가능 시간 설정",
+  "main.chat.detail.header.chatManual": "단체공지 사용 안내",
+  "main.chat.detail.body.chatBeforeSelect": "대화 목록을 선택하여 하이톡을 확인해보세요.",
+  "main.chat.detail.body.chatEmpty1": "생성된 대화가 없습니다.",
+  "main.chat.detail.body.chatEmpty2": "대화 상대를 선택하여 하이톡을 시작해보세요.",
+  "main.chat.detail.body.chatNotUsed1": "하이톡을 이용하지 않는 선생님입니다.",
+  "main.chat.detail.body.chatNotUsed2": "선생님이 기능을 사용하지 않는 경우 메시지를 보낼 수 없습니다.",
+
+  "main.education.event.pre": "진행 예정 이벤트",
+  "main.education.event.ing": "진행중인 이벤트",
+  "main.education.event.end": "종료된 이벤트",
+
+  "main.mypage.info.closeAccount.title": "사유*",
+  "main.mypage.info.closeAccount.description.reasonSelf": "탈퇴 사유를 직접 입력해주세요.",
+  "main.mypage.info.closeAccount.notice.title.text1": "1. 하이클래스 서비스를 탈퇴할 경우",
+  "main.mypage.info.closeAccount.notice.list.text1": "탈퇴한 아이디는 즉시 삭제되어 재사용 및 복구가 불가하오니 신중하게 선택하시기 바랍니다.",
+  "main.mypage.info.closeAccount.notice.list.text2": "참여 중인 모든 클래스와 구독중인 학교 정보를 더 이상 받아볼 수 없습니다.",
+  "main.mypage.info.closeAccount.notice.list.text3": "선생님으로 가입하신 경우, 하이클래스에서 탈퇴하여도 아이스크림 회원 계정은 유지됩니다.",
+  "main.mypage.info.closeAccount.notice.title.text2": "2. 가입한 클래스 중 하나만 탈퇴하고 싶다면?",
+  "main.mypage.info.closeAccount.notice.list.text5": "탈퇴하고 싶은 클래스 > 설정 페이지에서 탈퇴 할 수 있습니다.",
+  "main.mypage.info.closeAccount.notice.list.text6": "클래스에서 탈퇴할 경우, 해당 클래스의 소식을 받아볼 수 없으며 게시글에 접근이 불가합니다.",
+  "main.mypage.info.closeAccount.agree": "위 내용을 모두 확인 하였으며, 회원 탈퇴 시 모든 정보가 복구 불가능함에 동의합니다.",
+  "main.mypage.info.closeAccount.button.closeAccount": "서비스 탈퇴",
+  "main.mypage.info.closeAccount.reason.list.content1": "학교에서 이용 안함",
+  "main.mypage.info.closeAccount.reason.list.content2": "졸업, 전학",
+  "main.mypage.info.closeAccount.reason.list.content3": "알림장 정보 없음",
+  "main.mypage.info.closeAccount.reason.list.content4": "가정통신문, 급식 정보 없음",
+  "main.mypage.info.closeAccount.reason.list.content5": "재가입",
+  "main.mypage.info.closeAccount.reason.list.content6": "기타 (상세하게 작성해주시면 큰 도움이 됩니다.)",
+  "main.mypage.info.closeAccount.message.confirm": "탈퇴한 계정은 즉시 삭제되며 복구할 수 없습니다.\n하이클래스를 탈퇴하시겠습니까?",
+  "main.mypage.info.closeAccount.message.classOwner": "개설 중인 클래스가 있는 경우 클래스 폐쇄 후 서비스 탈퇴를 하실 수 있습니다.",
+  "main.mypage.info.closeAccount.message.alarmPlusMasterManager": "학교알리미 마스터 관리자는 탈퇴할 수 없습니다.<br>학교알리미 > 교직원 관리 메뉴에서 마스터 권한을 위임하고 다시 시도해주세요.<br>(일반관리자인 경우만 탈퇴 가능)",
+  "main.mypage.info.closeAccount.message.emptyReason": "탈퇴 사유를 입력해주세요.",
+  "main.mypage.info.closeAccount.message.lengthOver": "탈퇴 사유를 500자 이하로 입력해주세요.",
+  "main.mypage.info.closeAccount.message.closeComplete": "탈퇴되었습니다.",
+
+  "main.mypage.clazzes.notFound.title": "활동 중인 클래스가 없습니다.",
+  "main.mypage.clazzes.notFound.button.createClass": "새 클래스 만들기",
+  "main.mypage.clazzes.notFound.button.joinInviteCode": "초대코드로 가입하기",
+  "main.mypage.clazzes.notFound.button.searchClass": "클래스 찾기",
+
+  "main.unknown.user.name": "(알수없음)",
+
+  "noti.closeAccount.comp.message.text1": "하이클래스 탈퇴가 완료되었습니다.",
+  "noti.closeAccount.comp.message.text2": "그 동안 하이클래스를 이용해 주셔서 감사합니다.",
+  "noti.closeAccount.comp.button.ok": "감사합니다.",
+
+  "schools.homepage.button": "홈페이지",
+  "schools.header.button.subscribe": "구독",
+  "schools.header.button.subscribe2": "구독하기",
+  "schools.header.button.subscribed": "구독중",
+  "schools.header.message.subscribe": "구독 되었습니다",
+  "schools.header.message.unsubscribe": "구독해지 되었습니다",
+  "schools.lnb.all": "전체",
+  "schools.lnb.menu1": "가정통신문",
+  "schools.lnb.menu2": "급식",
+  "schools.lnb.menu3": "학교공지",
+  "schools.alarm.title": "가정통신문",
+  "schools.meal.title": "급식",
+  "schools.notice.title": "학교공지",
+
+  "help": {
+    "title": "고객센터",
+    "lnb": {
+      "notice": "공지사항",
+      "faq": "자주 묻는 질문",
+      "question": "문의하기",
+      "suggestion": "서비스 제안하기",
+      "contactus": "광고 및 제휴문의"
+    },
+    "notice": {
+      "title": "공지사항"
+    },
+    "faq": {
+      "title": "자주 묻는 질문"
+    },
+    "question": {
+      "title": "문의하기"
+    },
+    "suggestion": {
+      "title": "서비스 제안하기"
+    },
+    "contactus": {
+      "title": "광고 및 제휴문의"
+    }
+  },
+
+  "login.parents": "학부모로 시작하기",
+  "login.teacher": "다른 수단으로 로그인하기",
+  "login.teacher.v2": "선생님, 교직원으로 시작하기",
+  "login.student": "학생으로 시작하기",
+  "login.student2": "선생님이 만들어준 아이디로 시작하기",
+  "login.student3": "선생님이 아이디/비밀번호를 생성한 학생만 일반 로그인이 가능합니다.",
+  "login.educationOffice": "교육청 계정으로 시작하기",
+  "login.iscreammedia": "i-Scream 아이디로 시작하기",
+  "login.kakao": "카카오로 시작하기",
+  "login.naver": "네이버로 시작하기",
+  "login.google": "구글로 시작하기",
+  "login.apple": "Apple로 시작하기",
+  "login.gne": "경남교육청 로그인",
+  "login.hiclass": "하이클래스 로그인",
+  "login.hiclass.question": "기존 하이클래스 회원이신가요?",
+  "login.gne.teacher": "경남교육청 선생님으로 시작하기",
+  "login.gne.parents": "경남교육청 학부모로 시작하기",
+  "login.gne.student": "경남교육청 학생으로 시작하기",
+  "login.gne.comment1": "교육청 사이트에서 사용 중인 아이디와 비밀번호로 로그인하세요.",
+  "login.gne.comment2": "문의사항은 해당 교육청으로 하시기 바랍니다.",
+  "login.findid": "나의 SNS 계정 찾기",
+  "login.findSns": "나의 SNS 계정 찾기",
+  "login.auth": "하이클래스 회원가입",
+  "login.iScream.teacher": "선생님으로 시작하기",
+  "login.iScream.teacher.v2": "선생님으로 로그인하기",
+  "login.iScream.teacher.subTitle1": "아이스크림 계정으로 시작하시려면 휴대폰 번호 인증,",
+  "login.iScream.teacher.subTitle2": "하이클래스 약관 동의가 필요합니다.",
+  "login.iScream.student": "학생으로 시작하기",
+  "login.findId": "아이스크림 아이디 찾기",
+  "login.resetPw": "비밀번호 재설정",
+  "login.findSns.notFound.title": "회원 가입한 이력이 없습니다.",
+  "login.findSns.notFound.retry": "다시찾기",
+  "login.findSns.notFound.join": "회원가입",
+
+  "login.choice": "",
+  "login.choice.button.join": "신규 회원가입",
+  "login.choice.button.recertification": "기존 회원 재로그인",
+  "login.choice.button.findMySnsId": "기존 회원 SNS계정찾기",
+
+  "login.selectAge": "",
+
+  "login.recertification": "휴대폰 재인증하기",
+  "login.recertification.error.wrong.certNumber": "잘못된 인증정보입니다.<br>인증번호를 다시 한번 확인해주세요.",
+  "login.recertification.error.change.userMobile": "인증번호를 요청한 휴대폰 번호가 변경되었습니다.<br>휴대폰 번호를 다시 한번 확인해주세요.",
+  "login.recertification.error.fail.certification1": "입력하신 정보와 회원정보가 일치 하지 않습니다.<br>최근 기기변경 또는 디바이스 초기화를 진행하신 경우 <br>하이클래스 고객센터",
+  "login.recertification.error.fail.certification2": "로 문의 후 이용해주시기 바랍니다.",
+  "login.recertification.error.fail.mismatchedUserName": "입력하신 정보와 마이페이지 이름이 일치하지 않습니다.<br>다시 확인해주세요.<br><br>[ 마이페이지 이름 : {maskedUserName} ]",
+  "login.recertification.content.text1": "· 최근 기기변경이나 초기화등으로 로그인이 해제된 경우 <em>마이페이지에 등록된 이름</em>과 <em>휴대폰번호</em> 재인증 후 이용가능합니다.",
+  "login.recertification.content.text2-1": "· 로그인이 어려우신경우 하이클래스 고객센터",
+  "login.recertification.content.text2-2": "로 문의 후 이용해주시기 바랍니다.",
+  "login.recertification.content.text3": "· 최근 기기변경이나 초기화등으로 로그인이 해제된 경우 <em>휴대폰번호</em> 재인증 후 이용가능합니다.",
+
+  "login.auth.phone.message.selectAge": "14세 이상 동의 확인 필요",
+  "login.auth.phone.message.agreeTerms": "하이클래스의 이용약관 동의가 필요합니다.",
+  "login.auth.phone.message.agreePrivacyTerms": "하이클래스의 개인정보 수집 및 이용에 동의가 필요합니다.",
+  "login.auth.phone.message.existMobilePhone": "입력된 전화번호를 가진 사용자가 있습니다.",
+  "login.auth.phone.message.validation.MobilePhone": "잘못된 휴대폰 번호 형식입니다.",
+  "login.auth.phone.message.validation.userName": "잘못된 이름 형식입니다.\n한글 또는 영어를 2~20자 이내로 입력해주세요.",
+
+  "login.agreement": "서비스 이용을 위해<br>변경된 약관에 동의해주세요.",
+  "login.agreement.guardian.verification": "보호자 인증을 진행해주세요.",
+
+  "mobile.invite.clazz.inviteCard.button.text": "하이클래스 시작하기",
+  "mobile.share.button.text.prefix.education": "추천정보",
+  "mobile.share.button.text.prefix.event": "이벤트",
+  "mobile.share.button.text.prefix.hinotice": "공지사항",
+  "mobile.share.button.text.prefix.cp_board": "CP게시글",
+  "mobile.share.button.text": "더 보기",
+
+  "file.upload.error.bad.link": "잘못된 링크입니다.",
+  "file.upload.error.noLink.upload.response": "업로드 응답에 링크가 없습니다.",
+  "file.upload.error.during.video.upload": "동영상 업로드 중 오류가 발생했습니다.",
+  "file.upload.error.parsing.response.failed": "파싱 응답 실패",
+  "file.upload.error.size.over.video": "파일 당 첨부 가능한 용량은 {sizeStr} 입니다.",
+  "file.upload.error.size.over.image": "첨부 파일은 최대 {sizeStr} 까지 첨부 가능합니다.",
+  "file.upload.error.size.over.etc": "첨부 파일은 최대 {sizeStr} 까지 첨부 가능합니다.",
+  "file.upload.error.video.file.type": "동영상 파일 형식이 잘못되었습니다.",
+
+  "tooltip.main.header.alarmplus": "APP에서 학교알리미를 확인하실 수 있어요!",
+  "tooltip.main.header.alarmplus.suffix": "(구독 중인 학교 > 학교알리미 탭)",
+
+  "analytics.home.loadPage": "홈_web",
+  "analytics.home.click.button.search": "검색_web",
+  "analytics.home.click.button.notification": "알림_web",
+  "analytics.home.click.button.suggest.information": "추천정보_더보기_web",
+  "analytics.contents.detail.loadPage.note": "알림장_web",
+  "analytics.contents.detail.loadPage.album": "앨범_web",
+  "analytics.contents.detail.loadPage.board": "게시판_web",
+  "analytics.contents.detail.loadPage.homework": "과제게시판_web",
+  "analytics.contents.detail.loadPage.alarm": "가정통신문_web",
+  "analytics.contents.detail.loadPage.meal": "급식_web",
+  "analytics.contents.detail.loadPage.notice": "학교공지_web",
+  "analytics.contents.detail.loadPage.education": "교육정보_web",
+  "analytics.contents.detail.loadPage.event": "이벤트_web",
+  "analytics.contents.detail.loadPage.hinotice": "공지사항_web",
+  "analytics.contents.detail.loadPage.cp_board": "CP게시글_web",
+  "analytics.class.loadPage": "단위_클래스_메인_web",
+  "analytics.class.click.lnb.all": "클래스_전체_메뉴_web",
+  "analytics.class.click.lnb.note": "알림장_메뉴_web",
+  "analytics.class.click.button.note.more": "알림장_더보기_web",
+  "analytics.class.click.button.note.readuser": "알림장_수신확인_web",
+  "analytics.class.click.button.note.post": "알림장_쓰기_web",
+  "analytics.class.click.button.note.post.write.temporary": "알림장_쓰기_web_임시저장",
+  "analytics.class.click.button.note.post.write.complete": "알림장_쓰기_web_알림장 보내기",
+  "analytics.class.click.button.note.post.modalEditor": "알림장_쓰기_모달에디터_web",
+  "analytics.class.click.button.note.post.modalEditor.write.temporary": "알림장_쓰기_모달에디터_web_임시저장",
+  "analytics.class.click.button.note.post.modalEditor.write.complete": "알림장_쓰기_모달에디터_web_올리기",
+
+  "analytics.class.click.button.note.blackboard.imagePackFile": "알림장_쓰기_web_묶음 사진 관리",
+  "analytics.class.click.button.note.blackboard.attachFile": "알림장_쓰기_web_문서 첨부",
+  "analytics.class.click.button.note.blackboard.weeklyScheduleFile": "알림장_쓰기_web_주간 학습 계획",
+  "analytics.class.click.button.note.blackboard.phrases": "알림장_쓰기_web_자주 쓰는 문구",
+  "analytics.class.click.button.note.blackboard.notiSound": "알림장_쓰기_web_호루라기",
+  "analytics.class.click.button.note.blackboard.moveClass": "알림장_쓰기_web_내 클래스 바로가기",
+  "analytics.class.click.button.note.blackboard.mustRead": "알림장_쓰기_web_필독",
+  "analytics.class.click.button.note.blackboard.pin": "알림장_쓰기_web_상단공지",
+  "analytics.class.click.button.note.blackboard.zoom": "알림장_쓰기_web_화면 확대",
+
+  "analytics.class.click.button.download.manual": "하이클래스_안내문_web",
+  "analytics.class.click.button.download.allNote": "알림장_다운로드_web",
+  "analytics.class.click.lnb.album": "앨범_메뉴_web",
+  "analytics.class.click.button.albumView": "앨범_모아보기_web",
+  "analytics.class.click.button.album.post": "앨범_쓰기_web",
+  "analytics.class.click.lnb.board": "게시판_메뉴_web",
+  "analytics.class.click.lnb.homework": "과제게시판_메뉴_web",
+  "analytics.class.click.button.board.post": "게시판_쓰기_web",
+  "analytics.class.click.button.homework.post": "과제게시판_쓰기_web",
+  "analytics.class.click.lnb.attendance": "출석부_메뉴_web",
+  "analytics.class.click.calendar.day": "달력_날짜_클릭_web",
+  "analytics.class.click.button.calendarClass.post": "일정_등록하기_web",
+  "analytics.class.click.button.search": "게시글_찾기_web",
+  "analytics.class.click.lnb.setting": "클래스_설정_web",
+  "analytics.class.click.lnb.setting.member": "클래스_정보_web",
+  "analytics.class.click.lnb.permission": "게시판_설정_web",
+  "analytics.class.click.lnb.member": "구성원_관리_web",
+  "analytics.class.click.lnb.invite": "초대하기_web",
+  "analytics.class.click.lnb.form": "결석계/체험학습_web",
+  "analytics.class.click.lnb.survey": "설문/투표_web",
+
+  "analytics.class.click.button.invite.print": "초대장_인쇄하기",
+  "analytics.class.click.button.invite.linkCopy": "초대장_링크_복사_web",
+  "analytics.class.click.button.invite.sendMessage": "무료_문자로_초대장_보내기_web",
+  "analytics.class.click.button.createClass": "클래스_생성_web",
+  "analytics.class.click.button.joinInviteCode": "초대코드로_가입_web",
+  "analytics.class.click.button.searchClass": "클래스_찾기_web",
+
+  "analytics.class.member.addStudentBatch.submit.editMode": "클래스_임시학생계정_일괄생성하기_직접입력_web",
+  "analytics.class.member.addStudentBatch.submit.excelUpload": "클래스_임시학생계정_일괄생성하기_엑셀업로드_web",
+
+  "analytics.class.clazzApplies.print": "학교양식신청서_일괄인쇄_web",
+
+  "analytics.school.click.lnb.all": "학교_전체_메뉴_web",
+  "analytics.school.click.lnb.alarm": "가정통신문_메뉴_web",
+  "analytics.school.click.lnb.alarm_plus": "설문_메뉴_web",
+  "analytics.school.click.lnb.meal": "급식_메뉴_web",
+  "analytics.school.click.lnb.notice": "학교공지_메뉴_web",
+
+  "analytics.information.click": "교육정보_메뉴_web",
+  "analytics.information.education.click.selectCategory": "교육정보_카테고리_web",
+  "analytics.information.education.click.contentDetail": "교육정보_상세_web",
+  "analytics.information.education.click.contentDetail.shareButton": "교육정보_공유_web",
+  "analytics.information.event.click.contentDetail": "이벤트_상세_web",
+  "analytics.information.hinotice.click.contentDetail": "공지사항_상세_web",
+
+  "analytics.mypage.click": "내_프로필_web",
+  "analytics.mypage.click.lnb.info": "개인정보_web",
+  "analytics.mypage.click.lnb.schools": "나의_학교_web",
+  "analytics.mypage.click.lnb.clazzes": "나의_클래스_web",
+  "analytics.mypage.click.lnb.scrap": "나의_스크랩_web",
+
+  "analytics.myboard.click": "더보기_web",
+  "analytics.myboard.click.news": "내소식_더보기_web",
+  "analytics.myboard.click.lnb.news": "내소식_더보기_web",
+  "analytics.myboard.click.lnb.alarmplus": "학교알리미_설문_더보기_web",
+
+  "analytics.help.click": "교객센터_web",
+  "analytics.help.click.lnb.notice": "공지사항_web",
+  "analytics.help.click.lnb.faq": "자주_묻는_질문_web",
+  "analytics.help.click.lnb.question": "문의하기_web",
+  "analytics.help.click.lnb.suggestion": "서비스_제안하기_web",
+  "analytics.help.click.lnb.contactus": "광고_및_제휴문의_web",
+
+  "analytics.alarmplus.click": "학교알리미_메뉴_web",
+  "analytics.alarmplus.loadPage": "학교알리미_메인_web",
+
+  "analytics.timetable.click": "시간표_메뉴_web",
+
+  "analytics.class.click.member.button.startChat": "하이톡_web",
+  "analytics.chat.click": "하이톡_메뉴_web",
+  "analytics.chat.click.button.setting": "하이톡_설정_web",
+  "analytics.chat.click.chatRoom.emoticon": "이모티콘_web",
+  "analytics.chat.click.button.noticePersonalMessage": "일괄메시지_web",
+  "analytics.chat.count.error.toasted": "하이톡_알럿메시지_web",
+  "analytics.survey.survey.create": "설문_설문_발행",
+  "analytics.survey.after_school.create": "설문_방과후_발행",
+  "analytics.survey.consultation.create": "설문_학부모_발행",
+  "analytics.survey.survey.update": "설문_설문_수정",
+  "analytics.survey.after_school.update": "설문_방과후_수정",
+  "analytics.survey.consultation.update": "설문_학부모_수정",
+  "analytics.survey.survey.sendPush": "설문_설문_응답자_푸시",
+  "analytics.survey.after_school.sendPush": "설문_방과후_응답자_푸시",
+  "analytics.survey.consultation.sendPush": "설문_학부모_응답자_푸시",
+  "analytics.behavior.click": "행동기록_메뉴_web",
+
+  "analytics.login.teacher": "로그인_선생님",
+  "analytics.login.teacher.iscreammedia": "선생님_i-scream",
+  "analytics.login.teacher.google": "선생님_구글",
+  "analytics.login.teacher.apple": "선생님_애플",
+  "analytics.login.parents": "로그인_학부모",
+  "analytics.login.parents.kakao": "학부모_카카오",
+  "analytics.login.parents.naver": "학부모_네이버",
+  "analytics.login.parents.google": "학부모_구글",
+  "analytics.login.parents.apple": "학부모_애플",
+  "analytics.login.student": "로그인_학생",
+  "analytics.login.student.kakao": "학생_카카오",
+  "analytics.login.student.naver": "학생_네이버",
+  "analytics.login.student.google": "학생_구글",
+  "analytics.login.student.apple": "학생_애플",
+  "analytics.login.student.temporary": "학생_임시",
+  "analytics.login.advertiser": "광고주",
+  "analytics.hiclass.viewer": "하이클래스_이미지뷰어",
+  "analytics.hiclass.viewer.mainHome": "메인홈_이미지뷰어",
+  "analytics.hiclass.viewer.clazzes": "클래스_이미지뷰어",
+  "analytics.hiclass.viewer.clazzes.note": "알림장_이미지뷰어",
+  "analytics.hiclass.viewer.clazzes.album": "앨범_이미지뷰어",
+  "analytics.hiclass.viewer.clazzes.board": "자유게시판_이미지뷰어",
+  "analytics.hiclass.viewer.clazzes.homework": "과제_이미지뷰어",
+  "analytics.hiclass.viewer.myboard-news": "내소식_이미지뷰어",
+  "analytics.hiclass.viewer.schools": "학교_이미지뷰어",
+  "analytics.hiclass.viewer.schools-notice": "공지_이미지뷰어",
+  "analytics.hiclass.viewer.schools-meal": "급식_이미지뷰어",
+  "analytics.hiclass.viewer.schools-alarm": "가정통신문_이미지뷰어",
+  "analytics.hitalk.viewer": "하이톡_이미지뷰어",
+  "analytics.hitalk.create.room.limit": "하이톡_기간채팅방",
+
+  "analytics.behavior.toolkit": "학급기록_수업도구_web",
+  "analytics.behavior.toolkit.timer": "학급기록_타이머_web",
+  "analytics.behavior.toolkit.dice": "학급기록_주사위_web",
+  "analytics.behavior.toolkit.coin": "학급기록_동전던지기_web",
+  "analytics.behavior.toolkit.wheel": "학급기록_돌림판_web",
+  "analytics.behavior.toolkit.memo": "학급기록_메모_web",
+  "analytics.behavior.toolkit.noisemonitor": "학급기록_소음측정기_web",
+  "analytics.behavior.toolkit.video": "학급기록_영상재생_web",
+  "analytics.behavior.toolkit.qrcode": "학급기록_QR코드_web",
+  "analytics.behavior.toolkit.air": "학급기록_미세먼지_web",
+
+  "analytics.text.send.weblink": "LMS웹링크_web",
+
+  "analytics.user.age.verification.14older.completed": "기존_회원_14세이상_완료_web",
+  "analytics.user.age.verification.14under.completed": "기존_회원_14세미만_완료_web",
+
+  "chat.hitalk": "[하이톡 (채팅)]",
+  "chat.loading": "로딩중...",
+  "chat.download": "다운로드",
+  "chat.user": "대화 상대",
+  "chat.list": "대화 목록",
+  "chat.validation.error.parameter": "파라미터가 잘못 되었습니다.",
+  "chat.validation.error.chatroom": "채팅방이 1개 이상입니다.",
+  "chat.filter.all": "전체",
+  "chat.send": "보내기",
+  "chat.copy": "복사",
+  "chat.message.confirm": "메시지 수신확인",
+  "chat.delete": "삭제",
+  "chat.leave": "나가기",
+  "chat.cancel": "취소",
+  "chat.confirm": "확인",
+  "chat.read.processing": "읽음처리",
+  "chat.connect.error.reconnect.alert": "새 대화를 확인중입니다.<br>팝업을 닫은 후 잠시만 기다려주세요.",
+  "chat.invalid.group.members": "단체 공지할 대상이 없습니다",
+  "chat.invalid.counsel.time": "지금은 상담 가능 시간이 아니므로 <br> 답장이 어려울 수 있습니다.",
+  "chat.input.placeholder.withdrawal": "메시지 입력이 불가능한 채팅방 입니다.",
+  "chat.input.placeholder.teacheronly": "선생님만 작성 가능 합니다.",
+  "chat.input.placeholder.blocked": "채팅 기능이 일시 중지되었습니다.",
+  "chat.input.placeholder": "Shift + Enter키를 누르면 줄바꿈됩니다.",
+  "chat.input.keyword.limit": "1000자 이하로만 전송가능합니다.",
+  "chat.leave.alert": "채팅방에서 나가시겠습니까?",
+  "chat.leave.reservation.alert": "대화방에서 나가시겠습니까?<br>등록된 예약메시지는 삭제되지 않습니다.",
+  "chat.leave.group.alert": "채팅방을 종료하시면 내역이 모두 삭제됩니다.\n종료 전 대화내용을 저장해 주세요.\n채팅방을 종료하시려면 \"종료 후 삭제\"를 눌러주세요.",
+  "chat.leave.group.reservation.alert": "대화방에서 나가시겠습니까?<br>등록된 예약메시지를 전송할 수 없습니다.",
+  "chat.delete.your.alert": "구성원의 대화창에서도 삭제됩니다.\n삭제하시겠습니까?",
+  "chat.delete.alert": "상대의 대화창에서도 삭제됩니다.\n삭제하시겠습니까?",
+  "chat.message.read.alert": "해당 대화방의 읽지 않은 대화가 모두 읽음 처리됩니다. 읽음 처리하시겠습니까?",
+  "chat.message.delete": "삭제된 메시지 입니다.",
+  "chat.upload.invalid.alert": "지원하지 않는 파일 형식입니다.",
+  "chat.upload.video.alert": "동영상 전송은 앱(App)에서 가능합니다.",
+  "chat.invalid.preview": "미리보기를 지원하지 않는 파일입니다.\n첨부파일을 다운로드 합니다.",
+  "chat.invalid.download.video": "동영상 다운로드는 지원하지 않습니다.",
+  "chat.invalid.setting.time.counsel": "종료 시간을 시작 시간보다 빠르게 설정할 수 없습니다.",
+  "chat.time.updated": "상담가능시간이 변경완료 되었습니다.",
+  "chat.time.available": "대화 가능 시간",
+  "chat.time.unavailable": "대화 가능 시간이 없습니다.",
+  "chat.time.available.days": "상담 가능 요일",
+  "chat.time.available.counsel": "상담 가능 시간",
+  "chat.time.start": "시작 시간",
+  "chat.time.end": "종료 시간",
+  "chat.type.teacher": " 선생님",
+  "chat.type.parent": " 학부모",
+  "chat.type.student": " 학생",
+  "chat.settings.ago.second": "초전",
+  "chat.settings.ago.minute": "분전",
+  "chat.settings.ago.hour": "시간전",
+  "chat.settings.ago.day": "일전",
+  "chat.settings.second": "초",
+  "chat.settings.minute": "분",
+  "chat.settings.hour": "시",
+  "chat.settings.month": "월",
+  "chat.settings.day": "일",
+  "chat.settings.monday": "월",
+  "chat.settings.tuesday": "화",
+  "chat.settings.wednesday": "수",
+  "chat.settings.thursday": "목",
+  "chat.settings.friday": "금",
+  "chat.settings.saturday": "토",
+  "chat.settings.sunday": "일",
+  "chat.settings.am": "오전",
+  "chat.settings.pm": "오후",
+  "chat.settings.counsel.available": "상담 가능 시간 설정",
+  "chat.settings.counsel.description": "상담시간과 관계없이 채팅(하이톡)이 전송되나 상대가 보낸 메시지의 알림(푸시)이 오지않아 개인시간을 보호받을 수 있습니다.",
+  "chat.notice.target.default": "공지대상 선택",
+  "chat.notice.target.all": "구성원 전체",
+  "chat.notice.target.parents": "학부모 전체",
+  "chat.notice.target.student": "학생 전체",
+  "chat.notice.target.custom": "직접 선택",
+
+  "attendance.guide.default.info": "선생님 확인 전에만 수정/삭제가 가능합니다. \n일정이 바뀌었을 경우, 삭제 후 다시 제출해주세요."
+}

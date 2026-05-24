@@ -1,0 +1,24 @@
+.badge {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 24px;
+  font-weight: --font-weight-normal;
+  text-align: center;
+  white-space: nowrap;
+}
+.badge.purple {
+  background-color: var(--graphic-lavender);
+  color: var(--text-base);
+}
+.badge.primary {
+  background-color: var(--bg-primary-base);
+  color: var(--text-base);
+}
+.badge.secondary {
+  background-color: var(--bg-secondary-base);
+  color: var(--text-base);
+}
+.badge.noti {
+  background-color: var(--graphic-coral);
+  color: var(--text-base);
+}/*# sourceMappingURL=badge.module.css.map */

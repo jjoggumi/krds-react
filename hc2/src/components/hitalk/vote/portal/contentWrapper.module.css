@@ -1,0 +1,25 @@
+.content-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+}
+
+.header {
+  display: flex;
+  height: 49px;
+  padding-left: 16px;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 8px 8px 0 0;
+}
+
+.item {
+  border-bottom: 1px solid #E0E0E0;
+  overflow: hidden;
+}
+
+.item:last-child {
+  border-bottom: none;
+}

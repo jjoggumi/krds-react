@@ -1,0 +1,138 @@
+.hitalk-vote-portal {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 1000;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+button.close-button :global(.icon) {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+button.excel-button {
+  position: absolute;
+  top: 19px;
+  right: 65px;
+  width: 162px;
+  height: 32px;
+  border-radius: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #267E4E;
+  background: #FFF;
+  color: #267E4E;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* web/Text-s/Medium */
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px; /* 150% */
+  letter-spacing: -0.2px;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+.hitalk-tabs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 17px;
+}
+
+.hitalk-tabs :global(.tabs-wrapper) {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 53px;
+  overflow: hidden;
+  padding-left: 16px;
+  border-bottom: solid 1px #e8e8e8;
+}
+
+.hitalk-tabs :global(.tab-label) {
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  padding: 14px 20px 22px 20px;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--web-Text-Gray-08, #9E9E9E);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px; /* 106.25% */
+}
+
+.hitalk-tabs :global(.tab-label.active) {
+  color: #222;
+  font-weight: 500;
+  border-bottom: solid 2px #222;
+}
+
+.hitalk-tabs :global(.tab-content) {
+  flex: 1;
+  padding: 16px;
+  background-color: white;
+  height: 629px;
+  overflow-y: auto;
+}
+
+.hitalk-tabs :global(.tab-content)::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.hitalk-tabs :global(.tab-content)::-webkit-scrollbar-thumb {
+  background-color: #cfd3db;
+  background-clip: padding-box;
+  min-height:40px;
+  border: 2px solid transparent;
+  border-radius: 10px;  
+}
+.hitalk-tabs :global(.tab-content)::-webkit-scrollbar-track { 
+  background-color: transparent; 
+}
+
+.loading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.loading :global(.icon) {
+  width: 100px;
+}

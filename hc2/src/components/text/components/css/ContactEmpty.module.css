@@ -1,0 +1,7 @@
+.title5 :global(.etc) {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}/*# sourceMappingURL=ContactEmpty.module.css.map */

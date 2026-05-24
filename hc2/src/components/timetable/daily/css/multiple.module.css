@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* 복수교사 배정 */
+.co-teacher :global .gray-box .tb-col .panel .option-list {
+  height: 280px;
+  max-height: 280px;
+}
+.co-teacher :global .gray-box .tb-col .panel .option-list .hi-nodata {
+  padding: 100px 0;
+}/*# sourceMappingURL=multiple.module.css.map */

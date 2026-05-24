@@ -1,0 +1,107 @@
+
+
+// 수업수정 슬라이드 모달
+.lessonChangeSideModal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  :global(.side-modal-cont){
+    margin-bottom: 90px;
+  }
+  :global(.btns){
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    > button{
+      width: 150px;
+    }
+  }
+  :global(.h4-tit){
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-neutral-base);
+    padding-bottom: 20px;
+    h4{
+      font-size: 18px;
+    }
+  }  
+  :global(.form-group-inline){
+    :global(.autocomplete-wrap){
+      max-width: 320px;
+      width: 100%;
+    }
+    :global(.hi-selectbox){
+      max-width: 320px;
+      width: 100%;
+    }
+    & + :global(.hi-nodata){
+      height: 280px;
+      border-radius: 12px;
+      border: 1px solid var(--border-neutral-strong);
+      margin: 30px 0 ;
+    }
+  }
+}
+
+// 수업변경 탭
+.lessonChangeManagement {
+  :global(.table-content){
+    td{
+      cursor: pointer;
+      :global(.btn-xs){
+        height:24px;
+      }
+      :global(.text-text-neutral-stronger) {
+        color: var(--text-neutral-stronger);
+      }
+      :global(.break-all) {
+        word-break: break-all;
+      }      
+    } 
+    // 임시 필터 아이콘
+    th {
+      :global(.btn) {
+        &:global(.btn-sort) {
+          &::after {
+            mask-image: url('@/assets/img/icon/ico-arrow-down-fill.svg');
+          }
+        }
+      }
+    }
+  }
+  :global(.change-list) {
+    input[type=checkbox] {
+      +label {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    input[type='checkbox'] + label,
+    input[type='checkbox'] + label::after {
+      transition: none !important;
+    }
+  }
+  :global(.input-wrap) {
+    color: red;
+    :global(.ico-close-circle-fill) {
+      left: 228px;
+    }
+  }
+}
+
+
+// 수업 변경 신청 모달
+.lessonChangeRequestModal{
+  :global{
+    .table-content + .table-content{
+      margin-top: 30px;
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+{
+  "src/assets/css/hc-common.scss": {
+    "file": "assets/hc-common.css",
+    "src": "src/assets/css/hc-common.scss",
+    "isEntry": true
+  },
+  "src/assets/css/hc-tailwind.css": {
+    "file": "assets/hc-tailwind.css",
+    "src": "src/assets/css/hc-tailwind.css",
+    "isEntry": true
+  },
+  "src/hc2.js": {
+    "file": "assets/hc2.js",
+    "name": "hc2",
+    "src": "src/hc2.js",
+    "isEntry": true,
+    "css": [
+      "assets/hc2.css"
+    ]
+  }
+}

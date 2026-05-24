@@ -1,0 +1,53 @@
+
+/* 복수교사 배정 */
+.co-teacher {
+  // :global(.tb-row) {
+  //   flex-wrap: nowrap;
+  //   justify-content: center;
+
+  //   :global(.tb-col) {
+  //     width: 100%;
+  //     padding: 10px 20px;
+  //     //max-width: 643px;
+  //   }
+  // }
+
+  :global {
+    .gray-box .tb-col .panel .option-list {
+      height: 280px;
+      max-height: 280px;
+      .hi-nodata{
+        padding: 100px 0;
+      }
+    }
+  }
+}
+// .co-teacher {
+//   .tb-row {
+//     flex-wrap: nowrap;
+//     justify-content: center;
+
+//     .tb-col {
+//       width: 100%;
+//       padding: 10px 20px;
+//       max-width: 643px;
+//     }
+//   }
+
+//   .option-list {
+//     height: 280px;
+//     max-height: 280px;
+//   }
+// }
+
+// .form-group-inline {
+//   > label.sm {
+//     min-width: 100px;
+//   }
+
+//   .hi-selectbox,
+//   .autocomplete-wrap {
+//     max-width: 320px;
+//     width: 100%;
+//   }
+// }

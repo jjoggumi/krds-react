@@ -1,0 +1,127 @@
+@use "@/assets/css/scss/common/var" as *;
+
+@mixin displayMq($size:''){	
+	.d#{$size}-none {
+	  display: none !important;
+	}
+	
+	.d#{$size}-inline {
+	  display: inline !important;
+	}
+	
+	.d#{$size}-inline-block {
+	  display: inline-block !important;
+	}
+	
+	.d#{$size}-block {
+	  display: block !important;
+	}
+	
+	.d#{$size}-table {
+	  display: table !important;
+	}
+	
+	.d#{$size}-table-row {
+	  display: table-row !important;
+	}
+	
+	.d#{$size}-table-cell {
+	  display: table-cell !important;
+	}
+	
+	.d#{$size}-flex {
+	  display: -ms-flexbox !important;
+	  display: flex !important;
+	}
+	
+	.d#{$size}-inline-flex {
+	  display: -ms-inline-flexbox !important;
+	  display: inline-flex !important;
+	}
+}
+
+@mixin visibleMq($size:''){	
+	.visible#{$size} {
+	    display: block !important;
+	}
+	table.visible#{$size} {
+	    display: table !important;
+	}
+	tr.visible#{$size} {
+	    display: table-row !important;
+	}
+	th.visible#{$size}, 
+	td.visible#{$size} {
+	    display: table-cell !important;
+	}
+	.visible#{$size}-flex {
+	    display: flex !important;
+	}
+	.visible#{$size}-block {
+	    display: block !important;
+	}
+	.visible#{$size}-inline {
+	    display: inline !important;
+	}
+	.visible#{$size}-inline-block {
+	    display: inline-block !important;
+	}
+}
+
+/* display respon */
+@include displayMq();
+
+@media (max-width: 576px) {
+	@include displayMq(-xs);
+}
+@media (max-width: 768px) {
+	@include displayMq(-sm);
+}
+@media (max-width: 992px) {
+	@include displayMq(-md);
+}
+@media (max-width: 1200px) {
+	@include displayMq(-lg);
+}
+@media print {
+	@include displayMq(-print);
+}
+.visible-xs, .visible-sm, .visible-md, .visible-lg {
+  display: none !important;
+}
+
+.visible-xs-block, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block,
+.visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
+  display: none !important;
+}
+
+.visible-xs-flex, .visible-sm-flex, .visible-md-flex, .visible-lg-flex {
+  display: none !important;
+}
+
+@media (max-width: 576px) {
+	@include visibleMq(-xs);
+}
+@media (max-width: 768px) {
+	@include visibleMq(-sm);
+}
+@media (max-width: 992px) {
+	@include visibleMq(-md);
+}
+@media (max-width: 1200px) {
+	@include visibleMq(-lg);
+}
+
+
+@media (max-width: 576px) {
+	.hidden-xs { display: none !important; }
+}
+@media (max-width: 768px) {
+	.hidden-sm { display: none !important; }
+}
+@media (max-width: 992px) {	
+	.hidden-md { display: none !important; }
+}
+@media (max-width: 1200px) {	
+	.hidden-lg { display: none !important; }
+}

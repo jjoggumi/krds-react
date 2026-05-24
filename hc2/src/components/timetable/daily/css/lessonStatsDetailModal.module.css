@@ -1,0 +1,18 @@
+.lessonStatsDetailModal :global(.table-view) td, .lessonStatsDetailModal :global(.table-view) th {
+  height: 52px;
+}
+.lessonStatsDetailModal :global(.table-view) tr:last-child td,
+.lessonStatsDetailModal :global(.table-view) tr:last-child th {
+  border-bottom: 0;
+}
+.lessonStatsDetailModal :global(.gray-box.table-view.table-content) {
+  padding: 12px 16px;
+  margin-top: 0;
+}
+.lessonStatsDetailModal :global(.gray-box.table-view.table-content) > table {
+  border-top: 0px !important;
+}
+.lessonStatsDetailModal :global(.gray-box.table-view.table-content) > table td, .lessonStatsDetailModal :global(.gray-box.table-view.table-content) > table th {
+  height: 44px;
+  border-bottom: 1px solid var(--border-neutral-subtle);
+}/*# sourceMappingURL=lessonStatsDetailModal.module.css.map */

@@ -1,0 +1,27 @@
+[
+  {
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "roomName": "미술실",
+    "maxClass": 3
+  },
+  {
+    "specialtyRoomId": "faba1b08-6da0-40bd-99fc-92c069ba68bc",
+    "roomName": "미술관",
+    "maxClass": 3
+  },
+  {
+    "specialtyRoomId": "99294a11-19ba-44bd-a6ea-e8fc321cad23",
+    "roomName": "지구과학실",
+    "maxClass": 3
+  },
+  {
+    "specialtyRoomId": "e2741c16-c0e7-4322-8c73-2d4f2841c503",
+    "roomName": "체육관",
+    "maxClass": 3
+  },
+  {
+    "specialtyRoomId": "733b83ef-b7d9-4e12-9272-ae953135c70c",
+    "roomName": "음악실",
+    "maxClass": 3
+  }
+]

@@ -1,0 +1,465 @@
+// 일별 시간표 메인
+:global(.timetable-root){
+  .timetableMain{
+    flex: 1;
+    width: 100%;
+    padding-bottom:40px;
+    :global{
+      .tab-nav.type01 + .tab-con,
+      .tab-nav.type01 + .tab-con + .tab-con,
+      .tab-nav.type01 + .tab-con + .tab-con + .tab-con {
+        height: calc(100% - 111px);
+        margin-top: 24px;
+      }
+      // 시간표 선택박스
+      .timetable-select{
+        .badge{
+          border-radius: 50px;
+          background-color: var(--graphic-coral);
+        }
+        .selected{
+          border:0 !important;
+          font-size: 23px;
+          font-weight:  var(--font-weight-strong);
+          line-height: 140%;
+          color: var(--font-color);
+          padding: 0 36px 0 0;
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          &::after{
+            mask-image: none;
+            content: "";
+            background: none;
+            border: 0;
+            font-size: 10px;
+            text-align: center;
+            height:auto;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--border-neutral-strongest);
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            width: 0px;
+            height: 0;
+          }
+          .badge{
+            width: 48px;
+            height: 22px;
+          }
+        }
+
+        &.is-opened{
+          .selected{
+            &::after{
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+      .operation-period{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        color: var(--text-neutral-stronger);
+        .btn{
+          color: var(--text-neutral-stronger);
+        }
+      }
+
+    }
+    :global(.form-group-inline){
+      :global(.tooltip-custom){
+        margin-top: -2px;
+        margin-left: 2px;
+        i::after{
+          background-color: var(--action-red-base) !important;
+        }
+      }
+    }
+    :global(.input-wrap){
+      position: relative;
+      i{
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      input{
+        padding-left: 36px;
+      }
+    }
+    :global(.table-content){
+      &:global(.custom-scr){
+        width: 100%;
+        overflow: auto;
+      }
+      td{
+        :global(.btn-link){
+          &:disabled{
+            cursor: auto;
+            i::after{
+              background-color: var(--bg-neutral-strong) !important;
+            }
+          }
+          &:not(:disabled):hover{
+            i::after{
+              background-color: var(--bg-tertiary-stronger) !important;
+            }
+          }
+        }
+      }
+    }
+    :global(.timetable-nodata.hi-nodata){
+      height: 400px;
+      border-radius: 12px;
+      border: 1px solid var(--border-neutral-strong);
+      margin: 20px 0 ;
+    }
+  }
+
+  // 전체 시간표 탭
+  .timetableManagement{
+    :global(.week-select){
+      :global(.hi-selectbox-wrap.lg){
+        :global(.selected){
+          border:0 !important;
+          font-size: 16px;
+          font-weight:  var(--font-weight-bold);
+          line-height: 140%;
+          color: var(--text-default);
+          padding: 0;
+          background-color: transparent;
+          min-width: 290px;
+          text-align: center;
+          &::after{
+            display: none;
+          }
+          i{
+            padding: 0 0 3px 5px;
+          }
+        }
+        &:global(.is-opened){
+          :global(.selected){
+            i::after{
+              background-color: var(--bg-primary-base) !important;
+            }
+          }
+        }
+      }
+    }
+    :global(.tb-row) {
+      :global(.table-content) {
+        :global(.h4-tit) {
+          :global(.period) {
+            font-size: 16px;
+          }
+        }
+        table {
+          tbody {
+            :global(td.th) {
+              background-color: var(--bg-neutral-subtlest);
+            }
+          }
+        }
+      }
+    }
+    :global(.select-area){
+      :global(.hi-selectbox){
+        width: 200px;
+        +:global(.hi-selectbox){
+          width: 240px;
+        }
+      }
+    }
+    :global(.is-filtered){
+      :global(.selected){
+        border: 1px solid var(--control-secondary-subtle);
+      }
+    }
+    :global(.option-layer){
+      min-width: 100%;
+      background: var(--bg-base);
+      border: 1px solid var(--border-neutral-base);
+      border-radius: 8px;
+      width: 170px;
+      z-index: 10;
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 4px);
+      transform: translateX(-50%);
+      // :global(.option-list) {
+      //   :global(.item) {
+      //     input[type=checkbox] {
+      //       +label {
+      //         span {
+      //           font-size: 14px;
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
+
+  // 수업수정 슬라이드 모달
+  .lessonChangeSideModal {
+    // display: flex;
+    // flex-direction: column;
+    // position: relative;
+    :global(.side-modal-cont){
+      margin-bottom: 90px;
+    }
+    :global(.btns){
+      position: absolute;
+      left: 0;
+      bottom: 30px;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      > button{
+        width: 150px;
+      }
+    }
+    :global(.h4-tit){
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid var(--border-neutral-base);
+      padding-bottom: 20px;
+      h4{
+        font-size: 18px;
+      }
+    }
+    :global(.form-group-inline){
+      :global(.autocomplete-wrap){
+        max-width: 320px;
+        width: 100%;
+      }
+      :global(.hi-selectbox){
+        max-width: 320px;
+        width: 100%;
+      }
+      & + :global(.hi-nodata){
+        height: 280px;
+        border-radius: 12px;
+        border: 1px solid var(--border-neutral-strong);
+        margin: 30px 0 ;
+      }
+    }
+  }
+
+  // 학급일정 변경 슬라이드 모달
+  .classScheduleChangeSideModal{
+    // display: flex;
+    // flex-direction: column;
+    // position: relative;
+    [class*=form-group]:global(.form-group-inline) + :global(.form-group-inline){
+      margin-top: 36px;
+    }
+  }
+
+  // 수업변경 탭
+  .lessonChangeManagement {
+    :global(.table-content){
+      td{
+        cursor: pointer;
+        :global(.btn-xs){
+          height:24px;
+        }
+        :global(.text-text-neutral-stronger) {
+          color: var(--text-neutral-stronger);
+        }
+        :global(.break-all) {
+          font-size: var(--text-d2);
+        }
+      }
+      // 임시 필터 아이콘
+      th {
+        :global(.btn) {
+          &:global(.btn-sort) {
+            &::after {
+              mask-image: url('@/assets/img/icon/ico-arrow-down-fill.svg');
+            }
+          }
+        }
+      }
+    }
+    :global(.change-list) {
+      input[type=checkbox] {
+        +label {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    :global(.input-wrap) {
+      color: red;
+      :global(.ico-close-circle-fill) {
+        left: 228px;
+      }
+    }
+  }
+
+  // 수업 변경 신청 모달
+  .lessonChangeRequestModal{
+    :global{
+      .table-content + .table-content{
+        margin-top: 30px;
+      }
+    }
+  }
+
+  // 학급일정 변경 탭
+  .classScheduleManagement {
+    :global(.table-content){
+      td{
+        cursor: pointer;
+        :global(.break-all) {
+          word-break: break-all;
+        }
+      }
+      // 임시 필터 아이콘
+      th {
+        :global(.btn) {
+          &:global(.btn-sort) {
+            &::after {
+              mask-image: url('@/assets/img/icon/ico-arrow-down-fill.svg');
+            }
+          }
+        }
+      }
+    }
+    :global(.change-list) {
+      input[type=checkbox] {
+        +label {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    :global(.input-wrap) {
+      :global(.ico-close-circle-fill) {
+        left: 228px;
+      }
+    }
+  }
+
+  // 시수 누계 관리 탭
+  .lessonStatsManagement{
+    height:100%;
+    display: flex;
+    flex-flow: column;
+    :global(.tb-row){
+      margin: 0;
+      flex-wrap: nowrap;
+      flex-grow: 1;
+      min-height: 0;
+      gap: 20px;
+      :global(.table-content.date-check){
+        width: 20%;
+        min-width: 185px;
+        height: 460px;
+        th{
+          background-color: var(--bg-neutral-subtlest);
+          border-bottom: 1px solid var(--border-neutral-subtler);
+          padding: 8px 16px;
+        }
+        td{
+          padding: 8px;
+        }
+        tr:first-child td{
+          border-top:0;
+        }
+        & + :global(.table-content){
+          flex-grow: 1;
+          max-height: fit-content;
+        }
+      }
+    }
+  }
+
+  //시수 누계 관리 상세 모달
+  .lessonStatsDetailModal{
+    :global(.table-view){
+      td, th{
+        height:52px;
+      }
+      tr:last-child td,
+      tr:last-child th{
+        border-bottom: 0;
+      }
+    }
+    :global(.gray-box.table-view.table-content){
+      padding:12px 16px;
+      margin-top: 0;
+
+      > table{
+        border-top:0px !important;
+        td, th{
+          height:44px;
+          border-bottom: 1px solid var(--border-neutral-subtle);
+        }
+      }
+    }
+  }
+
+  // 시간표 선택박스 레이어
+  :global{
+    .timetable-select-layer{
+      .option-list{
+        white-space: nowrap;
+        min-width: 420px;
+        > .flex{
+          position: relative;
+          .item{
+            padding-right:40px;
+          }
+          .btn-trash{
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          .badge{
+            border-radius: 50px;
+            background-color: var(--graphic-coral);
+            width: 42px;
+            height: 18px;
+            font-size: 10px;
+            font-weight:  var(--font-weight-bold);
+            color: var(--text-base);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .list-add {
+        font-size: var(--text-b3);
+        color: var(--text-primary-base);
+        padding: 12px 24px 14px;
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+
+  // 기초 시간표 생성하기 모달
+  .baseTimetableModal{
+    .btns {
+      button{
+        min-width:135px;
+      }
+      span{
+        line-height: 130%;
+      }
+    }
+
+  }
+}

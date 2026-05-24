@@ -1,0 +1,51 @@
+/* Card 기본 스타일 */
+.card {
+  display: block;
+  background-color: var(--bg-base);
+  border-radius: 12px;
+  padding: 12px;
+
+  /* Card 크기별 스타일 */
+  &.card-xs {
+    border-radius: 4px; /* 미지정 */
+    padding: 16px; /* 미지정 */
+  }
+  &.card-sm {
+    border-radius: 8px; /* 미지정 */
+    padding: 20px; /* 미지정 */
+  }
+  &.card-md {
+    border-radius: 12px;
+    padding: 24px;
+  }
+  &.card-lg {
+    border-radius: 12px;
+    padding: 32px;
+  }
+  &.card-xl {
+    border-radius: 20px; /* 미지정 */
+    padding: 30px; /* 미지정 */
+  }
+
+  /* Card 색상별 스타일 */
+  &.card-border {
+    background-color: var(--bg-base);
+    border: 1px solid var(--border-neutral-strong);
+  }
+
+  &.card-lightgray {
+    background-color: var(--bg-secondary-subtlest);
+    border: 1px solid var(--bg-secondary-subtlest);
+  }
+
+  /* 색상 임시 지정 */
+  &.card-lightblue {
+    background-color: var(--bg-primary-subtler);
+    border: 1px solid var(--bg-primary-subtler);
+  }
+
+  &.card-lightred {
+    background-color: var(--bg-red-subtlest);
+    border: 1px solid var(--bg-red-subtlest);
+  }
+}

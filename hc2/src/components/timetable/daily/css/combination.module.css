@@ -1,0 +1,7 @@
+.mergedClass :global .gray-box .tb-col .panel .option-list {
+  height: 275px;
+  max-height: 275px;
+}
+.mergedClass :global .gray-box .tb-col .panel .option-list .hi-nodata {
+  padding: 100px 0;
+}/*# sourceMappingURL=combination.module.css.map */

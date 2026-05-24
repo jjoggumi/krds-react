@@ -1,0 +1,591 @@
+@use "@/assets/css/scss/common/var" as *;
+@use "sass:color";
+
+$btnColors: (
+  primary: (color: $primary),
+  secondary: (color: $secondary),
+  success: (color: $success),
+  info: (color: $info),
+  noti: (color: $noti),
+  warning: (color: $warning),
+  error: (color: $error),
+  navy: (color: $navy),
+  purple: (color: $purple),
+  yellow: (color: $yellow),
+  jungle: (color: $jungle),
+  orange: (color: $orange),
+  default: (color: $default, hover: 0.5),  
+  gray: (color: $default),  
+  white: (color: $white, font: var(--gray-10), hover: 0.5),  
+  black: (color: $gray-10),  
+  light-primary: (color: $primary-04, font: #4166B0, hover: 0.5),
+);
+
+/* Button Style */
+@mixin btnStyle($color, $font: null, $hover: null) {
+  $fontValue: if($font == null, $white, $font);
+  $hoverValue: if($hover == null, 1.5, $hover);
+
+  color: $fontValue;
+  background: $color;
+  border-color: $color;
+
+  &:hover:not(.disabled, :disabled),
+  &:active:not(.disabled, :disabled) {
+    background: color.scale($color, $lightness: $hoverValue * -10%);
+    border-color: color.scale($color, $lightness: $hoverValue * -10%);
+    transition: all 0.3s ease;
+  }
+
+  > .hi-ico{
+    &::after{background-color: $fontValue;}
+  }
+}
+
+@mixin btnLineStyle($color, $font: $color, $hover: null) {  
+  $hoverValue: if($hover == null, 1.5, $hover);
+
+  color: $color;
+  background: var(--white);
+  border-color: $color;
+
+  &:hover:not(.disabled, :disabled),
+  &:active:not(.disabled, :disabled) {
+    background-color: var(--gray-02);    
+    transition: all 0.3s ease;
+  }
+
+  > .hi-ico{
+    &::after{background-color: var(--font-color);}
+  }
+}
+
+button,
+[role=button] {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.hi-btn{
+  display: inline-block;
+  color: var(--white);
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  font-weight: 500;
+  text-align: center;
+  padding: 0 16px;
+  border-radius: 100px;
+  min-height: 25px;
+  line-height: 1.2;
+
+  > .hi-ico{
+    vertical-align: middle;
+    padding: 0;
+    margin-left: -2px;
+    margin-top: -1px;
+  }
+
+  &.disabled:not(.btn-link),
+  &:disabled:not(.btn-link),
+  &[aria-disabled="true"]:not(.btn-link),
+  &[disabled]:not(.btn-link) {
+    color: var(--white) !important;
+    pointer-events: none;
+    background-color: var(--gray-06) !important;
+    border-color: var(--gray-06) !important;
+    cursor: default;
+
+    > .hi-ico{
+      &::after{background-color: var(--white) !important;}
+    }
+  }
+
+  /* 버튼 사이즈 */
+  &.btn-xs {
+    font-size: 12px;
+    padding: 0 10px;
+    font-weight: 400;
+  }
+
+  &.btn-sm {
+    font-size: 14px;
+    padding: 0 12px;
+    min-height: 32px;
+    font-weight: 400;
+  }
+  
+  &.btn-md {
+    font-size: 14px;
+    min-height: 40px;
+    font-weight: 400;
+  }
+
+  &[class *='btn-line-'] {      
+    font-weight: 500;
+  }
+
+  &.btn-lg {
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  &.btn-xl {
+    font-size: 16px;
+    min-height: 52px;
+  }
+
+  &.btn-block {
+    width: 100%;
+  }
+
+  /* 버튼 스타일 */
+
+  // 기본 스타일 버튼
+  @each $name, $config in $btnColors {
+    $color: map-get($config, color);
+    $font: map-get($config, font);
+    $hover: map-get($config, hover);
+
+    &.btn-#{$name} {
+      @include btnStyle($color, $font: $font, $hover: $hover);
+    }
+    &.btn-line-#{$name} {
+      @include btnLineStyle($color, $hover: $hover);
+    }
+  }
+  
+  // 예외 버튼
+  &.btn-disabled {
+    color: var(--white) !important;
+    pointer-events: none;
+    background-color: var(--gray-06) !important;
+    border-color: var(--gray-06) !important;
+    cursor: default;
+  }
+  &.btn-link {
+    background: transparent;
+    color: var(--gray-10);
+    border-radius: 0;
+    padding: 0px;
+    line-height: normal;
+    font-weight: var(--font-normal);
+    border: 0;
+  }
+
+  &.btn-default {
+    @include btnStyle($gray-03, $font: $default, $hover: 0.5);
+  }
+
+  // &.btn-primary {
+  //   @include btnStyle($primary);
+  // }
+
+  // &.btn-light-primary {
+  //   @include btnStyle($primary-04,	$font: #4166B0, $hover: 0.5	);
+  // }
+
+  // &.btn-secondary {
+  //   @include btnStyle($secondary);
+  // }
+
+  // &.btn-success {
+  //   @include btnStyle($success);
+  // }
+
+  // &.btn-info {
+  //   @include btnStyle($info);
+  // }
+  
+  // &.btn-noti {
+  //   @include btnStyle($noti);
+  // }
+
+  // &.btn-noti {
+  //   @include btnStyle($noti);
+  // }
+
+  // &.btn-warning {
+  //   @include btnStyle($warning);
+  // }
+
+  // &.btn-purple {
+  //   @include btnStyle($purple);
+  // }
+
+  // &.btn-yellow {
+  //   @include btnStyle($yellow);
+  // }
+
+  // &.btn-jungle {
+  //   @include btnStyle($jungle);
+  // }
+
+  // &.btn-orange {
+  //   @include btnStyle($orange);
+  // }
+
+  // &.btn-gray {
+  //   @include btnStyle($gray-09, $font: var(--white));
+  // }
+
+  // &.btn-white {
+  //   @include btnStyle($white, $font: var(--gray-10), $hover: 0.5);
+  // }
+
+  // &.btn-black {
+  //   @include btnStyle($gray-10);
+  // }
+
+  // &.btn-link {
+  //   @include btnStyle($transparent, $font: var(--gray-10));
+  //   border-radius: 0;
+  //   padding: 0px;
+  //   line-height: normal;
+  //   font-weight: var(--font-normal);
+  // }
+
+  &.btn-line-default {
+    @include btnLineStyle(var(--default));
+    border-color: var(--gray-06);
+  }
+
+  // &.btn-line-primary {
+  //   @include btnLineStyle($primary);
+  // }
+
+  &.btn-line-light-primary {
+    @include btnLineStyle(var(--primary-05));
+    color:var(--secondary);
+  }
+
+  // &.btn-line-secondary {
+  //   @include btnLineStyle($secondary);
+  // }
+
+  // &.btn-line-success {
+  //   @include btnLineStyle($success);
+  // }
+
+  // &.btn-line-info {
+  //   @include btnLineStyle($info);
+  // }
+
+  // &.btn-line-noti {
+  //   @include btnLineStyle($noti);
+  // }
+
+  // &.btn-line-warning {
+  //   @include btnLineStyle($warning);
+  // }
+
+  // &.btn-line-purple {
+  //   @include btnLineStyle($purple);
+  // }
+
+  // &.btn-line-yellow {
+  //   @include btnLineStyle($yellow);
+  // }
+
+  // &.btn-line-jungle {
+  //   @include btnLineStyle($jungle);
+  // }
+
+  // &.btn-line-orange {
+  //   @include btnLineStyle($orange);
+  // }
+
+  // &.btn-line-gray {
+  //   @include btnLineStyle(var(--gray-09));
+  // }
+
+  // &.btn-line-black {
+  //   @include btnLineStyle(var(--gray-10));
+  // }
+
+  &.btn-line-white {
+    //@include btnLineStyle(var(--white));
+    background:transparent;
+    &:hover:not(.disabled, :disabled),
+    &:active:not(.disabled, :disabled) {
+      color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &.btn-bitrounded {
+    border-radius: 5px;
+  }
+
+  &.btn-square {
+    border-radius: 0;
+  }
+}
+
+// common.css
+.cursor-pointer {
+  cursor: pointer;
+}
+.hi-btn.btn-line {
+  color: var(--primary);
+  background-color: transparent;
+  border-color: var(--primary);
+}
+.hi-btn.btn-line-lgray {
+  color: #222;
+  background-color: transparent;
+  border-color: #d6d6d6;
+}
+.hi-btn.btn-end {
+  background-color: #ccc;
+  border-color: #ccc;
+}
+.hi-btn.btn-lgray {
+  color: #616161;
+  background-color: #f3f3f3;
+  border-color: #f3f3f3;
+}
+.hi-btn.btn-download {
+  color: #fff;
+}
+.hi-btn.btn-download.btn-line {
+  color: var(--primary);
+}
+.hi-btn.btn-download.btn-line-lgray {
+  color: #616161;
+}
+.hi-btn.btn-download::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("../../img/icon/icon_download_white.svg") no-repeat;
+  background-size: cover;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.hi-btn.btn-download.btn-line::before {
+  background-image: url("../../img/icon/icon_download_blue.svg");
+}
+.hi-btn.btn-download.btn-line-lgray::before {
+  background-image: url("../../img/icon/icon_download_gray.svg");
+}
+.hi-btn.btn-download[disabled]::before {
+  background-image: url("../../img/icon/icon_download_white.svg") !important;
+}
+
+/* 하이톡 공유 버튼 */
+.hi-hitalkshare .btn-hitalkshare {
+  width: 24px;
+  height: 24px;
+  background: #fff url("../../img/icon/icon_hitalkshare.svg") center center /
+    24px 24px no-repeat;
+}
+.hi-hitalkshare:hover .tooltip {
+  display: block;
+}
+.hi-hitalkshare .tooltip {
+  display: none;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  height: 30px;
+  background: rgba(61, 70, 85, 0.85);
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  white-space: nowrap;
+  padding: 0 10px;
+  transform: translateX(-50%);
+}
+.hi-hitalkshare .tooltip::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -8px;
+  left: calc(50% - 2px);
+  border: 4px solid transparent;
+  border-top: 4px solid rgba(61, 70, 85, 0.85);
+}
+
+// hiclass.css
+
+/* 흰색 버튼 */
+.btn-bg-w {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+.btn-bg-w:hover {
+  background: #ebeef4;
+}
+.btn-bg-w.dis {
+  background: #fff;
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* 흰색 버튼2 파랑보더 */
+.btn-bg-w2 {
+  border: 1px solid rgba(66, 103, 178, 0.4);
+  background: #fff;
+  color: #3867c6;
+}
+.btn-bg-w2:hover {
+  background: #ebeef4;
+}
+.btn-bg-w2.dis {
+  background: #fff;
+  cursor: default;
+  opacity: 0.5;
+}
+// 해당 페이지로 이동(MainBodyMypageInfoBodyAccount.vue)
+// .btn-bg-w3 {
+//   border: 1px solid var(--primary);
+//   background: #fff;
+//   color: var(--primary);
+// }
+// .btn-bg-w3:hover {
+//   background: #ebeef4;
+// }
+// .btn-bg-w3.dis {
+//   background: #fff;
+//   cursor: default;
+//   opacity: 0.5;
+// }
+//미사용
+// .btn-bg-w4 {
+//   border: 1px solid #4267b266;
+//   background: #fff;
+//   color: var(--primary);
+// }
+// .btn-bg-w4:hover {
+//   background: #ebeef4;
+// }
+// .btn-bg-w4.dis {
+//   background: #fff;
+//   cursor: default;
+//   opacity: 0.5;
+// }
+
+/* 코랄 버튼 border */
+//미사용
+// .btn-bg-cb {
+//   border: 1px solid #ff6a6a;
+//   background: #fff;
+//   color: #ff6a6a;
+// }
+// .btn-bg-cb:hover {
+//   opacity: 0.8;
+// }
+// .btn-bg-cb.dis {
+//   background: #dadde2;
+//   cursor: default;
+//   color: #fff;
+//   opacity: 1 !important;
+//   border: 0;
+// }
+
+/* 흰색 버튼-none border */
+// 미사용
+// .btn-bg-w-nb {
+//   background: #fff;
+// }
+// .btn-bg-w-nb:hover {
+//   opacity: 0.8;
+// }
+// .btn-bg-w-nb.dis {
+//   background: #fff;
+//   color: #000;
+//   cursor: default;
+//   opacity: 0.2;
+// }
+
+/* 코발트 버튼 */
+.btn-bg-c {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+}
+.btn-bg-c:hover {
+  background: #3867c6;
+}
+.btn-bg-c.dis {
+  background: #dadde2;
+  cursor: default;
+  color: #fff;
+}
+
+/* 쿨 그레이색 */
+.btn-bg-cg {
+  background: #ebeef4;
+}
+.btn-bg-cg:hover {
+  background: #e0e6f1;
+}
+.btn-bg-cg.dis {
+  background: #ebeef4;
+  opacity: 0.5;
+}
+
+/* 코랄-솔리드 버튼 border */
+// 해당 페이지로 이동(MemberDetail.vue)
+// .btn-bg-cb-solid {
+//   background: #ff6a6a;
+//   color: #fff;
+// }
+// .btn-bg-cb-solid:hover {
+//   opacity: 0.8;
+// }
+// .btn-bg-cb-solid.dis {
+//   background: #dadde2;
+//   cursor: default;
+//   color: #fff;
+//   opacity: 1 !important;
+//   border: 0;
+// }
+// .btn-bg-cb-solid.n {
+//   background: #ec1f2d;
+//   font-weight: 700;
+//   font-size: 15px;
+// }
+
+/* 그레이 버튼 */
+// 해당 페이지로 이동(AccountDeactivate.vue)  
+// .btn-bg-g {
+//   background-color: #5f6580;
+//   color: #fff;
+// }
+// .btn-bg-g:hover {
+//   opacity: 0.8;
+// }
+// .btn-bg-g.dis {
+//   background: #dadde2;
+//   opacity: 0.5;
+// }
+
+/* 레드 버튼 */
+// 해당 페이지로 이동(WorksheetReject.vue)  
+// .btn-bg-r {
+//   background-color: #ff2a20;
+//   color: #fff;
+// }
+// .btn-bg-r.dis {
+//   background: #dadde2;
+//   opacity: 0.5;
+// }
+
+// 기타 버튼 ('임시 학생 계정 생성'을 위한 동의 사항 페이지에서만 사용됨 : class 이동)
+// .tit-btn{
+//   font-size: 18px!important;
+//   letter-spacing: -1px;
+//   color:#3867c6;
+//   text-decoration: underline;
+// }

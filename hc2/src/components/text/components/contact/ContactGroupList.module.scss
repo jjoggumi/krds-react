@@ -1,0 +1,186 @@
+﻿// lessonList.module.scss
+
+.lnbContainer {
+  background-color: var(--bg-base);
+  width: 250px;
+  min-width: 250px;  
+  box-sizing: border-box;
+  position: sticky;
+  top: 85px;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: var(--text-h3);
+    line-height: var(--leading-h3);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    &.isSelected {
+      color: var(--text-primary-base);
+    }
+  }
+  .menuList {
+    height: calc(var(--vh) * 100 - 273px);
+    overflow: auto;
+    > li {
+      line-height: 40px;
+
+      .menuView {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 4px;
+        transition:
+          background-color 0.2s,
+          color 0.2s;
+        gap: 8px;
+        padding: 2px 0;
+        min-height: 40px;
+
+        .menuName {
+          color: var(--text-default);
+          flex-grow: 1;
+          font-size: var(--text-b3);
+          line-height: var(--leading-b3);
+          font-weight: var(--font-weight-medium);
+          &.isMain {
+            font-size: var(--text-b2);
+            line-height: var(--leading-b2);
+            font-weight:  var(--font-weight-bold);
+          }
+        }
+        .count {
+          margin-left: 4px;
+        }        
+        .actionBtns {
+          min-width: 48px;
+          gap: 8px;
+          display: none;
+
+          > button:hover {
+            color: var(--text-default);
+            i {
+              background-color: var(--gray-950);
+            }
+          }
+        }
+        &:hover {   
+          .actionBtns {
+            display: flex;
+          }
+          // .menuName {
+          //   color: var(--primary);
+          // }
+        }
+      }
+
+      .menuEdit {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 2px 4px 2px 0;
+        min-height: 40px;
+        .actionBtns {
+          display: flex;
+        }   
+        .text-input {
+          flex: 1 1 auto;
+          min-width: 0;
+        }
+      }
+
+      >.isSelected {
+        > .menuView .menuName {
+          color: var(--text-primary-base);
+          font-weight:  var(--font-weight-bold);
+        }
+      }
+    }
+    .addBtn {
+      color: var(--text-neutral-strong);
+      gap: 6px;
+      font-weight:  var(--font-weight-medium);
+      height: 40px;
+      padding-top: 2px;
+      i {
+        background-color: var(--gray-700);
+        width: 18px;
+        height: 18px;
+      }
+      &:hover {
+        color: var(--text-default);
+        font-weight:  var(--font-weight-bold);
+        i {
+          background-color: var(--gray-950);
+        }
+      }
+    }
+
+    .subList {
+      .isSub {
+        line-height: 36px;
+        padding: 2px 0;
+        > button {
+          margin-left: 18px;
+        }
+
+        .menuView {
+          gap: 6px;
+          padding: 0 4px 0 24px;
+          line-height: 36px;
+          min-height: 36px;
+          .dot {
+            font-size: var(--text-h1);
+          }
+          &:hover {      
+            // color: var(--primary);
+            // background: var(--primary-02);    
+            .actionBtns {
+              display: flex;
+            }
+            // .menuName {
+            //   color: var(--primary);
+            //   font-weight: var(--font-weight-bold);
+            // }
+          }
+        }
+        &.isSelected {
+          .menuView {
+            background: var(--bg-secondary-subtlest);
+            .dot {
+              color: var(--text-primary-base);
+            }
+            .menuName {
+              color: var(--text-primary-base);
+              font-weight:  var(--font-weight-bold);
+            }
+            &.menuEdit {
+              background: transparent;
+            }           
+          }
+        }
+        .addBtn {
+          padding-left: 24px;
+        }
+      }
+    }
+  }
+  .saveButton {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--action-primary-base);
+    color: white;
+    cursor: pointer;
+  }
+
+  .cancelButton {
+    padding: 6px 10px;
+    border: 1px solid var(--slate-200);
+    border-radius: 4px;
+    background-color: white;
+    color: var(--text-neutral-stronger);
+    cursor: pointer;
+  }
+}

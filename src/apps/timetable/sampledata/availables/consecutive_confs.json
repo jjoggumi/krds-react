@@ -1,0 +1,16 @@
+[
+  {
+    "consecutiveConfId": "04fc3752-3d2b-4b54-9d90-fd28fad95786",
+    "courseId": "6d1a8619-79cb-493e-b664-0f393c1aa970",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "grade": 1,
+    "consecutivePeriod": "2,1"
+  },
+  {
+    "consecutiveConfId": "738fca23-f721-452a-9c51-47def73fc6b2",
+    "courseId": "902f0d44-f9b0-4c0b-9321-95ee4e2bebd4",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "grade": 3,
+    "consecutivePeriod": "2"
+  }
+]

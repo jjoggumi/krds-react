@@ -1,0 +1,118 @@
+.floating-popup {
+  z-index: 999;
+  position: fixed;
+  right: 50%;
+  bottom: 0;
+  margin-right: -900px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  right: 35px;
+  margin-right: 0;
+}
+.floating-popup .inner {
+  overflow: hidden;
+  width: 360px;
+  -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.floating-popup .top button {
+  overflow: hidden;
+  display: block !important;
+}
+.floating-popup .top img {
+  max-width: 100%;
+}
+.floating-popup .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  background-color: var(--bg-base);
+  padding: 0 20px;
+  border-top: 1px solid var(--border-neutral-subtle);
+}
+.floating-popup .bottom button {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.floating-popup.show {
+  -webkit-animation: showGuidePopup 0.6s ease-out 1 forwards;
+          animation: showGuidePopup 0.6s ease-out 1 forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.floating-popup.hide {
+  -webkit-animation: hideGuidePopup 0.32s ease-in 1 forwards;
+          animation: hideGuidePopup 0.32s ease-in 1 forwards;
+}
+
+@keyframes showGuidePopup {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes showGuidePopup {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes hideGuidePopup {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes hideGuidePopup {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 1900px) {
+  .floating-popup {
+    right: 20px;
+    margin-right: 0;
+  }
+}/*# sourceMappingURL=floatingPopup.module.css.map */

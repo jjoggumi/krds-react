@@ -1,0 +1,11 @@
+{
+  "title": "title",
+  "hello": "hello {name}",
+
+  "message": "hello i18n !!",
+  "main.ssemtube": "ssemtube",
+  "main.link.button1": "How to",
+  "main.link.button2": "쌤튜브",
+  "main.link.button3": "쌤튜브",
+  "main.link.button4": "쌤튜브"
+}

@@ -1,0 +1,91 @@
+
+/* font line-height Set */
+.text-leading-t1{
+  @apply text-t1 leading-t1 ;
+}
+.text-leading-t2 {
+  @apply text-t2 leading-t2;
+}
+.text-leading-t3 {
+  @apply text-t3 leading-t3;
+}
+.text-leading-h1 {
+  @apply text-h1 leading-h1 ;
+}
+.text-leading-h2 {
+  @apply text-h2 leading-h2;
+}
+.text-leading-h3 {
+  @apply text-h3 leading-h3;
+}
+.text-leading-h4 {
+  @apply text-h4 leading-h4;
+}
+.text-leading-b1 {
+  @apply text-b1 leading-b1;
+}
+.text-leading-b2 {
+  @apply text-b2 leading-b2;
+}
+.text-leading-b3 {
+  @apply text-b3 leading-b3;
+}
+.text-leading-d1 {
+  @apply text-d1 leading-d1;
+}
+.text-leading-d2 {
+  @apply text-d2 leading-d2;
+}
+.text-leading-d3 {
+  @apply text-d3 leading-d3;
+}
+
+/* control base : button / input / select */
+.control-xxs {
+  height: var(--ctl-xxs-h);
+  font-size: var(--ctl-xxs-f);
+  border-radius: var(--ctl-xxs-r);
+  @apply text-d2 leading-d2;
+}
+
+.control-xs {
+  height: var(--ctl-xs-h);
+  /* font-size: var(--ctl-xs-f); */
+  border-radius: var(--ctl-xs-r);  
+  @apply text-b3 leading-b3;
+}
+
+.control-sm {
+  height: var(--ctl-sm-h);
+  /* font-size: var(--ctl-sm-f); */
+  border-radius: var(--ctl-sm-r);  
+  @apply text-b3 leading-b3;
+}
+
+.control-md {
+  height: var(--ctl-md-h);
+  /* font-size: var(--ctl-md-f); */
+  border-radius: var(--ctl-md-r);
+  @apply text-b3 leading-b3;
+}
+
+.control-lg {
+  height: var(--ctl-lg-h);
+  /* font-size: var(--ctl-lg-f); */
+  border-radius: var(--ctl-lg-r);  
+  @apply text-b2 leading-b2;
+}
+
+.control-xl {
+  height: var(--ctl-xl-h);
+  /* font-size: var(--ctl-xl-f); */
+  border-radius: var(--ctl-xl-r);
+  @apply text-b1 leading-b1;
+}
+
+.control-2xl {
+  height: var(--ctl-xxl-h);
+  /* font-size: var(--ctl-xl-f); */
+  border-radius: var(--ctl-xxl-r);
+  @apply text-b1 leading-b1;
+}

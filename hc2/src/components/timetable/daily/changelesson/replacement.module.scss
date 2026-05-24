@@ -1,0 +1,110 @@
+// 수업 변경
+.courseChange {
+  :global(.additional) {
+    background: var(--bg-primary-subtlest);
+  }
+  :global(.autocomplete-wrap) {
+    :global(.input-wrap) {
+      input {
+        font-size: 14px;
+        &:hover:not(:disabled) {
+          background-color: var(--bg-yellow-subtlest);
+          box-shadow: none;
+        }
+        &:focus:not(:disabled) {
+          background-color: var(--bg-yellow-subtlest);
+          box-shadow: 0 0 0 1px var(--yellow-300);
+        }
+      }
+    }
+    // :global(.option-layer) {
+    //   width: 200px;
+    //   .option-list{
+    //     max-height: 192px;
+    //   }
+    // }
+  }
+
+  :global(.tb-row) {
+    flex-wrap: nowrap;
+    justify-content: center;
+    :global(.tb-col) {
+      width: 100%;
+      padding: 10px 20px;
+      //max-width: 570px;
+    }
+  }
+}
+
+// .formGroupInline {
+//   > label.sm {
+//     min-width: 100px;
+//   }
+//   .hi-selectbox,
+//   .autocomplete-wrap {
+//     max-width: 320px;
+//     width: 100%;
+//   }
+// }
+
+// .courseChange {
+//   .additional {
+//     background: #E9F3FF;
+//   }
+
+//   .autocomplete-wrap {
+//     .input-wrap {
+//       input {
+//         font-size: 14px;
+//         &:hover:not(:disabled) {
+//           background-color: #FFF8DF;
+//           box-shadow: none;
+//         }
+//         &:focus:not(:disabled) {
+//           background-color: #FFF8DF;
+//           box-shadow: 0 0 0 1px #FACE34;
+//         }
+//       }
+//     }
+//     .autocomplete-list {
+//       width: 200px;
+//       height: 192px;
+//     }
+//   }
+
+//   .tb-row {
+//     flex-wrap: nowrap;
+//     justify-content: center;
+//     .tb-col {
+//       width: 100%;
+//       padding: 10px 20px;
+//       max-width: 570px;
+//     }
+//   }
+// }
+
+
+// .form-group-inline{
+//   > label.sm{
+//     min-width: 100px;
+//   }
+//   .hi-selectbox,
+//   .autocomplete-wrap{
+//     max-width: 320px;
+//     width: 100%;
+//   }
+// }
+// ::v-deep .side-modal-cont{
+//   > .hi-nodata{
+//     height: 280px;
+//     border-radius: 12px;
+//     border: 1px solid var(--gray-07);
+//     margin: 30px 0 ;
+//   }
+// } 
+// .h4-tit{
+//   display: flex;
+//   gap: 20px;
+//   border-bottom: 1px solid #D6D6D6;
+//   padding-bottom: 20px
+// }

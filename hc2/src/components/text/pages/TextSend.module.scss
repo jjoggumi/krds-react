@@ -1,0 +1,15 @@
+.textSend {
+  padding: 40px 60px;
+  height: calc(100vh - 65px);
+  width: 100%;
+  .title-wrap {
+    .title {
+      font-size: 23px;
+    }
+    .smr {
+      font-size: 12px;
+      color: var(--text-neutral-strong);
+      font-weight:  var(--font-weight-regular);
+    }
+  }
+}

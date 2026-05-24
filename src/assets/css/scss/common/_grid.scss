@@ -1,0 +1,92 @@
+@use "@/assets/css/scss/common/var" as *;
+
+/* Grid Mixin */
+@mixin gridMq($size){	
+	.col#{$size} {
+		flex: 1 0 0%;
+	}
+	.row-cols#{$size}-auto > * {
+		flex: 0 0 auto;
+		width: auto;  
+	}
+	
+	@for $i from 1 to 7{
+		.row-cols#{$size}-#{$i} > * {
+			flex: 0 0 auto;
+			width: calc(100% / #{$i});
+		}
+	}	
+	
+	.col#{$size}-auto {
+		flex: 0 0 auto;
+		width: auto;
+	}
+	
+	@for $i from 1 to 13{		  
+		.col#{$size}-#{$i}{
+			flex: 0 0 auto;
+			width: calc(100% / ( 12 / #{$i}));	  	  
+		}
+	}
+	
+	@for $i from 1 to 13{		  
+		.offset#{$size}-#{$i}{
+	  	margin-left: calc(100% / ( 12 / #{$i}));	    	  
+		}
+	}
+}
+/* grid */
+.hi-row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-right: -16px;
+	margin-left: -16px;
+	
+	> * {
+  		position: relative;
+		flex-shrink: 0;
+		width: 100%;
+		max-width: 100%;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	
+	&.sm-gutters {
+		margin-right: -4px;
+		margin-left: -4px; 
+	  
+		> * {
+		  padding-right: 4px;
+		  padding-left: 4px;
+		}
+	}
+	
+	&.no-gutters {
+		margin-right: 0;
+		margin-left: 0;
+		
+		> * {			
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}  
+}
+
+@media (min-width: 576px) {
+	@include gridMq('-sm');	
+}
+@media (min-width: 768px) {
+	@include gridMq('-md');
+}
+@media (min-width: 992px) {	
+	@include gridMq('-lg');
+}
+@media (min-width: 1200px) {	
+	@include gridMq('-xl');
+}
+@media (min-width: 1400px) {  
+	@include gridMq('-xxl');
+}

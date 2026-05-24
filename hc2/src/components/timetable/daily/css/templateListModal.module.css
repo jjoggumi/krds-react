@@ -1,0 +1,76 @@
+.historyModal :global .table-content {
+  overflow: hidden;
+  overflow-y: auto;
+}
+.historyModal :global .table-content tr:not(:has(.hi-nodata)):hover td,
+.historyModal :global .table-content tr.edited td {
+  background: var(--bg-secondary-subtlest);
+}
+.historyModal :global .table-content tr:not(:has(.hi-nodata)):hover td input,
+.historyModal :global .table-content tr.edited td input {
+  padding-right: 60px;
+}
+.historyModal :global .table-content tr:not(:has(.hi-nodata)):hover td input + span,
+.historyModal :global .table-content tr.edited td input + span {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 12px;
+  color: var(--text-neutral-base);
+  font-weight: 400;
+  line-height: 150%;
+}
+.historyModal :global .table-content tr.selected td {
+  background: var(--bg-secondary-subtlest);
+}
+.historyModal :global .table-content tr.selected td::before {
+  display: block;
+  content: "";
+  border: 1px solid var(--control-secondary-subtle);
+  border-left: 0;
+  border-right: 0;
+  margin: -1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.historyModal :global .table-content tr.selected td:first-child::before {
+  border-left: 1px solid var(--control-secondary-subtle);
+}
+.historyModal :global .table-content tr.selected td:last-child::before {
+  border-right: 1px solid var(--control-secondary-subtle);
+}
+.historyModal :global .history-txt {
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.disabled-row {
+  color: var(--text-neutral-subtle);
+  background-color: var(--bg-neutral-subtle);
+  cursor: not-allowed;
+}
+.disabled-row .btn-edit {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.disabled-row:hover {
+  background-color: var(--bg-neutral-subtlest);
+}
+
+.disabled-col {
+  color: var(--text-neutral-subtle);
+  background-color: var(--bg-neutral-subtle);
+  cursor: not-allowed;
+}
+.disabled-col .btn-edit {
+  pointer-events: none;
+  opacity: 0.5;
+}/*# sourceMappingURL=templateListModal.module.css.map */

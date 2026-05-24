@@ -1,0 +1,55 @@
+.autocomplete-wrap {
+  height: 100%;
+  position: relative;
+}
+.autocomplete-wrap input {
+  height: var(--ctl-md-h);
+  border-radius: var(--ctl-md-r);
+  font-size: var(--ctl-md-f);
+}
+
+.autocomplete-wrap.in-table .text-input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.autocomplete-wrap.in-table .text-input input[type=text],
+.autocomplete-wrap.in-table .text-input input[type=number] {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  border: 0 !important;
+  text-align: center;
+  padding: 0;
+}
+.autocomplete-wrap.in-table .text-input input[type=text]:hover:not(:disabled), .autocomplete-wrap.in-table .text-input input[type=text]:focus:not(:disabled),
+.autocomplete-wrap.in-table .text-input input[type=number]:hover:not(:disabled),
+.autocomplete-wrap.in-table .text-input input[type=number]:focus:not(:disabled) {
+  -webkit-box-shadow: 0 0 0 1px var(--control-secondary-subtle);
+          box-shadow: 0 0 0 1px var(--control-secondary-subtle);
+}
+.autocomplete-wrap.in-table .text-input input[type=text]:disabled,
+.autocomplete-wrap.in-table .text-input input[type=number]:disabled {
+  -webkit-box-shadow: 0 0 0 1px var(--border-neutral-base);
+          box-shadow: 0 0 0 1px var(--border-neutral-base);
+}
+.autocomplete-wrap.in-table .text-input input[type=text].read-only,
+.autocomplete-wrap.in-table .text-input input[type=number].read-only {
+  -webkit-box-shadow: 0 0 0 1px var(--border-neutral-base);
+          box-shadow: 0 0 0 1px var(--border-neutral-base);
+}
+.autocomplete-wrap.in-table .text-input input[type=text].error,
+.autocomplete-wrap.in-table .text-input input[type=number].error {
+  -webkit-box-shadow: 0 0 0 1px var(--control-red-subtle);
+          box-shadow: 0 0 0 1px var(--control-red-subtle);
+}
+.autocomplete-wrap.in-table .text-input input[type=text].error:hover:not(:disabled),
+.autocomplete-wrap.in-table .text-input input[type=number].error:hover:not(:disabled) {
+  -webkit-box-shadow: 0 0 0 1px var(--control-red-subtle);
+          box-shadow: 0 0 0 1px var(--control-red-subtle);
+}
+.autocomplete-wrap.in-table .text-input input[type=text].error:focus:not(:disabled),
+.autocomplete-wrap.in-table .text-input input[type=number].error:focus:not(:disabled) {
+  -webkit-box-shadow: 0 0 0 1px var(--control-red-subtle);
+          box-shadow: 0 0 0 1px var(--control-red-subtle);
+}/*# sourceMappingURL=autocompleteInput.module.css.map */

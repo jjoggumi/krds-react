@@ -1,0 +1,155 @@
+@use "@/assets/css/scss/common/var" as *;
+
+.hi-board .board__header .hi-kebabmenu { top: 0;right: 0; }
+.hi-kebabmenu { 
+  position: absolute; 
+
+  .btn-kebab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+  }
+  .btn-kebab span {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #616161;
+  }
+  .btn-kebab.is-active span,
+  .btn-kebab:hover span { background-color: var(--primary); }
+
+  .kebabmenu__layer { 
+    display: none;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    
+    button {
+      width: 100%;
+      color: #616161;
+      line-height: 21px;
+      height:45px;
+      text-align: left;
+      white-space: nowrap;
+      padding: 0 20px 0 16px;
+      display: flex;
+      align-items: center;
+    }
+    button + button { border-top: 1px solid #ececec; }
+    button:hover { background-color: rgba(71, 120, 222, 0.08); }
+    button[class]::before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-image: url("../../img/icon/icons_kebabmenu.png");
+      background-position: 0 0;
+      background-size: 80px;
+      background-repeat: no-repeat; 
+      background: #616161;
+      vertical-align: middle;
+      margin-right: 2px;
+      mask-size:100%;
+    }
+    button[class].txt-warning::before{      
+      background: var(--warning);
+    }      
+    button span { vertical-align: middle; }
+      
+    .btn-replace::before {
+      mask-image: url("~@/assets/img/svg/ico-replace.svg");
+    }
+    .btn-image::before { 
+      mask-image: url("~@/assets/img/svg/ico-magic.svg");
+    }
+    .btn-align-left::before { 
+      mask-image: url("~@/assets/img/svg/ico-align-left.svg");
+    }
+    .btn-align-center::before { 
+      mask-image: url("~@/assets/img/svg/ico-align-center.svg");
+    }
+    .btn-align-right::before { 
+      mask-image: url("~@/assets/img/svg/ico-align-right.svg");
+    }
+    .btn-align-change::before { 
+      mask-image: url("~@/assets/img/svg/ico-modify.svg");
+    }
+    .btn-report::before { 
+      mask-image: url("~@/assets/img/svg/ico-siren.svg");
+    }
+    .btn-edit-blackboard::before { 
+      mask-image: url("~@/assets/img/svg/ico-blackbd.svg");
+    }
+    .btn-blackbd-modify::before {
+      mask-image: url("~@/assets/img/svg/ico-blackbd.svg");
+    }
+    .btn-modify::before {
+      mask-image: url("~@/assets/img/svg/ico-modify.svg");
+    }
+    .btn-edit::before {
+      mask-image: url("~@/assets/img/svg/ico-modify.svg");
+    }
+    .btn-edit2::before {
+      mask-image: url("~@/assets/img/svg/ico-pen2.svg");
+    }
+    .btn-move::before {
+      mask-image: url("~@/assets/img/svg/ico-move.svg");
+    }
+    .btn-export::before {
+      mask-image: url("~@/assets/img/svg/ico-export.svg");
+    }
+    .btn-copy::before {
+      mask-image: url("~@/assets/img/svg/ico-copy.svg");
+    }
+    .btn-trash::before {
+      mask-image: url("~@/assets/img/svg/ico-delete2.svg");
+    }
+    .btn-delete::before {
+      mask-image: url("~@/assets/img/svg/ico-delete2.svg");
+    }
+    .btn-notice::before {
+      mask-image: url("~@/assets/img/svg/ico-pin-on.svg");
+    }
+    .btn-notice-off::before {
+      mask-image: url("~@/assets/img/svg/ico-pin-off.svg");
+    }
+    .btn-hitalkshare::before {
+      mask-image: url("~@/assets/img/svg/ico-hitalkshare.svg");
+    }
+    .btn-hitalk-delete::before {
+      mask-image: url("~@/assets/img/svg/ico-delete2.svg");
+    }
+    .btn-hitalk-copy::before {
+      mask-image: url("~@/assets/img/svg/ico-copy.svg");
+    }
+    .btn-hitalk-reserve::before {
+      mask-image: url("~@/assets/img/svg/ico-time.svg");
+    }
+    .btn-hitalk-send::before {
+      mask-image: url("~@/assets/img/svg/ico-send.svg");
+    }
+    .btn-download::before {
+      mask-image: url("~@/assets/img/svg/ico-file-down.svg");
+    }
+    .btn-share::before {
+      mask-image: url("~@/assets/img/svg/ico-share.svg");
+    }
+  }
+}

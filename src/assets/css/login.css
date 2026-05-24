@@ -1,0 +1,700 @@
+@charset "UTF-8";
+.page-login #cont-wrap { text-align: center; }
+.page-login .logo-wrap {margin:0 0 20px 0;text-align:center;}
+.page-login .login-box-wrap {
+    width: 560px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.page-login .login-start-text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    font-family: var(--font-body);
+    letter-spacing: -0.5px;
+}
+.page-login .sub-start-text {margin:22px 0 0 0;line-height:150%;font-size:18px;font-weight:400;text-align:center;}
+.page-login .sub-start-text strong {font-weight:800;font-size: 22px;padding: 18px 0 0;display: inline-block;}
+.page-login .sub-start-text.find-sns {margin:40px 0 40px 0;}
+.page-login .sub-start-text.find-sns .user-email {background-color: #EEE;height: 68px;padding: 20px 15px;margin: 0 40px 20px;align-content: center;border-radius: 8px;}
+.page-login .sub-start-text.find-sns .user-email strong {font-weight:500;font-size: 20px;padding: 0;display: inline-block;font-family: var(--font-body);}
+.page-login .sub-start-text.find-sns p.notice-text {text-align: center;font-family: var(--font-body);font-size: 16px;font-style: normal;font-weight: 400;line-height: 150%;}
+.page-login .sub-start-text.find-sns p.sub-notice-text {color: #616161;text-align: center;font-family: var(--font-body);font-size: 14px;font-style: normal;font-weight: 400;line-height: 160%;}
+
+.page-login .input-validation-text {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    padding: 0;
+    margin: 8px 0;
+}
+
+/* 연령 정보 확인 */
+.page-login .verify-age-wrap .login-style-wrap{
+    width: 560px;
+    margin: 0 auto;
+}
+.verify-age{    
+    width: 430px;
+    margin: 26px auto 0;
+    text-align: left;
+}
+.verify-age .verify-age-title {    
+    margin-bottom: 32px;  
+}
+.verify-age .verify-age-title .tit-txt{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+.verify-age .verify-age-title .sub-txt{
+    margin-top: 8px;
+    line-height: 150%;
+    font-size: 15px;
+    color: #2e2e2e;
+}
+
+.verify-age .ft-blue-warning {
+    border: 0;
+    padding: 8px 20px;
+    align-items: flex-start;
+}
+
+.verify-age .verify-age-btns{
+    margin-bottom: 24px;  
+    display: flex;
+    gap: 12px;  
+}
+.verify-age .verify-age-btns input[type=radio].btn-type + label{
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--gray-07);
+    background-color: var(--gray-01);
+    font-weight: var(--font-bold);
+}
+.verify-age .verify-age-btns input[type=radio].btn-type + label span{
+    color: var(--gray-09);
+}
+
+.verify-age .verify-age-btns input[type=radio].btn-type.under14:checked + label {
+    border: 1px solid var(--noti);
+    background-color: rgba(var(--noti-rgb), .12);
+}
+.verify-age .verify-age-btns input[type=radio].btn-type.over14:checked + label {
+    border: 1px solid var(--primary);
+    background-color: rgba(var(--primary-rgb), .12);
+}
+.verify-age .verify-age-btns input[type=radio].btn-type:checked + label span{
+    color: var(--font-color);
+}
+
+.verify-age .verify-age-checkbox .form-check{
+    margin-bottom: 40px;
+}
+.verify-age .verify-age-checkbox .form-check em{
+    display: block;
+    margin-bottom: 6px;
+}
+.verify-age .verify-age-checkbox input[type=checkbox] + label{
+    display: flex;
+}
+@media screen and (max-width: 640px) {
+    .page-login .login-cont-wrap.verify-age-wrap{
+        margin: 0 auto;
+    }
+    .verify-age{    
+        width: 95%;
+        margin: 0 auto;
+    }
+    .verify-age .verify-age-title,
+    .verify-age .verify-age-checkbox .form-check,
+    .verify-age .verify-age-btns{
+        margin-bottom: 24px;
+    }
+}
+
+/* 간편 로그인*/
+.page-login .login-cont-wrap {
+    margin: 30px 0 0;
+    text-align: center;
+}
+.page-login .login-style-wrap {text-align:center; width:380px;margin:0 auto ;}
+.page-login .login-style + .login-style {margin:12px 0 0; }
+.page-login [class^="btn-bg-"],
+.page-login .login-style button {
+    width: 100%;
+    height: 44px;
+    font-size: 15px;
+    line-height: 42px;
+    border-radius: 52px;
+}
+.page-login .btn-bg-c { 
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.page-login [class^="btn-bg-"].dis {
+    background-color: #dadde2;
+    border-color: #dadde2;
+}
+.page-login .login-style button::before {
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+.page-login .login-style button span {
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 23px;
+    letter-spacing: -0.2px;
+    vertical-align: baseline;
+}
+.page-login .login-style p {
+    padding: 13px 0;
+    font-size: 1rem;
+    color: #999;
+    line-height: 1.4;
+}
+.page-login .login-style .question {color:#000;}
+.page-login .login-style.type-site button {background:var(--primary);color:#fff;}
+.page-login .login-style.type-site button:hover {background:#3867c6;opacity:1;}
+.page-login .login-style.type-site button:before {content:none;}
+.page-login .login-style.type-site button.dis {background:#ccc;}
+.page-login .login-style.type-site2 button {background:#f66a45;color:#fff;}
+.page-login .login-style.type-kakao button {
+    background: #FEE500;
+}
+.page-login .login-style.type-kakao button::before {
+    background-image: url("../img/svg/ico_login_kakao.svg");
+    background-size: cover;
+}
+.page-login .login-style.type-naver button {
+    background:#03C75A;
+    color:#fff;
+}
+.page-login .login-style.type-naver button::before {
+    background-image: url("../img/svg/ico_login_naver.svg");
+    background-size: cover;
+}
+.page-login .login-style.type-iscreammedia button {
+    background-color: #f66a45;
+    color: #fff;
+}
+.page-login .login-style.type-iscreammedia button::before { display: none; }
+.page-login .login-style.type-google button {
+    line-height: 34px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+}
+.page-login .login-style.type-google button::before {
+    background-image: url("../img/svg/ico_login_google.svg");
+    background-size: cover;
+}
+.page-login .login-style.type-google button.dis {
+    background:#fff;
+}
+.page-login .login-style.type-apple button {
+    line-height: 34px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.page-login .login-style.type-apple button::before {
+    background-image: url("../img/svg/ico_login_apple.svg");
+    background-size: cover;
+}
+.page-login .login-style.type-apple button.dis {background:#fff;}
+.page-login .login-style a {display:inline-block;width:100%;height:44px;line-height:44px;border-radius:22px;}
+.page-login .login-style a:before {content:"";display:inline-block;width:44px;height:44px;background-position:center center;background-repeat:no-repeat;vertical-align:middle;}
+.page-login .login-style a span {font-size: 15px;font-weight: 500;display: inline-block;}
+.page-login .login-style.type-hiclass a {background-color:#fff;border:1px solid #001b51;}
+.page-login .login-style.type-hiclass a:before {background-image:url('../img/icon_login_hiclass_36.png');}
+.page-login .login-style.type-gyeongnam a,
+.page-login .login-style.type-gne button {background-color:#fff;border:1px solid #00b3ed; line-height: 0;}
+.page-login .login-style.type-gyeongnam a::before,
+.page-login .login-style.type-gne button::before {
+    background-image: url("../img/icon/icon_login_gyeongnam.png");
+    background-size: cover;
+}
+.page-login .login-style.type-gne button span {
+    font-size: 15px;
+    font-weight: 500;
+}
+.page-login .login-style button:hover {opacity:0.8;}
+.page-login .login-style button.dis {background:#ccc !important;color:#fff !important;cursor:default;}
+.page-login .find-my-sns-id {margin:29px 0 0 0;}
+.page-login .find-my-sns-id button {color:#666;border-bottom:1px solid #666;}
+.page-login .find-my-sns-id button:hover {color:#000;}
+
+.page-login .login-style[class*="type-lg-"] button {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+}
+.page-login .login-style.type-lg-blue button {
+    color: #fff;
+    background-color: var(--primary);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.page-login .login-style.type-lg-white button {
+    color: #010101;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.page-login .login-style[class*="type-lg-"] button span { font-size: 15px; }
+.page-login .login-style[class*="type-lg-"] button::before,
+.page-login .login-style[class*="type-lg-"] button::after {content:"";position:absolute;left:90%;display:block;width:2px;height:12px;border-radius:3px;}
+.page-login .login-style[class*="type-lg-"] button::before {top:46%;transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+.page-login .login-style[class*="type-lg-"] button::after {bottom:46%;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);}
+.page-login .login-style.type-lg-blue button::before, 
+.page-login .login-style.type-lg-blue button::after {background-color:#fff;} 
+.page-login .login-style.type-lg-white button::before, 
+.page-login .login-style.type-lg-white button::after { background-color: #010101; } 
+
+/* input 로그인 */
+.page-login .input-box-wrap {
+    height: 44px;
+    line-height: 42px;
+    margin: 10px 0 0;
+    background-color: #fff;
+}
+.page-login .input-box-wrap:nth-of-type(1) {margin:0;}
+.page-login .input-login-cont-wrap {
+    width: 380px;
+    margin: 30px auto;
+}
+.page-login .error-text { margin-top: 10px;color:#fe5151;}
+.page-login .input-login-cont-wrap .input-box-wrap { font-size: 0;padding: 0 0 0 4px; }
+.page-login .input-login-cont-wrap .input-box-wrap::before {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+}
+.page-login .input-login-cont-wrap .input-box-wrap.input-id::before { background: url("../img/icon/icon_login_id.png") center center / cover no-repeat; }
+.page-login .input-login-cont-wrap .input-box-wrap.input-pw::before { background: url("../img/icon/icon_login_pw.png") center center / cover no-repeat; }
+.page-login .input-login-cont-wrap .input-box-wrap input { 
+    width: calc(100% - 36px);
+    padding: 0 10px;
+}
+
+.page-login .input-login-cont-wrap .keep-login-wrap {margin:12px 0 0 0;}
+.page-login .input-login-cont-wrap .confirm-btn-wrap {margin:28px 0 0 0;}
+.page-login .btm-text-wrap {margin:12px 0 0 0;text-align:center;color:#999;}
+
+.page-login .text-list {text-align: left;padding-top: 15px;}
+.page-login .text-list li {color: #333;line-height: 1.4;padding-left: 8px;text-indent: -8px;margin-top:8px;}
+.page-login .text-list em {color: var(--primary);font-weight: 500;line-height: 1.4;}
+
+/* 선생님으로 시작하기 (웹뷰, 미디어 로그인) */
+.page-login .btn-bg-OR{background-color: #e24e26;  color: #fff; }
+.page-login .btn-bg-OR[disabled],
+.page-login .btn-bg-c[disabled] {
+    background-color: #d7d7d7;
+}
+.page-login .input-login-cont-wrap.type-teacher .btm-link-wrap {
+    padding: 0;
+    margin: 20px 0 40px;
+}
+.page-login .input-login-cont-wrap.type-teacher .btm-link-wrap a {
+    color: #616161;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+.page-login .input-login-cont-wrap.type-teacher .btm-link-wrap a:hover {
+    color: #616161;
+    border: 0;
+}
+.page-login .input-login-cont-wrap.type-teacher .btm-link-wrap a:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+}
+.page-login .input-login-cont-wrap.type-teacher hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 24px 0;
+}
+.login-style.type-google-apple button {
+    line-height: 34px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.login-style.type-google-apple button::before {
+    content: "";
+    width: 45px;
+    height: 22px;
+    background: url("../img/icon/icon_login_google_apple.png") no-repeat left top;
+    background-size: cover;
+    margin-right: 12px;
+}
+
+/* ID 찾기 */
+.page-login .findId-cont-wrap {width:380px;margin:26px auto 0;}
+.page-login .findId-cont-wrap .findId-result {font-size: 24px;font-weight:bold;text-align:center;color: #4275df;}
+.page-login .findId-cont-wrap .findId-result.no-result {font-size: 15px;}
+.page-login .findId-cont-wrap .findId-result.no-result p {margin:12px 0 0 0;font-size:0;}
+.page-login .findId-cont-wrap .findId-result.no-result p > * {display:inline-block;vertical-align:middle;}
+.page-login .findId-cont-wrap .findId-result.no-result p span {font-size: 15px;}
+.page-login .findId-cont-wrap .findId-result.no-result p span:first-child {color:#888;}
+.page-login .findId-cont-wrap .findId-result.no-result p img {margin:0 0 0 8px;}
+.page-login .findId-cont-wrap .confirm-btn-wrap {margin:28px 0 0 0;}
+.page-login .findId-cont-wrap .confirm-btn-wrap button.btn-bg-c {margin:12px 0 0 0;}
+
+/* SNS ID 찾기 */
+.page-login .findSnsId-cont-wrap {width:380px;margin:26px auto 0;}
+.page-login .findSnsId-cont-wrap .request-wrap {overflow:hidden;}
+.page-login .findSnsId-cont-wrap .request-wrap .input-box-wrap {float:left;width:296px;}
+.page-login .findSnsId-cont-wrap .request-wrap .request-btn-wrap {float:left;width:76px;margin:0 0 0 8px;}
+.page-login .findSnsId-cont-wrap .request-wrap .request-btn-wrap button {width:100%;height:44px;line-height:44px;border-radius:44px;}
+.page-login .findSnsId-cont-wrap .confirm-btn-wrap {margin:28px 0 0 0;}
+.page-login .findSnsId-cont-wrap .confirm-btn-wrap button.btn-bg-w {margin:0 0 12px 0;}
+
+/* SNS 로그인 */
+.page-login .loginSns-cont-wrap {width: 380px;margin:26px auto 0;}
+.page-login .loginSns-cont-wrap .request-wrap {margin:8px 0 0 0;overflow:hidden;}
+.page-login .loginSns-cont-wrap .request-wrap .input-box-wrap {float:left;width:296px;}
+.page-login .loginSns-cont-wrap .request-wrap .request-btn-wrap {float:left;width:76px;margin:0 0 0 8px;}
+.page-login .loginSns-cont-wrap .request-wrap .request-btn-wrap button {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 4px;
+}
+.page-login .input-box-wrap .timer-text {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    color: #fe5151;
+    transform: translateY(-50%);
+}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap {
+    text-align: left;
+    margin: 16px 0 0;
+}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap label { width: 90%; display: flex;}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap input[type=checkbox] + label::before { vertical-align: top; }
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap label span,
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-terms-wrap span {
+    display: inline-block;
+    width: calc(100% - 30px);
+    color: #2e2e2e;
+    font-size: 15px;
+    letter-spacing: -1px;
+    vertical-align: middle;
+    margin: 0 0 0 5px;
+    display: flex;
+    width: calc(100% - 30px);
+    gap: 4px;
+}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-terms-wrap .label{line-height: 20px;}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-terms-wrap label.agree-sms span{
+    width: 100%;
+    flex-wrap: wrap;
+}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-terms-wrap label.agree-sms .tit{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 20px;
+}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-terms-wrap label.agree-sms .smr{
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--Txt-Gray-08);
+}
+
+/* login */
+.page-login .agree-terms-wrap:first-of-type {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 12px;
+}
+.page-login .agree-terms-wrap { 
+    display: flex;
+    align-items: flex-start;
+    margin-top: 12px;
+}
+.page-login .agree-terms-wrap .label { 
+    color: #666;
+    font-weight: 500;
+}
+.page-login .agree-terms-wrap .btn-view {
+    color: #888;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: underline;
+}
+/* 인증문자 안내 */
+.login-warnning {
+    /*display: none;*/
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background: #F8F9FC;
+    margin-top: 10px;
+    color: var(--primary);
+    line-height: 54px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.login-warnning p::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon_warning.svg) no-repeat center center;
+    padding-left: 16px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+.login-warnning p { position: relative; height: 75px; line-height: 54px !important; }
+.login-warnning p .kko-btn{position: absolute;
+    top: 26px;
+    right: 0;
+    transform: translate(0, -50%);
+    margin-right: 18px;
+    color: inherit;    
+    text-decoration: underline;
+    font-weight: 500;
+
+}
+.login-warnning p span {
+    position: absolute;
+    font-size: 11px;
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+    background: #eee;
+    width: 75px;
+    text-align: center;
+    padding: 5px 10px 5px 6px;
+    border-radius: 50px;
+    left: 12px;
+    top: 42px;
+    color: #666;
+}
+.login-warnning p span::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    padding-right: 9px;
+    margin-right: 5px;    
+}
+.login-warnning p span.arr-down::before {
+    background: url("../img/icon_arrow_down.png") center no-repeat;
+    background-size:100%;
+}
+.login-warnning p span.arr-up::before {
+    background: url("../img/icon_arrow_up.png") center no-repeat;
+    background-size:100%;
+}
+.login-warnning div {
+    display: none;
+    color: #616161;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0 15px 15px 15px;
+    line-height: 18px;
+}
+.login-warnning div span {
+    font-size: 12px;
+    color: #9E9E9E;
+}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap span a {
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 15px;
+    color:var(--primary);
+}
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-sms-wrap { margin: 12px 0 0; }
+.page-login .loginSns-cont-wrap .checkbox-confirm-wrap .confirm-btn-wrap { margin: 28px 0 0; }
+
+/* 비밀번호 재설정*/
+.page-login .resetPW-cont-wrap {width:300px;margin:0 auto;}
+.page-login .resetPW-cont-wrap.type2 {width:380px;margin:26px auto 0;}
+.page-login .resetPW-cont-wrap .confirm-btn-wrap {margin:28px auto 0;}
+
+/* 박스 내부 하단 기타 */
+.page-login .btm-link-wrap {
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 70px;
+}
+.page-login .btm-link-wrap a {display:inline-block;padding:0 0 1px 0;border-bottom:1px solid #666;vertical-align:middle;color:#666;}
+.page-login .btm-link-wrap a:first-child {margin-right:10px;color:#3867c6;border-bottom: 1px solid #3867c6;}
+.page-login .btm-link-wrap a:last-child {font-weight:bold;}
+.page-login .btm-link-wrap a:hover {color:#000;}
+.page-login .btm-link-wrap a:first-child:hover {color:#1f499c;border-bottom: 1px solid #1f499c;}
+.signin-infotxt {display: none;}
+.page-login .btm-link-wrap .bar {display:inline-block;vertical-align:middle;width:1px;height:16px;margin:0 24px;background:rgba(0,0,0,0.2);}
+.m-login-txt > p{
+    text-align: center;
+    margin-top:16px;
+    line-height:150%;
+    font-size: 15px;
+    color: #2e2e2e;
+}
+/* 박스 외부 하단 영역 */
+.login-btm-wrap {margin:60px 0;}
+.login-btm-wrap .link-btn-wrap {font-size:0;text-align:center;}
+.login-btm-wrap .link-btn-wrap a {display:inline-block;vertical-align:middle;width:140px;height:36px;line-height:34px;border:1px solid rgba(0, 0, 0, 0.2);border-radius:18px;background:#fff;}
+.login-btm-wrap .link-btn-wrap a:hover {background:#ebeef4;}
+.login-btm-wrap .link-btn-wrap a.dis {background:#fff;cursor:default;opacity:0.5;}
+.login-btm-wrap .link-btn-wrap a + a {margin:0 0 0 8px;}
+.login-btm-wrap .text-wrap {margin:17px 0 0 0;font-size:0;text-align:center;}
+.login-btm-wrap .text-wrap a {display:inline-block;vertical-align:middle;color:#666;line-height:15px;}
+.login-btm-wrap .text-wrap a:hover {color:#000;}
+.login-btm-wrap .text-wrap .bar {display:inline-block;vertical-align:middle;width:1px;height:15px;margin:0 8px;background:#666;}
+
+.page-login .logo-wrap a {
+    display: inline-block;
+    width: 220px;
+    height: 100px;
+    text-indent: -999em;
+    background: url("../img/logo_login.png") no-repeat;
+    background-size: cover;
+ }
+.page-login .logo-wrap img {
+    display: none;
+}
+
+.page-login + .footer,
+.page-login .footer,
+.page-login + #loadHTMLfooter .footer {
+    width: 100%;
+    text-align: center;
+}
+.page-login + .footer .footer-list,
+.page-login .footer .footer-list,
+.page-login + #loadHTMLfooter .footer-list {
+    padding: 10px 0 0;
+}
+.page-login + .footer .footer-list + p,
+.page-login .footer .footer-list + p,
+.page-login + #loadHTMLfooter .footer-list + p {
+    padding-left: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .page-login .logo-wrap {
+        display: block;
+    }
+    .page-login .logo-wrap a {
+        width: 156px;
+        height: 68px;
+    }
+    .page-login .input-login-cont-wrap .input-box-wrap.input-id::before { vertical-align: middle; }
+}
+@media screen and (max-width: 640px) {
+    .page-login + .footer .footer-list a,
+    .page-login .footer-list a,
+    .page-login + #loadHTMLfooter .footer-list a {
+        font-size: 12px;
+    }
+    .page-login + .footer .footer-list + p, .page-login .footer .footer-list + p, .page-login + #loadHTMLfooter .footer-list + p {
+        padding: 0;
+        display: block;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .page-login .logo-wrap a {
+        width: 110px;
+        height: 50px;
+    }
+    .page-login .input-login-cont-wrap { margin: 1.5rem 0 0; }
+    .page-login .login-start-text { font-size: 1.429rem; }
+
+    .page-login [class^="btn-bg-"], 
+    .page-login .find-my-sns-id button,
+    .page-login .login-style button,
+    .page-login .login-style button span { font-size: 1rem; }
+    .page-login .login-style p { font-size: 1rem; }
+    .page-login .input-box-wrap input { font-size: 1rem; }
+
+
+    .m-login-txt > p { font-size: 1rem; }
+    .page-login .input-login-cont-wrap.type-teacher .btm-link-wrap a,
+    .page-login .error-text,
+    .page-login .text-list li,
+    .page-login .loginSns-cont-wrap .checkbox-confirm-wrap label span, 
+    .page-login .loginSns-cont-wrap .checkbox-confirm-wrap span a, 
+    .page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-terms-wrap span { font-size: 1rem; }
+    .page-login .input-login-cont-wrap { width: 100%; }
+    .page-login .login-box-wrap {
+        width: auto;
+        padding: 2.5rem 1.143rem;
+        margin: 0 1rem;
+    }
+
+    .page-login .input-login-cont-wrap.type-teacher .btm-link-wrap { margin: 2rem 0; }
+    .page-login .login-style-wrap,
+    .page-login .loginSns-cont-wrap { width: 100%; }
+    .page-login .loginSns-cont-wrap .request-wrap .input-box-wrap { width: calc(100% - 85px); }
+
+    .page-login .findSnsId-cont-wrap { width: 100%; }
+    .page-login .findSnsId-cont-wrap .request-wrap .input-box-wrap { width: calc(100% - 85px); }
+    
+    /* webview */ 
+    #wrap.page-login.page-login-teacher,
+    #wrap.page-login.page-login-webview {
+        min-width: 100%;
+        background: #fff;
+    }
+    .page-login.page-login-teacher #cont-wrap,
+    .page-login.page-login-webview #cont-wrap {
+        padding: 0;
+    }
+    .page-login.page-login-teacher .login-start-text,
+    .page-login.page-login-webview .login-start-text,
+    .page-login.page-login-teacher .logo-wrap,
+    .page-login.page-login-webview .logo-wrap {
+        display: none;
+    }
+    .page-login.page-login-teacher .login-box-wrap,
+    .page-login.page-login-webview .login-box-wrap{
+        padding: 1rem 0 2.5rem;
+        box-shadow: none;
+    }
+    .page-login.page-login-teacher .input-box-wrap,
+    .page-login.page-login-webview .input-box-wrap{
+        border-radius: 44px;
+        height: 44px;
+        line-height: 44px;
+    }
+    .page-login.page-login-webview .input-login-cont-wrap.type-teacher .btm-link-wrap {
+        margin: 20px 0 46px;
+    }
+    .page-login .sub-start-text { font-size: 1.143rem; }
+    .page-login .sub-start-text strong { font-size: 1.286rem; }
+}
+
+@media screen and (max-width: 320px) {
+    .page-login [class^="btn-bg-"], 
+    .page-login .find-my-sns-id button,
+    .page-login .login-style button,
+    .page-login .login-style button span { font-size: 0.929rem; }
+    .page-login .login-style p { font-size:  0.929rem; }
+    .page-login .input-box-wrap input { font-size: 1rem; }
+
+    .page-login .input-validation-text,
+    .m-login-txt > p,
+    .page-login .input-login-cont-wrap.type-teacher .btm-link-wrap a,
+    .page-login .error-text,
+    .page-login .text-list li,
+    .page-login .loginSns-cont-wrap .checkbox-confirm-wrap label span,
+    .page-login .loginSns-cont-wrap .checkbox-confirm-wrap span a, 
+    .page-login .loginSns-cont-wrap .checkbox-confirm-wrap .agree-terms-wrap span { font-size: 0.929rem; }
+}

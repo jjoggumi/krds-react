@@ -1,0 +1,58 @@
+
+
+/* 결, 보강 */
+.course-supplement {
+  .selected-row {
+    td {
+      background-color: var(--bg-secondary-subtlest) !important;
+    }
+  }
+  .panel-tit {    
+    .tit {
+      display: flex;
+      align-items: center;
+      color: var(--font-color);
+      font-weight: var(--font-weight-bold);
+      line-height: 150%;
+      letter-spacing: -.5px;
+      margin-bottom: 8px;
+      font-weight:  var(--font-weight-bold);
+      font-size: var(--ctl-xl-f);
+    }
+  }
+}
+
+// .course-supplement {
+//   .panel-body {
+//     .table-content {
+//       height: 400px;
+//     }
+//   }
+// }
+
+// .form-group-inline {
+//   > label.sm {
+//     min-width: 100px;
+//   }
+//   .hi-selectbox,
+//   .autocomplete-wrap {
+//     max-width: 320px;
+//     width: 100%;
+//   }
+// }
+
+// .side-modal-cont {
+//   > .hi-nodata {
+//     height: 280px;
+//     border-radius: 12px;
+//     border: 1px solid var(--gray-07);
+//     margin: 30px 0;
+//   }
+// }
+
+// .h4-tit {
+//   display: flex;
+//   gap: 20px;
+//   border-bottom: 1px solid #d6d6d6;
+//   padding-bottom: 20px;
+// }

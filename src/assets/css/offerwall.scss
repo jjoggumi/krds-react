@@ -1,0 +1,305 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+.offerwall-wrap {
+  min-height: 100%;
+  .navbar {
+    height: 60px;
+    padding:0.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    .navbar-brand{
+      width:calc((100% - 1140px) / 2);
+      margin:0 0 2px 0;
+      img{
+        width:80px;
+      }
+    }
+    .navbar-collapse{
+      .nav-item{
+        + .nav-item{
+          margin-left:30px;
+          &.active a{
+            font-weight: 500;
+          }
+        }
+        a{font-size:18px;}
+      }
+    }
+    @media screen and (max-width: 1400px){
+      .navbar-brand{
+        width: 120px;
+        text-align: left;
+      }      
+    }
+  }
+  .container{
+    min-height: calc(100dvh - 60px);
+    background: #fff;
+    padding: 40px 30px;
+  }  
+  .title-wrap h2{font-size:25px;}
+  .form-area{
+    margin: 20px 0 30px;
+    background: #f5f5f5;
+    padding: 20px 20px 10px;
+    border-radius: 5px;
+
+    .row{
+      margin-right: -5px;
+      margin-left: -5px;
+      margin-bottom:10px;
+      [class^="col"]{
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+    }
+    select {
+      appearance: none;      
+      background-image: url(~@/assets/img/icon/ic_arrowdown_16.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
+    }    
+    .input-calendar{
+      position:relative;
+      input{padding-right:28px;}
+      > i{
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 5px);
+        color: #666;
+      }
+    }
+    .input-calendar.input-group{
+      .input-group-prepend button i,
+      .input-group-append button i{
+        font-size: 10px;
+      }
+    }
+  }
+  .result-wrap{
+    margin-bottom: 10px;
+    .result-title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      .tit{
+        font-size:18px;
+        font-weight: 500;
+      }
+      .btns{
+        .btn-excel{
+          margin-left: 10px;
+          &:hover{
+            background: #f5f5f5;
+            color: #28a745;
+          }
+        }
+      }
+    }
+    .result-list{
+      .table{
+        th{
+          text-align: center;    
+          vertical-align: middle;
+        }
+        td{
+          color: #333;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .modal{
+    display: block;
+    max-width: 100%;
+    .modal-dialog{
+      top: 50%;
+      transform: translateY(-50%);
+      &.modal-sm{
+        max-width: 400px;
+      }
+    }
+    .modal-content{
+      border-radius:16px;
+      
+      .modal-header{
+        justify-content: center;
+        padding: 40px 24px 0px 24px;
+        border: 0;
+        h4{
+          font-size:18px;
+        }
+      }
+      .modal-body{
+        padding:24px 24px 25px;
+      }
+      .modal-footer{
+        border:0;
+        padding: 0px 24px 24px 24px;
+        justify-content: center;
+      }
+    }
+  }
+  .nav-tabs{
+    .nav-link{
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #9d9d9d;
+      background:#f5f5f5;        
+      border-bottom:1px solid #dee2e6;
+      width: 150px;
+      text-align: center;
+
+    }
+    .nav-link.active {
+      color: #222;
+      background:#fff;        
+      border-bottom:1px solid transparent;
+    }
+  }
+  i{color: inherit;}
+  .infobox{
+    background:#f5f5f5;
+    padding:30px;
+    p{margin: 0;}
+  }
+  
+  .btn-warning{
+    background-color: #FF8833;
+    border-color: #FF8833;
+    color:#fff;
+  }
+  .btn-warning:not(:disabled):not(.disabled):active:focus{
+    box-shadow: 0 0 0 .2rem rgba(255, 136, 51, 0.5);
+  }
+  .btn-warning:not(:disabled):not(.disabled):active:focus{    
+    background-color: #e97421;
+    border-color: #e97421;
+    color:#fff;
+  }
+  .form-control:focus,
+  button[class*="btn-"]:focus {
+    box-shadow: none;
+  }  
+  .picker-calendar-month.record p.data-choice span.total{
+    display: none;
+  }
+
+  .pdf{
+    border: 1px solid #ddd;
+    padding:50px;
+    margin: 50px;
+    .header{      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+
+      .logo img{
+        width:150px;
+      }
+      .logo.hiclass img{
+        width:100px;
+      }
+      .title{
+        font-size: 30px;
+        font-weight: 600;
+        margin-right:8px;
+      }
+    }
+    .info-wrap{      
+      padding: 30px 0;
+      .info-box{
+        background-color: #f5f5f5;     
+        padding: 20px;   
+        .info-title{
+          font-size: 16px;
+          font-weight: 500;  
+          margin-bottom:12px;      
+        }
+        .info-list{
+          padding:0;
+          li{padding:6px 0;}
+        }
+      }
+      .info-list{
+        padding-left:20px;
+        li{padding:8px 0;
+          span{
+            display: inline-block;
+            width:100px;
+            color:#666;
+          }
+        }        
+      }
+    }
+  }
+  
+  .table-sticky{
+    max-height: 500px;
+    overflow: auto;    
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 10px;
+      height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+    background: #d3d1cb;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track { background-color: transparent; }
+    table{
+      border: 0px;
+      border-collapse: separate;
+	    border-spacing: 0;
+      margin: 0;
+      thead{
+        position: sticky;
+        top: 0; 
+      }
+      tbody td{
+        border-left-width: 0;
+        border-right: 1px solid #dee2e6;
+        border-top-width: 0;
+        border-bottom: 1px solid #dee2e6;
+        &:first-child{
+          border-left: 1px solid #dee2e6;
+        }
+      }
+    }
+  }
+
+  .calendar__layer{
+    .calendar__top {
+      background-color: #007bff;
+      border-bottom: 1px solid #007bff;
+      .btn-today {
+        color: #007bff;
+        border: 1px solid #007bff;
+        background: #fff;
+      }
+    }     
+    .calendar__table table tbody {
+      td:first-child,
+      td:last-child { color: #9e9e9e; }
+      td.today {
+        color: #007bff;
+      }    
+      td.today.is-selected:before {
+        background: #FFF8F0;
+      }
+      td.is-selected {
+        color: #007bff;
+      }
+      td.is-selected:before {
+        background-color: #e6eeff;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// 학급일정 변경 탭
+  .classScheduleManagement {
+    :global(.table-content){
+      td{
+        cursor: pointer;
+        :global(.break-all) {
+          word-break: break-all;
+        }
+      }
+      // 임시 필터 아이콘
+      th {
+        :global(.btn) {
+          &:global(.btn-sort) {
+            &::after {
+              mask-image: url('@/assets/img/icon/ico-arrow-down-fill.svg');
+            }
+          }
+        }
+      }
+    }
+    :global(.change-list) {
+      input[type=checkbox] {
+        +label {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    :global(.input-wrap) {
+      :global(.ico-close-circle-fill) {
+        left: 228px;
+      }
+    }
+  }
+
+  

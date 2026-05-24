@@ -1,0 +1,4053 @@
+@charset "UTF-8";
+
+* {
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: -.2px;
+}
+body {
+    overflow: inherit;
+    position: relative;
+    min-width: 930px;
+    background-color: #fff;
+}
+body.hidden{
+    padding-right: 0px;
+}
+input[type=checkbox]+label:before { background-image: url("../img/icon/icons_checkbox_hitalk.png"); }
+input[type=radio]+label:before { background-image: url("../img/icon/icons_radio_hitalk.png"); }
+
+/* scroll common */
+.hitalk-scrollbar { overflow-y: auto;}
+.hitalk-scrollbar::-webkit-scrollbar {
+    background-color: transparent;
+    width: 12px;
+}
+.hitalk-scrollbar::-webkit-scrollbar-thumb  {
+    background-color: #cfd3db;
+	min-height:40px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+}
+.hitalk-scrollbar::-webkit-scrollbar-track { background-color: #fff; }
+
+[class*="btn-bg-"] {
+    font-size: 15px;
+    font-weight: 500;
+    transform: skew(0);
+    -webkit-transform: skew(0);
+}
+[class*="btn-bg-"].dis {
+    background-color: #dadde2;
+}
+.btn-bg-w2 {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-bg-c {
+    background-color: var(--primary);
+}
+.border-selectbox-wrap.selected .selected-option,
+.border-selectbox-wrap .selected-option:hover {
+    border-color: var(--primary);
+}
+.border-selectbox-wrap .selected-option::after {
+    background: url("../img/icon/icon_selectbox_arr_48.png") no-repeat;
+    background-size: auto 24px;
+}
+.border-selectbox-wrap.selected .selected-option:after {
+    background: url("../img/icon/icon_selectbox_on_arr_48.png") no-repeat;
+    background-size: auto 24px;
+}
+.border-selectbox-wrap .option-list-wrap {
+    top: 36px;
+    border: 1px solid #ccc;
+}
+.border-selectbox-wrap .selected-option .option-val,
+.border-selectbox-wrap .option-list-wrap li .option-item {
+    font-size: 15px;
+    font-weight: 400;
+}
+.border-selectbox-wrap .option-list-wrap li .option-item {
+    color: #333;
+}
+.border-selectbox-wrap .option-list-wrap li:hover {
+    background-color: #f5f8ff;
+}
+.border-selectbox-wrap .option-list-wrap li.selected {
+    background-color: #f5f8ff;
+}
+.border-selectbox-wrap .option-list-wrap li.selected .option-item {
+    color: var(--primary);
+    font-weight: 400;
+}
+
+/* more button */
+.dot-more-btn-wrap {
+    position: inherit;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 7px auto;
+}
+.dot-more-btn-wrap {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 7px auto;
+}
+.dot-more-btn-wrap {
+    position: absolute;
+    top: -6px;
+    right: -23px;
+}
+.dot-more-btn-wrap .more-btn {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon_more_dot_24.png);
+    background-size: cover;
+}
+.dot-more-btn-wrap .more-btn:hover {
+    background-position: -20px 0;
+}
+.dot-more-btn-wrap .more-btn.dis {
+    background-position: -40px 0;
+}
+.dot-more-btn-wrap .more-btn.on {
+    background-position: -20px 0;
+}
+.dot-more-btn-wrap .more-popup-wrap button {
+    line-height: 40px;
+}
+.dot-more-btn-wrap .more-popup-wrap {
+    overflow: hidden;
+    top: auto;
+    bottom: 0;
+    left: 5px;
+}
+.dot-more-btn-wrap .more-popup-wrap button {
+    height: 40px;
+}
+.dot-more-btn-wrap .more-popup-wrap button:hover {
+    background-color: #f5f8ff;
+}
+.dot-more-btn-wrap .more-popup-wrap button:before {
+    content: "";
+    display: none;
+}
+.dot-more-btn-wrap .more-popup-wrap button {
+    width: 100%;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 18px;
+}
+.dot-more-btn-wrap .more-popup-wrap .del-btn {
+    color: #f80909;
+}
+/* scrollbar  */
+.scrollbar-outer>.scroll-element.scroll-y {
+    top: 2px;
+    right: 0;
+    width: 12px;
+}
+.scrollbar-outer>.scroll-element.scroll-y::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: 0;
+    display: block;
+    width: 12px;
+    height: 100%;
+    background-color: #fff;
+}
+.scrollbar-outer>.scroll-element.scroll-y::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: 12px;
+    display: block;
+    height: 100%;
+    border-left: 1px solid #eaeaea;
+}
+.scrollbar-outer>.scroll-element.scroll-y .scroll-element_outer {
+    width: 13px;
+    border-radius: 4px;
+}
+.scrollbar-outer>.scroll-element .scroll-bar {
+    width: 8px;
+    margin: 0 2px;
+    background-color: #cfd3db;
+    border-radius: 4px;
+    opacity: 1;
+}
+.scrollbar-outer>.scroll-element.scroll-y .scroll-element_outer,
+.scrollbar-outer>.scroll-element.scroll-y .scroll-element_track {
+    border-radius: 0;
+}
+.scrollbar-outer>.scroll-element.scroll-y .scroll-element_size {
+    top: -4px;
+}
+.scrollbar-outer>.scroll-element.scroll-y .scroll-element_track {
+    top: -4px;
+    background-color: transparent;
+}
+.gray-box {
+    padding: 16px;
+    background-color: #f8f8f8;
+}
+.gray-box strong {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+.gray-box p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.gray-box ul {
+    min-height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.gray-box ul li {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    text-indent: -10px;
+    padding-left: 10px;
+}
+.gray-box ul li + li { margin-top: 12px; }
+.gray-box li strong { display: inline; }
+
+.ooo-conversation-cont-wrap .profile-thumbnail.group::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.ooo-conversation-cont-wrap .profile-thumbnail.group:first-child {
+    z-index: 2;
+    margin: 0;
+}
+.ooo-conversation-cont-wrap .profile-thumbnail.group:nth-child(2) {
+    z-index: 1;
+    margin: 18px 8px 0;
+}
+.ooo-conversation-cont-wrap .profile-thumbnail.group:nth-child(3) {
+    z-index: 0;
+    margin: 18px -8px 0;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .profile-thumbnail-wrap .group:nth-child(1):nth-last-child(2),
+.ooo-conversation-cont-wrap .opponent-list-wrap .profile-thumbnail-wrap .group:nth-child(1):nth-last-child(2)~.group {
+    width: 30px;
+    height: 30px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .profile-thumbnail-wrap .profile-thumbnail.group:nth-child(1):nth-last-child(3),
+.ooo-conversation-cont-wrap .opponent-list-wrap .profile-thumbnail-wrap .profile-thumbnail.group:nth-child(1):nth-last-child(3)~.profile-thumbnail.group {
+    width: 26px;
+    height: 26px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info .profile-thumbnail-wrap .profile-thumbnail.group:nth-child(1):nth-last-child(2),
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info .profile-thumbnail-wrap .profile-thumbnail.group:nth-child(1):nth-last-child(2)~.profile-thumbnail.group {
+    width: 25px;
+    height: 25px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info .profile-thumbnail-wrap .profile-thumbnail.group:nth-child(1):nth-last-child(3),
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info .profile-thumbnail-wrap .profile-thumbnail.group:nth-child(1):nth-last-child(3)~.profile-thumbnail.group {
+    width: 23px;
+    height: 23px;
+}
+
+/********************************************************* hitalk wrap **********************************************************/
+.window-popup-atten.type2 {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.window-popup-atten{
+    position: relative;
+    width:960px;
+    height:663px;
+}
+.window-popup-atten .modal-close-icon {
+    position:absolute;
+    top: 11px;
+    right:18px;
+    background-image:url('../img/icon_modal_close_24.png');
+}
+.window-popup-atten .modal-close-btn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.hitalk-modal .boundary-box {
+    border-radius: 0;
+    box-shadow: none;
+}
+.ooo-conversation-cont-wrap .ooo-conversation-cont-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/********************************************************* hitalk left area **********************************************************/
+.ooo-conversation-cont-wrap .left-wrap { width: 410px; }
+.ooo-conversation-cont-wrap .left-wrap .inner {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.ooo-conversation-cont-wrap .left-wrap .tab-nav-wrap {
+    position: relative;
+    width: 80px;
+    text-align: center;
+    background-color: #273959;
+    padding-top: 40px;
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap button {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap button::before {
+    width: 40px;
+    height: 40px;
+    background-color: #8294b4;
+    mask-image: url("~@/assets/img/svg/ico-users.svg");
+    mask-size: 100%;
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap button:hover::before{
+    background-color: #94a9cd;
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap button.on::before{
+    background-color: #fff;
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap .c-opponent::before { 
+    mask-image: url("~@/assets/img/svg/ico-users.svg");
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap .c-list::before {
+    mask-image: url("~@/assets/img/svg/ico-hitalk-thin.svg"); 
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap .c-reservation::before {
+    mask-image: url("~@/assets/img/svg/ico-chattime.svg");
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap .c-vote::before {
+    mask-image: url("~@/assets/img/svg/ic_menu_vote.svg");
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap .time-setting::before {
+    mask-image: url("~@/assets/img/svg/ico-timeset.svg");
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap .list-count {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    min-width: 28px;
+    background-color: #ff6a6a;
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+    border-radius: 10px;
+    padding: 0 6px;
+}
+.ooo-conversation-cont-wrap .tab-nav-wrap button span {
+    font-size: 0;
+}
+.ooo-conversation-cont-wrap .tab-nav-bottom-wrap {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 80px;
+    text-align: center;
+}
+.ooo-conversation-cont-wrap .tab-nav-bottom-wrap .profile-thumbnail {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff url("../img/icon/profile_default.png") center no-repeat;
+    background-size: cover;
+    margin: 0 auto 18px;
+}
+.ooo-conversation-cont-wrap .tab-nav-bottom-wrap .time-setting::before {
+    width: 29px;
+    height: 28px;
+    background: url("../img/icon/icons_hitalk.png") right -150px/200px auto no-repeat;
+}
+.ooo-conversation-cont-wrap .tab-nav-bottom-wrap .time-setting:hover::before {
+    background-position: -140px -150px;
+}
+.ooo-conversation-cont-wrap .tab-nav-bottom-wrap .time-setting span {
+    font-size: 0;
+}
+.ooo-conversation-cont-wrap .left-wrap .tab-cont-wrap {
+    width: calc(410px - 80px);
+}
+.ooo-conversation-cont-wrap .left-wrap .tab-cont-wrap .search-box {
+    margin:10px 15px;
+}
+.ooo-conversation-cont-wrap .left-wrap .tab-cont-wrap .search-box.no-btn .input-box-wrap::after{
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: center / 100% no-repeat #000;
+    mask: url(../img/svg/ico-search-thin.svg) no-repeat center / contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+.ooo-conversation-cont-wrap .left-wrap .tab-cont-wrap .search-box + .opponent-list-wrap{
+    border-top:1px solid #e8e8e8; 
+}
+.ooo-conversation-cont-wrap .tab-cont-wrap .tab-cont-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    line-height: 70px;
+    color: #2e2e2e;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0 15px;
+
+}
+/* 대화목록 앞 아이콘 삭제
+ .ooo-conversation-cont-wrap .tab-cont-wrap .tab-cont-title::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    background: url("../img/icon/icons_hitalk.png") 0 0/200px auto no-repeat;
+    vertical-align: middle;
+    margin: 0 4px;
+} */
+.ooo-conversation-cont-wrap .tab-cont-wrap .btn-guide {
+    height: 18px;
+    background-color: #fff;
+    color: #868e96;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0 7px;
+    border: 1px solid #dde2e6;
+    border-radius: 18px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .tab-cont-wrap .btn-guide::before {
+    content: "!";
+    max-width: 10px;
+    height: 10px;
+    font-size: 10px;
+    line-height: 10px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 4px 0 3px;
+    border: 1px solid #868e96;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-title-wrap .btn-guide {
+    position: absolute;
+    top: 0;
+    left: 65px;
+    height: 20px;
+    font-size: 12px;
+    margin: 5px 0;
+}
+.ooo-conversation-cont-wrap .tab-cont-wrap .c-opponent::before { background-position: 0 -50px; }
+.ooo-conversation-cont-wrap .tab-cont-wrap .c-list::before { background-position: -25px -50px; }
+.ooo-conversation-cont-wrap .tab-cont-wrap .c-reservation::before { background-position: -120px -330px; }
+
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-title-wrap {
+    position: relative;
+    padding: 0 90px 0 14px;
+    background-color: #f7f8f9;
+    border-bottom: 1px solid #eee;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-title-wrap .title {
+    color: #273959;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 30px;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-title-wrap .btn-toggle {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon/icons_hitalk.png") 0 -75px/200px auto no-repeat;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .scroll-scrolly_visible .btn-toggle {
+    margin-right: 10px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-title-wrap .btn-toggle.on {
+    background-position: -25px -75px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-title-wrap .btn-toggle:hover {
+    opacity: .6;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap.c-opponent-wrap,
+.ooo-conversation-cont-wrap .opponent-list-wrap.c-list-wrap .list-cont-wrap {
+    height: calc(100vh - 70px);
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap ul li {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 68px;
+    padding: 16px 20px 16px 60px;
+    border-bottom: 1px solid #f7f8f9;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap ul li:hover {
+    background: #edf1fa;
+    cursor: pointer;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-thumbnail {
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: url("../img/icon/profile_default.png") center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .class-administrator {
+    top: 13px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    border-width: 1px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .notice-list-wrap .profile-btn-wrap {
+    flex-shrink: 0;
+    font-size: 0;
+    margin-left: auto;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .notice-list-wrap .profile-btn-wrap [class^="btn-"] {
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0 8px;
+    border: 1px solid var(--primary);
+    border-radius: 24px;
+    margin-left: 4px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .notice-list-wrap .profile-btn-wrap [class^="btn-"]:hover { opacity: .8; }
+.ooo-conversation-cont-wrap .opponent-list-wrap .notice-list-wrap .profile-btn-wrap [class^="btn-"]::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("../img/icon/icons_hitalk.png") 0 0/200px auto no-repeat;
+    margin-right: 2px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .notice-list-wrap .profile-btn-wrap .btn-message::before {
+    background-position: -150px -45px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .notice-list-wrap .profile-btn-wrap .btn-notice::before {
+    background-position: -125px -45px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap{
+    display: flex;
+    align-self: center;
+    width: 100%;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap {
+    width: 100%;
+}
+
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap .call,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap .time {
+    margin: 4px 0 0 2px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap .msg{
+    margin: 0 0 0 20px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap .call span,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap .msg span,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap .time span {
+    display: inline-block;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+    vertical-align: middle;
+    margin-left: 4px;
+    width: calc(100% - 20px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-info-wrap .profile-text-wrap .msg span{
+    margin-left: 0px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-order-wrap {
+    display: inline-block;
+    min-width: 28px;
+    height: 18px;
+    color: #616161;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    padding: 0 4px;
+    margin-right: 6px;
+    border: 1px solid #9e9e9e;
+    border-radius: 18px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-order-wrap-n.num-std,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-order-wrap-n.num-no,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-order-wrap-n.num
+{
+    display: inline-block;
+    min-width: 28px;
+    height: 18px;
+    color: #616161;
+    background: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    padding: 0 4px;
+    margin: 2px 6px 0 0;
+    border: 1px solid #9e9e9e;
+    border-radius: 18px;
+}
+.block-list .list-cont-wrap .profile-text-wrap .profile-order-wrap-n.num,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-order-wrap-n.num {
+    background: #9E9E9E;
+    color: #FFF;
+    border: 1px solid #9E9E9E;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-order-wrap-n.num-no {
+    background: none;
+    border: none;
+    width: 0;
+    min-width: 0;
+    margin-right: 2px;
+    padding: 0;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .name span:not(.num) {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 48px;
+    max-width: 100%;
+    color: #2e2e2e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-right: 5px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap.single-name .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* height: 36px; */
+    max-width: 250px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-order-wrap+.profile-text-wrap .name span {
+    max-width: 210px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap.c-list-wrap ul li.selected {
+    background-color: #edf1fa;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap.c-list-wrap .list-cont-wrap ul li {
+    padding-right: 65px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap.c-list-wrap .list-cont-wrap .profile-text-wrap {
+    display: block;
+    width: 100%;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap.c-list-wrap .list-cont-wrap .profile-text-wrap .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-right: 30px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .name .num {
+    color: #bbb;
+    font-size: 12px;
+    line-height: 2;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .info,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .call,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .msg,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .time {
+    margin: 4px 0 0 0;
+    font-size: 0;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .info span,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .call span,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .msg span,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .time span {
+    display: inline-block;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+    vertical-align: middle;
+    /* margin-left: 3px; */ 
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .msg{
+    margin: 0 0 0 18px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .call::before,
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .time::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 2px 0 1;
+    background: url("../img/icon/icons_hitalk.png") no-repeat;
+    background-size: 200px auto;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .time::before { background-position: -170px -45px; }
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .call::before { background-position: -185px -45px; }
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .school-info {
+    display: none;
+    padding: 0 20px 0 0;
+    margin: 4px 0 0 0;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .school-info span {
+    display: inline-block;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.2;
+    word-break: break-all;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .chating-count {
+    position: absolute;
+    right: -45px;
+    top: 3px;
+    height: 20px;
+    min-width: 20px;
+    background: #ff6a6a;
+    padding: 0 6px;
+    border-radius: 10px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .chating-count span {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+    vertical-align: top;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .chating-time {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .chating-time span {
+    display: inline-block;
+    color: #bbb;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .chating-preview {
+    position: relative;
+    margin: 2px 0 0;
+}
+.ooo-conversation-cont-wrap .opponent-list-wrap .list-cont-wrap .profile-text-wrap .chating-preview p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 44px;
+    color: #888;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* 하이톡 예약하기 */
+.ooo-conversation-cont-wrap .left-wrap.full { width: 100%; }
+.ooo-conversation-cont-wrap .left-wrap.full ~ .right-wrap { display: none; }
+.ooo-conversation-cont-wrap .left-wrap.full .tab-cont-wrap { width: calc(100% - 80px); }
+.ooo-conversation-cont-wrap .left-wrap.full .tab-cont-wrap .search-name-wrap {
+    position: relative;
+    background-color: #fff;
+    padding: 10px 8px;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+.ooo-conversation-cont-wrap .left-wrap.full .tab-cont-wrap .search-name-wrap .search-box-wrap {
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 40px !important;
+}
+.ooo-conversation-cont-wrap .left-wrap.full .tab-cont-wrap .search-name-wrap .search-box-wrap::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon/icons_hitalk.png") -125px -75px/200px auto no-repeat;
+    margin-top: -10px;
+}
+.ooo-conversation-cont-wrap .left-wrap.full .tab-cont-wrap .search-name-wrap .input-box-wrap input {
+    padding: 0;
+}
+.ooo-conversation-cont-wrap .left-wrap.full .tab-cont-wrap .search-name-wrap .input-text-delete-btn {
+    right: 13px;
+}
+
+.ooo-conversation-cont-wrap .c-reservation-wrap .empty-wrap:not(.explanation-cont-wrap) .img-wrap { background-image: url("../img/icon/icon_nodata_gray.svg"); }
+.ooo-conversation-cont-wrap .hitalk-scrollbar {
+    overflow-y: auto;
+    height: calc(100vh - (70px + 57px));
+    background-color: #F4F5F9;
+}
+.ooo-conversation-cont-wrap .reservation__wrap { padding: 30px; }
+.ooo-conversation-cont-wrap .reservation__wrap .highlight {
+    color: inherit;
+    font-weight: inherit;
+    background-color: #dae4f8 !important;
+}
+.ooo-conversation-cont-wrap .reservation__wrap .text-refer {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.ooo-conversation-cont-wrap .reservation__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.ooo-conversation-cont-wrap .reservation__top .text-search-result {
+    color: #888;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.ooo-conversation-cont-wrap .reservation__top .text-search-result span {
+    color: var(--primary);
+    font-weight: 700;
+    margin-right: 4px;
+}
+.ooo-conversation-cont-wrap .reservation__top .text-search-result span::before { content: "‘";color: #888; }
+.ooo-conversation-cont-wrap .reservation__top .text-search-result span::after { content: "’";color: #888; }
+.ooo-conversation-cont-wrap .reservation__top .group-btn {
+    display: flex;
+    display: flex;
+    margin-left: auto;
+}
+.ooo-conversation-cont-wrap .reservation__top .group-btn button { margin-right: 8px; }
+.ooo-conversation-cont-wrap .reservation__top .tab {
+    font-size: 0;
+    margin-bottom: 26px;
+}
+.ooo-conversation-cont-wrap .reservation__top .tab button {
+    min-width: 104px;
+    height: 36px;
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 34px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 36px;
+    margin-right: 8px;
+}
+.ooo-conversation-cont-wrap .reservation__top .tab button.is-active {
+    background-color: #ECF2FF;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.ooo-conversation-cont-wrap .reservation__item {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    padding: 25px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.ooo-conversation-cont-wrap .reservation__item:hover { background-color: #EDF1FA; }
+.ooo-conversation-cont-wrap .reservation__item.is-sending { animation: reservationItemBg 2.5s ease 1 forwards; }
+@keyframes reservationItemBg {
+    0%, 85% { background-color: #EDF1FA; }
+}
+
+.ooo-conversation-cont-wrap .reservation__item .checkbox { margin-right: 25px; }
+.ooo-conversation-cont-wrap .reservation__item .image {
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: url("../img/icon/profile_default_hiclass.svg") no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+.ooo-conversation-cont-wrap .reservation__item .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+    image-rendering: auto;
+}
+.ooo-conversation-cont-wrap .reservation__item .info { font-size: 0; }
+.ooo-conversation-cont-wrap .reservation__item .name {
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .reservation__item .num {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .reservation__item .class {
+    color: #bbb;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .reservation__item .class::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.ooo-conversation-cont-wrap .reservation__item .message {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-all;
+    white-space: pre-wrap;
+    margin: 4px 0 0;
+}
+.ooo-conversation-cont-wrap .reservation__item .message.file::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon/icons_hitalk.png") -40px -395px/200px auto no-repeat;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.ooo-conversation-cont-wrap .reservation__item .reservation {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.ooo-conversation-cont-wrap .reservation__item .reservation::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon/icons_hitalk.png") -80px -370px/200px auto no-repeat;
+    margin-right: 4px;
+}
+.ooo-conversation-cont-wrap .reservation__item .reservation .date {
+    color: var(--primary);
+    font-size: 14px;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .reservation__item .reservation .is-error { color: #EC1F2D; }
+.ooo-conversation-cont-wrap .reservation__item .icon-error {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon/icons_hitalk.png") -20px -370px/200px auto no-repeat;
+    margin-left: 4px;
+}
+.ooo-conversation-cont-wrap .reservation__item .icon-error .hi-tooltip {
+    left: -12px;
+    top: 24px;
+}
+.ooo-conversation-cont-wrap .reservation__item .icon-error .hi-tooltip span { font-size: 13px; }
+.ooo-conversation-cont-wrap .reservation__item .icon-error:hover .hi-tooltip { display: block; }
+.ooo-conversation-cont-wrap .reservation__item .hi-kebabmenu { top: 8px;right: 8px; } /* #68446 하이톡 > 예약 메시지 목록 우측 더보기 버튼 클릭영역 확대  */
+.ooo-conversation-cont-wrap .reservation__item .hi-kebabmenu  .btn-kebab { width: 48px;   height: 48px;   padding: 15px;  } /* #68446 하이톡 > 예약 메시지 목록 우측 더보기 버튼 클릭영역 확대  */
+.ooo-conversation-cont-wrap .hi-kebabmenu .kebabmenu__layer button { color: #333; }
+.ooo-conversation-cont-wrap .hi-kebabmenu .kebabmenu__layer button::before { background: #333; }
+/* .ooo-conversation-cont-wrap .hi-kebabmenu .kebabmenu__layer .btn-hitalk-reserve::before { background-position: -100px -370px; }
+.ooo-conversation-cont-wrap .hi-kebabmenu .kebabmenu__layer .btn-hitalk-delete::before { background-position: -120px -370px; }
+.ooo-conversation-cont-wrap .hi-kebabmenu .kebabmenu__layer .btn-hitalk-send::before { background-position: -140px -370px; }
+.ooo-conversation-cont-wrap .hi-kebabmenu .kebabmenu__layer .btn-hitalk-copy::before { background-position: -160px -370px; } */
+
+/********************************************************* hitalk right area **********************************************************/
+.ooo-conversation-cont-wrap .right-wrap {
+    position: relative;
+    width: calc(100% - 410px);
+    min-width: 520px;
+    float: left;
+    border-left: 1px solid #d8d8d8;
+}
+/* hitalk right area > empty (guide) */
+.empty-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+.empty-wrap .text-wrap p {
+    color: #888;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 15px;
+    margin-top: 16px;
+}
+.empty-wrap .img-wrap { text-align: center; }
+.empty-wrap:not(.explanation-cont-wrap) .img-wrap {
+    width: 70px;
+    height: 70px;
+    background: url("../img/icon/icon_nodata.svg") no-repeat;
+}
+.empty-wrap:not(.explanation-cont-wrap) .img-wrap img { display: none; }
+.empty-wrap.search-empty-wrap { height: calc(100% - 102px); }
+.explanation-cont-wrap {
+    height: 100vh;
+    background-color: #f4f5f9;
+}
+.explanation-cont-wrap .img-wrap {
+    background: #f4f5f9;
+    border-radius: 20px 20px 0 0;
+}
+.explanation-cont-wrap .img-wrap img {
+    width: 300px;
+}
+.explanation-cont-wrap .text-wrap p {
+    color: #333;
+    line-height: 1.63;
+    margin-top: 20px;
+}
+
+/* hitalk right area > top area */
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap {
+    /* overflow-y: auto; 대화 저장하기 버튼이 툴팁 형태로 바뀌면서 해당 영역이 스크롤이 생겨 overflow 기능 삭제함 */
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: #fff;
+    padding: 0 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info {
+    position: relative;
+    width: 100%;
+    padding: 0 15px 0 40px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info .profile-thumbnail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../img/icon/profile_default.png") center no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info p {
+    display: inline-block;
+    color: #2e2e2e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: break-all;
+    margin: 0 5px 0 0;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info .ft-14 {
+    width: 100%;
+    color: #888;
+    font-size: 12px !important;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .btn-download {
+    margin-right: 12px;
+    position: relative;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .btn-download::before { 
+    background-color:#333;
+    width: 24px;
+    height: 24px;
+    mask-size: 100%;
+    mask-image: url("../img/icon/icon_download_gray.svg");    
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .btn-download:hover::before{ 
+    background-color:var(--primary);
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .btn-download span{
+    display: none;
+    position: absolute;
+    width: 90px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.56);
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #fff;
+    font-weight: 400;
+    padding: 6px 8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 99;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .btn-download:hover span{
+    display: block;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info span {
+    display: inline-block;
+    color: #ff6a6a;
+    word-break: break-all;
+    margin-left: 4px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .info {
+    display: inline-block;
+    height: 22px;
+    font-size: 0;
+    padding: 0 8px;
+    border: 1px solid var(--primary);
+    border-radius: 11px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .info::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .available-time::before {
+    background: url("../img/icon/icons_hitalk.png") -140px -63px/200px auto no-repeat;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .info span {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 12px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .end-time {
+    border: 1px solid #ff6a6a;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .end-time::before{
+    display: none;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .end-time span{
+    color: #ff6a6a;
+    margin-left: 0px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .end-time.off{
+    border:1px solid #888888;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .end-time.off span{
+    color:#888888;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .dot-more-btn-wrap {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+}
+
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn::after,
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn .more-btn-dot::before,
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn .more-btn-dot::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 2px);
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #333;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn:hover::after,
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn:hover .more-btn-dot::before,
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn:hover .more-btn-dot::after {
+    background-color: var(--primary);
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .dot-more-btn-wrap .more-btn::after {
+    top: calc(50% - 2px);
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn .more-btn-dot::before {
+    top: 3px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn .more-btn-dot::after {
+    bottom: 3px;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn > span:not(.more-btn-dot){
+    display: none;
+    position: absolute;
+    width: 57px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.56);
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #fff;
+    font-weight: 400;
+    padding: 6px 8px;
+    right: 0;
+    top: 24px;
+    z-index: 99;
+}
+.ooo-conversation-cont-wrap .right-wrap .chatting-opponent-info-wrap .more-btn:hover > span{
+    display: block;
+}
+
+/* hitalk right area > message list */
+.ooo-conversation-cont-wrap .right-wrap .chatting-list-wrap {
+    overflow: hidden;
+    background-color: #edf1fa;
+    border-bottom: 1px solid #e8e8e8;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .scrollbar-outer {
+    padding: 0 15px;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .scrollbar-outer.scroll-scrolly_visible {
+    padding: 0 28px 0 15px;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .scrollbar-outer>.scroll-element.scroll-y::before {
+    background-color: #fff;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-date-wrap {
+    position: relative;
+    margin: 32px 0;
+    text-align: center;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-date-wrap::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #b1bbd2;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-date-wrap .date {
+    position: relative;
+    display: inline-block;
+    background-color: #edf1fa;
+    color: #a1a7b8;
+    font-size: 12px;
+    padding: 0 54px;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-msg-wrap {
+    text-align: center;
+    margin: 20px 0;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-msg-wrap div {
+    font-size: 15px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 12px 20px;
+    border-radius: 18px;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-msg-wrap .invite,
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-msg-wrap .ejection {
+    background-color: #cbd3e5;
+    color: #fff;
+    font-size: 16px;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-bubble-wrap {
+    font-size: 0;
+    margin: 20px 0;
+}
+.ooo-conversation-cont-wrap .chatting-list-wrap .chatting-bubble-wrap > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble {
+    display: inline-block;
+    max-width: 50%;
+    padding: 15px 20px;
+    border-radius: 18px;
+    vertical-align: bottom;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble a {
+    color: inherit;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: underline;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble-etc-wrap {
+    position: relative;
+    font-size: 12px;
+    vertical-align: bottom;
+    min-width: 20px;
+    min-height: 20px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .time {
+    color: #adb5ca;
+    padding-top: 5px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .reading-check-wrap {
+    color: #ff6a6a;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .reading-check-wrap.check {
+    display: none;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .more-btn-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    width: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    white-space: nowrap;
+    font-size: 0;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .more-btn-wrap button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    margin: 4px 0;
+    box-sizing: content-box;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .more-btn-wrap button:not(:first-of-type) {
+    border-left: 1px solid #eee;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .more-btn-wrap button::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .more-btn-wrap .resending-btn::after {
+    background: url("../img/icon/icons_hitalk.png") left -200px/200px auto no-repeat;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-etc-wrap .more-btn-wrap .delete-btn::after {
+    background: url("../img/icon/icons_hitalk.png") -25px -200px/200px auto no-repeat;
+}
+
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-profile-wrap {
+    display: block;
+    padding: 0 0 0 48px;
+    position: relative;
+}
+.ooo-conversation-cont-wrap .chatting-profile-wrap > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .chatting-profile-wrap .profile-thumbnail {
+    position: absolute;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 0 12px 0 0;
+    background: url("../img/icon/profile_default.png") center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.ooo-conversation-cont-wrap .chatting-profile-wrap .profile-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto;
+}
+.ooo-conversation-cont-wrap .chatting-profile-wrap .profile-name {
+    color: #2e2e2e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    word-break: break-all;
+    margin-bottom: 4px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting {
+    text-align: right;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .chatting-bubble {
+    color: #fff;
+    background: var(--primary);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .chatting-bubble-etc-wrap {
+    margin: 0 7px 0 0;
+    height: 28px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .chatting-bubble-etc-wrap .dot-more-btn-wrap {
+    right: 38px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .chatting-bubble-etc-wrap .dot-more-btn-wrap .more-popup-wrap {
+    left: inherit;
+    right: 0;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.your-chatting {
+    text-align: left;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.your-chatting .chatting-bubble {
+    margin: 0 0 0 40px;
+    background-color: #fff;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.your-chatting .chatting-bubble-etc-wrap {
+    margin: 0 0 0 7px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.your-chatting .chatting-bubble-etc-wrap .dot-more-btn-wrap {
+    right: -24px;
+}
+
+/* hitalk right arae > upload file */
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble .message-file {
+    position: relative;
+    min-height: 48px;
+    padding-left: 40px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble .message-file::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon/icons_hitalk.png") -50px -100px/200px auto no-repeat;
+
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble .message-file span {
+    display: block;
+    text-align: left;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble .message-file .name {
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble .message-file .period {
+    color: #888;
+    font-size: 12px;
+    margin-top: 6px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .chatting-bubble .message-file::before {
+    background: url("../img/icon/icons_hitalk.png") -100px -100px/200px auto no-repeat
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .chatting-bubble .message-file .name {
+    color: #fff;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .chatting-bubble .message-file .period {
+    color: #a6bef0;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image .chatting-bubble {
+    background-color: transparent;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid rgb(211,215,226);
+    border-radius: 18px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image .chatting-bubble img {
+    width: 100%;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image .chatting-bubble button {
+    display: block;
+    max-width: 140px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble {
+    width: 220px;
+    border: 0;
+    border-radius: 0;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble p {
+    font-size: 0;
+    margin-right: -5px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: calc(33.33% - 5px);
+    padding-top: calc(33.33% - 5px);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble .cover-empty {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(1):nth-last-of-type(3n),
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(1):nth-last-of-type(3n)~button {
+    width: calc(33.33% - 5px);
+    padding-top: calc(33.33% - 5px);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(3n + 4):nth-last-of-type(4),
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(3n + 4):nth-last-of-type(4)~button {
+    width: calc(50% - 5px);
+    padding-top: calc(50% - 5px);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(3n + 2):nth-last-of-type(1),
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(3n + 1):nth-last-of-type(2) {
+    width: calc(50% - 5px);
+    padding-top: calc(50% - 5px);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(1):nth-last-of-type(4),
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble button:nth-of-type(1):nth-last-of-type(4)~button {
+    width: calc(50% - 5px);
+    padding-top: calc(50% - 5px);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.image .cover-empty .expired-img-icon span {
+    width: 46px;
+    height: 46px;
+    background: url("../img/icon/icons_hitalk.png") 0 -150px/200px auto no-repeat;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble .cover-empty {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border: 0;
+    background-color: #d3d7e2;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble .cover-empty [class^="empty-"],
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .chatting-bubble  [class^="video-"] {
+    top: 50%;
+    margin-top: -24px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.video .chatting-bubble .img-video-view-wrap {
+    overflow: hidden;
+    position: relative;
+    width: 205px;
+    height: 205px;
+    border-radius: 18px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.video .cover-empty {
+    width: 100%;
+    height: 100%;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.video .cover-video {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.video .video-icon01 span {
+    background: url("../img/icon/icon_play.svg") no-repeat;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.video .cover-empty .expired-video-icon span {
+    width: 46px;
+    height: 46px;
+    background: url("../img/icon/icons_hitalk.png") right -100px/200px auto no-repeat;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.video .chatting-bubble {
+    overflow: hidden;
+    max-width: 205px;
+    padding: 0;
+    background-color: transparent;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.video .chatting-bubble img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    max-width: 150%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+/* hitalk right area > 하이톡 공유하기 */
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .chatting-bubble {
+    width: 250px;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 18px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: rgba(71, 120, 222, 0.2) url("../img/logo/logo_2x.png") center center/102px auto no-repeat;
+    padding: 54% 0 0;
+    border-radius: 18px 18px 0 0;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+    object-position: top;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb [class*="thumb-"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/hitalk/thumb_survey.png") no-repeat;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb .thumb-survey { background-position: 0 0; }
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb .thumb-afterschool { background-position: 0 -135px; }
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb .thumb-counsel { background-position: 0 calc(-135px * 2); }
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb .thumb-draw {background-position: 0 calc(-135px * 3);}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb .thumb-fcfs {background-position: 0 calc(-135px * 4);}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .thumb .thumb-report { 
+    background: url("../img/hitalk/thumb_report.svg") no-repeat;
+    background-position: 0 0; }
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .info {
+    padding: 15px 15px 20px;
+    border-radius: 0 0 18px 18px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .heading {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .text p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 66px;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #616161;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .group-link {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px -2px 0;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.share .link {
+    flex: 1;
+    background-color: #f3f3f3;
+    color: #222;
+    font-size: 15px;
+    text-align: center;
+    line-height: 39px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+/* hitalk right area > emoticon */
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.emoticon .chatting-bubble {
+    padding: 0;
+    background-color: transparent;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.emoticon .chatting-bubble img {
+    width: 100px;
+    height: 100px;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting.emoticon .chatting-bubble p {
+    text-align: right;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap .msg {
+    display: inline-block;
+    line-height: 1.6;
+    text-align: left !important;
+    padding: 15px 20px;
+    border-radius: 18px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .msg {
+    color: #fff;
+    background: var(--primary);
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.your-chatting .msg {
+    color: #333;
+    background: #fff;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.my-chatting .msg-del {
+    color: #88a3dd;
+}
+.ooo-conversation-cont-wrap .chatting-bubble-wrap.your-chatting .msg-del {
+    color: #bbb;
+}
+
+/* hitalk right area > bottom area */
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: 0;
+    max-height: 100%;
+    padding: 15px;
+    background-color: #fff;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .btn-scrollBottom {
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    width: 58px;
+    height: 58px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 4px 12px 0 rgba(7, 43, 71, 0.24);
+    font-size: 0;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .btn-scrollBottom::before,
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .btn-scrollBottom::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: #2e2e2e;
+    border-radius: 2px;
+    margin-top: -5px;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .btn-scrollBottom::before {
+    left: 56%;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .btn-scrollBottom::after {
+    left: 40%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.btn-floating-chat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: -70px;
+    right: 30px;
+    width: calc(100% - 43px);
+    height: 54px;
+    padding: 0 12px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+}
+.btn-floating-chat .info {
+    max-width: 200px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.btn-floating-chat .info .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+    color: #2e2e2e;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 8px;
+}
+.btn-floating-chat .image {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 36px;
+    padding: 36px 0 0;
+    border-radius: 50%;
+    background: #fff url("../img/icon/profile_default.png") center no-repeat;
+}
+.btn-floating-chat .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+    background-color: #fff;
+}
+.btn-floating-chat .chat { width: calc(100% - 250px); }
+.btn-floating-chat .chat p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    color: #333;
+    font-size: 16px;
+    line-height: 36px;
+}
+.btn-floating-chat .arrow {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    margin-left: auto;
+}
+.btn-floating-chat .arrow::before,
+.btn-floating-chat .arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: #2e2e2e;
+    border-radius: 1px;
+    margin-top: -7px;
+}
+.btn-floating-chat .arrow::before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 5px;
+}
+.btn-floating-chat .arrow::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: -5px;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .input-box-wrap {
+    width: 100%;
+    font-size: 0;
+    overflow: visible;
+    border-color: #d8d8d8;
+    border-radius: 3px;
+    padding: 0 115px 43px 0;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .input-box-wrap::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 42px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .input-box-wrap.dis {
+    opacity: 1;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .input-box-wrap .textarea-wrap {
+    overflow-x: hidden;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+    margin: 15px 0;
+    vertical-align: top;
+}
+.ooo-conversation-cont-wrap .input-box-wrap .textarea-wrap::-webkit-scrollbar {
+    width: 8px;
+}
+.ooo-conversation-cont-wrap .input-box-wrap .textarea-wrap::-webkit-scrollbar-thumb {
+    background-color: #cfd3db;
+	min-height:40px;
+    border-radius: 4px;
+}
+.ooo-conversation-cont-wrap .input-box-wrap .textarea-wrap::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 4px;
+}
+.ooo-conversation-cont-wrap .input-box-wrap .textarea-wrap .text-input-area {
+    min-height: 56px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: normal;
+    word-break: break-all;
+    outline: none;
+    cursor: text;
+    padding: 0;
+    transform: none;
+}
+.ooo-conversation-cont-wrap .input-box-wrap .textarea-wrap .text-input-area:empty::before {
+    content: attr(placeholder);
+    display: block;
+    color: #bbb;
+}
+.ooo-conversation-cont-wrap .input-box-wrap .textarea-wrap .text-input-area > * {
+    line-height: 1.6;
+}
+.ooo-conversation-cont-wrap .input-box-wrap .textarea-wrap textarea {
+    height: 34px;
+    line-height: 140%;
+    padding-top: 7px;
+    border-radius: 4px;
+    background: #fff !important;
+    font-weight: normal;
+    font-size: 15px;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .attach-file-wrap {
+    padding: 3px 12px 12px 12px;
+}
+/* chatlayout으로 이동
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-attach {
+    z-index: 1;
+    left: calc(15px + 16px);
+    bottom: calc(5px + 16px);
+    top: inherit;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-attach button.btn-attach {
+    width: 32px;
+    height: 32px;
+    border: none;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-attach button.btn-attach::before {
+    width: 20px;
+    height: 23px;
+    background: url("../img/icon/icons_hitalk.png") -50px -50px/200px auto no-repeat;
+    margin: 3px 0 0;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-attach button.btn-attach:hover {
+    opacity: .6;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-attach button.btn-attach:hover::before {
+    opacity: 1;
+} 
+    */
+/* StickerLayout.vue scope
+.ooo-conversation-cont-wrap .write-comment-btm-wrap {
+    z-index: 1;
+    position: absolute;
+    left: 53px;
+    bottom: 5px;
+}
+.ooo-conversation-cont-wrap .write-comment-btm-wrap .add-emoticon-wrap {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+.ooo-conversation-cont-wrap .write-comment-btm-wrap .add-emoticon-wrap .add-emoticon-btn {
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+.ooo-conversation-cont-wrap .write-comment-btm-wrap .add-emoticon-wrap .add-emoticon-btn::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url("../img/icon/icons_hitalk.png") -75px -50px/200px auto no-repeat;
+    vertical-align: middle;
+}
+.ooo-conversation-cont-wrap .write-comment-btm-wrap .add-emoticon-wrap .add-emoticon-btn:hover,
+.ooo-conversation-cont-wrap .write-comment-btm-wrap .add-emoticon-wrap .add-emoticon-btn.dis {
+    opacity: .6;
+}
+.ooo-conversation-cont-wrap .write-comment-btm-wrap .add-emoticon-wrap .add-emoticon-btn.new::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ff6a6a;
+} */
+.ooo-conversation-cont-wrap .chatting-input-wrap .attaching-img {
+    padding: 5px;
+    border-radius: 3px;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .attaching-img .delete-btn {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #fff url("../img/icon/icon_close_black.svg") no-repeat;
+    background-size: 18px 18px;
+    background-position: center center;
+    box-sizing: content-box;
+}
+/* StickerLayer scope 
+.ooo-conversation-cont-wrap .emoticon-select-popup {
+    left: -40px;
+    bottom: 45px;
+    right: inherit;
+    padding-top: 39px;
+    border-radius: 10px;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 45px;
+    display: inline-block;
+    border-top: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .emoticon-on-icon {
+    right: inherit;
+    left: 38px;
+    bottom: -45px;
+    width: auto;
+    height: auto;
+    padding: 5px 7px;
+    background-color: rgb(231, 232, 234);
+    border-radius: 4px;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .select-tab-wrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    border-top: 0;
+    border-radius: 10px 10px 0 0;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .select-tab-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .select-tab-wrap ul {
+    height: 39px;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .select-tab-wrap ul li {
+    background-color: #f8f8f8;
+    border-color: #eaeaea;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .select-tab-wrap ul li.on {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .select-tab-wrap ul li.new:after {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ff6a6a;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .emoticon-on-icon .icon {
+    width: 22px;
+    height: 22px;
+    background: url("../img/icon/icons_hitalk.png") -100px -50px/200px auto no-repeat;
+    border-radius: 50%;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .emoticon-item-wrap {
+    max-height: 250px;
+    background-color: transparent;
+    padding: 20px;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .emoticon-item-wrap .emoticon-item ul li {
+    border: 1px solid transparent;
+}
+.ooo-conversation-cont-wrap .emoticon-select-popup .emoticon-item-wrap .emoticon-item ul li:hover {
+    background: none;
+    border-color: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+     */
+.ooo-conversation-cont-wrap .chatting-input-wrap .send-btn-wrap {
+    position: absolute;
+    top: calc(24px + 16px);
+    right: calc(20px + 16px);
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .send-btn-wrap button {
+    width: 75px;
+    height: 39px;
+    border-radius: 30px;
+}
+
+/* 예약 메시지 안내 */
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .reservation-notice-wrap {
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .reservation-notice-wrap p {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    font-size: 14px;
+    line-height: 38px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 5px;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .reservation-notice-wrap p::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon/icons_hitalk.png") -40px -370px/200px auto no-repeat;
+    vertical-align: middle;
+    margin: -2px 2px 0 0;
+}
+.ooo-conversation-cont-wrap .chatting-cont-wrap .chatting-input-wrap .reservation-notice-wrap p::after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid #9e9e9e;
+    border-right: 1.5px solid #9e9e9e;
+    transform: rotate(45deg);
+    margin-left: auto;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .reservation-notice-wrap ~ .input-box-wrap { border-top: 0;border-radius: 0 0 3px 3px; }
+.ooo-conversation-cont-wrap .chatting-input-wrap .reservation-notice-wrap ~ .send-btn-wrap { top: calc(20px + 16px + 40px); }
+/* ChatLayout scope
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation {
+    z-index: 1;
+    position: absolute;
+    left: calc((15px + 16px) + (32px * 2 + 6px * 2));
+    bottom: calc(5px + 16px);
+    width: 32px;
+    height: 32px;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation .btn-reservation {
+    width: 100%;
+    height: 100%;
+    background: url("../img/icon/icons_hitalk.png") -150px -330px/200px auto no-repeat;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation .btn-reservation[disabled] { opacity: .6; }
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation .btn-reservation:hover { opacity: .6; }
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation .hi-tooltip {
+    display: block;
+    top: 0;
+    left: calc(100% + 6px);
+    font-size: 13px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation .hi-tooltip::before {
+    z-index: -1;
+    background-color: #fff;
+    left: -5px;
+    top: calc(50% - 5px);
+    border: 0;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation .hi-tooltip span {
+    color: #222;
+    font-size: 13px;
+}
+.ooo-conversation-cont-wrap .chatting-input-wrap .add-reservation .hi-tooltip span::before {
+    content: "N";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    background-color: #ff6a6a;
+    border-radius: 50%;
+    margin-right: 4px;
+} */
+@keyframes hideReservationTooltip {
+    from { opacity: 1; }
+    to { opacity: 0;visibility: hidden; }
+}
+
+
+/********************************************************* popup **********************************************************/
+.ooo-conversation-cont-wrap .right-wrap.dim-right-modal::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+/* popup */
+.modal {
+    background-color:rgba(0, 0, 0, .7);
+    max-height: 100vh;
+}
+.modal.normal-modal .modal-close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: url("../img/icon/icon_close_black.svg");
+    background-size: cover;
+}
+.modal-top-btn-wrap .right-wrap {
+    top: 30px;
+}
+.modal-top-btn-wrap .right-wrap .download-btn {
+    width: auto;
+    height: 36px;
+    text-align: center;
+    background-color: transparent;
+    padding: 0 16px;
+    border: 1px solid #fff;
+    border-radius: 34px;
+    margin-right: 96px;
+}
+.modal-top-btn-wrap .right-wrap button.download-btn::before {
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon/icon_download_white.svg") no-repeat;
+    background-size: 24px 24px;
+    background-position: left center;
+    margin-right: 4px;
+}
+.modal-top-btn-wrap .right-wrap button span { font-size: 15px; }
+.modal-top-btn-wrap .right-wrap .download-select {
+    position: absolute;
+    left: -50px;
+    top: calc(100% + 14px);
+    background-color: #fff;
+    border-radius: 10px;
+    border: rgba(0,0,0,.2);
+}
+.modal-top-btn-wrap .right-wrap .download-select::before {
+    content: "";
+    position: absolute;
+    left: 65%;
+    top: -15px;
+    border: 8px solid transparent;
+    border-bottom-color: #fff;
+}
+.modal-top-btn-wrap .right-wrap .download-select span {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    line-height: 44px;
+    text-align: center;
+    padding: 0 16px;
+    margin: 0;
+}
+.modal-top-btn-wrap .right-wrap .download-select span + span { border-top: 1px solid #e8e8e8; }
+.talk-view-attached-file-modal.modal.has-top-btn-wrap .modal-cont-inner {
+    position: relative;
+    padding: 0;
+}
+.talk-view-attached-file-modal:not(.slick-modal) .modal-cont-inner img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: auto;
+    max-height: 85vh;
+    transform: translateY(-50%);
+    transform: -webkit-translateY(-50%);
+}
+.talk-view-attached-file-modal .right-wrap .modal-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: none;
+    width: auto;
+    height: 36px;
+    text-align: center;
+    padding: 0 16px;
+    border: 1px solid #fff;
+    border-radius: 30px;;
+}
+.talk-view-attached-file-modal .modal-close-btn::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 34px;
+    background: url("../img/icon/icon_close_white.svg") no-repeat;
+    background-size: 24px 24px;
+    background-position: left center;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+.talk-view-attached-file-modal .modal-close-btn::after {
+    content: "닫기";
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    line-height: 34px;
+}
+/* modal : images slide */
+.talk-view-attached-file-modal.slick-modal .slide-wrap,
+.talk-view-attached-file-modal.slick-modal .slick-list,
+.talk-view-attached-file-modal.slick-modal .slick-track,
+.talk-view-attached-file-modal.slick-modal .slick-slide,
+.talk-view-attached-file-modal.slick-modal .slick-slide div,
+.talk-view-attached-file-modal.slick-modal .slider-for { height: 100%; }
+.talk-view-attached-file-modal.slick-modal .slider-for img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    max-width: 60%;
+    max-height: 85vh;
+}
+.talk-view-attached-file-modal.slick-modal .slide-count {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    padding: 0 24px;
+    border-radius: 36px;
+    transform: translateX(-50%);
+}
+.talk-view-attached-file-modal.slick-modal .slide-count::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon/icon_hitalk_setimage.svg") no-repeat;
+    background-size: 24px 24px;
+    background-position: left center;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.talk-view-attached-file-modal.slick-modal .slide-nav-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 15px 0;
+    text-align: center;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slick-track { margin: 0 auto;}
+.talk-view-attached-file-modal.slick-modal .slider-nav {
+    display: inline-block;
+    width: calc(90px * 9);
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slick-slide {
+    cursor: pointer;
+    margin: 0 8px;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slide.slick-slide.slick-current::after, /* 퍼블리싱 산출물 slick */
+.talk-view-attached-file-modal.slick-modal .slider-nav .slick-current .slide::after { /* 개발 slick */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slide {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    padding-top: 64px;
+    border-radius: 4px;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slide img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    max-width: none;
+    min-width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+/* modal : alert */
+.hitalk-alert-modal.modal,
+.conversation-setting-modal.modal {
+    text-align: center;
+    font-size: 0;
+}
+.hitalk-alert-modal.modal::before,
+.conversation-setting-modal.modal::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.hitalk-alert-modal.modal .modal-cont-wrap,
+.conversation-setting-modal .modal-cont-wrap {
+    position: relative;
+    left: inherit;
+    top: inherit;
+    display: inline-block;
+    overflow: visible;
+    vertical-align: middle;
+    margin: 0 !important;
+}
+.modal.normal-modal .modal-title-wrap {
+    padding-top: 32px;
+    margin: 0 0 16px;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap {
+    padding: 32px 30px 0;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap .title {
+    font-size: 20px;
+    font-weight: 700;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap .text-wrap {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap .text-wrap span {
+    font-weight: inherit;
+    font-family: inherit;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap .text-wrap .highlight {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    color: var(--primary)
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap .text-wrap .highlight-red {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    color: #FF6A6A
+}
+.modal.normal-modal .modal-title-wrap .title {
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap p span {
+    color: #888;
+    font-weight: 350;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap p span .highlight{
+    color: var(--primary);
+    font-weight: 500;
+}
+.modal.normal-modal .modal-title-wrap p {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap .desc {
+    width: 497px;
+    height: 55px;
+    background: #F4F5F9;
+    border-radius: 6px;
+    color: #333;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap .desc .time-icon {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+    margin-right: 5px;
+    display: inline-block;
+    background: url('../img/guide/ic_clock_setting_23.png')
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 16px;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap p .highlight {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+.hitalk-alert-modal.modal .modal-cont .icon-title-wrap p strong {
+    color: #333;
+    font-weight: 700;
+}
+.hitalk-alert-modal .btn-wrap {
+    padding: 28px 0 32px;
+}
+.hitalk-alert-modal .btn-wrap button {
+    width: 160px;
+    height: 44px;
+    line-height: 42px;
+    border-radius: 44px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.hitalk-alert-modal .btn-wrap .modal-close-btn {
+    background-color: #616161;
+    border-color: #616161;
+    color: #fff;
+}
+.save-progress {
+    position: relative;
+    width: 100%;
+    height: 36px;
+    background-color: #e8eaf0;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.save-progress .progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 36px;
+    background-color: var(--primary);
+    border-radius: 3px;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
+.all-noti-mem-thum-wrap ul > li {
+    position: relative;
+    padding: 8px 46px;
+    margin: 0 15px;
+}
+.all-noti-mem-thum-wrap ul > li .btn-add-mem {
+    overflow: visible;
+    position: relative;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 36px;
+}
+.all-noti-mem-thum-wrap ul > li .btn-add-mem:disabled{
+    opacity: 0.4;
+    cursor: unset;
+}
+.all-noti-mem-thum-wrap ul > li .btn-add-mem::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: -46px;
+    top: 0;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../img/icon/icons_hitalk.png") 0 -100px/200px auto no-repeat;
+}
+.all-noti-mem-thum-wrap ul > li .btn-add-mem:hover::before {background-color: #fff;}
+.all-noti-mem-thum-wrap ul>li .profile-thumbnail {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 0 8px 0 0;
+    background: url("../img/icon/profile_default.png") center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.all-noti-mem-thum-wrap ul>li .profile-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto;
+}
+.all-noti-mem-thum-wrap ul > li .name {
+    width: 100%;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 36px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+}
+.all-noti-mem-thum-wrap ul > li .name.profile-block::before{
+    top: 10px;
+}
+.all-noti-mem-thum-wrap ul>li .name span {
+    font-weight: inherit;
+}
+.all-noti-mem-thum-wrap ul>li .name .me {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.all-noti-mem-thum-wrap ul > li .check-mem {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.all-noti-mem-thum-wrap ul > li .check-mem .no-chat{
+    width: 28px;
+    min-height: 28px;
+    padding: 0px 3px;
+}
+/* .all-noti-mem-thum-wrap ul > li .check-mem .no-chat i::after{
+    background-color:#EF2B2A;
+
+} */
+.all-noti-mem-thum-wrap ul > li.dis{opacity:0.4;}
+
+/* popup 공지하기 대상 선택 */
+.all-noti-opt {
+    width: 100%;
+    padding: 16px 30px 0;
+}
+.all-noti-opt>p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 0 10px;
+}
+.all-noti-opt .border-selectbox-wrap .selected-option {text-align: left;}
+.all-noti-opt .border-selectbox-wrap.selected .option-list-wrap {display: block;height: auto;overflow-y: hidden;}
+.all-noti-opt .border-selectbox-wrap .option-list-wrap li {text-align:left;}
+
+/* popup 직접 선택 */
+.modal.normal-modal .modal-title-wrap p.badge-noti-member {
+    display: block;
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: right;
+    line-height: 1;
+    padding: 25px 30px 0;
+    margin: 0;
+}
+p.badge-noti-member>span {
+    color: #ff6a6a;
+}
+.mem-noti-peo {
+    position: relative;
+    display: inline-block;
+    height: 32px;
+    border: 1px solid #eaeaea;
+    padding: 0 40px 0 15px;
+    background: #f4f5f9;
+    border-radius: 18px;
+    margin: 0 15px 8px;
+}
+.mem-noti-peo span {
+    display: inline-block;
+    max-width: 193px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    color: #333;
+    font-size: 15px;
+    line-height: 30px;
+}
+.mem-noti-peo:hover {
+    background-color: #edf1fa;
+    border: 1px solid var(--primary);
+}
+.mem-noti-peo:hover span {color: var(--primary)}
+.mem-noti-peo .delete-btn {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon/icon_close_black.svg");
+    background-size: cover;
+    margin-top: -8px;
+}
+.mem-noti-peo .delete-btn:hover {opacity: .5;}
+.mem-noti-peo .delete-btn.dis {opacity: .3;}
+
+/* .all-noti-wrap {padding: 0 30px;}
+.all-noti-wrap::after {content: "";display: block;clear: both;}
+.all-noti-wrap .checkbox-wrap {
+    text-align: left;
+    margin: -36px 0 15px;
+}
+.all-noti-wrap .checkbox-wrap label {margin-right: 10px;}
+.all-noti-wrap .search-name-wrap {
+    width: 264px;
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+}
+.all-noti-wrap .search-name-wrap .search-box-wrap {
+    width: 100%;
+}
+.all-noti-wrap .all-noti-mem-thum-wrap {
+    float: left;
+    width: 264px;
+    height: 302px;
+    padding: 0;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+    border-radius: 0 0 2px 2px;
+}
+*/
+.mem-noti-list {
+    text-align: left;
+    height: 400px;
+    overflow: auto
+}
+.mem-noti-list .mem-noti-peo:first-child {
+    margin-top: 20px;
+}
+.mem-noti-list .mem-noti-peo:last-child {
+    margin-bottom: 20px;
+} 
+
+/* 설정 및 수신확인 aside layer popup */
+.noti-setting-wrap {
+    overflow: hidden;
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 430px;
+    height: 100vh;
+    background-color: #fff;
+}
+.noti-function-wrap{
+    display: flex;
+    flex-flow: column;
+    height: calc(100% - 56px);
+}
+.noti-function-wrap .all-noti-mem-thum-wrap{
+    overflow: auto;
+    flex-grow: 1;
+}
+.noti-function-wrap  .all-noti-mem-thum-wrap.slide-pop{
+    max-height: 100%;
+}
+.noti-function-wrap  .all-noti-mem-thum-wrap.slide-pop .scrollbar-outer{
+    max-height: 100% !important;
+}
+.tit-noti {
+    position: relative;
+    height: 70px;
+    padding-left: 15px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 7px;
+}
+.tit-noti p {
+    color: #2e2e2e;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 70px;
+}
+.tit-noti .modal-close-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 31px;
+    height: 31px;
+    background: url("../img/icon/icon_close_black.svg");
+    background-size: cover;
+    margin-top: -15px;
+}
+.tit-noti-mem {
+    position: relative;
+    padding: 14px 0 10px;
+    /* border-bottom: 1px solid #eee; */
+    margin: 0 15px;
+}
+.tit-noti-mem p {
+    color: #2e2e2e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 5px;
+}
+.tit-noti-mem p::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon/icons_hitalk.png") -75px -75px/200px auto no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.tit-noti-mem .btn-wrap {position: absolute;right: 0;bottom: 10px;}
+.tit-noti-mem .btn-wrap [class*="btn-"] {
+    width: 120px;
+}
+.tit-noti-save,
+.tit-period-edit,
+.tit-name-edit {
+    position: relative;
+    padding: 14px 0 10px;
+    border-bottom: 1px solid #eee;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.tit-noti-save p,
+.tit-period-edit p,
+.tit-name-edit p {
+    color: #2e2e2e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 5px;
+}
+.tit-noti-save p::before,
+.tit-period-edit p::before,
+.tit-name-edit p::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    mask-image: url(../img/svg/ico-file-down.svg);
+    mask-size: 100%;
+    background: #111;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/* .tit-noti-save p::after,
+.tit-period-edit p::after,
+.tit-name-edit p::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon/icons_hitalk.png") -150px -75px/200px auto no-repeat;
+    vertical-align: middle;
+    margin-top: -12px;
+} */
+
+.tit-period-edit p::before{mask-image: url(../img/svg/ico-calendar.svg);}
+.tit-name-edit p::before {mask-image: url(../img/svg/ico-pen2.svg);}
+
+.tit-noti-receive {
+    padding: 14px 0 10px;
+    border-bottom: 1px solid #eee;
+    margin: 0 15px;
+}
+.tit-noti-receive::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.tit-noti-receive p {
+    float: left;
+    color: #2e2e2e;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 5px;
+}
+.tit-noti-receive p::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon/icons_hitalk.png") right -75px/200px auto no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.tit-noti-receive .right {
+    float: right;
+    display: block;
+    color: #333;
+    font-size: 13px;
+    line-height: 26px;
+}
+.ico-chatting {
+    position: relative;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 48px;
+}
+.ico-chatting::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icon_c_list_24.png");
+}
+.ico-out {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background-color: #f8f8f8;
+    color: #a5a5a5;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 56px;
+    border-top: 1px solid #eee;
+    padding-left: 52px;
+    cursor: pointer;
+}
+.ico-out::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon/icons_hitalk.png") -50px -75px/200px auto no-repeat;
+    margin-top: -12px;
+}
+/* 하이톡 > 대화목록 > 더보기 > 채팅방 내보내기 버튼
+.noti-function-wrap .switching-btn {position: absolute;top: 13px;right: 17px;width: 46px;height: 24px;background-image: url("../img/icon_switch_24.png");}
+.noti-function-wrap .switching-btn:hover {background-position: -50px;}
+.noti-function-wrap .switching-btn.dis {background-position: -100px;}
+.noti-function-wrap .switching-btn.on {background-image: url("../img/icon_switch_on_24.png");}
+
+.noti-function-wrap .btn-wrap {text-align: center;}
+.noti-function-wrap .btn-wrap button {width: 320px;height: 36px;border-radius: 18px;} */
+
+.noti-confirm-wrap {z-index: 1000;position: absolute;right: 0;top: 0;width: 430px;height: 100vh;background-color: #fff;}
+.noti-confirm-wrap .all-noti-mem-thum-wrap.slide-pop .scrollbar-outer {
+    max-height: calc(100vh - 128px) !important;
+}
+.noti-confirm-wrap .all-noti-mem-thum-wrap.slide-pop ul > li {
+    padding-right: 60px;
+}
+
+.all-noti-mem-thum-wrap.slide-pop {
+    width: auto;
+    max-height: 300px;
+    text-align: left;
+    margin: 0 15px;
+}
+.all-noti-mem-thum-wrap.slide-pop .scrollbar-outer { /* noti-setting-wrap */
+    max-height: calc(100vh - 235px) !important;
+}
+.all-noti-mem-thum-wrap.slide-pop .scrollbar-outer>.scroll-element.scroll-y {
+    width: 13px;
+}
+.all-noti-mem-thum-wrap.slide-pop .scrollbar-outer>.scroll-element.scroll-y::before {
+    border-right: 1px solid #eaeaea;
+}
+.all-noti-mem-thum-wrap.slide-pop .scrollbar-outer>.scroll-element.scroll-y::after {
+    right: 13px;
+}
+.all-noti-mem-thum-wrap.slide-pop .scrollbar-outer>.scroll-element.scroll-y .scroll-element_outer {
+    width: 14px;
+}
+.all-noti-mem-thum-wrap.slide-pop ul > li .status {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    display: inline-block;
+    min-width: 40px;
+    color: var(--primary);
+    font-size: 15px;
+    text-align: center;
+}
+.all-noti-mem-thum-wrap.slide-pop ul>li .status.on {
+    color: #888;
+}
+.noti-confirm-wrap .all-noti-mem-thum-wrap ul > li,
+.noti-setting-wrap .all-noti-mem-thum-wrap ul > li {
+    margin: 0 5px;
+}
+.noti-confirm-wrap .all-noti-mem-thum-wrap ul > li:first-child,
+.noti-setting-wrap .all-noti-mem-thum-wrap ul > li:first-child {
+    padding-top: 13px;
+}
+
+/* 파일 업로드 */
+.before-upload p {
+    display: inline-block;
+    color: #888;
+    font-size: 13px;
+    vertical-align: middle;
+    margin-left: 14px;
+}
+.before-upload p .type {
+    display: block;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+.upload-file-wrap {
+    padding: 12px 19px;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+}
+.attaching-img-wrap {
+    font-size: 0;
+    margin: 0 -8px;
+}
+.modal-cont-inner .attaching-img-wrap ul li,
+.modal-cont-inner .attaching-img-wrap ul li + li,
+.attaching-img-wrap li {
+    display: inline-block;
+    vertical-align: top;
+    width: 70px;
+    height: 70px;
+    margin: 8px;
+}
+.attaching-img {
+    width: 70px;
+    height: 70px;
+    border: 0;
+}
+.attaching-img .img-wrap {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+}
+.attaching-img .img-wrap:not(.hitalk-sticker):hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    background-image: url("../img/icon/icon_magicbar.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+    z-index: 1;
+    cursor: pointer;
+}
+.attaching-img .img-wrap img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.attaching-img .delete-btn {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    z-index: 2;
+}
+.attaching-img .delete-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/icon/icon_close_black.svg") no-repeat;
+    background-size: 18px;
+    background-position: center;
+    opacity: .6;
+}
+.attaching-file-list-wrap {
+    height: auto;
+    border: 0;
+}
+.attaching-file-list-wrap .attaching-file {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    margin: 0 8px 8px 0;
+    vertical-align: middle;
+}
+.attaching-file-list-wrap .attaching-file span { width: 100%; }
+.attaching-file span::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon/icon_file_blue.svg") no-repeat;
+    vertical-align: middle;
+    margin-right: 2px;
+    margin-top: -2px;
+}
+.attaching-file span,
+.attached-file,
+.attached-file span {
+    color: var(--primary) !important;
+    font-size: 15px;
+}
+.attaching-file .delete-btn {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin: 6px 0;
+}
+.attaching-file .delete-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/icon/icon_close_black.svg") no-repeat;
+    background-size: 16px;
+    background-position: center;
+    opacity: .5;
+}
+.attaching-img-wrap .file-drag-area-wrap { margin: 8px; }
+.attaching-img-wrap .loading-infinite-scroll-wrap { width: 70px;height: 70px; }
+.file-drag-area-wrap {
+    display: inline-block;
+    vertical-align: middle;
+}
+.upload-file-wrap .file-drag-area-wrap .file-drag-area {
+    width: 54px;
+    height: 54px;
+    background: url('../img/icon_file_drag_area_54.png') center no-repeat;
+}
+.upload-file-wrap .file-drag-area-wrap .file-drag-area:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+.upload-file-wrap .file-drag-area-wrap input {
+    z-index: -1;
+    position: fixed;
+    width: 0;
+    height: 0;
+    left: -9999px;
+}
+.loading-infinite-scroll-wrap {
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+.loading-infinite-scroll-wrap .icon { margin: 0; }
+
+/* popup 메시지 작성 */
+.note-notice-edit-modal.modal .modal-cont-wrap {
+    overflow: auto;
+    position: relative;
+    left: inherit;
+    top: inherit;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 !important;
+}
+.note-notice-edit-modal.modal .modal-cont-wrap::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.note-notice-modal .btn-wrap {
+    padding: 36px 0 40px;
+}
+.modal .modal-cont-wrap .report-box {
+    display: inline-block;
+    width: 600px;
+    vertical-align: middle;
+    margin: 50px 0;
+}
+.report-box .modal-cont-inner .check-list-wrap {
+    width: 100%;
+    padding: 0 30px;
+    transform: skew(0);
+    -webkit-transform: skew(0);
+}
+.report-box .modal-cont-inner .check-list-wrap .agree-check-wrap { border: 1px solid #e8e8e8; }
+.report-box .modal-cont-inner .check-list-wrap ul li>textarea {
+    overflow: auto;
+    min-height: 200px;
+    font-size: 15px;
+    padding: 15px;
+    border: 0;
+    box-sizing: border-box;
+    resize: none;
+}
+/* 7/30 - GuideLayout.vue 파일내 scss scoped 이동 */
+/* popup 공지하기 사용안내 팝업*/
+/* .hitalk-notice-guide-wrap .guide-list {
+    text-align: left;
+    padding: 0 30px 40px;
+}
+.hitalk-notice-guide-wrap .guide-list .item {
+    position: relative;
+    min-height: 100px;
+    padding-left: 127px;
+    padding-top: 10px;
+    margin-top: 40px;
+}
+.hitalk-notice-guide-wrap .guide-list .item:first-child {
+    margin-top: 27px;
+}
+.hitalk-notice-guide-wrap .guide-list .item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url("../img/icon/icons_hitalk.png") 0 -225px/200px auto no-repeat;
+}
+.hitalk-notice-guide-wrap .guide-list .item:last-child::before {
+    background-position: -100px -225px;
+}
+.hitalk-notice-guide-wrap .guide-list .title {
+    color: #2e2e2e;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.hitalk-notice-guide-wrap .guide-list .desc {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+.hitalk-notice-guide-wrap .guide-list .text-refer {
+    display: block;
+    color: rgba(136, 136, 136, 0.7);
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 8px;
+} */
+
+/* popup 하이톡 배너 팝업 */
+.hitalk-banner-modal {display: block;opacity: 0;z-index: 1000;position: fixed;top: calc(100% - 63px - 35px);left: calc(100% - 350px - 25px);width: auto;height: auto;background: none;}
+.hitalk-banner-modal .modal-close-icon {width: 30px;height: 30px;top: 16px;right: 18px;background: none;}
+.hitalk-banner-modal {
+    animation: showPopup .3s ease-out 1 forwards;
+    -webkit-animation: showPopup .3s ease-out 1 forwards;
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+}
+.hitalk-banner-modal img { height: 130px; }
+
+@keyframes showPopup {
+    0%   { opacity: 0;transform: translateY(0);-webkit-transform: translateY(0); }
+    100% { opacity: 1;transform: translateY(-50px);-webkit-transform: translateY(-50px); }
+}
+@-webkit-keyframes showPopup {
+    0%   { opacity: 0;transform: translateY(0);-webkit-transform: translateY(0); }
+    100% { opacity: 1;transform: translateY(-50px);-webkit-transform: translateY(-50px); }
+}
+
+/* 하이톡 메인 배너 */
+.hitalk-main-banner {
+    height: 100vh;
+    background-color: #f4f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hitalk-main-banner .banner__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 570px;
+    margin: 0 -20px;
+
+}
+.hitalk-main-banner .banner__item {
+    overflow: hidden;
+    position: relative;
+    flex-basis: calc(33.334% - 10px);
+    padding-top: 33.334%;
+    border-radius: 8px;
+    margin: 0 5px 10px;
+}
+.hitalk-main-banner .banner__item.heading {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding-top: 10%;
+    margin-bottom: 0;
+}
+.hitalk-main-banner .banner__item.full {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding-top: 10.528%;
+    margin-top: 5px;
+}
+.hitalk-main-banner .banner__item::after { /* dimmed */
+    content: "";
+    flex: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
+.hitalk-main-banner .banner__item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+
+/* modal : 하이톡 예약하기*/
+[class*="hitalk-message"] .set-date-wrap {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+[class*="hitalk-message"] .date-cont-wrap {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+[class*="hitalk-message"] .date-wrap {
+    display: inline-block;
+    width: 182px;
+    height: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 0 10px;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+    vertical-align: middle;
+}
+[class*="hitalk-message"] .date-wrap .date {
+    color: var(--primary);
+    line-height: 34px;
+}
+[class*="hitalk-message"] .calendar-icon-btn {
+    width: 36px;
+    height: 36px;
+    background-color: #929BB9;
+    border-radius: 4px 0 0 4px;
+    vertical-align: middle;
+}
+[class*="hitalk-message"] .calendar-icon-btn::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon/icons_hitalk.png") 0 -370px/200px auto no-repeat;
+    vertical-align: middle;
+}
+[class*="hitalk-message"] .popup-calendar-wrap { box-shadow: none; }
+[class*="hitalk-message"] .note-calendar-popup {
+    z-index: 3;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -15%;
+    background-color: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 0 0 4px 4px;
+}
+[class*="hitalk-message"] .note-resev-opt { padding-bottom: 0; }
+[class*="hitalk-message"] .note-resev-opt .border-selectbox-wrap.selected .option-list-wrap { height: 100px; }
+/* .hitalk-targetlist {
+    width: 100%;
+    text-align: left;
+} */
+/* .hitalk-targetlist .targetlist__top {
+    display: flex;
+    padding-bottom: 10px;
+}
+.hitalk-targetlist .targetlist__top .group-checkbox input[type=checkbox] + label { padding-right: 16px; }
+.hitalk-targetlist .targetlist__top .group-checkbox ~ .num {
+    margin-left: auto;
+    line-height: 20px;
+}
+.hitalk-targetlist .targetlist__top .num { color: #9e9e9e; }
+.hitalk-targetlist .targetlist__top .num .ft-blue { font-weight: 500; }
+.hitalk-targetlist .select-target__list input + label { padding: 10px 0; }
+.hitalk-targetlist .select-target__item:not(:first-of-type) { border: 0; }
+.hitalk-targetlist .select-target__list .text {
+    max-width: calc(100% - (20px + 36px + 16px + 6px));
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.hitalk-targetlist .select-target__list {
+    overflow-y: auto;
+    width: 100%;
+    max-width: 330px;
+    height: 300px;
+    padding: 5px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+.column__flex .hitalk-targetlist {
+    width: 270px;
+    height: 100%;
+    max-height: 450px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-right: 20px;
+} */
+.column__flex .targetlist__top {
+    display: block;
+    padding: 24px 20px 10px;
+}
+.column__flex .targetlist__top .heading {
+    display: inline-block;
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 12px;
+}
+.column__flex .targetlist__top .num ~ .group-checkbox { margin-top: 14px; }
+/* .column__flex .hitalk-targetlist .select-target__list {
+    border: 0;
+    height: calc(100% - 83px);
+}
+.hitalk-targetlist .select-target__item .image {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+.hitalk-targetlist .select-target__item .num,
+.hitalk-targetlist .select-target__item .num-std,
+.hitalk-targetlist .select-target__item .num-no {
+    display: inline-block;
+    width: 28px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #9E9E9E;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 20px;
+}
+.hitalk-targetlist .select-target__item .num-std {
+    background: #FFF;
+    color: #616161;
+    border: 1px solid #9E9E9E;
+}
+.hitalk-targetlist .select-target__item .num-no {
+    background: none;
+    width: 0;
+} */
+
+/* 7/31 - BatchPopupContent.vue, PersonGroupPopupContent.vue 파일내 scss scoped 이동 */
+/* .hitalk-messagebox {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    background-color: #F8F9FC;
+    text-align: left;
+    border-radius: 8px;
+    border: 0 !important;
+}
+.hitalk-messagebox textarea {
+    flex-grow: 1;
+    width: 100%;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px;
+    border: 0;
+}
+.hitalk-messagebox .messagebox__top {
+    padding: 15px 5px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 0 15px;
+}
+.hitalk-messagebox .messagebox__top input[type=radio] + label { line-height: 36px; }
+.hitalk-messagebox .messagebox__top label:not(:first-of-type) { margin-left: 28px; }
+.hitalk-messagebox .messagebox__top .set-date-wrap { margin-left: 14px; }
+.hitalk-messagebox .upload-file-wrap {
+    overflow-y: auto;
+    height: 80px;
+    background-color: #F4F5F9;
+    padding: 12px 12px 0;
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    max-width: 470px;
+}
+.hitalk-messagebox .attaching-img-wrap ul li,
+.hitalk-messagebox .attaching-img-wrap ul li + li,
+.hitalk-messagebox .attaching-img-wrap li {
+    width: 54px;
+    height: 54px;
+    margin: 0 8px 24px;
+}
+.hitalk-messagebox .attaching-img-wrap .loading-infinite-scroll-wrap,
+.hitalk-messagebox .upload-file-wrap .attaching-img { width: 54px;height: 54px; }
+.hitalk-messagebox .file-drag-area-wrap .file-drag-area { background-color: #fff; }
+.hitalk-messagebox .after-upload .file-drag-area-wrap { margin: 0 0 12px; }
+.hitalk-messagebox .attaching-file { background-color: #DDE4F2; }
+.hitalk-messagebox .upload-tab {
+    margin-top: auto;
+    padding: 17px 19px;
+}
+.hitalk-messagebox .upload-tab button {
+    color: #888;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-right: 18px;
+}
+.hitalk-messagebox .upload-tab button::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/icon/icons_hitalk.png") 0 0/200px auto no-repeat;
+    margin-right: 4px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.hitalk-messagebox .upload-tab button.is-active { color: #333; }
+.hitalk-messagebox .upload-tab .btn-image::before { background-position: 0 -395px; }
+.hitalk-messagebox .upload-tab .btn-video::before { background-position: -20px -395px; }
+.hitalk-messagebox .upload-tab .btn-file::before {background-position: -40px -395px; }
+.hitalk-messagebox .upload-tab .btn-image.is-active::before { background-position: 0 -415px; }
+.hitalk-messagebox .upload-tab .btn-video.is-active::before { background-position: -20px -415px; }
+.hitalk-messagebox .upload-tab .btn-file.is-active::before {background-position: -40px -415px; } 
+*/
+
+
+/* 7/30 personGroupPopup.vue scss scoped 이동 */
+/* .hitalk-messageinfo {
+    width: 470px;
+    text-align: left;
+}
+.hitalk-messageinfo .messageinfo__heading {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 36px;
+}
+.hitalk-messageinfo > ul > li .messageinfo__heading { min-width: 100px; }
+.hitalk-messageinfo > ul > li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.hitalk-messageinfo .messageinfo__item p {
+    display: inline;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-all;
+    vertical-align: middle;
+}
+.hitalk-messageinfo .messageinfo__item .image {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    background: url("../img/icon/profile_default_hiclass.svg") no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+.hitalk-messageinfo .messageinfo__item .image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+    image-rendering: auto;
+}
+.hitalk-messageinfo .messageinfo__item input[type=radio] + label { margin-right: 16px; }
+.hitalk-messageinfo ~ .hitalk-messagebox { height: 320px; } */
+.hitalk-reaction-btn {
+    width: 40px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* padding: 4px 10px; */
+    background: #DEE2ED;
+    color: #333;
+    border-radius: 8px;
+    right: 0;
+    bottom: 0;
+    /*border: 1px solid #DEE2ED;*/
+}
+.hitalk-reaction-btn:hover {
+    background: #D3D6E1;
+}
+.chatting-bubble-wrap.your-chatting .hitalk-reaction-btn {
+    left: 0;
+}
+.hitalk-reaction-wrap {
+    width: auto;
+    display: block !important;
+    margin-top: 2px;
+    position: relative;
+}
+.hitalk-reaction-wrap.other-user {
+    margin-left: 40px;
+}
+
+.hitalk-reaction-wrap span {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    background: #DEE2ED;
+    color: #333;
+    border-radius: 8px;
+    border: 1px solid #DEE2ED;
+    font-size: 11px;
+    font-weight: 400;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+.hitalk-reaction-wrap span.other-user {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+.hitalk-reaction-wrap span:hover {
+    cursor: pointer;
+    background: #D3D6E1;
+}
+.hitalk-reaction-wrap span.selected {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.hitalk-reaction-wrap span.selected:hover {
+    cursor: pointer;
+    background: rgba(71, 120, 222, 0.20);
+}
+.hitalk-reaction-wrap span i {
+    display: inline-block;
+    margin-right: 3px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+i.reaction {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 0px !important;
+    background: url("../img/icon/icon_emoticon_add_on.png") center/cover no-repeat;
+}
+i.reaction-check {
+    background: url("../img/icon/icon_reaction_check.png") center/cover no-repeat;
+}
+i.reaction-ok {
+    background: url("../img/icon/icon_reaction_ok.png") center/cover no-repeat;
+}
+i.reaction-no {
+    background: url("../img/icon/icon_reaction_no.png") center/cover no-repeat;
+}
+i.reaction-like {
+    background: url("../img/icon/icon_reaction_like.png") center/cover no-repeat;
+}
+i.reaction-heart {
+    background: url("../img/icon/icon_reaction_heart.png") center/cover no-repeat;
+}
+i.reaction-joy {
+    background: url("../img/icon/icon_reaction_joy.png") center/cover no-repeat;
+}
+i.reaction-sad {
+    background: url("../img/icon/icon_reaction_sad.png") center/cover no-repeat;
+}
+i.reaction-surprise {
+    background: url("../img/icon/icon_reaction_surprise.png") center/cover no-repeat;
+}
+i.reaction-user {
+    margin-right: 0px !important;
+    background: url("../img/icon/ic_reaction_user.png") center/cover no-repeat;
+}
+.reaction-select-wrap {
+    width: auto;
+    display: block !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+.reaction-select-wrap.other-user {
+    top: 0;
+    left: 0;
+}
+.reaction-select-wrap .reaction-select {
+    width: 316px;
+    border: 1px solid #E0E0E0;
+    border-radius: 9px;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08));
+}
+.reaction-select-wrap .reaction-select span {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    padding: 6px !important;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0;
+}
+.reaction-select-wrap .reaction-select span:hover,
+.reaction-select-wrap .reaction-select span.my {
+    background: #EEEEEE;
+}
+.reaction-select-wrap .reaction-select span i {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+
+/* 7/30 BlockedListDialog.vue 파일내 scss scoped 이동 */
+/* 하이톡 차단 리스트 */
+/* .block-list-wrap {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: auto;
+    text-align: left;
+    height:484px;
+}
+.block-list-wrap  .list-title-wrap {
+    position: relative;
+    background-color: #f7f8f9;
+    border-bottom: 1px solid #eee;
+    padding: 16px;
+}
+.block-list-wrap  .list-title-wrap .title{
+    color: #666666;
+    white-space: normal;
+    line-height: 1.3;
+    font-weight: 400;
+    font-size: 13px;
+}
+.block-list-wrap  .list-cont-wrap{
+    padding-top: 6px;
+}
+.block-list-wrap  .list-cont-wrap > li{
+    padding: 16px 12px 16px 16px;
+    border-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 13px;
+}
+.block-list-wrap  .list-cont-wrap > li:hover{
+    background: transparent;
+}
+.block-list-wrap  .list-cont-wrap > li .profile-text-wrap{
+    flex-grow: 1;
+    width: calc(100% - 70px);
+}
+.block-list-wrap  .list-cont-wrap .profile-text-wrap .name span:not(.num){    
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 48px;
+    max-width: 100%;
+    color: #2e2e2e;
+    line-height: 1.3;
+    font-weight: 500;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-right: 5px;
+    font-size:14px;
+}
+.block-list-wrap  .list-cont-wrap .profile-text-wrap .info{
+    margin-top: 1px;
+}
+.block-list-wrap  .list-cont-wrap .profile-text-wrap .info span{
+    display: inline-block;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.block-list-wrap  .list-cont-wrap .profile-btn-wrap{
+    padding-top: 2px;
+}
+.block-list-wrap  .class-list-wrap{
+    background-color: #FAFAFA;
+    border:1px solid #E6E6E6;
+    border-radius: 6px;
+    width: 100%;
+    overflow: hidden;
+    padding:16px 16px 6px;
+}
+.block-list-wrap  .class-list-wrap > li{
+    padding: 14px 0;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #EEE;
+}
+.block-list-wrap  .class-list-wrap > li:last-child{
+    border:0;
+}
+.block-list-wrap  .class-list-wrap > li.tit{
+    font-size: 13px;
+    color: #888;
+    padding: 3px 0 6px;
+    min-height: auto;
+    border: 0;
+    margin-bottom:0;
+    font-weight: 400;
+}
+.block-list-wrap  .class-list-wrap > li.noclass{
+    font-size: 14px;
+}
+.block-list-wrap .class-list-wrap > li > .profile-text-wrap > .name{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.block-list-wrap .class-list-wrap > li > .profile-text-wrap > .name > span:not(.num){    
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    color: #2e2e2e;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+.block-list-wrap  .class-list-wrap .profile-thumbnail{
+    min-width: 36px;
+    min-height: 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: url("../img/icon/profile_default.png") 50% no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.block-list-wrap .class-list-wrap .profile-thumbnail img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+.block-list-wrap .class-list-wrap .profile-order-wrap-n.num, 
+.block-list-wrap .class-list-wrap .profile-order-wrap-n.num-no, 
+.block-list-wrap .class-list-wrap .profile-order-wrap-n.num-std {
+    display: inline-block;
+    min-width: 28px;
+    height: 18px;
+    color: #616161;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    padding: 0 4px;
+    border: 1px solid #9e9e9e;
+    border-radius: 18px;
+}
+.block-list-wrap .nodata{
+    color:#616161;
+    flex-flow: column;
+    justify-content: center;
+    max-height: calc(100% - 70px);
+} */
+
+/* 최소 높이 600px */
+@media screen and (max-width: 1024px),
+screen and (max-height: 600px) {
+    .ooo-conversation-cont-wrap .opponent-list-wrap.c-opponent-wrap,
+    .ooo-conversation-cont-wrap .opponent-list-wrap.c-list-wrap .list-cont-wrap { min-height: calc(600px - 70px); }
+    .ooo-conversation-cont-wrap .c-reservation-wrap .scrollbar-outer { min-height: calc(600px - (70px + 57px)); }
+    .ooo-conversation-cont-wrap .left-wrap .inner,
+    .hitalk-main-banner,
+    .explanation-cont-wrap,
+    .noti-setting-wrap,
+    .noti-confirm-wrap { min-height: 600px; }
+    .all-noti-mem-thum-wrap.slide-pop .scrollbar-outer { min-height: calc(600px - 235px); }
+    .noti-confirm-wrap .all-noti-mem-thum-wrap.slide-pop .scrollbar-outer { min-height: calc(600px - 128px); }
+    .hitalk-main-banner .banner__list { width: 80%;max-width: 570px; }
+    .modal,
+    .hi-modal-common { position: absolute; }
+    .hi-modal-common .modal__dim { position: fixed; }
+}
+@media screen and (max-width: 640px) {
+    .modal.normal-modal .modal-close-icon {display: block;}
+}
+
+/* ie bug */
+@media all and (-ms-high-contrast:none) {
+    .ooo-conversation-cont-wrap .chatting-bubble-wrap.image.group .chatting-bubble img,
+    .talk-view-attached-file-modal.slick-modal .slider-nav .slide img  {
+        height: 140%;
+        max-height: none;
+    }
+}

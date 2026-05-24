@@ -1,0 +1,88 @@
+/* 결석계, 체험학습 하이클래스 양식 print css (vue파일에 내부 스타일시트 적용) */
+.print-div .application-form-wrap {
+    position: relative;
+    width: 680px;
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 0 auto 10px;
+    box-shadow: none;
+    border-radius: 0;
+}
+.print-div .application-form-wrap .application-form-list > li{min-height: 38px;}
+.print-div .application-form-wrap .application-form-list .text{padding: 3px 10px;}
+.print-div .application-form-wrap.exper {padding: 20px 20px;}
+
+.print-div .application-form-bottom{margin-top:15px;}
+.print-div .application-form-bottom .date-wrap{padding-top: 10px;}
+.print-div .application-form-bottom p{font-size: 14px;}
+.print-div .application-form-bottom p.principal{margin-top: 20px;font-size: 16px;}
+.print-div .application-form-bottom p p.ref{font-size: 14px;}
+
+.print-div .application-form-report{margin: 15px 0 0;}
+.print-div .application-form-report .tit{padding: 15px 24px 15px;font-size:16px; }
+.print-div .application-form-report .con{padding: 15px 24px 15px;}
+.print-div .application-form-report .con p.noti{margin-top:15px;}
+.print-div .application-form-report .tit > .smr{font-size:15px !important;}
+.print-div .application-form-report .con > *{font-size:14px;}
+
+@media print {
+    body {
+        background-color: #fff;
+        transform: scale(.9);
+    }
+    /* 프린트 영역 외 숨김 처리 */
+    body #apps, body #nprogress  {
+        display: none !important;
+    }
+    /* 프린트 영역 상단에 고정 */
+    body .print-div {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+    body .print-div .application-form-wrap {
+        max-width: 100%;
+        width: 240mm;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        page-break-before: always;
+    }
+
+    /* 프린트 영역 세부 설정 */
+    body .print-div .application-form-wrap .application-form-top .application-form-title {
+        font-size: 40px !important;
+    }
+    body .print-div .application-form-wrap .application-form-bottom p.principal {
+        font-size: 30px !important;
+    }
+    body .print-div .application-form-wrap .application-form-list {
+        border: 2px solid #383838 !important;
+    }
+
+    body .print-div .attendance-neis-container-pdf {
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        page-break-before: always;
+    }
+
+    body .print-div .personnel-pdf-container {
+        max-width: 100%;
+        width: 240mm;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        page-break-before: always;
+    }
+    body .print-div .personnel-pdf-container table { page-break-inside:auto; }
+    body .print-div .personnel-pdf-container tr { page-break-inside:avoid; page-break-after:auto; }
+    body .print-div .personnel-pdf-container thead { display:table-header-group; }
+    body .print-div .personnel-pdf-container tfoot { display:table-footer-group; }
+
+
+    /* -- 프린트 영역 세부 설정 */
+}

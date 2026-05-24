@@ -1,0 +1,95 @@
+// 탭
+.timetable-root{ 
+	.tab-nav{
+		> button{
+			width: 50%;
+			height: 48px;
+			background-color: var(--bg-base);
+			border: 1px solid var(--border-neutral-strong);
+			font-size: var(--ctl-lg-f);
+			font-weight:  var(--font-weight-bold);
+			color: var(--text-neutral-strong);      
+			&.active{
+				background-color: var(--action-primary-base);
+				border: 1px solid var(--border-primary-base);
+				color: var(--text-base);
+			}
+			&:first-child{
+				border-radius: 8px 0 0 8px;
+			}
+			&:last-child{
+				border-radius: 0 8px 8px 0;
+			}
+		}
+		&.type01{
+			border-bottom: 1px solid var(--border-neutral-base);
+			> button{
+				width: auto;
+				border-radius: 0;            
+				border: 0;
+				font-size: var(--text-h3);
+				color: var(--text-neutral-strong);
+				&.active{
+					background-color: transparent;
+				border-bottom: 4px solid var(--action-secondary-strongest);
+				color: var(--text-secondary-strongest);
+				} 
+				& + button{
+					margin-left: 24px;
+				}       
+			}		
+			& + .tab-con{
+				margin-top:24px;
+			}
+		}
+		&.type02{
+			> button{
+				color: var(--text-neutral-strong);
+				border: 1px solid var(--border-neutral-strong);			
+				font-size: var(--text-b3);
+				font-weight:  var(--font-weight-regular);
+				border-radius: 12px 12px 0 0;
+				&.active{
+					color: var(--text-base);
+					background-color: var(--action-secondary-strongest);
+					border-color: var(--action-secondary-strongest);
+					font-weight:  var(--font-weight-medium);
+				}
+			}		
+			& + .tab-con{
+				border: 1px solid var(--border-neutral-strong);
+				border-top: 0;
+				border-radius: 0 0 12px 12px;
+			}
+		}
+		&.type03{
+			display: flex;
+			gap: 8px;
+			> button{
+				width: auto;
+				background: var(--bg-secondary-subtler);
+				border:0;
+				border-radius: 50px;
+				height: 40px;
+				padding: 8px 20px;
+				color: var(--text-default);
+				font-weight:  var(--font-weight-regular);
+				&.active{
+					color: var(--text-base);
+					background-color: var(--action-secondary-strongest);
+					font-weight:  var(--font-weight-medium);
+				}
+				&.is-new:after{
+					content: "";
+					display: inline-block;
+					width: 4px;
+					height: 4px;
+					background-color: var(--control-red-subtle);
+					border-radius: 50%;
+					vertical-align: top;
+					margin: -2px 0 0 2px;
+				}
+			}		
+		}
+	}
+}

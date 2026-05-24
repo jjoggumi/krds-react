@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.modal {
+    background-color:rgba(0, 0, 0, .7);
+    max-height: 100vh;
+}
+.modal-top-btn-wrap .right-wrap {
+    top: 30px;
+}
+.modal-top-btn-wrap .right-wrap button span { font-size: 15px; }
+.modal-top-btn-wrap .right-wrap .download-select span + span { border-top: 1px solid #e8e8e8; }
+.talk-view-attached-file-modal.modal.has-top-btn-wrap .modal-cont-inner {
+    position: relative;
+    padding: 0;
+}
+.talk-view-attached-file-modal:not(.slick-modal) .modal-cont-inner img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: auto;
+    max-height: 85vh;
+    transform: translateY(-50%);
+    transform: -webkit-translateY(-50%);
+}
+.talk-view-attached-file-modal .right-wrap .modal-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: none;
+    width: auto;
+    height: 36px;
+    text-align: center;
+    padding: 0 16px;
+    border: 1px solid #fff;
+    border-radius: 30px;;
+}
+.talk-view-attached-file-modal .modal-close-btn::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 34px;
+    background: url("../img/icon/icon_close_white.svg") no-repeat;
+    background-size: 24px 24px;
+    background-position: left center;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+.talk-view-attached-file-modal .modal-close-btn::after {
+    content: "닫기";
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    line-height: 34px;
+}
+/* modal : images slide */
+.talk-view-attached-file-modal.slick-modal .slide-wrap,
+.talk-view-attached-file-modal.slick-modal .slick-list,
+.talk-view-attached-file-modal.slick-modal .slick-track,
+.talk-view-attached-file-modal.slick-modal .slick-slide,
+.talk-view-attached-file-modal.slick-modal .slider-for { height: 100%; }
+.talk-view-attached-file-modal.slick-modal .slider-for img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    max-width: 60%;
+    max-height: 85vh;
+}
+.talk-view-attached-file-modal.slick-modal .slide-count {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    font-size: 14px;
+    line-height: 36px;
+    padding: 0 24px;
+    border-radius: 36px;
+    transform: translateX(-50%);
+}
+.talk-view-attached-file-modal.slick-modal .slide-count::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icon/icon_hitalk_setimage.svg") no-repeat;
+    background-size: 24px 24px;
+    background-position: left center;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.talk-view-attached-file-modal.slick-modal .slide-nav-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 15px 0;
+    text-align: center;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slick-track { margin: 0 auto;}
+.talk-view-attached-file-modal.slick-modal .slider-nav {
+    display: inline-block;
+    width: calc(90px * 9);
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slick-slide {
+    cursor: pointer;
+    margin: 0 8px;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slide.slick-slide.slick-current::after, /* 퍼블리싱 산출물 slick */
+.talk-view-attached-file-modal.slick-modal .slider-nav .slick-current .slide::after { /* 개발 slick */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slide {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    padding-top: 64px;
+    border-radius: 4px;
+}
+.talk-view-attached-file-modal.slick-modal .slider-nav .slide img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    max-width: none;
+    min-width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    object-fit: cover;
+}

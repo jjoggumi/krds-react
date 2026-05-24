@@ -1,0 +1,156 @@
+// 수업추가 
+.courseAddition{
+
+}
+
+
+// .form-group-inline {
+//   > label.sm {
+//     min-width: 100px;
+//   }
+//   .hi-selectbox,
+//   .autocomplete-wrap {
+//     max-width: 320px;
+//     width: 100%;
+//   }
+// }
+
+// // h4 제목
+// .h4-tit {
+//   display: flex;
+//   gap: 20px;
+//   border-bottom: 1px solid #D6D6D6;
+//   padding-bottom: 20px;
+// }
+
+// // h5 제목
+// .h5-tit {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+//   h5 {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+//   }
+//   .divider {
+//     margin: 0 4px;
+//   }
+//   .text-primary {
+//     color: var(--primary-color, #007bff);
+//   }
+// }
+
+// // 테이블 스타일
+// .table-content {
+//   &.time-table {
+//     overflow-x: auto;
+//     table {
+//       width: 100%;
+//       border-collapse: collapse;
+//       th,
+//       td {
+//         border: 1px solid #ddd;
+//         text-align: center;
+//         padding: 4px;
+//       }
+//       th {
+//         background: #f7f7f7;
+//       }
+//     }
+//   }
+
+//   &.teacher-view {
+//     table {
+//       width: 100%;
+//       th,
+//       td {
+//         border: 1px solid #ccc;
+//       }
+//     }
+//   }
+// }
+
+// // 버튼 스타일
+// .btn-table-cell {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   min-height: 60px;
+//   width: 100%;
+//   border: none;
+//   background: #fff;
+//   cursor: pointer;
+
+//   &.selected {
+//     background: #E9F3FF;
+//   }
+
+//   &.consecutive-course {
+//     background: #fafafa;
+//     &.fst {
+//       border-left: 2px solid #007bff;
+//     }
+//   }
+
+//   &.assign-after {
+//     background: #FFF8DF;
+//   }
+
+//   &:disabled {
+//     background: #f1f1f1;
+//     cursor: not-allowed;
+//   }
+// }
+
+// // badge 스타일
+// .badges {
+//   display: flex;
+//   gap: 4px;
+//   justify-content: center;
+// }
+// .badge {
+//   display: inline-block;
+//   padding: 2px 6px;
+//   border-radius: 4px;
+//   font-size: 12px;
+//   &.change {
+//     background: #FFEBEB;
+//     color: #d9534f;
+//   }
+//   &.concurrent {
+//     background: #F0F4FF;
+//     color: #004085;
+//   }
+//   &.fixed {
+//     background: #E8F5E9;
+//     color: #28a745;
+//   }
+// }
+
+// // 기타
+// .gray-box {
+//   background: #f7f7f7;
+//   padding: 20px;
+//   border-radius: 8px;
+// }
+
+// .mt-5 {
+//   margin-top: 20px;
+// }
+// .mt-30 {
+//   margin-top: 30px;
+// }
+// .mt-10 {
+//   margin-top: 40px;
+// }
+// .ml-10 {
+//   margin-left: 40px;
+// }
+// .ml-1 {
+//   margin-left: 5px;
+// }
+// .w100 {
+//   width: 100%;
+// }

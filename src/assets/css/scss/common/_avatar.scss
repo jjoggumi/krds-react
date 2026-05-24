@@ -1,0 +1,311 @@
+@use "@/assets/css/scss/common/var" as *;
+
+.profile-list{
+  overflow: auto;
+  
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #cfd3db;
+    background-clip: padding-box;
+    min-height:40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track { background-color: transparent; }
+  
+  .profile-list-item{
+    padding: 12px 20px;
+  }
+  .profile-list-item + .profile-list-item{
+    border-top:1px solid var(--gray-05);
+  }
+}
+.profile-list-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  span{
+    display: inline-block;  
+    vertical-align: middle;
+    line-height: normal;
+  }
+  .img-area {
+    overflow: hidden;
+    flex: 0 0 auto;
+    position: relative;
+    display: inline-block;
+    min-width: 36px;
+    min-height: 36px;
+    width: 36px;
+    height: 36px;
+    background: url("~@/assets/img/icon/profile_default.png") no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    vertical-align: middle;    
+    margin-right: 8px;
+    
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: auto;
+      min-width: 100%;
+      height: 100%;
+      transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      object-fit: cover;
+      image-rendering: auto;
+      background-color: #fafafa;
+    }
+    img:not([src]),
+    img[src=""]{
+      background-color: transparent;
+      visibility: hidden;
+    }
+  }
+
+  .txt-area{
+    flex: 1 1 auto;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    width:calc(100% - 52px);
+    .num, 
+    .num-std, 
+    .num-no {      
+      flex: 0 0 auto;
+      display: inline-block;
+      width: 28px;
+      height: 18px;
+      line-height: 18px;
+      background-color: #9E9E9E;
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 20px;
+      margin-top: 2px;
+    }
+    //.num {
+    //   flex: 0 0 auto;
+    //   min-width: 22px;
+    //   line-height: 22px;
+    //   text-align: center;
+    //   background-color: #f8f8f8;
+    //   padding: 0 4px;
+    // }
+    .num-std {
+        background: #FFF;
+        color: #616161;
+        border: 1px solid #9E9E9E;
+    }
+    .num-no {
+        background: none;
+        width: 0;
+        margin-right: 0;
+    }
+    .txt-inner{
+      flex: 1 1 auto;
+      width: calc(100% - 44px);
+      .name {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: #222;
+          font-size: 15px;
+          font-weight: 400;
+          width: 100%;
+      }  
+      .info {
+        display: block;
+        font-size: 12px;
+        color: var(--gray-08);
+        margin: 0;
+      }
+    }
+  }
+
+  &.underline:not(:first-of-type) { border-top: 1px solid #e0e0e0; }
+
+  input[type=radio] + label,
+  input[type=checkbox] + label {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-align: left;  
+  }
+  input[type=radio] + label > div,
+  input[type=checkbox] + label > div{width: calc(100% - 20px); display: flex; align-items: center;}
+  input[type=radio] + label::before,
+  input[type=checkbox] + label::before { flex: 0 0 auto; }
+  input[type=radio] + label span,
+  input[type=checkbox] + label span{margin: 0px;}
+  input[type=checkbox] + label span.img-area{margin-right: 8px;margin-left:8px;}
+}
+// 기존에 있던 프로필 이미지(png) 배경색 추가 (기본 배경과 겹쳐보이는 문제 대응) 
+.profile-thumbnail img{background-color:#fafafa;}
+
+.avatar-img {
+  flex: 0 0 auto;
+  position: relative;
+  display: inline-block;
+  min-width: 36px;
+  min-height: 36px;
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  
+  .img-area{    
+    overflow: hidden;    
+    border-radius: 50%;
+    height:100%;
+    width:100%;    
+    object-fit: cover;
+    image-rendering: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //transition: 0.3s;
+    
+    img {
+      height:100%;
+      width:100%;
+      object-fit: cover;
+    }
+    
+    .txt{
+      color:#fff;
+      font-size:24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      padding: 5px;
+      word-break: break-all;
+      line-height: 1.1;
+      font-family: var(--font-body);
+      font-weight: bold;
+      &.dim{
+        background-color: rgba(0, 0, 0, 0.32);
+      }
+    }
+  }
+  &.school .img-area{
+    background-image: url("~@/assets/img/icon/school_default.png");
+  }
+  &.class .img-area{
+    background-image: url("https://download.hiclass.net/static/images/class_image_default.png");
+  }
+  &.profile .img-area{
+    background-image: url("~@/assets/img/profile_default.png");
+  }
+  &.xxl.profile .img-area,
+  &.xl.profile .img-area{
+    background-image: url("~@/assets/img/profile_default_xl.png");
+  }
+  &.capture{      
+    width: 1123px;
+    height: 1123px;
+    .img-area .txt{
+      font-size: 330px;
+      &.word4{
+        padding: 120px;
+      }
+    }
+  }
+
+  @mixin avatar-size($size, $ico, $border, $padding, $position) {
+    min-width: $size;
+    min-height: $size;
+    width: $size;
+    height: $size;
+
+    .badge, 
+    i.hi-ico{
+      width:$ico;
+      height:$ico;
+      min-width: $ico;
+      min-height: $ico;
+      position: absolute;
+      border-width: $border;
+      padding: $padding;
+
+      &.top-left{
+        top: $position;
+        left: $position;
+      }
+      &.top-right{
+        top: $position;
+        right: $position;
+      }
+      &.bottom-left{
+        bottom: $position;
+        left: $position;
+      }
+      &.bottom-right{
+        bottom: $position;
+        right: $position;
+      }
+    }
+  }
+
+  &.xxl {
+    @include avatar-size(160px, 20px, 3px, 5px, 0px);
+  }
+  &.xl {
+    @include avatar-size(120px, 20px, 3px, 5px, 0px);
+  }
+  &.lg {
+    @include avatar-size(90px, 18px, 2px, 3px, 0px);
+  }
+  &.md{
+    @include avatar-size(36px, 16px, 1px, 2px, -5px);
+  }
+  &.sm {
+    @include avatar-size(30px, 16px, 1px, 2px, -5px);
+  }
+  &.xs {
+    @include avatar-size(20px, 16px, 1px, 2px, -5px);
+  }
+  &.outline{
+    .img-area{
+      border: 1px solid #e8e8e8;
+    }
+  }
+  
+  .badge.admin{
+    top: -3px;
+    left: -4px;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    background: url(../../img/ico_crown_26.png) no-repeat;
+    background-size: contain;
+    border-radius: 28px;
+    border: 1px solid #fff;
+    z-index: 2;
+  }
+  .badge.new{
+    top: -8px;
+    right: -8px;
+    width: 26px;
+    height: 26px;    
+    border-width: 0px;
+    background: url(../../img/icon_profile_img_new_26.png);
+    z-index: 2;
+  }  
+  .badge.main-admin{
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../../img/icon/icon_admin.svg) no-repeat;
+    z-index: 2;
+  }  
+}

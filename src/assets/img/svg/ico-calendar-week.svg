@@ -1,0 +1,17 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.83334" y="4.33203" width="21.3333" height="20.6667" rx="4" fill="#768AA8"/>
+<path d="M4.83334 8.33203C4.83334 7.22746 5.72877 6.33203 6.83334 6.33203H20.1667C21.2712 6.33203 22.1667 7.22746 22.1667 8.33203V9.66536H4.83334V8.33203Z" fill="white"/>
+<path d="M7.5 3.66406V6.9974" stroke="#627694" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M11.5 3.66406V6.9974" stroke="#627694" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M15.5 3.66406V6.9974" stroke="#627694" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M19.5 3.66406V6.9974" stroke="#627694" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="6.16666" y="13" width="2.66667" height="2.66667" rx="1.33333" fill="white"/>
+<rect x="6.16666" y="18.332" width="2.66667" height="2.66667" rx="1.33333" fill="white"/>
+<rect x="12.1667" y="13" width="2.66667" height="2.66667" rx="1.33333" fill="white"/>
+<rect x="12.1667" y="18.332" width="2.66667" height="2.66667" rx="1.33333" fill="white"/>
+<rect x="18.1667" y="13" width="2.66667" height="2.66667" rx="1.33333" fill="white"/>
+<rect x="18.1667" y="18.332" width="2.66667" height="2.66667" rx="1.33333" fill="white"/>
+<ellipse cx="22.5" cy="19.6667" rx="6.66667" ry="6.66667" fill="white"/>
+<line x1="22.093" y1="16.4875" x2="22.093" y2="20.1974" stroke="#627694" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="22.093" y1="20.2" x2="25.2547" y2="20.2" stroke="#627694" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

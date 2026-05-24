@@ -1,0 +1,15 @@
+.is-new {
+  position: relative;
+}
+.is-new::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  right: 0;
+  top: -9px;
+  width: 6px;
+  height: 6px;
+  background: var(--noti, #ff3b30);
+  border-radius: 50%;
+  pointer-events: none;
+}/*# sourceMappingURL=tabs.module.css.map */

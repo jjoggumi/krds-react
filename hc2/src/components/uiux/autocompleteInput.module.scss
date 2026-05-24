@@ -1,0 +1,46 @@
+.autocomplete-wrap{    
+  height: 100%;
+  position: relative;
+  
+  input{
+    height: var(--ctl-md-h); 
+    border-radius: var(--ctl-md-r);
+    font-size: var(--ctl-md-f);       
+  } 
+}
+.autocomplete-wrap.in-table{
+  .text-input{
+    width:100%;
+    height:100%;
+    text-align: center;
+    input[type=text],
+    input[type=number]{
+      height:100%;
+      width: 100%;
+      border-radius: 0;
+      border: 0 !important;
+      text-align: center;
+      padding: 0;
+      &:hover:not(:disabled),
+      &:focus:not(:disabled){
+        box-shadow: 0 0 0 1px var(--control-secondary-subtle);
+      }
+      &:disabled{
+        box-shadow: 0 0 0 1px var(--border-neutral-base);
+
+      }
+      &.read-only{
+        box-shadow: 0 0 0 1px var(--border-neutral-base);
+      }
+      &.error{
+        box-shadow: 0 0 0 1px var(--control-red-subtle);
+        &:hover:not(:disabled){
+          box-shadow: 0 0 0 1px var(--control-red-subtle);
+        }
+        &:focus:not(:disabled){
+          box-shadow: 0 0 0 1px var(--control-red-subtle);
+        }
+      }
+    }  
+  }
+}

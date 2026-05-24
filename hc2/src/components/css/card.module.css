@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* Card 기본 스타일 */
+.card {
+  display: block;
+  background-color: var(--bg-base);
+  border-radius: 12px;
+  padding: 12px;
+  /* Card 크기별 스타일 */
+}
+.card.card-xs {
+  border-radius: 4px; /* 미지정 */
+  padding: 16px; /* 미지정 */
+}
+.card.card-sm {
+  border-radius: 8px; /* 미지정 */
+  padding: 20px; /* 미지정 */
+}
+.card.card-md {
+  border-radius: 12px;
+  padding: 24px;
+}
+.card.card-lg {
+  border-radius: 12px;
+  padding: 32px;
+}
+.card.card-xl {
+  border-radius: 20px; /* 미지정 */
+  padding: 30px; /* 미지정 */
+}
+.card {
+  /* Card 색상별 스타일 */
+}
+.card.card-border {
+  background-color: var(--bg-base);
+  border: 1px solid var(--border-neutral-strong);
+}
+.card.card-lightgray {
+  background-color: var(--bg-secondary-subtlest);
+  border: 1px solid var(--bg-secondary-subtlest);
+}
+.card {
+  /* 색상 임시 지정 */
+}
+.card.card-lightblue {
+  background-color: var(--bg-primary-subtler);
+  border: 1px solid var(--bg-primary-subtler);
+}
+.card.card-lightred {
+  background-color: var(--bg-red-subtlest);
+  border: 1px solid var(--bg-red-subtlest);
+}/*# sourceMappingURL=card.module.css.map */

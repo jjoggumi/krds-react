@@ -1,0 +1,13 @@
+.classScheduleManagement :global(.table-content) td {
+  cursor: pointer;
+}
+.classScheduleManagement :global(.table-content) td :global(.break-all) {
+  word-break: break-all;
+}
+.classScheduleManagement :global(.table-content) th :global(.btn):global(.btn-sort)::after {
+  -webkit-mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+          mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+}
+.classScheduleManagement :global(.change-list) input[type=checkbox] + label span {
+  font-size: 14px;
+}/*# sourceMappingURL=classScheduleManagement.module.css.map */

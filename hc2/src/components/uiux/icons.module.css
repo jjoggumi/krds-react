@@ -1,0 +1,470 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: 13px 13px;
+  display: inline-block;
+  &.color {
+    background-image: none;
+    mask-size: 100%;
+  }
+}
+
+.plus {
+  background: url('./icons/ic_plus.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_plus.svg');
+  }
+}
+.plusA {
+  background: url('./icons/ic_plus.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_plus.svg');
+  }
+}
+
+.calendar {
+  background: url('./icons/ic_calendar.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_calendar.svg');
+  }
+}
+
+.calendar-next {
+  background: url('./icons/ic_calendar_next.png') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_calendar_next.svg');
+  }
+}
+
+.calendar-prev {
+  background: url('./icons/ic_calendar_prev.png') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_calendar_prev.svg');
+  }
+}
+
+.select-box-arrow-down {
+  background: url('./icons/icon_selectbox_arr_48.png') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/icon_selectbox_arr_48.png');
+  }
+}
+
+.select-box-arrow-up {
+  background: url('./icons/icon_selectbox_on_arr_48.png') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/icon_selectbox_on_arr_48.png');
+  }
+}
+
+.arrow-up {
+  background: url('./icons/ic_arrow_up.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_arrow_up.svg');
+  }
+}
+
+.arrow-down {
+  background: url('./icons/ic_arrow_down.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_arrow_down.svg');
+  }
+}
+
+.check {
+  background: url('./icons/ic_check.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_check.svg');
+  }
+}
+
+.close {
+  background: url('./icons/ic_close.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_close.svg');
+  }
+}
+
+.close-s {
+  background: url('./icons/ic_close_s.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_close_s.svg');
+  }
+}
+
+.arrow-right {
+  background: url('./icons/ic_arrow_right.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_arrow_right.svg');
+  }
+}
+
+.time {
+  background: url('./icons/ic_time.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_time.svg');
+  }
+}
+
+.more {
+  background: url('./icons/ic_more.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_more.svg');
+  }
+}
+
+.modify {
+  background: url('./icons/ic_modify.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_modify.svg');
+  }
+}
+
+.trash {
+  background: url('./icons/ic_trash.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_trash.svg');
+  }
+}
+
+.file-excel {
+  background: url('./icons/ic_file_excel.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_file_excel.svg');
+  }
+}
+
+.nodata {
+  background: url('./icons/icon_nodata.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/icon_nodata.svg');
+  }
+}
+
+.vote-alarm {
+  background: url('./icons/icn-vote-01.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/icn-vote-01.svg');
+  }
+}
+
+.checkbox-hitalk {
+  background: url('./icons/icons_checkbox_hitalk.png') no-repeat;
+  background-position: left bottom;
+  background-size: auto 50px;
+}
+
+.checkbox-hitalk-unchecked {
+  background: url('./icons/icons_checkbox_hitalk.png') no-repeat 0 0 / auto 50px;
+}
+
+.crown {
+  background: url('./icons/ico_crown_26.png') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico_crown_26.png');
+  }
+}
+
+.loading-horizontal {
+  background: url('./icons/icon_new_tab_loading_20.png');
+  animation: new_tab_loading steps(3) 0.75s infinite;
+}
+
+.picture-original {
+  background: url('./icons/ic_picture_original.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ic_picture_original.svg');
+  }
+}
+
+.search {
+  background: url('./icons/ico-search-thin.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-search-thin.svg');
+  }
+}
+
+.global {
+  background: url('./icons/ico-global.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-global.svg');
+  }
+}
+.eye-on {
+  background: url('./icons/ico-eye-on.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-eye-on.svg');
+  }
+}
+.eye-off {
+  background: url('./icons/ico-eye-off.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-eye-off.svg');
+  }
+}
+.upload {
+  background: url('./icons/ico-upload.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-upload.svg');
+  }
+}
+.info-fill {
+  background: url('./icons/ico-info-fill.svg') no-repeat center center;
+  &.color {
+    -webkit-mask-image: url('./icons/ico-info-fill.svg');
+    mask-image: url('./icons/ico-info-fill.svg');
+  }
+}
+.info {
+  background: url('./icons/ico-info.svg') no-repeat center center;
+  &.color {
+    -webkit-mask-image: url('./icons/ico-info.svg');
+    mask-image: url('./icons/ico-info.svg');
+  }
+}
+.pen {
+  background: url('./icons/ico-pen.svg') no-repeat center center;
+  &.color {
+    -webkit-mask-image: url('./icons/ico-pen.svg');
+    mask-image: url('./icons/ico-pen.svg');
+  }
+}
+.tel {
+  background: url('./icons/ico-tel.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-tel.svg');
+  }
+}
+.double-left {
+  background: url('./icons/ico-double-left.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-double-left.svg');
+  }
+}
+.double-right {
+  background: url('./icons/ico-double-right.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-double-right.svg');
+  }
+}
+.download {
+  background: url('./icons/ico-download.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-download.svg');
+  }
+}
+.tel-fill {
+  background: url('./icons/ico-tel-fill.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-tel-fill.svg');
+  }
+}
+.down-circle {
+  background: url('./icons/ico-down-circle.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-down-circle.svg');
+  }
+}
+.down-circle-fill {
+  background: url('./icons/ico-down-circle-fill.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-down-circle-fill.svg');
+  }
+}
+.calendar-week {
+  background: url('./icons/ico-calendar-week.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-calendar-week.svg');
+  }
+}
+.calendar-week-active {
+  background: url('./icons/ico-calendar-week-active.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-calendar-week-active.svg');
+  }
+}
+.inquiry {
+  background: url('./icons/ico-inquiry.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-inquiry.svg');
+  }
+}
+/* 위쪽에 plus 사용되고 있음. 
+.plus {
+  background: url('./icons/ico-plus.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-plus.svg');
+  }
+} */
+.send {
+  background: url('./icons/ico-send.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-send.svg');
+  }
+}
+.arrow-left {
+  background: url('./icons/ico-arrow-left.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-arrow-left.svg');
+  }
+}
+.help-fill {
+  background: url('./icons/ico-help-fill.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-help-fill.svg');
+  }
+}
+.help {
+  background: url('./icons/ico-help.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-help.svg');
+  }
+}
+.user {
+  background: url('./icons/ico-user.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-user.svg');
+  }
+}
+.arrow-down-sort {
+  background: url('./icons/ico-arrow-down.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-arrow-down.svg');
+  }
+}
+.arrow-up-sort {
+  background: url('./icons/ico-arrow-up.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-arrow-up.svg');
+  }
+}
+.reload{
+  background: url('./icons/ico-reload.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-reload.svg');
+  }
+}
+.email{
+  background: url('./icons/ico-email.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-email.svg');
+  }
+}
+.clip{
+  background: url('./icons/ico-clip.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-clip.svg');
+  }
+}
+.link{
+  background: url('./icons/ico-link.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-link.svg');
+  }
+}
+.file-pdf{
+  background: url('./icons/ico-file-pdf.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-file-pdf.svg');
+  }
+}
+.file-pdf-text{
+  background: url('./icons/ico-file-pdf-text.svg') no-repeat center center;
+  &.color {
+    mask-image: url('./icons/ico-file-pdf-text.svg');
+  }
+}
+
+/* 문자발송 lnb 아이콘 */
+.lnb-address{
+  background: url('../../assets/img/text/lnb-address.svg') no-repeat center center;
+}
+.lnb-authority{
+  background: url('../../assets/img/text/lnb-authority.svg') no-repeat center center;
+}
+.lnb-call{
+  background: url('../../assets/img/text/lnb-call.svg') no-repeat center center;
+}
+.lnb-clock{
+  background: url('../../assets/img/text/lnb-clock.svg') no-repeat center center;
+}
+.lnb-mobile{
+  background: url('../../assets/img/text/lnb-mobile.svg') no-repeat center center;
+}
+.lnb-point{
+  background: url('../../assets/img/text/lnb-point.svg') no-repeat center center;
+}
+.lnb-sns{
+  background: url('../../assets/img/text/lnb-sns.svg') no-repeat center center;
+}
+.lnb-sns-active{
+  background: url('../../assets/img/text/lnb-sns-active.svg') no-repeat center center;
+}
+
+@keyframes new_tab_loading {
+  100% {
+    background-position: -300px 0;
+  }
+}
+
+/* Color utility classes for Icon component */
+.color-primary {
+  background-color: #4778de;
+}
+.color-secondary {
+  background-color: #4267b2;
+}
+.color-success {
+  background-color: #00bf40;
+}
+.color-info {
+  background-color: #4778de;
+}
+.color-noti {
+  background-color: #ff6a6a;
+}
+.color-warning {
+  background-color: #ec1f2d;
+}
+.color-navy {
+  background-color: #1e3668;
+}
+.color-purple {
+  background-color: #eb6bff;
+}
+.color-yellow {
+  background-color: #ffb600;
+}
+.color-jungle {
+  background-color: #267e4e;
+}
+.color-orange {
+  background-color: #ff8737;
+}
+.color-gray {
+  background-color: #bdbdbd;
+}
+.color-black {
+  background-color: #000000;
+}
+.color-white {
+  background-color: #ffffff;
+}
+.color-default {
+  background-color: #616161;
+}
+.color-disabled {
+  background-color: #d6d6d6;
+}
+.color-gray-07 {
+  background-color: #bdbdbd;
+}
+.color-gray-10 {
+  background-color: #1b1b1b;
+}
+.color-light-gray {
+  background-color: #bdbdbd;
+}
+.color-light-primary {
+  background-color: #e1e9f9;
+}

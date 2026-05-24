@@ -1,0 +1,225 @@
+@charset "UTF-8";
+.loading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* 전체 화면 오버레이: 로딩 중 클릭 차단 */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: all;
+  /* 배경은 투명하게 유지 (필요 시 tint 적용 가능) */
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 공통 아이콘 크기 기본값 */
+.loading-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* 변형: 가로 스프라이트 애니메이션 */
+.loading-icon--horizontal {
+  width: 100px;
+  height: 20px;
+}
+
+/* 변형: 스피너 (원형 회전) */
+.loading-icon--spinner {
+  width: 24px;
+  height: 24px;
+}
+
+/* 변형: 점점점 (3점 펄스) */
+.loading-icon--dots {
+  width: 12px;
+  height: 12px;
+}
+
+/* 회전 스피너 */
+.loading-spinner {
+  background: none;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  -webkit-animation: icon_spin 0.8s linear infinite;
+          animation: icon_spin 0.8s linear infinite;
+}
+
+/* 점 3개 펄스 애니메이션 */
+.loading-dots {
+  background: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+  -webkit-animation: dots_pulse 0.9s ease-in-out infinite;
+          animation: dots_pulse 0.9s ease-in-out infinite;
+}
+
+@-webkit-keyframes icon_spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes icon_spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dots_pulse {
+  0% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+  33% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.6), 32px 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.6), 32px 0 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+  }
+  66% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.6);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+}
+@keyframes dots_pulse {
+  0% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+  33% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.6), 32px 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.6), 32px 0 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+  }
+  66% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.6);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 16px 0 0 rgba(0, 0, 0, 0.4), 32px 0 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+}
+/* timetable 변형: 3개의 점 로더 */
+.dot-loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+
+.dot-loader span {
+  width: 14px;
+  height: 14px;
+  background-color: var(--blue-400); /* 로티랑 비슷한 파랑 */
+  border-radius: 50%;
+  -webkit-animation: dot-bounce 1.4s ease-in-out infinite both;
+          animation: dot-bounce 1.4s ease-in-out infinite both;
+}
+
+/* 딜레이로 순차 효과 */
+.dot-loader span:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.dot-loader span:nth-child(2) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+.dot-loader span:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes dot-bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.6;
+  }
+  30% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.6;
+  }
+}
+
+@keyframes dot-bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.6;
+  }
+  30% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.6;
+  }
+}/*# sourceMappingURL=loading.module.css.map */

@@ -1,0 +1,133 @@
+.timetable-root{ 
+  $colors: (
+    primary: var(--action-primary-base),
+    secondary: var(--bg-secondary-base),
+    success: var(--graphic-green),
+    info: var(--action-primary-base),
+    noti: var(--control-red-subtle),
+    warning: var(--action-red-base),
+    error: var(--red-500),
+    navy: var(--text-secondary-stronger),
+    purple: var(--graphic-lavender),
+    yellow: var(--graphic-yellow),
+    jungle: var(--green-800),
+    orange: var(--orange-400),
+    default: var(--text-neutral-stronger),
+    gray: var(--text-neutral-strong),
+    white: var(--bg-base),
+    black: var(--bg-fixed-black),
+  );
+  /* Icon Style */
+  @mixin iconName($name) {
+    &.ico-#{$name}::after {
+      mask-image: url("@/assets/img/icon/ico-#{$name}.svg");
+    }
+  }
+  @mixin iconColor($color-name, $color-value) {
+    &.ico-bg-#{$color-name},
+    &.ico-#{$color-name}::after {
+      background-color:#{$color-value} !important;
+    }
+    &.ico-line-#{$color-name} {
+      border-color: $color-value;
+      &::after {
+        background-color: $color-value !important;
+      }
+    }
+  }
+  .ico {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-color: var(--text-default);
+      -webkit-mask-image: url("@/assets/img/icon/ico-none.svg");
+      mask-image: url("@/assets/img/icon/ico-none.svg");
+  
+      /* 아이콘 색상 설정 */
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+  
+    /* 아이콘 색상 */
+    @each $name, $color in $colors {
+      @include iconColor($name, $color);
+    }
+    @include iconColor(gray2, var(--text-neutral-base));
+    @include iconColor(disabled, var(--control-neutral-strong));
+  
+    // 아이콘 사이즈
+    $ico-sizes: (  14: (),  16: (),  20: (),  24: (),  36: (padding: 5px,),);
+    @each $size, $options in $ico-sizes {
+      &.ico-size-#{$size} {
+        min-width: #{$size}px;
+        min-height: #{$size}px;
+        width: #{$size}px;
+        height: #{$size}px;
+  
+        @each $prop, $value in $options {
+          #{$prop}: $value;
+        }
+      }
+    }
+  
+    //아이콘 이름
+    @include iconName(exit);
+    @include iconName(arrow-left);
+    @include iconName(arrow-right);
+    @include iconName(arrow-down);
+    @include iconName(arrow-down-fill);
+    @include iconName(arrow-up);
+    @include iconName(arrow-up-fill);
+    @include iconName(calendar);
+    @include iconName(close);
+    @include iconName(close-circle-fill);
+    @include iconName(help);
+    @include iconName(info);
+    @include iconName(info-fill);
+    @include iconName(info-warning);
+    @include iconName(info-warning-fill);
+    @include iconName(mobile-check);
+    @include iconName(search);
+    @include iconName(trash);
+    @include iconName(check);   
+    @include iconName(clock);   
+    @include iconName(list);   
+    @include iconName(plus);   
+    @include iconName(download);   
+    @include iconName(upload);   
+    @include iconName(pen);   
+    @include iconName(exchange-chain);   
+    @include iconName(exchange-direct);   
+    @include iconName(email);   
+    @include iconName(hitalk);   
+    @include iconName(setting);
+  
+    &.ico-help::before{
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: var(--bg-base);
+      left: 5px;
+      top: 5px;
+      border-radius: 50%;
+    }  
+  }
+}

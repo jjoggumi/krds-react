@@ -1,0 +1,111 @@
+.hi-modal-wrap {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	overflow: auto;
+	background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	& ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+  }
+  & ::-webkit-scrollbar-thumb {
+		background-color: var(--slate-200);
+		background-clip: padding-box;
+		min-height:40px;
+		border: 2px solid transparent;
+		border-radius: 10px;
+  }
+  & ::-webkit-scrollbar-track { background-color: transparent; } 
+
+	.modal-dim {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	.modal-layer {
+		position: relative;
+		width: 400px;
+		background-color: var(--bg-base);
+		font-size: 16px;
+		border-radius: 12px;
+		box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3);		
+		display: flex;
+		flex-flow: column;
+	} 
+	.modal-header { 
+    flex: 0 0 auto;  
+    padding: 44px 32px 16px; 
+    display: flex;
+    flex-flow: column;
+		gap: 4px;
+    h2 {
+      margin: 0;
+      color: var(--text-default);
+      font-family: var(--font-family-sans);
+      font-size: 20px;
+      font-weight:  var(--font-weight-bold);
+      line-height: 140%;
+    }
+    .desc {
+      font-family: var(--font-family-sans);
+      font-size: 15px;
+      color: var(--text-neutral-stronger);
+      font-weight:  var(--font-weight-regular);
+      line-height: 160%;
+    }
+    .btn-close {
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;      
+      width: 20px;
+      height: 20px;
+      color: var(--text-neutral-strong);
+    }
+	}
+	.modal-content { 
+		padding: 0px 32px 28px 32px;
+		flex-grow: 1;
+	}
+	.modal-footer{    
+		display: flex;
+		justify-content: flex-end;
+		gap: 8px;
+		padding: 0 32px 24px 32px;
+	}    
+	&.modal-xs .modal-layer{width:95%;max-width:360px;}
+	&.modal-sm .modal-layer{width:95%;max-width:400px;}
+	&.modal-md .modal-layer{width:95%;max-width:620px;}
+	&.modal-lg .modal-layer{width:95%;max-width:760px;}
+	&.modal-xl .modal-layer{width:95%;max-width:850px;}
+	&.modal-2xl .modal-layer{width:95%;max-width:1000px;} //미사용(데이터 수정가능)
+	&.modal-3xl .modal-layer{width:95%;max-width:1200px;} //미사용(데이터 수정가능)
+	&.modal-4xl .modal-layer{width:95%;max-width:1820px;}
+	&.modal-full .modal-layer{
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+		.modal__content{
+			min-height: calc(100% - 140px);
+		}
+	}
+
+	// 상단 닫기버튼 스킵
+	&.title-close-skip{
+		.modal-header .btn-close{display:none;}
+	}
+}

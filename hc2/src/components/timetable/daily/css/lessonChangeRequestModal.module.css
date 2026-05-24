@@ -1,0 +1,6 @@
+.lessonChangeRequestModal :global .table-content + .table-content {
+  margin-top: 30px;
+}
+.lessonChangeRequestModal :global .form-group-inline .tooltip-custom i:after {
+  background-color: var(--action-red-base) !important;
+}/*# sourceMappingURL=lessonChangeRequestModal.module.css.map */

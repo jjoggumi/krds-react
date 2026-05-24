@@ -1,0 +1,84 @@
+﻿.textareaWith_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--bg-base);
+  border: 1px solid var(--border-neutral-base);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box; 
+  &.focused {
+    border-color: var(--control-secondary-subtle);
+    // background: #f1f4fc;
+  }
+
+  .mainArea {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box; 
+    flex: 1;
+    .overlayText,
+    .textarea_field {
+      width: 100%;
+      padding: 16px;
+      font-size: var(--text-b2);
+      line-height: var(--leading-b2);
+      font-family: inherit;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 0;
+      box-sizing: border-box; 
+    }
+    .overlayText {
+      position: relative;
+      z-index: 1;
+      color: var(--text-default);
+      pointer-events: none;
+      user-select: none;
+      .variableTag {
+        display: inline-block;
+        color: var(--text-primary-base);
+        background-color: var(--bg-primary-subtlest);
+        border-radius: 2px;
+        padding: 0;
+        margin: 0;
+        font-family: inherit;
+        letter-spacing: inherit;
+      }
+    }
+    .textarea_field {
+      position: relative;
+      z-index: 2;
+      display: block;
+      color: transparent;
+      caret-color: var(--text-default);
+      background: transparent;
+      border: none;
+      outline: none;
+      transition: none;
+    }
+  }
+  .footerBar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 16px 16px;
+    background: inherit;
+    .byte_footer {
+      font-size: var(--text-b3);
+      .current {
+        color: var(--text-primary-base);
+      }
+      .total {
+        color: var(--text-neutral-stronger);
+      }
+    }
+    .etcArea{
+      width:100%;
+    }
+  }
+}

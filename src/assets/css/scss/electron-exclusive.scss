@@ -1,0 +1,336 @@
+.on-electron {
+  overflow: hidden;
+  // 레이아웃
+  .l-page-index{
+    height: 100%;
+
+    .l-container-index{
+      height: 100%;
+      padding-top: 0px;
+
+      > section:not(.electron-intro-wrap){
+        display: none;
+      }
+    }
+    .l-header-index,
+    .l-footer,
+    .l-footer-sub {
+        display: none;
+    }
+  }
+  // 인트로
+  .electron-intro-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .electron-intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      .electron-heading {
+        margin-bottom:30px;
+        &::before {
+          content: '';
+          display: block;
+          background: url("~@/assets/img/logo_login.png") center no-repeat;
+          width: 200px;
+          height: 70px;
+          margin: 0 auto 24px;
+        }        
+        span {
+          display: block;
+          color: #273959;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.5;
+          letter-spacing: -0.2px;
+        }
+      }
+      .electron-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        li {
+          a {              
+            width: 260px;
+            height: 300px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            background: #FFF;
+            display: block;
+            padding: 40px;
+            border: 1px solid transparent;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px rgb(0, 0, 0)rgba(0, 0, 0, 0.1);            
+            text-align: center;
+            &:hover {
+              background-color: #fff;
+              border: 1px solid var(--primary);
+              transform: translateY(-10px);
+              box-shadow: 10.992px 20px 34px rgba(16, 42, 103, 0.10);
+              strong{
+                color:var(--primary);
+              }
+            }
+            &::before{              
+              content: '';
+              display: block;
+              background: url("~@/assets/img/index/electron-intro-t.png") center no-repeat;
+              width: 120px;
+              height: 120px;
+              background-size: 100%;
+              margin: 0 auto 24px;
+            }
+            strong {
+              color: #222;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 1.5;
+              letter-spacing: -0.2px;
+            }
+            p {
+              color: #888;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1.5;
+              letter-spacing: -0.2px;
+            }
+          }
+          &:nth-child(2) a::before {
+            background-image: url("~@/assets/img/index/electron-intro-p.png");
+          }
+          &:nth-child(3) a::before {
+            background-image: url("~@/assets/img/index/electron-intro-s.png");
+          }
+        }
+      }
+
+      .electron-join {
+        width: 100%;
+        color: #888;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: right;
+
+        a{
+          color: #888;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.5;
+          text-decoration: underline;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+  
+  // 로그인
+  #wrap.page-login {
+    height: 100%;
+    #cont-wrap{
+      padding:80px 0 0 0;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+
+      #loginHeader{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        height: 80px;
+        border-top: 1px solid #E0E0E0;
+        border-bottom: 1px solid #E0E0E0;
+        .logo-wrap{
+          text-align: left;
+          margin: 0;
+          padding: 14px 48px;
+          a{
+            width: 107px;
+            height: 51px;
+          }
+        }
+      }
+
+      .login-box-wrap{
+        width:480px;
+        padding:40px;
+        border-radius: 16px;
+        .login-start-text{          
+          font-family: var(--font-body);
+        }
+
+        .login-start-text.smr::after{
+          content:'이용을 원하는 계정을 선택해주세요';
+          display: block;
+          color: #888;
+          text-align: center;
+          font-family: var(--font-body);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          letter-spacing: -0.2px;
+          margin-top: 6px;
+        }
+
+        .login-style button{
+          border-radius:12px;
+        }
+      }
+    }
+  }
+
+  // 하이톡 레이아웃 커스텀
+  .ooo-conversation-cont-wrap .left-wrap{
+    user-select: none;
+    width: 450px;
+
+    .tab-nav-wrap {
+      height: 100vh;
+    }      
+    .tab-cont-wrap{
+      width: calc(450px - 80px);
+    }
+    .tab-nav-bottom-wrap button.icon.setting {
+      &::before {
+        width: 36px;
+        height: 36px;
+        background-color: #8294b4;
+        mask-image: url("~@/assets/img/svg/ico-setting.svg");
+        mask-size: 100%;
+      }
+      &:hover::before {
+        background-color: #94a9cd;
+      }
+      &.on::before {
+        background-color: #fff;
+      }
+    }
+  }
+  .ooo-conversation-cont-wrap .right-wrap {
+    user-select: none;
+    .chatting-bubble {
+      user-select: text;
+    }
+  }
+  .empty-wrap:not(.explanation-cont-wrap) .img-wrap{
+    display: none;
+  }
+  .empty-wrap .btn-primary{
+    min-width: 220px;
+  }
+
+  // 하이톡 설정 팝업
+  .left-wrap .inner .tab-nav-bottom-wrap .option-list {
+    position: fixed;
+    left: 70px;
+    bottom: 28px;
+    width: 162px;
+    border: solid 1px #e0e0e0;
+    z-index: 999 !important;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    ul{
+      overflow: auto;
+      max-height: none;      
+      padding: 12px 0;
+      li {
+        cursor: pointer;
+        min-height: 40px;
+        span {
+          color: #333;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 21px */
+          letter-spacing: -0.2px;
+        }
+      }   
+    } 
+  }   
+
+  //상담시간 설정 모달
+  .hi-modal-common.time-setting{
+    .modal__header{
+      .heading{
+        text-align: left;
+        border-bottom: 1px solid #D6D6D6;
+        padding-bottom: 18px;
+      }
+    }
+    .modal__layer{
+      width:780px;
+      max-width:780px;
+    }
+    .setting-cont-wrap{
+      .tab-wrap{
+        position: absolute;
+        right: 50px;
+        top: 0px;
+        button{
+          border: 0;
+          border-radius: 0;
+          padding: 10px 20px 0;
+          height: 75px;
+          width: auto;
+          transition: all 0.2s ease-in-out;
+          border-bottom: 2px solid transparent;
+          &.is-active{
+            color: #222;
+            background: #fff;
+            border-bottom: 2px solid var(--primary);
+          }
+        }
+      }
+      .time-wrap{
+        .on-off-text br{display: none;}
+        .day-wrap{
+          display: flex;
+          align-items: center;
+          .tit{
+            margin: 0;
+            width: 100px;
+          }
+          .day{margin-right:25px;}
+        }
+        .time-set-noti-box{          
+          justify-content: center;
+          width: 100%;
+          br:nth-child(2){display: none;}
+        }
+        .setting-time-wrap{
+          .start-time-wrap:nth-child(2) .st-time-setting{
+            padding-right: 22px;
+          }
+          .start-time-wrap{
+            display: flex;
+            align-items: center;            
+            .stit{width:100px;}
+            .st-time-setting{flex-grow: 1;}
+            + .start-time-wrap{margin-top: 6px;}
+          }
+
+        }
+      }
+    }
+  } 
+
+}

@@ -1,0 +1,142 @@
+.text-input {
+  position: relative;
+  padding: 0px;
+  background-color: white;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.text-input input[type=text], .text-input input[type=number] {
+  height: var(--ctl-md-h);
+  border-radius: var(--ctl-md-r);
+  font-size: var(--ctl-md-f);
+  padding: 0px 12px;
+  border: 1px solid #d6d6d6;
+  background: #fff;
+  color: #1b1b1b;
+  font-weight: 400;
+  line-height: 150%;
+  width: 100%;
+}
+.text-input input[type=text]::-webkit-input-placeholder, .text-input input[type=number]::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+.text-input input[type=text]::-moz-placeholder, .text-input input[type=number]::-moz-placeholder {
+  color: #bdbdbd;
+}
+.text-input input[type=text]:-ms-input-placeholder, .text-input input[type=number]:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+.text-input input[type=text]::-ms-input-placeholder, .text-input input[type=number]::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+.text-input input[type=text]::placeholder, .text-input input[type=number]::placeholder {
+  color: #bdbdbd;
+}
+.text-input input[type=text]:hover:not(:disabled), .text-input input[type=number]:hover:not(:disabled) {
+  border-color: #8ea4d1;
+}
+.text-input input[type=text]:focus:not(:disabled), .text-input input[type=number]:focus:not(:disabled) {
+  border-color: #8ea4d1;
+  background: #f1f4fc;
+}
+.text-input input[type=text]:disabled, .text-input input[type=number]:disabled {
+  border-color: #d6d6d6;
+  background: #eeeeee;
+  color: #bdbdbd;
+}
+.text-input input[type=text]:-moz-read-only:not(:disabled), .text-input input[type=number]:-moz-read-only:not(:disabled) {
+  border-color: #d6d6d6;
+  background: #eeeeee;
+  color: #1b1b1b;
+}
+.text-input input[type=text]:read-only:not(:disabled), .text-input input[type=number]:read-only:not(:disabled) {
+  border-color: #d6d6d6;
+  background: #eeeeee;
+  color: #1b1b1b;
+}
+.text-input input[type=text] + .msg, .text-input input[type=number] + .msg {
+  font-size: 13px;
+  padding-top: 5px;
+}
+.text-input input[type=text].error, .text-input input[type=number].error {
+  border-color: #f37079 !important;
+  color: #ec1f2d !important;
+}
+.text-input input[type=text].error:hover:not(:disabled), .text-input input[type=number].error:hover:not(:disabled) {
+  border-color: #f37079 !important;
+  color: #ec1f2d !important;
+}
+.text-input input[type=text].error:focus:not(:disabled), .text-input input[type=number].error:focus:not(:disabled) {
+  border-color: #f37079 !important;
+  background: #fff7f8;
+  color: #ec1f2d !important;
+}
+.text-input input[type=text].error + .msg, .text-input input[type=number].error + .msg {
+  color: #ec1f2d;
+}
+.text-input input[type=text].success + .msg, .text-input input[type=number].success + .msg {
+  color: #00bf40;
+}
+.text-input .btns {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.text-input .search-btn {
+  width: 24px;
+  height: 24px;
+}
+.text-input .search-btn :global(.icon) {
+  width: 24px;
+  height: 24px;
+  background-size: 24px;
+}
+.text-input .close-btn {
+  width: 18px;
+  height: 18px;
+  right: 40px;
+  background-color: #9e9e9e;
+  border-radius: 50%;
+}
+.text-input .close-btn :global(.icon) {
+  background-size: 75%;
+  -webkit-filter: invert(1) brightness(2);
+          filter: invert(1) brightness(2);
+  min-width: 18px;
+  min-height: 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+.text-input.search-ico input[type=text], .text-input.search-ico input[type=number] {
+  padding-left: 40px;
+}
+.text-input.search-ico::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #9e9e9e;
+  -webkit-mask-image: url("../icons/ico-search-thin.svg");
+          mask-image: url("../icons/ico-search-thin.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.text-input.hasSearch input[type=text], .text-input.hasSearch input[type=number] {
+  padding-right: 63px;
+}/*# sourceMappingURL=input.module.css.map */

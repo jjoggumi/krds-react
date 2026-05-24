@@ -1,0 +1,83 @@
+.lessonChangeSideModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.lessonChangeSideModal :global(.side-modal-cont) {
+  margin-bottom: 90px;
+}
+.lessonChangeSideModal :global(.btns) {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+.lessonChangeSideModal :global(.btns) > button {
+  width: 150px;
+}
+.lessonChangeSideModal :global(.h4-tit) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid var(--border-neutral-base);
+  padding-bottom: 20px;
+}
+.lessonChangeSideModal :global(.h4-tit) h4 {
+  font-size: 18px;
+}
+.lessonChangeSideModal :global(.form-group-inline) :global(.autocomplete-wrap) {
+  max-width: 320px;
+  width: 100%;
+}
+.lessonChangeSideModal :global(.form-group-inline) :global(.hi-selectbox) {
+  max-width: 320px;
+  width: 100%;
+}
+.lessonChangeSideModal :global(.form-group-inline) + :global(.hi-nodata) {
+  height: 280px;
+  border-radius: 12px;
+  border: 1px solid var(--border-neutral-strong);
+  margin: 30px 0;
+}
+
+.lessonChangeManagement :global(.table-content) td {
+  cursor: pointer;
+}
+.lessonChangeManagement :global(.table-content) td :global(.btn-xs) {
+  height: 24px;
+}
+.lessonChangeManagement :global(.table-content) td :global(.text-text-neutral-stronger) {
+  color: var(--text-neutral-stronger);
+}
+.lessonChangeManagement :global(.table-content) td :global(.break-all) {
+  word-break: break-all;
+}
+.lessonChangeManagement :global(.table-content) th :global(.btn):global(.btn-sort)::after {
+  -webkit-mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+          mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+}
+.lessonChangeManagement :global(.change-list) input[type=checkbox] + label span {
+  font-size: 14px;
+}
+.lessonChangeManagement :global(.change-list) input[type=checkbox] + label,
+.lessonChangeManagement :global(.change-list) input[type=checkbox] + label::after {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.lessonChangeRequestModal :global .table-content + .table-content {
+  margin-top: 30px;
+}/*# sourceMappingURL=lessonChangeManagement.module.css.map */

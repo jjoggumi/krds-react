@@ -1,0 +1,373 @@
+button,
+[role=button] {
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+}  
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;  
+  border-radius: var(--md-radius);
+  height: var(--md-height);
+  font-size: var(--md-font);
+  padding:0 16px;    
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  text-align: center;
+  color: var(--white);
+  line-height: 1.6;
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  
+  // 버튼 사이즈 
+  &.btn-xs {
+    padding: 0 14px;
+    height: var(--xs-height);
+    border-radius: var(--xs-radius);
+    font-size: var(--xs-font);
+  }    
+  &.btn-sm {      
+    padding: 0 16px;
+    height: var(--sm-height);
+    border-radius: var(--sm-radius);
+    font-size: var(--sm-font);
+  }
+  &.btn-md {
+    padding:0 16px;
+    border-radius: var(--md-radius);
+    height: var(--md-height);
+    font-size: var(--md-font);
+  }  
+  &.btn-lg {
+    padding:0 24px;
+    border-radius: var(--lg-radius);
+    height: var(--lg-height);
+    font-size: var(--lg-font);
+  }  
+  &.btn-xl {
+    padding:0 24px;
+    border-radius: var(--xl-radius);
+    height: var(--xl-height);
+    font-size: var(--xl-font);
+  }  
+  &.btn-block { 
+    width: 100%;
+  } 
+  &.btn-ico-left{
+    &::after{
+      display: inline-block;
+      content: '';
+      width: 8px;
+    }
+  }
+  &.btn-ico-right{
+    &::before{
+      display: inline-block;
+      content: '';
+      width: 8px;
+    }
+  }
+  
+  &.btn-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    color: var(--white);
+    &[class *= 'btn-ico']{
+      i::after {background-color:var(--white);}
+    }
+    &:hover:not(:disabled) {
+      background-color: mix(black, $primary, 16%);
+      border-color: mix(black, $primary, 16%);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: mix(black, $primary, 24%);
+      border-color: mix(black, $primary, 24%);
+    }
+    &:disabled {
+      background-color: var(--disabled-bg);
+      border-color: var(--disabled-bg);
+      cursor: auto;
+    }
+  }
+  &.btn-noti {
+    background-color: $noti;
+    border: 1px solid $noti;
+    color: var(--white);
+    &[class *= 'btn-ico']{
+      i::after {background-color:var(--white);}
+    }
+    &:hover:not(:disabled) {
+      background-color: mix(black, $noti, 16%);
+      border-color: mix(black, $noti, 16%);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: mix(black, $noti, 24%);
+      border-color: mix(black, $noti, 24%);
+    }
+    &:disabled {
+      background-color: var(--disabled-bg);
+      border-color: var(--disabled-bg);
+      cursor: auto;
+    }
+  }
+  &.btn-secondary {
+    background-color: $primary-04;
+    border: 1px solid $primary-04;
+    color: $primary;      
+    &[class *= 'btn-ico']{
+      i::after {background-color:$primary;}
+    }
+    &:hover:not(:disabled) {
+      background-color: mix(black, $primary-04, 4%);
+      border-color: mix(black, $primary-04, 4%);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: mix(black, $primary-04, 8%);
+      border-color: mix(black, $primary-04, 8%);
+    }
+    &:disabled {
+      background-color: var(--disabled-bg);
+      border-color: var(--disabled-bg);
+      color: var(--white);
+      cursor: auto;           
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--white);}
+      }
+    }      
+  }   
+  &.btn-tertiary-blue {
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+    color: var(--primary);  
+    &[class *= 'btn-ico']{
+      i::after {background-color:var(--primary);}
+    }
+    &:hover:not(:disabled) {
+      background-color: rgba(var(--primary-rgb), 0.16);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: rgba(var(--primary-rgb), 0.24);
+    }
+    &:disabled {
+      opacity: 0.40;
+      cursor: auto;
+    }   
+  }   
+  &.btn-tertiary{
+    background-color: var(--white);
+    border: 1px solid var(--gray-06);
+    color: var(--gray-10);      
+    &[class *= 'btn-ico']{
+      i::after {background-color: var(--gray-10);}
+    }
+    &:hover:not(:disabled) {
+      background-color: rgba(var(--black-rgb), 0.04);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: rgba(var(--black-rgb), 0.08);
+    }
+    &:disabled {
+      border-color:var(--Line-Gray-04);
+      color:var(--Txt-Gray-07);
+      cursor: auto;        
+      &[class *= 'btn-ico']{
+        i::after {background-color: var(--Txt-Gray-07);}
+      }
+    }    
+  }
+  &.btn-success{
+    background-color: $success;
+    border: 1px solid $success;
+    color: var(--white);
+    &[class *= 'btn-ico']{
+      i::after {background-color:var(--white);}
+    }
+    &:hover:not(:disabled) {
+      background-color: mix(black, $success, 16%);
+      border-color: mix(black, $success, 16%);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: mix(black, $success, 24%);
+      border-color: mix(black, $success, 24%);
+    }
+    &:disabled {
+      background-color: var(--disabled-bg);
+      border-color: var(--disabled-bg);
+      cursor: auto;
+    }
+  }
+  &.btn-line-warning{
+    background-color: var(--white);
+    border: 1px solid var(--warning);
+    color: var(--warning);  
+    &[class *= 'btn-ico']{
+      i::after {background-color:var(--warning);}
+    }
+    &:hover:not(:disabled) {
+      background-color: rgba(var(--warning-rgb), 0.16);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: rgba(var(--warning-rgb), 0.24);
+    }
+    &:disabled {
+      opacity: 0.40;
+      cursor: auto;
+    }   
+  } 
+  &.btn-warning{
+    background-color: $warning;
+    border: 1px solid $warning;
+    color: var(--white);  
+    &[class *= 'btn-ico']{
+      i::after {background-color:var(--white);}
+    }
+    &:hover:not(:disabled) {
+      background-color: mix(black, $warning, 16%);
+      border-color: mix(black, $warning, 16%);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: mix(black, $warning, 24%);
+      border-color: mix(black, $warning, 24%);
+    }    
+    &:disabled {
+      background-color: var(--disabled-bg);
+      border-color: var(--disabled-bg);
+      cursor: auto;
+    }   
+  } 
+  &.btn-link{
+    padding:0;
+    background-color: transparent;
+    color: inherit;
+    border: 0;
+    height: auto;
+    vertical-align: middle;
+    &:focus:not(:disabled),
+    &:active:not(:disabled),
+    &:hover:not(:disabled),
+    &:disabled {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  // 도움말
+  &[class*="btn-help"]{
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    border: 0px solid rgba(var(--primary-rgb), 0.5);
+    margin: 0 4px;
+    &::before{    
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: var(--white);
+      left: 3px;
+      top: 3px;
+      border-radius: 50%;
+    }
+    &::after{
+      display: inline-block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-color: var(--gray-07);
+      mask-image: url(~@/assets/img/timetable/ico-help.svg);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: 20px;
+      transition: all 0.25s ease-in-out;
+      border-radius: 20px;
+    }  
+    &:hover::after{
+      background-color: var(--gray-08);
+    }
+    &.help-on{
+      animation: helpOn-ani 1s ease-in-out infinite;
+      &::after{
+        background-color: var(--primary);
+      }
+    }
+  }
+  &[class*="btn-help-w"]{    
+    border: 0px solid rgba(var(--white-rgb), 0.5);
+    &:hover::after,
+    &::after{
+      background-color: var(--white);
+    } 
+    &:hover::before,
+    &::before {
+      background: var(--primary);
+    }
+    &.help-on{
+        animation: helpOn-ani-w 1s ease-in-out infinite reverse;
+      &::after{
+        background-color: var(--white);
+      }
+    }
+  }     
+  
+  &.btn-ghost{
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    height: auto;
+    color: var(--font-color);
+    &:hover:not(:disabled) {
+      background-color: rgba(var(--black-rgb), 0.04);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: rgba(var(--black-rgb), 0.04);
+    }
+    &:disabled {
+      opacity: 0.40;
+      cursor: auto;
+    }
+  }
+
+  //정렬
+  &.btn-sort{
+    width: 20px;
+    height: 20px;
+    transition: 0.25s ease-in-out;
+    &::after{
+      display: inline-block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-color: var(--black);
+      mask-image: url(~@/assets/img/timetable/ico-arrow-down-fill.svg);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;     
+    }  
+    &:hover::after{
+      background-color: var(--gray-09);      
+    }
+    &.desc{
+      transform: rotate(180deg);
+    }
+    &.asc{
+      transform: rotate(0deg);
+    }
+  }
+}

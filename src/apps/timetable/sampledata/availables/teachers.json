@@ -1,0 +1,227 @@
+[
+  {
+    "teacherName": "김서연",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "백민서",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "이준서",
+    "teacherId": "7994e762-de8f-4b23-ae6d-c949bb7f92db",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "박하린",
+    "teacherId": "f09a5162-d31e-43df-a9d6-dc372111aaea",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "최도현",
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "정예은",
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "강민준",
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "조수아",
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "윤지우",
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "홍하은",
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "오현우",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "배유진",
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "한서현",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "신하린",
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "임준호",
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "장수진",
+    "teacherId": "75b11e5e-6261-473c-aca1-d9ec40dbb634",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "권예진",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "이하율",
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "박지훈",
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "송유나",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "최시우",
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "정하영",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "강하늘",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "김도윤",
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "박수현",
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "장민서",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "정다연",
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "정지훈",
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "김나윤",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "최지아",
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "박도윤",
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "윤서준",
+    "teacherId": "cd0caf03-60c2-435f-acc8-dbd23e87e769",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "장서연",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "이준희",
+    "teacherId": "3a96e17c-3095-455c-ace3-2c0d1feca8e4",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "윤민서",
+    "teacherId": "8f3aa8f7-2ad7-4414-bc07-e78c71c6bf47",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "박지안",
+    "teacherId": "e739840b-29a5-4eef-a6c4-2f51f1ad242b",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "이다현",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "조민서",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "강현우",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "박하윤",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "이태윤",
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "최유진",
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "정지우",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "윤하진",
+    "teacherId": "346783e9-cec8-48ab-a483-79966bfc81f3",
+    "freePeriods": []
+  },
+  {
+    "teacherName": "김준서",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "freePeriods": []
+  }
+]

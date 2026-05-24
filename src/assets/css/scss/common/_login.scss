@@ -1,0 +1,242 @@
+@use '@/assets/css/scss/common/var' as *;
+
+.page-login {
+  #cont-wrap {
+    text-align: center;
+    .logo-wrap {
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+    .login-box-wrap {
+      width: 520px;
+      text-align: left;
+      margin: 0 auto;
+      padding: 40px 0;
+      .login-start-text {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-align: center;
+        font-family: var(--font-body);
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+  .sub-start-text {
+    margin: 22px 0 0 0;
+    line-height: 150%;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    strong {
+      font-weight: 800;
+      font-size: 22px;
+      padding: 18px 0 0;
+      display: inline-block;
+    }
+    &.find-sns {
+      margin: 40px 0 40px 0;
+      .user-email {
+        background-color: #eee;
+        height: 68px;
+        padding: 20px 15px;
+        margin: 0 40px 20px;
+        align-content: center;
+        border-radius: 8px;
+        strong {
+          font-weight: 500;
+          font-size: 20px;
+          padding: 0;
+          display: inline-block;
+          font-family: var(--font-body);
+        }
+      }
+      p {
+        &.notice-text {
+          text-align: center;
+          font-family: var(--font-body);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+        &.sub-notice-text {
+          color: #616161;
+          text-align: center;
+          font-family: var(--font-body);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+  .input-validation-text {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    padding: 0;
+    margin: 8px 0;
+  }
+  // 간편 로그인
+  .login-cont-wrap {
+    margin: 30px 0 0;
+    text-align: center;
+  }
+  .login-style-wrap {
+    text-align: center;
+    width: 380px;
+    margin: 0 auto;
+  }
+  .login-style {
+    + .login-style {
+      margin: 12px 0 0;
+    }
+    button {
+      width: 100%;
+      height: 44px;
+      font-size: 15px;
+      line-height: 42px;
+      border-radius: 52px;
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-right: 8px;
+      }
+      span {
+        font-size: 15px;
+        font-weight: 500;
+        display: inline-block;
+        line-height: 23px;
+        letter-spacing: -0.2px;
+        vertical-align: baseline;
+      }
+    }
+    p {
+      padding: 13px 0;
+      font-size: 1rem;
+      color: #999;
+      line-height: 1.4;
+    }
+    .question {
+      color: #000;
+    }
+    &.type-site {
+      button {
+        background: var(--primary);
+        color: #fff;
+        &::before {
+          content: none;
+        }
+        &:hover {
+          background: #3867c6;
+          opacity: 1;
+        }
+        &.dis {
+          background: #ccc;
+        }
+      }
+    }
+    &.type-site2 {
+      button {
+        background: #f66a45;
+        color: #fff;
+      }
+    }
+    &.type-kakao {
+      button {
+        background: #fee500;
+        &::before {
+          background-image: url('../img/svg/ico_login_kakao.svg');
+          background-size: cover;
+        }
+      }
+    }
+    &.type-naver {
+      button {
+        background: #03c75a;
+        color: #fff;
+        &::before {
+          background-image: url('../img/svg/ico_login_naver.svg');
+          background-size: cover;
+        }
+      }
+    }
+    &.type-iscreammedia {
+      button {
+        background-color: #f66a45;
+        color: #fff;
+        &::before {
+          display: none;
+        }
+      }
+    }
+    &.type-google {
+      button {
+        line-height: 34px;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        &::before {
+          background-image: url('../img/svg/ico_login_google.svg');
+          background-size: cover;
+        }
+        &.dis {
+          background: #fff;
+        }
+      }
+    }
+    &.type-apple {
+      button {
+        line-height: 34px;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        &::before {
+          background-image: url('../img/svg/ico_login_apple.svg');
+          background-size: cover;
+        }
+        &.dis {
+          background: #fff;
+        }
+      }
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      border-radius: 22px;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+      }
+      span {
+        font-size: 15px;
+        font-weight: 500;
+        display: inline-block;
+      }
+    }
+  }
+}
+&[class^='btn-bg-'] {
+  width: 100%;
+  height: 44px;
+  font-size: 15px;
+  line-height: 42px;
+  border-radius: 52px;
+  &.dis {
+    background-color: #dadde2;
+    border-color: #dadde2;
+  }
+  .btn-bg-c {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+}

@@ -1,0 +1,361 @@
+body {
+  overflow-y: hidden;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.designSys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.designSys aside {
+  width: 250px;
+  min-width: 250px;
+  height: 100dvh;
+  background-color: #242745;
+  color: #fff;
+  font-family: var(--font-tit);
+}
+.designSys aside .navBrand {
+  height: 110px;
+}
+.designSys aside .navBrand a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  font-weight: var(--font-bold);
+  font-size: 23px;
+  text-decoration: none;
+}
+.designSys aside .navBrand a span {
+  display: block;
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.designSys aside .collapseSet {
+  overflow: auto;
+  height: calc(100dvh - 110px);
+  padding: 5px 0;
+}
+.designSys aside .collapseSet .collapsList {
+  padding: 5px;
+  border-top: 1px solid #313657;
+}
+.designSys aside .collapseSet .collapsList .collapsible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border: 0;
+  border-radius: 0;
+  padding: 10px 15px;
+  background: transparent;
+  color: rrgba(255, 255, 255, 0.4);
+  font-size: 13px;
+}
+.designSys aside .collapseSet .collapsList .collapsible::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center left;
+          mask-position: center left;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.designSys aside .collapseSet .collapsList .collapsible::after {
+  position: absolute;
+  right: 10px;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.designSys aside .collapseSet .collapsList .collapsible a {
+  color: #fff;
+  text-decoration: none;
+}
+.designSys aside .collapseSet .collapsList .collapsCon {
+  padding: 0;
+}
+.designSys aside .collapseSet .collapsList .collapsCon .item {
+  padding: 0 10px 5px 40px;
+}
+.designSys aside .collapseSet .collapsList .collapsCon .item a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+}
+.designSys aside .collapseSet .collapsList .collapsCon .item a.router-link-active {
+  color: #fff;
+  font-weight: var(--font-bold);
+}
+.designSys aside .collapseSet .collapsList .collapsCon .item:first-child {
+  padding-top: 5px;
+}
+.designSys aside .collapseSet .collapsList .collapsCon .item:last-child {
+  padding-bottom: 20px;
+}
+.designSys aside .collapseSet .collapsList:hover .collapsible, .designSys aside .collapseSet .collapsList.on .collapsible {
+  border-radius: 5px;
+  color: #fff;
+}
+.designSys aside .collapseSet .collapsList:hover .collapsible::before, .designSys aside .collapseSet .collapsList.on .collapsible::before {
+  background-color: #fff;
+}
+.designSys aside .collapseSet .collapsList:hover .collapsible::after, .designSys aside .collapseSet .collapsList.on .collapsible::after {
+  border-color: #fff;
+}
+.designSys aside .collapseSet .collapsList.nonChild .collapsible::after {
+  display: none;
+}
+.designSys aside .collapseSet .collapsList:nth-child(1) .collapsible::before {
+  -webkit-mask-image: url("~@/assets/img/svg/ico-chart.svg");
+          mask-image: url("~@/assets/img/svg/ico-chart.svg");
+}
+.designSys aside .collapseSet .collapsList:nth-child(2) .collapsible::before {
+  -webkit-mask-image: url("~@/assets/img/svg/ico-chart.svg");
+          mask-image: url("~@/assets/img/svg/ico-chart.svg");
+}
+.designSys aside .collapseSet .collapsList:nth-child(3) .collapsible::before {
+  -webkit-mask-image: url("~@/assets/img/svg/ico-chart.svg");
+          mask-image: url("~@/assets/img/svg/ico-chart.svg");
+}
+.designSys aside .collapseSet .collapsList:nth-child(4) .collapsible::before {
+  -webkit-mask-image: url("~@/assets/img/svg/ico-chart.svg");
+          mask-image: url("~@/assets/img/svg/ico-chart.svg");
+}
+.designSys aside .collapseSet .collapsList:nth-child(5) .collapsible::before {
+  -webkit-mask-image: url("~@/assets/img/svg/ico-chart.svg");
+          mask-image: url("~@/assets/img/svg/ico-chart.svg");
+}
+.designSys aside .collapseSet .collapsList:nth-child(6) .collapsible::before {
+  -webkit-mask-image: url("~@/assets/img/svg/ico-chart.svg");
+          mask-image: url("~@/assets/img/svg/ico-chart.svg");
+}
+.designSys aside .collapseSet::-webkit-scrollbar {
+  width: 8px;
+}
+.designSys aside .collapseSet::-webkit-scrollbar-thumb {
+  background: #3a4064;
+  border-radius: 10px;
+}
+.designSys aside .collapseSet::-webkit-scrollbar-track {
+  background: #242745;
+}
+.designSys header {
+  position: relative;
+  background-color: #0F6BFF;
+  padding: 40px 50px;
+  color: #fff;
+}
+.designSys header h1 {
+  font-size: 40px;
+  line-height: 40px;
+  font-family: var(--font-tit);
+  margin-top: 0;
+}
+.designSys header p {
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  font-size: 15px;
+  font-weight: 300;
+}
+.designSys header p.info {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+.designSys header p.info span {
+  display: inline-block;
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.designSys header p.link button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 100px;
+  background: #0059e7 no-repeat center;
+  text-indent: -999999px;
+}
+.designSys header p.link button.figma {
+  background-image: url("~@/dev/designSystem/assets/img/figma.svg");
+}
+.designSys header p.link button.scss {
+  background-image: url("~@/dev/designSystem/assets/img/css.svg");
+}
+.designSys header p.link button.js {
+  background-image: url("~@/dev/designSystem/assets/img/js.svg");
+}
+.designSys header p.link button + button {
+  margin-left: 10px;
+}
+.designSys main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #FFF;
+  height: 100dvh;
+  overflow: auto;
+}
+.designSys article {
+  height: 100%;
+}
+.designSys article .sections {
+  width: 100%;
+}
+.designSys article .sections section {
+  padding: 50px;
+  border-bottom: 8px solid #f5f5f5;
+}
+.designSys article .sections section > h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.designSys article .ctrArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 0;
+}
+.designSys article .ctrArea .elArea {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.designSys article .ctrArea .propArea {
+  width: 270px;
+  border-left: 1px solid #ddd;
+  background: #f3f3f3;
+}
+.designSys article .ctrArea .propArea li {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.designSys article .ctrArea .propArea li label {
+  width: 100px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+.designSys article .ctrArea .propArea li .hi-selectbox .selected,
+.designSys article .ctrArea .propArea li .input-box-wrap input {
+  font-size: 13px;
+  font-weight: 400;
+}
+.designSys article .ctrArea .propArea li > div {
+  width: calc(100% - 100px);
+  display: inline-block;
+}
+.designSys article .ctrArea .codeArea {
+  background: #333;
+  width: 55%;
+}
+.designSys article .ctrArea code {
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+.designSys article .ctrArea code .tag {
+  color: #e2777a;
+}
+.designSys article .ctrArea code .val {
+  color: #7ec699;
+}
+.designSys article.type01 {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.designSys article.type01 .ctrArea {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  min-width: 600px;
+  height: 100dvh;
+  position: sticky;
+  top: 0;
+}
+.designSys article.type01 .ctrArea .optArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+}
+.designSys article.type01 .ctrArea .optArea .elArea {
+  border-left: 1px solid #ddd;
+  width: calc(100% - 275px);
+}
+.designSys article.type01 .ctrArea .codeArea {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}/*# sourceMappingURL=layout.css.map */

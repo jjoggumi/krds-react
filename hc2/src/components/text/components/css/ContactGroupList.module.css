@@ -1,0 +1,177 @@
+.lnbContainer {
+  background-color: var(--bg-base);
+  width: 250px;
+  min-width: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: sticky;
+  top: 85px;
+}
+.lnbContainer .title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+.lnbContainer .title.isSelected {
+  color: var(--text-primary-base);
+}
+.lnbContainer .menuList {
+  height: calc(var(--vh) * 100 - 273px);
+  overflow: auto;
+}
+.lnbContainer .menuList > li {
+  line-height: 40px;
+}
+.lnbContainer .menuList > li .menuView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  gap: 8px;
+  padding: 2px 0;
+  min-height: 40px;
+}
+.lnbContainer .menuList > li .menuView .menuName {
+  color: var(--text-default);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: var(--text-b3);
+  line-height: var(--leading-b3);
+  font-weight: var(--font-weight-medium);
+}
+.lnbContainer .menuList > li .menuView .menuName.isMain {
+  font-size: var(--text-b2);
+  line-height: var(--leading-b2);
+  font-weight: var(--font-weight-bold);
+}
+.lnbContainer .menuList > li .menuView .count {
+  margin-left: 4px;
+}
+.lnbContainer .menuList > li .menuView .actionBtns {
+  min-width: 48px;
+  gap: 8px;
+  display: none;
+}
+.lnbContainer .menuList > li .menuView .actionBtns > button:hover {
+  color: var(--text-default);
+}
+.lnbContainer .menuList > li .menuView .actionBtns > button:hover i {
+  background-color: var(--gray-950);
+}
+.lnbContainer .menuList > li .menuView:hover .actionBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.lnbContainer .menuList > li .menuEdit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  padding: 2px 4px 2px 0;
+  min-height: 40px;
+}
+.lnbContainer .menuList > li .menuEdit .actionBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.lnbContainer .menuList > li .menuEdit .text-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0;
+}
+.lnbContainer .menuList > li > .isSelected > .menuView .menuName {
+  color: var(--text-primary-base);
+  font-weight: var(--font-weight-bold);
+}
+.lnbContainer .menuList .addBtn {
+  color: var(--text-neutral-strong);
+  gap: 6px;
+  font-weight: var(--font-weight-medium);
+  height: 40px;
+  padding-top: 2px;
+}
+.lnbContainer .menuList .addBtn i {
+  background-color: var(--gray-700);
+  width: 18px;
+  height: 18px;
+}
+.lnbContainer .menuList .addBtn:hover {
+  color: var(--text-default);
+  font-weight: var(--font-weight-bold);
+}
+.lnbContainer .menuList .addBtn:hover i {
+  background-color: var(--gray-950);
+}
+.lnbContainer .menuList .subList .isSub {
+  line-height: 36px;
+  padding: 2px 0;
+}
+.lnbContainer .menuList .subList .isSub > button {
+  margin-left: 18px;
+}
+.lnbContainer .menuList .subList .isSub .menuView {
+  gap: 6px;
+  padding: 0 4px 0 24px;
+  line-height: 36px;
+  min-height: 36px;
+}
+.lnbContainer .menuList .subList .isSub .menuView .dot {
+  font-size: var(--text-h1);
+}
+.lnbContainer .menuList .subList .isSub .menuView:hover .actionBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.lnbContainer .menuList .subList .isSub.isSelected .menuView {
+  background: var(--bg-secondary-subtlest);
+}
+.lnbContainer .menuList .subList .isSub.isSelected .menuView .dot {
+  color: var(--text-primary-base);
+}
+.lnbContainer .menuList .subList .isSub.isSelected .menuView .menuName {
+  color: var(--text-primary-base);
+  font-weight: var(--font-weight-bold);
+}
+.lnbContainer .menuList .subList .isSub.isSelected .menuView.menuEdit {
+  background: transparent;
+}
+.lnbContainer .menuList .subList .isSub .addBtn {
+  padding-left: 24px;
+}
+.lnbContainer .saveButton {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--action-primary-base);
+  color: white;
+  cursor: pointer;
+}
+.lnbContainer .cancelButton {
+  padding: 6px 10px;
+  border: 1px solid var(--slate-200);
+  border-radius: 4px;
+  background-color: white;
+  color: var(--text-neutral-stronger);
+  cursor: pointer;
+}/*# sourceMappingURL=ContactGroupList.module.css.map */

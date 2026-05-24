@@ -1,0 +1,2639 @@
+[
+  {
+    "lessonConfId": "c8e40462-188d-40cb-aa2b-5aba1b2a7763",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "b2faf0c0-29e9-4e41-a1ef-06a2df3e4e4c",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c3d9c13e-afed-4b47-b1ea-0ccbdb7cf2cd",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "b2faf0c0-29e9-4e41-a1ef-06a2df3e4e4c",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "496135cd-31a8-4b4f-86c9-740fd3e84de3",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "b2faf0c0-29e9-4e41-a1ef-06a2df3e4e4c",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "eaaa5397-26a1-4e10-8d0e-388b582111d3",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "b2faf0c0-29e9-4e41-a1ef-06a2df3e4e4c",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1e9de44d-9272-47ae-b11a-a741a14e1f14",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "6d1a8619-79cb-493e-b664-0f393c1aa970",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2,1"
+  },
+  {
+    "lessonConfId": "7fdc5dc6-78a0-4f84-ba97-7e32a0347c44",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "6d1a8619-79cb-493e-b664-0f393c1aa970",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2,1"
+  },
+  {
+    "lessonConfId": "d9c8876d-8a2c-4bc8-8eac-0f75923bafd3",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "6d1a8619-79cb-493e-b664-0f393c1aa970",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2,1"
+  },
+  {
+    "lessonConfId": "da8e687c-5aec-41eb-93c2-706620899948",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "6d1a8619-79cb-493e-b664-0f393c1aa970",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2,1"
+  },
+  {
+    "lessonConfId": "20509ae6-c9b4-4b13-aa2c-7d31c894ac03",
+    "teacherId": "7994e762-de8f-4b23-ae6d-c949bb7f92db",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5cde1958-c5d1-4114-ac53-f75b4f36160a",
+    "teacherId": "7994e762-de8f-4b23-ae6d-c949bb7f92db",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5d9c4297-0aba-4321-a10a-33a795ee4795",
+    "teacherId": "7994e762-de8f-4b23-ae6d-c949bb7f92db",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "20f2866f-f4de-4f72-bb17-5502698f4b95",
+    "teacherId": "7994e762-de8f-4b23-ae6d-c949bb7f92db",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "31a6d169-48ce-4d66-a1d0-e4917a677e5a",
+    "teacherId": "f09a5162-d31e-43df-a9d6-dc372111aaea",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a26d145c-1342-4155-a63f-67cbce3ac36b",
+    "teacherId": "f09a5162-d31e-43df-a9d6-dc372111aaea",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8a28499f-5a7b-4ad0-bc58-eab552f3962e",
+    "teacherId": "f09a5162-d31e-43df-a9d6-dc372111aaea",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a381dc61-80c0-4d4e-bcf1-0c37c9d4319a",
+    "teacherId": "f09a5162-d31e-43df-a9d6-dc372111aaea",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "614f0672-d69c-430a-b565-c3bc9fd92102",
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "fe6939ed-bf1a-450d-9e1a-123af9cc8c74",
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c326f586-fa71-4be3-9a3c-0542d2788252",
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c2f017ae-02a1-4665-be9d-935732db9c53",
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c39309a4-014d-4396-a9a9-85b6c40db4f5",
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "95e71b2f-060f-45ff-bacd-1fb191bb557d",
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "6206f0f6-f8b3-4c5b-ada0-650af206ca1f",
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9f7111f7-fb89-443e-be70-62d6e0b5bcb4",
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e76078f5-dcf4-4553-b74c-001275a9420c",
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7985c43b-80ce-4954-b570-7998cf39e442",
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7e157c53-dcdd-4eae-b23c-d7cf6c4743ba",
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5e44c6e2-002d-4314-accf-a14c355f014f",
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ac77cc5c-489a-4b95-9586-be9d4dbecb6f",
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9dfb0771-b76a-4e9d-9070-3016d215d79c",
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "60a95c14-a5ca-4cca-bb7f-1462844048c3",
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e75cb0ac-a7c5-456e-9293-4033091797c8",
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "265cfad5-a78b-4b08-aa4c-a8cb822dfdb3",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1a2045fe-2ebb-4833-8632-3cede164d8d2",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "fc5dbae5-1e6d-4a04-8945-68918ca26fa8",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c95354d2-a687-4153-8653-2b5583258c8d",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "0d0af111-d7a3-4720-b526-f017a9781f34",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f1166f3d-68ff-4746-a954-63dfeafbc109",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1a0d48e6-8cc6-4b4f-a8ed-ae4579dcc619",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "66436e4f-cded-4bd8-8715-9c1617079dbc",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a0a98faf-d0e6-496a-91b1-862a3d482356",
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4d6973da-8680-48ef-855d-7c76087ac644",
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e1bfb6c8-2eeb-431e-a5eb-5b58d0cd0baf",
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b351c8f1-0e2e-403b-9042-86b86dc6443d",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "13eceee3-7075-464e-b4aa-3c2ff06000c9",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "21095026-8ee4-4be1-b6fa-6fd8096e0101",
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "26e2aca7-1c76-46dd-87cf-71aa647b2633",
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7264087d-975a-4ca2-a2c3-965f3f6a225a",
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "cc7f64aa-ee03-4837-a278-d5e86761c66a",
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "af8c35b8-eb31-4f6c-905a-22395c50b98f",
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5dcd6309-62d0-4293-bb5d-c5a637043218",
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c8f367bf-5ffd-4ba4-ba72-11228f4cf58c",
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d4f51889-02f7-403b-8392-117f2d521a17",
+    "teacherId": "75b11e5e-6261-473c-aca1-d9ec40dbb634",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "28b3d2d7-b500-4d05-b87a-e017b2503594",
+    "teacherId": "75b11e5e-6261-473c-aca1-d9ec40dbb634",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "70a7f739-cf74-4780-a64c-099a9040913c",
+    "teacherId": "75b11e5e-6261-473c-aca1-d9ec40dbb634",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "48d72596-80f3-4e31-b050-07a523e8c2e9",
+    "teacherId": "75b11e5e-6261-473c-aca1-d9ec40dbb634",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "afb5e7e9-6d8d-4209-a57d-3366e2888729",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "2282fe06-0494-4be8-9b72-7258bba98b2c",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "06bf1634-73e5-489a-803a-52e131dcd2d3",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "99889bb4-cba6-4923-bfac-a24625fb865a",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c1254a7f-1f42-46e3-b9f1-55d906815ccf",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c7649088-27c7-4bbf-8770-a483db2fb937",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "184cca73-e209-4fc5-9b72-4e76311274da",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "72773c7e-7f2c-4776-879e-8c0546dee34e",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "74d899ce-535c-48c6-887b-76f15975b62f",
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "3dd4ab2f-5de5-48bd-8941-8de154846b74",
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ead3dfee-bb43-4b67-b624-0247111a8f3d",
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "064913bc-dda6-4edc-94e8-3442649f081c",
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9be5a283-ad06-43ed-8715-4a8a1b210821",
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1497cf62-2e56-4910-8bb1-d21e8cce8ccf",
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a68d5b7c-6d10-49b6-b496-6688193bc2c1",
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "78c6dd01-bbbf-42c1-a349-aaef10286d05",
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d00debdb-16cc-4e98-a611-d1e8210250f6",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7d88473c-b6e6-4572-ac8c-323ccbb5eb8a",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8736764b-08f5-4d2f-9e25-089672448cc3",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e67d0dd3-dd83-4280-8453-f7bfc484a73a",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "6b298393-f569-44a8-9af2-270b913dc56a",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f4ac68ec-cd90-4b4b-9817-b1a00e98ae6a",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "de4615ba-799c-4964-b14b-d9c088d1ac13",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ddbd3d53-298f-4fc2-8d9a-16db96fc0b28",
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "aff192a5-1566-45d9-87bc-4eb6641a37ea",
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "254a7b93-de2e-4a4a-82ba-59a9bbcec827",
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "855bbc2e-3215-412a-8037-3404045a0679",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "fc9fb38c-5c45-4f28-83b6-5c2efb8bfb5f",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "fa6e5f16-5ea6-4513-a29c-fdbec0c902c6",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ea092635-cb7d-49c2-b97d-498c0c60b031",
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9ee2429f-0d62-4a43-b6b8-b79c2d80406f",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "abd67860-4b6e-4d21-bab1-d6f2e7225c5f",
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "cb652e61-4661-41fb-87c9-1ca2513f18d0",
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "16797531-c190-450f-9ec6-b668d5d39b47",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "db99e394-34b9-4496-8281-dbd1fc682c60",
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "d4d07f56-79f7-4460-8dc8-796d7465675a",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e812a236-2c78-4ae3-87ee-21c3c26af025",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "999dde69-4a2a-457d-ba57-9b7db3754d30",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "24821629-4034-4037-930c-6e6e3396c5a3",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "d4d07f56-79f7-4460-8dc8-796d7465675a",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "fd78e147-4a24-42cb-a60e-cfa87a82747b",
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "16797531-c190-450f-9ec6-b668d5d39b47",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "95948db4-6ace-4478-ab46-45dd05231392",
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "f2b68f33-f9ca-4bae-aaa0-0b1eed92a670",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f29726ec-c82a-4ee5-a154-c2f6fab0e1a2",
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "ddcc7a69-b110-4746-8cc9-b1575b18ed23",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e3374dc5-b62b-4129-9e4d-014e3d3e5301",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "13b9c52d-f1cd-48e6-89c0-5055ec2a7179",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d5f61e5b-a3c5-4bfa-be45-0de8acf82c10",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "999dde69-4a2a-457d-ba57-9b7db3754d30",
+    "classId": "1d923193-97a4-4bf4-8a25-b708aae1c3fc",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1871c811-e2b1-4f11-b457-dbc8248382d6",
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "170113a8-010c-47e7-8943-1f98738d4f1a",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b322a2c2-a08f-49e3-9065-7184d7008be7",
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "5c95b594-e5b7-4e68-a4dd-9c8ce9a0b6f2",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "13f1a8de-40a4-468e-b7dd-2b3018eaec23",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "b0b2b9a8-dcd2-4be0-a94f-d5c2bc564820",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5ee9d0bf-427e-42db-b575-b2fee1448d72",
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "aaa5edd5-fdc3-44de-b4db-c61332b2ad84",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b0648cf8-d771-4884-8d3c-faa2610844b7",
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "78e229ad-35b5-402b-9396-b4d0db005477",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "0f156c4f-e14e-4eb6-87ad-38ce58a94d85",
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "b0b2b9a8-dcd2-4be0-a94f-d5c2bc564820",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c5821c95-a2de-4fbf-888d-a874bce7495a",
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "170113a8-010c-47e7-8943-1f98738d4f1a",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f27d943b-0193-404a-8147-dc02b51f4ed6",
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "4372861a-bcb0-4c68-a4d0-dfa6d3538ae3",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8b744a3c-bf5a-4154-8687-7785b7879bf7",
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "aaa5edd5-fdc3-44de-b4db-c61332b2ad84",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "46b59aec-4dc0-4859-9b4e-03a9c45fa4bc",
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "courseId": "78e229ad-35b5-402b-9396-b4d0db005477",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "74b63d80-68fc-4a7c-9e96-90dd5316d383",
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "170113a8-010c-47e7-8943-1f98738d4f1a",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9d501e91-50b4-482e-92a9-3abb4ef78ec0",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "b0b2b9a8-dcd2-4be0-a94f-d5c2bc564820",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "36520f9d-6afd-4005-8d4d-c4fb369d851d",
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "20edefad-76dc-4e14-8dd8-1f8f427bca91",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d7dfc0a0-d5dc-49bd-8c17-7a5bc2b91b95",
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "170113a8-010c-47e7-8943-1f98738d4f1a",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "630b43bf-e0ff-473e-b0d7-20ce55772d7f",
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "5c95b594-e5b7-4e68-a4dd-9c8ce9a0b6f2",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "634a4397-f851-447a-804c-f7b485598a9e",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "c90b4940-5c03-4a47-bb1d-bb59254d7156",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5bd17a65-75ae-4e09-bfb7-476e64dd35db",
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "courseId": "276ab148-ffe9-4f2d-9b45-901179e3c321",
+    "classId": "1d923193-97a4-4bf4-8a25-b708aae1c3fc",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "95e1744d-1b42-4b97-9c27-894759a1cfc4",
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "courseId": "78e229ad-35b5-402b-9396-b4d0db005477",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "768ab8f3-0311-4b6a-803c-0252271b405f",
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "4372861a-bcb0-4c68-a4d0-dfa6d3538ae3",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "90973802-5001-4f8c-b41a-af40f079d38a",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "c90b4940-5c03-4a47-bb1d-bb59254d7156",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ddaecd94-2183-4322-8d3e-fc2e5a06483d",
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "df274f80-328c-4093-a10b-09d83ec82c68",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "10154a49-168a-44e1-9fe2-f64b44a8d1e4",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "f92b6edb-0914-419d-888d-14c4f485a549",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "fa23aeaa-fabe-4764-9c7e-b11f8d7c55ff",
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "78e229ad-35b5-402b-9396-b4d0db005477",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e4e0a670-5d03-40b9-964d-4e113e324ebe",
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "d84e1a69-29cc-460b-b07b-62899740bc3b",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "96fbba4a-bd13-4964-9a2f-dcae9fba30a3",
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "170113a8-010c-47e7-8943-1f98738d4f1a",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "78890193-7135-45b0-b95d-e0cbfd028c39",
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "5a0b96c3-1d78-4759-9a54-6a3943b2a93e",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a900e870-1a3c-4117-aeed-a2191f705f54",
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "1bef778c-f245-406a-81f7-546ae6752af3",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "59f9ac4a-dd41-40f6-abb2-92883ff2ea46",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "c68ffc0f-5e02-4385-a463-b304503e8c1c",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1c3cd6a7-fb27-4f60-a70e-b60ce4bb22a6",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "1bef778c-f245-406a-81f7-546ae6752af3",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a64af72a-0c9d-404a-9091-af806aea34ee",
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "5a0b96c3-1d78-4759-9a54-6a3943b2a93e",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d06a3258-a859-4bd4-b2b7-3099fbaa7251",
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "fd36301f-c8ae-4a1d-8ac9-1a3fc59ec7d5",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b1cdb913-7fd3-4ad2-a886-3741351fc1c4",
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "9777c6ea-5245-4195-8584-e5b90c14a7ac",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4e7a3e7e-e588-48ee-9da8-9035f4ad42de",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "ff3fdede-9f0f-4bb0-b132-771d3e11dff8",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "80524380-7b8e-4c77-9fb9-4e81577ccc4e",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "c68ffc0f-5e02-4385-a463-b304503e8c1c",
+    "classId": "1d923193-97a4-4bf4-8a25-b708aae1c3fc",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "cc5b6d5e-7a54-4131-aa59-83fca6d4bd49",
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8d5587c6-025d-4bb7-989a-755c55342615",
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "37951532-af80-4916-ba7f-e7cdcd3ba3ad",
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d747a92a-4a8f-497c-bfcd-ec5d6ffffd2d",
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "2cbd2873-d745-469d-9150-0af664ba6cbb",
+    "teacherId": "cd0caf03-60c2-435f-acc8-dbd23e87e769",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5143993d-5bd8-46ae-89e0-d8d21d23be06",
+    "teacherId": "cd0caf03-60c2-435f-acc8-dbd23e87e769",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "02149afe-0a4a-4bac-88c1-c55a06a05190",
+    "teacherId": "cd0caf03-60c2-435f-acc8-dbd23e87e769",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a24ad7f7-d219-4942-af2d-b8f568fc16df",
+    "teacherId": "cd0caf03-60c2-435f-acc8-dbd23e87e769",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7b881077-c613-4278-90a8-399a4b5b2ae5",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "68a0c423-c333-4362-951b-f7e6ddc8a94e",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ae8d5ecc-7cbe-4ea8-b2e4-be31b8d86b47",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "31254184-306a-44b2-8dc4-58603884c211",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "83141dfe-cd27-41c8-bbf6-8425f27b4734",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "31bdd9b1-4c5d-4c26-ae58-0269eb3d8d0a",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ce858e69-8b89-4da6-b21c-3c848cbab4e3",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "03e0dfdd-ed18-4edb-859b-2e72e6763108",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ffaeb822-ecc2-4041-86a8-c20a0ac7b7f2",
+    "teacherId": "3a96e17c-3095-455c-ace3-2c0d1feca8e4",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "3b2b09ed-f03e-4448-aa56-bc33d2102ab4",
+    "teacherId": "3a96e17c-3095-455c-ace3-2c0d1feca8e4",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "10bb05cc-2d58-4a89-b96b-b8b8ed84101c",
+    "teacherId": "3a96e17c-3095-455c-ace3-2c0d1feca8e4",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "0117b1aa-118e-46d2-8cc3-7c193d715aa6",
+    "teacherId": "3a96e17c-3095-455c-ace3-2c0d1feca8e4",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5fc01f18-1447-4fc5-b33e-6922ec3e6f97",
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1141a094-143b-4f81-a10c-292ece0f7c10",
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7b97d5da-0656-4cc6-8f92-b8d49cc4ebab",
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b7a29a32-2d8c-4534-b05f-6d8c29e1d23d",
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "3053d333-58fa-446f-b245-1029c306f2ec",
+    "teacherId": "8f3aa8f7-2ad7-4414-bc07-e78c71c6bf47",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b2d927ed-d156-4b32-ba89-0f9fba9cd822",
+    "teacherId": "8f3aa8f7-2ad7-4414-bc07-e78c71c6bf47",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1a7e5169-047b-4ecf-888b-fe48e566b640",
+    "teacherId": "8f3aa8f7-2ad7-4414-bc07-e78c71c6bf47",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a5c645ea-fb35-4e8b-9613-36f0260871e8",
+    "teacherId": "8f3aa8f7-2ad7-4414-bc07-e78c71c6bf47",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9ce3fcf9-5258-41e0-ad6a-5f28375e9d4a",
+    "teacherId": "e739840b-29a5-4eef-a6c4-2f51f1ad242b",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "19893548-7ccc-40b8-be0b-3b981a1eefbf",
+    "teacherId": "e739840b-29a5-4eef-a6c4-2f51f1ad242b",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e6086c06-e844-4344-88d4-5e8b220d2fa4",
+    "teacherId": "e739840b-29a5-4eef-a6c4-2f51f1ad242b",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5ab9fa05-4b7e-4664-b770-1f86c28661d3",
+    "teacherId": "e739840b-29a5-4eef-a6c4-2f51f1ad242b",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a974bca9-e074-41f9-81d0-da5b7a3f6cac",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "aaa1aced-03a3-4356-929e-b5c1c451931f",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "19cae009-5ee0-45b8-b238-21ea867bba28",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d99e7edf-e37a-4864-92de-6c2f95adbf76",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a0f6799f-d058-408c-8b08-46bac4501238",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7732c5b0-986b-4a56-ae1f-c0de0d718959",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5f51143d-1de7-4e80-8b7d-662ce7c7fc66",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a90ddea8-8805-440e-84a6-5c805b2206ce",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "cf12e646-ed50-40b7-8092-9dc29e1a52ef",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "ceb48b5a-12b9-46bf-ad83-1e4ea0ecb909",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c748fc42-c9e6-43a0-88ee-02834730cf7b",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "76359a84-fc45-4870-bb05-59253a6123a1",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7fade133-d90e-4cdb-b363-996c202dc0db",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1da930e2-63c4-4d18-8371-bb716f4b9226",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "abca12b3-c018-47d6-a19c-05f96e13ebac",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ff6221b6-e484-4939-af12-97a6b14d5131",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "75c46df7-9496-48a9-99bc-9e3aef14e162",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "cd8a82bd-829f-4e81-a976-5c99f61efa77",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "649b2269-6c1c-4cb4-a3b8-b165ca4d7f79",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d72f9dd3-5d47-409d-8f84-be9208b570ae",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "54e044e7-b5aa-4e0f-9464-5af7708878d0",
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8c43c1d0-ea08-45da-bee9-9bb440faf57f",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "76b3e172-edaf-402c-afcc-6ba01839415c",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7e9e477b-0982-4ca6-a6f1-d3db7dc52781",
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "26eed286-8310-427b-9e96-bac60c740fb3",
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "15a9219b-7014-4bbb-90a8-fb1d967479cd",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "93a16605-8710-4973-a4ad-25d016ced155",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "49db2590-0c9c-47ab-9b87-c51407919ef5",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "da89226c-9db9-4bb1-aec0-e7234da861d0",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "3ff3695f-84a3-49b5-a39f-dc4fcbc2cd6a",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9877822e-1b0e-4e6f-a644-bf39bb0c5767",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "67212ec2-2660-45a5-8c4b-96440395c7c8",
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "050c8614-ad34-4e50-824c-6ded92e301ca",
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4d1e615d-fb01-4825-931c-9a1626484ef0",
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "9813bf28-36e1-4b22-8c57-4c7cd0cb164f",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "37152ac3-3c07-475d-9a43-32c54bd28915",
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "fd991b18-de9d-49f0-b684-01485e1c7569",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "48472dbc-6512-41a4-a671-3101b65ef0f0",
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "fdcf1260-de34-4292-82dd-c72408a77b80",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "284c3cec-c248-47b9-8b4a-9001c197afb0",
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "f3a7c3dc-3bed-4043-b8d2-c15733a924f3",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c26c9cbe-7e17-44b1-bc4a-766137d061f3",
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "courseId": "e1d9b171-93a6-4909-b4c6-bf32925f5c89",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4d4c3625-5d18-4176-9665-b9bef3d88c03",
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "6d64ef64-115f-4a7f-b3f8-4b46f8cf4c1b",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "0889a43b-ebfb-4706-89d3-6f18735aa95f",
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "8ad563f4-8a31-4267-895c-9d7093fcddbb",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "111ef129-d4b3-4bc0-a091-fbc256f2f877",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "a108e3a2-6944-4b77-8c80-894dd98f53f8",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8cd3c8c1-d2cf-47a3-8e29-9563af6b5973",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "7657f135-7331-462a-8b5a-c3ad5afd2dee",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c92716fc-91ca-42eb-8fc9-ce15359a4d29",
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "51319b23-b625-484c-b810-c2814c570e6b",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "553d463c-8454-4ad0-8555-288f97226af9",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "34e5c94f-146b-4ec0-934d-50b6e1807066",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5d5c9461-80b5-453d-99be-c3ae02d5fa38",
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "9813bf28-36e1-4b22-8c57-4c7cd0cb164f",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "121e7ac7-57c2-489f-a311-f353d7edce9d",
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "f3a7c3dc-3bed-4043-b8d2-c15733a924f3",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "17275055-fd6d-44de-948a-fee0338449cc",
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "6d64ef64-115f-4a7f-b3f8-4b46f8cf4c1b",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e4e6d427-92aa-450d-addb-7ef01d0a1f48",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "bfe9bce3-5d82-493e-a41d-9d0e12cfe3cf",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "90cc7891-88a2-4af8-85f9-059b78fe3cfb",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "a108e3a2-6944-4b77-8c80-894dd98f53f8",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "38afaf16-68d3-4ee0-9eee-2c8299c682ab",
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "fd991b18-de9d-49f0-b684-01485e1c7569",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d5ffd2cf-9584-4324-9613-67a3ed18dff3",
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "9813bf28-36e1-4b22-8c57-4c7cd0cb164f",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "bfc678a3-fe3d-4164-82db-b1f86f43c6e1",
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "8ad563f4-8a31-4267-895c-9d7093fcddbb",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "92482d05-b110-45f8-a1c8-e64a34a115a8",
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "ca4b7b31-d817-4f99-bd05-ae06f4c5f475",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8d55333e-5935-40d2-8085-71c28d702df3",
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "f3a7c3dc-3bed-4043-b8d2-c15733a924f3",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e239e666-029d-4816-81be-5e0254802b59",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "ee3a49df-1d07-4844-8fbf-4f452cac0ee3",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7b2d4eef-4baf-45eb-b5fd-378549d5118d",
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "courseId": "e1d9b171-93a6-4909-b4c6-bf32925f5c89",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "50521afb-f970-4d22-81d2-2ac5aefeb2aa",
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "f3a7c3dc-3bed-4043-b8d2-c15733a924f3",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "71f2809f-742e-4248-9420-c1d4408786ce",
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "51319b23-b625-484c-b810-c2814c570e6b",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f2ccc0eb-0c1a-44e8-b6af-cecd1c7e48c2",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "bfe9bce3-5d82-493e-a41d-9d0e12cfe3cf",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "6f33a7ca-d329-49d6-b5aa-fc6ac83f20c2",
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "8ad563f4-8a31-4267-895c-9d7093fcddbb",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9e57dce9-b559-4073-a08d-5cc42b4688c7",
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "59df5add-eac7-4961-9637-2b16ddb2ce66",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7f11bd86-82eb-4a5b-b99e-86a733aeb2d3",
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "8c37a38a-a138-4c45-8f9a-a6a4f4c23a25",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9c22adf5-80a3-4468-8128-56e7fccb50dc",
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "f3a7c3dc-3bed-4043-b8d2-c15733a924f3",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "49855f93-3c96-44f3-a1ac-864686bd2c4f",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "ee3a49df-1d07-4844-8fbf-4f452cac0ee3",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e078a4c6-2e21-4f60-bcb8-296c52989885",
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "courseId": "e1d9b171-93a6-4909-b4c6-bf32925f5c89",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "3fddf76d-1c96-4abc-8ce0-933ef885bd77",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "a108e3a2-6944-4b77-8c80-894dd98f53f8",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5d4f5587-80c6-4b7d-9766-927042c03737",
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "7657f135-7331-462a-8b5a-c3ad5afd2dee",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "66ee96eb-4bfd-4a87-8e5d-f47a17a6d52b",
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "51319b23-b625-484c-b810-c2814c570e6b",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "d0087ca0-a0c5-423c-8763-3afef04978f8",
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "85413f4a-bc6e-4f34-89bd-49811a3d2d29",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1fd27a0b-60ee-4c2f-ba8d-002f4626335e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ac1c4b91-7b89-46e7-8503-3f8a3dda37ef",
+    "teacherId": "346783e9-cec8-48ab-a483-79966bfc81f3",
+    "courseId": "c4d99662-b254-4358-b232-500d5811716f",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "1fd27a0b-60ee-4c2f-ba8d-002f4626335e",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4f49a82c-4fdc-47fe-96f0-57070ed3579d",
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "85413f4a-bc6e-4f34-89bd-49811a3d2d29",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "0ecbe8e1-61a1-441c-8a38-58ef08877026",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4d92d620-5c7b-477b-bd0f-f1db3a5a0df5",
+    "teacherId": "346783e9-cec8-48ab-a483-79966bfc81f3",
+    "courseId": "c4d99662-b254-4358-b232-500d5811716f",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "0ecbe8e1-61a1-441c-8a38-58ef08877026",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c436cbf5-1e13-4872-a28e-d34c89464ac8",
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "61f33769-9f19-4916-aaf4-f2b0370ae774",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "eff1d28e-0a01-4a31-9560-6c2c1cc634b2",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "689ae79b-cec8-424a-a542-d2c031b93725",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "3c4e3c4d-29bf-4136-8ae3-9850d09d02df",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "eff1d28e-0a01-4a31-9560-6c2c1cc634b2",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c7ab3a34-8cff-4e36-af60-77f5fd95dfda",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "58a93dd1-08e4-4a9d-a7cd-a7d7f578c2c5",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "eff1d28e-0a01-4a31-9560-6c2c1cc634b2",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4e1e210c-7278-4b0e-bf7e-7aab25c5f5b9",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "3c4e3c4d-29bf-4136-8ae3-9850d09d02df",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "975d1354-b8a3-44fa-91d0-a62250353362",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "58a93dd1-08e4-4a9d-a7cd-a7d7f578c2c5",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "24a03a7c-fc01-4d1e-b75d-b6c08a31bfee",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "3c4e3c4d-29bf-4136-8ae3-9850d09d02df",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8448ef9e-653e-4745-9ad3-0053d6022237",
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "58a93dd1-08e4-4a9d-a7cd-a7d7f578c2c5",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e8bfd757-405f-42af-9254-b2f42697f8d4",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "2aecd4a7-36d6-4f73-b317-46135ad7c8fd",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3e10fd58-2ec5-4187-ad86-58206d21918f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "91404773-124a-445e-b5bb-b888aa803db6",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "4416be38-646f-4cd6-9ca2-4abdbc927a4a",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "3e10fd58-2ec5-4187-ad86-58206d21918f",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "0948308d-186c-4395-9f2a-37b149c29946",
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f5f05d23-1b92-4811-9f2e-256a87fa0b4d",
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "03f03541-7d08-4deb-8ce7-0ef4bfa890ce",
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b2956aa8-b576-4f95-9039-9266e016c01e",
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5675cb92-25cc-4f73-b194-954093c1b05d",
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f72aa0b2-ff9d-4d47-a270-d1adba5cec37",
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c29af510-b8d9-417d-9414-946448e2efe7",
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "fd3466c1-1c8f-4f81-a399-93e3af2a3adb",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "a3298b52-5068-49cc-a70b-b74a05111863",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "0a4040e9-77b0-4196-8a15-e8978e73289b",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "23380789-98ea-4c22-aff7-1a2e3f0bf224",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9d60156c-33c5-4d81-a42c-637c34524e08",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "78a0ba0b-98a1-45de-8bd9-b77763bd6c92",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "33e21320-26fc-48fd-8baa-26206e515839",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "1a212c5e-c632-4f8b-9332-72a241e41cd5",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "60048f86-abcc-41d2-9082-357d08837752",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ae964de3-ea1c-4f66-a60b-f8ec76e7fb6f",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "2e5c3dcf-bc7f-4744-8e74-e7d53821c901",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "5699f220-acfc-49a9-ba90-d4fe29f21b2b",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9832086a-df4d-4868-89f4-f5f5198c6c03",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "15a80c83-2536-4ce6-b0f3-8e0928d0d7c8",
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "9fc3062e-4f75-4a4b-9f2f-c2c53944edc8",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "46f81ed3-7b25-459a-aded-4131323ab9d1",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "cc07511a-23da-4a80-9f08-028094236ea9",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e221268e-6137-48fe-8040-6ad05bc81665",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "b0a0f9b4-4491-41f0-bce9-ed008154548c",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "84771648-6e24-4014-8f16-30a57f8efc05",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "de95c59b-0aa2-4f7a-830c-7436b97bf930",
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "4e4a103e-0df1-4571-b82a-9ff7c1ca52b2",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "f56a3c92-21a2-4e9a-aa0d-c532fe215954",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "2a9b8fdc-8b87-4421-ac35-e52f90392b19",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "867593bb-ccae-44c7-be35-1957ab8a3e35",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "ea7223c4-6386-4944-81d5-ae23ab3fce47",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "e58175ac-ce98-40b3-b9ad-48ac9d5dd25a",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7645211a-a1f5-4738-b972-38dc79de2a1a",
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7273279c-5e77-4090-86ac-d38f2561e9a0",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8ff61d73-f4c3-4c3c-bfbb-18c86b4f0abf",
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7bc3d40a-054f-4a92-a7a6-4c7cf4b90c6d",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "6424be72-ada0-4748-89fe-c6e7acd1f006",
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "c1655886-b932-4c1f-bdc4-f1c092cf7c49",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "8d5ecd53-a97d-4ef9-8f6d-a7e3ed676a83",
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "3afc859f-2d01-4424-baaf-a9a7e60da4b9",
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7e73ffa4-73d3-4c7b-bd53-4dcd16ffe67a",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "902f0d44-f9b0-4c0b-9321-95ee4e2bebd4",
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2"
+  },
+  {
+    "lessonConfId": "27c607f4-0881-4cbf-84fc-03ff9d09d23d",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "902f0d44-f9b0-4c0b-9321-95ee4e2bebd4",
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2"
+  },
+  {
+    "lessonConfId": "7d0e67f3-35c3-4976-8f06-b43295bf7533",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "902f0d44-f9b0-4c0b-9321-95ee4e2bebd4",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2"
+  },
+  {
+    "lessonConfId": "842b93b0-608b-470b-bfe2-609c69600a15",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "902f0d44-f9b0-4c0b-9321-95ee4e2bebd4",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "concurrentCourseId": "",
+    "consecutivePeriod": "2"
+  },
+  {
+    "lessonConfId": "d24404d3-3888-499c-bf5b-2c09b3e451dc",
+    "teacherId": "346783e9-cec8-48ab-a483-79966bfc81f3",
+    "courseId": "c4d99662-b254-4358-b232-500d5811716f",
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "6287c2a8-69c7-406f-b2cc-024fccc5d16d",
+    "teacherId": "346783e9-cec8-48ab-a483-79966bfc81f3",
+    "courseId": "c4d99662-b254-4358-b232-500d5811716f",
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "7f75afd8-044e-42b6-98f3-641b37598c0d",
+    "teacherId": "346783e9-cec8-48ab-a483-79966bfc81f3",
+    "courseId": "c4d99662-b254-4358-b232-500d5811716f",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  },
+  {
+    "lessonConfId": "84a09e34-b897-4a5c-9f11-f6cb7c23e8b4",
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "4416be38-646f-4cd6-9ca2-4abdbc927a4a",
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "specialtyRoomId": "",
+    "concurrentCourseId": "",
+    "consecutivePeriod": ""
+  }
+]

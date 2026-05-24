@@ -1,0 +1,803 @@
+@use "@/assets/css/scss/common/var" as *;
+
+/* * * * * 
+    SWITCH 
+* * * * */
+.hi-selectbox{  
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  
+  & ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+  }
+  & ::-webkit-scrollbar-thumb {
+    background-color: #cfd3db;
+    background-clip: padding-box;
+    min-height:40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
+  & ::-webkit-scrollbar-track { background-color: transparent; }
+  
+  .option__layer {
+    display: none;
+    overflow-y: auto;
+    z-index: 10;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    max-height: 220px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,.16);
+
+    .option {
+      display: block;
+      width: 100%;
+      color: #222;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+      word-break: break-all;
+      padding: 10px 16px;
+      &.is-selected,
+      &:hover { background-color: rgba(71, 120, 222, 0.08); }
+      &:not(:first-of-type) { border-top: 1px solid #e0e0e0; }
+    }
+  }
+  > .selected {
+    display: block;
+    display: block;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background-color: #fff;
+    color: #222;
+    font-size: 15px;
+    line-height: 38px;
+    text-align: left;
+    padding: 0 24px 0 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    &.default{color: #888;}
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 14px;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-bottom: 1px solid #222;
+      border-left: 1px solid #222;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      margin-top: -7px;
+    }
+    &:disabled { background-color: #eee;color: #888 !important; }
+    &:disabled::after { border-color: #bdbdbd !important; }
+    & input {
+      width: 100%;
+      border: 0;
+      padding: 0;
+      line-height: 38px;
+      vertical-align: top;
+    }
+  }
+  &.is-opened{
+    .option__layer { display: block; }
+    > .selected { 
+      border-color: #222; 
+      &::after {
+        transform: rotate(135deg);
+        margin-top: -2px;
+      }
+      &:hover{
+        border-color: #9e9e9e;
+      }
+    }
+  }  
+  &.xs{  //  우리학교 신청서 양식
+    > .selected{      
+      height: var(--xs-height);
+      line-height: var(--xs-height);
+      border-radius: var(--xs-radius);
+      font-size: var(--xs-font);    
+    }
+    .option__layer{      
+      .option{     
+        height: var(--xs-height);
+        font-size: var(--xs-font);
+        padding: 4px 16px;
+      }
+    }        
+  }
+  // 사이즈 아직 미사용
+  &.sm{
+    > .selected{      
+      height: var(--sm-height);
+      line-height: var(--sm-height);
+      border-radius: var(--sm-radius);
+      font-size: var(--sm-font); 
+    }
+    .option__layer{      
+      .option{     
+        height: var(--sm-height);
+        font-size: var(--sm-font);
+        padding: 4px 16px;
+      }
+    }        
+  }
+  &.md{
+    > .selected{      
+      height: var(--md-height);
+      line-height: var(--md-height);
+      border-radius: var(--md-radius);
+      font-size: var(--md-font);
+    }
+    .option__layer{    
+      .option{            
+        height: var(--md-height);
+        font-size: var(--sm-font);
+        padding: 8px 16px;
+      }
+    } 
+  } 
+  &.lg{
+    > .selected{      
+      border-radius: var(--lg-radius);
+      height: var(--lg-height);
+      line-height: var(--lg-height);
+      font-size: var(--lg-font); 
+    }
+    .option__layer{     
+      .option{           
+        height: var(--lg-height);
+        font-size: var(--md-font);
+        padding: 12px 16px;
+      }
+    } 
+  }  
+  &.xl{
+    > .selected{      
+      border-radius: 8px;
+      height: var(--xl-height);
+      line-height: var(--xl-height);
+      font-size: var(--xl-font);   
+    }      
+    .option__layer{     
+      .option{        
+        height: var(--xl-height);
+        font-size: var(--xl-font);
+        padding: 12px 16px;
+      }
+    }
+  }
+  // option position
+  &.opt-top{
+    .option__layer{
+      top: auto;      
+      bottom: calc(100% + 4px);
+      box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.16);
+    }
+  }
+  &.opt-right{
+    .option__layer{
+      top: 0;
+      left: 100%;
+    }
+  }
+  &.opt-left{
+    .option__layer{
+      top: 0;
+      left: auto;
+      right: 100%;
+    }
+  }
+  // type
+  &.dropdown{
+    > .selected{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      &::after{display: none;}
+    }
+  }
+}
+
+/* * * * * 
+    SWITCH 
+* * * * */
+.hi-switch { display: inline-block; }
+.hi-switch input[type=checkbox] + label::before { display: none; }
+.hi-switch .track {
+    display: inline-block;
+    position: relative;
+    width: 46px;
+    height: 24px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 46px;
+}
+.hi-switch .track::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px; 
+    background-color: #333;
+    border-radius:100%;
+    transition: left 0.3s;
+}
+.hi-switch input[type=checkbox]:checked + label .track { border-color: #4267b2; }
+.hi-switch input[type=checkbox]:checked + label .track::before { left: 24px;background-color: var(--primary); }
+.hi-switch input[type=checkbox]:disabled + label .track { border-color: var(--disabled); }
+.hi-switch input[type=checkbox]:disabled + label .track::before { left: 24px;background-color: var(--disabled); }
+
+/* * * * * 
+    CHECKBOX & RADIO
+* * * * */
+
+/* checkbox radio */
+input[type=checkbox],
+input[type=radio] { 
+  position: fixed;
+  left: -999em;
+  width: 0;
+  height: 0; 
+
+  + label {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    line-height: 20px;
+    vertical-align: middle;
+
+    span{
+      display: inline-block;
+      position: relative;
+      color: #222;
+      font-size: 15px;
+      line-height: 20px;
+      vertical-align: middle;
+      margin: 0 0 0 6px;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      background: url("~@/assets/img/icon/icons_checkbox.png") no-repeat 0 0/auto 50px;
+      vertical-align: middle;
+    }
+    &:hover::before { background-position: center top; }
+  }
+
+  &.dis + label,
+  &.disabled + label { cursor: default; }  
+  
+  &.dis + label::before,
+  &:disabled + label::before { background-position: right top; }
+  &:checked + label::before { background-position: left bottom; }
+  &:checked + label:hover::before { background-position: center bottom; }
+  &.dis:checked + label::before,
+  &:disabled:checked + label::before { background-position: right bottom; }
+}
+
+/* checkbox */
+
+.form-check{
+  position: relative;
+  display: block;
+  & + .form-check{
+    margin-top:8px;
+  }
+}
+.form-check-inline{
+  display: inline-block;
+  align-items: center;
+  margin-right:16px;
+  &:last-child{
+    margin-right:0;
+  }
+}
+
+input[type=checkbox] + label::before {
+  background-image: url("~@/assets/img/icon/icons_checkbox.png");
+}
+input[type=checkbox].sq-type + label:before {
+  background-image: url("~@/assets/img/icon/icons_checkbox_hitalk.png");
+}
+
+/* radio */
+input[type=radio] + label::before {
+  background-image: url("~@/assets/img/icon/icons_radio.png");
+}
+input[type=radio].sq-type + label:before { 
+  background-image: url("~@/assets/img/icon/icons_radio_hitalk.png"); 
+}
+
+input[type=checkbox],
+input[type=radio]{
+  &.btn-type{
+    + label{
+      padding: 0 10px;
+      border: 1px solid var(--gray-05);
+      border-radius: 4px;
+      background-color: #fff;
+      color: #222;
+      font-size: 15px;
+      text-align: center;
+      margin-right: 4px;
+      display: inline-flex;
+      height: 40px;
+      align-items: center;
+      
+      span{margin:0;}
+
+      &::before{
+        display: none;
+      }
+    }
+    &:checked + label{      
+      border: 1px solid var(--primary);
+      background-color: var(--primary-04);
+      color: var(--primary);
+      span{
+        color: var(--primary);        
+      }
+    }
+    &.rounded {
+      + label {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        span { margin: 0;}
+        &:hover {
+          border: 1px solid rgba(var(--primary-rgb), 0.32);
+          span {color: var(--primary);}
+        }
+      }
+      &:checked{
+        + label {
+          background-color: var(--primary);
+          span {color: #fff;}
+          &::after {display: none;}
+        }
+      }
+    }
+    &.rounded:disabled + label,
+    &:disabled + label{
+      border: 1px solid var(--gray-04);
+      background-color: none;
+      color: #888;
+      cursor: not-allowed;
+      span{color: #BDBDBD;}
+    }
+    &.rounded:checked:disabled + label, 
+    &:checked:disabled + label {
+      border: 1px solid var(--gray-06);
+      background-color: var(--gray-06);
+      color: #888;
+      cursor: not-allowed;
+      span{color: #fff;}
+    }
+    
+  }
+}
+
+.hi-datepicker {
+  display: inline-block;
+  margin-right: 4px;
+}
+.hi-datepicker .mx-datepicker {
+  width: auto;
+}
+.hi-datepicker .mx-input {
+  width: 170px;
+  height: 40px;
+  color: #222;
+  font-size: 15px;
+  line-height: 38px;
+  padding: 0 10px 0 38px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: none;          
+}
+.hi-datepicker .mx-input:not(:disabled):hover, .hi-datepicker .mx-input:not(:disabled):focus {
+  border-color: #222;
+}
+.hi-datepicker .mx-input:disabled {
+  color: #888;
+  background-color: #eee;
+}
+.hi-datepicker .mx-input:disabled + .mx-icon-calendar {
+  opacity: 0.35;
+}
+.hi-datepicker .mx-input-wrapper {
+  position: relative;
+}
+.hi-datepicker .mx-icon-calendar {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: calc(100% - 34px);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("~@/assets/img/icon/icon_calendar.svg") no-repeat;
+  background-size: cover;
+}
+.hi-datepicker .mx-calendar {
+  width: 300px;
+  padding: 0;
+}
+.hi-datepicker .mx-datepicker-header {
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+.hi-datepicker .mx-datepicker-header .btn-today {
+  width: 38px;
+  height: 28px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 26px;
+  border: 1px solid #fff;
+  border-radius: 28px;
+}
+.hi-datepicker .mx-calendar-header {
+  height: 48px;
+  background-color: #4267b2;
+  padding: 0 65px;
+  border-radius: 8px 8px 0 0;
+}
+.hi-datepicker .mx-btn-text,
+.hi-datepicker .mx-calendar-header-label {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 48px;
+}
+.hi-datepicker .mx-btn-text:focus, .hi-datepicker .mx-btn-text:hover,
+.hi-datepicker .mx-calendar-header-label:focus,
+.hi-datepicker .mx-calendar-header-label:hover {
+  color: #fff;
+}
+.hi-datepicker .mx-icon-left:before,
+.hi-datepicker .mx-icon-right:before,
+.hi-datepicker .mx-icon-double-left:before,
+.hi-datepicker .mx-icon-double-right:before,
+.hi-datepicker .mx-icon-double-left:after,
+.hi-datepicker .mx-icon-double-right:after {
+  width: 16px;
+  height: 16px;
+  border-color: #fff;
+  margin-top: -2px;
+}
+.hi-datepicker .mx-btn-icon-double-left,
+.hi-datepicker .mx-btn-icon-double-right,
+.hi-datepicker .mx-icon-calendar svg {
+  display: none;
+}
+.hi-datepicker.mx-datepicker-popup {
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.16);
+}
+.hi-datepicker .mx-calendar-content {
+  height: auto;
+  padding: 10px;
+}
+.hi-datepicker .mx-table-date td:first-of-type,
+.hi-datepicker .mx-table-date td:last-of-type {
+  color: #ff4e4e;
+}
+.hi-datepicker .mx-table-date th, .hi-datepicker .mx-table-date td {
+  width: 38px;
+  height: 38px;
+  color: #222;
+  font-size: 14px;
+  padding: 0 4px;
+}
+.hi-datepicker .mx-table-date th {
+  font-weight: 500;
+  height: 34px;
+}
+.hi-datepicker .mx-table-date .cell.active {
+  color: inherit;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+.hi-datepicker .mx-table-date .cell.active:first-of-type div, .hi-datepicker .mx-table-date .cell.active:last-of-type div {
+  color: #ff4e4e;
+}
+.hi-datepicker .mx-table-date .cell.disabled {
+  color: #bdbdbd;
+  background-color: transparent;
+}
+.hi-datepicker .mx-table-date .cell.not-current-month {
+  color: #bdbdbd;
+}
+.hi-datepicker .mx-table-date .cell.today {
+  color: var(--primary);
+  background-color: transparent;
+}
+.hi-datepicker .mx-table-date .cell.today.active {
+  background-color: rgba(71, 120, 222, 0.16);
+}
+.hi-datepicker .mx-table-year .cell,
+.hi-datepicker .mx-table-month .cell {
+  height: 40px;
+}
+.hi-datepicker .mx-table-year .cell.active,
+.hi-datepicker .mx-table-month .cell.active {
+  background-color: var(--primary);
+}
+
+.hi-datepicker.type-counsel {
+  display: block;
+  margin-right: 0;
+}
+.hi-datepicker.type-counsel .mx-input {
+  width: 200px;
+  height: 32px;
+  color: #222;
+  font-size: 15px;
+  line-height: 1;
+  padding: 0 30px 8px 8px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  background: #fff url("~@/assets/img/icon/icon_calendar.svg") no-repeat;
+  background-position: calc(100% - 8px) 0;
+}
+.hi-datepicker.type-counsel .mx-input:hover, .hi-datepicker.type-counsel .mx-input:focus {
+  border-color: #222;
+}
+.hi-datepicker.type-counsel .mx-icon-calendar {
+  display: none;
+}
+.hi-datepicker.type-counsel .mx-calendar-content {
+  height: auto;
+  padding: 16px;
+}
+.hi-datepicker.type-counsel .mx-calendar-content::after {
+  content: "";
+  width: 100%;
+  height: 15px;
+  background: url("~@/assets/img/icon/icons_survey.png") 0 0/150px auto no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  background-position: right -470px;
+  margin-top: 10px;
+}
+.hi-datepicker.type-counsel .mx-table {
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ececec;
+}
+.hi-datepicker.type-counsel .mx-table-date th:first-of-type,
+.hi-datepicker.type-counsel .mx-table-date td:first-of-type,
+.hi-datepicker.type-counsel .mx-table-date th:last-of-type,
+.hi-datepicker.type-counsel .mx-table-date td:last-of-type {
+  display: none;
+}
+.hi-datepicker.type-counsel .mx-table-date th + th,
+.hi-datepicker.type-counsel .mx-table-date td + td {
+  border-left: 1px solid #ececec;
+}
+.hi-datepicker.type-counsel .mx-table-date th {
+  width: 50px;
+  height: 30px;
+  background-color: #f2f5f7;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+}
+.hi-datepicker.type-counsel .mx-table-date td {
+  position: relative;
+  width: 50px;
+  height: 48px;
+  color: #4267b2;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+}
+.hi-datepicker.type-counsel .mx-table-date .cell.active {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 0;
+}
+.hi-datepicker.type-counsel .mx-table-date .cell.disabled {
+  background-color: #fafafa;
+}
+.hi-datepicker.type-counsel .mx-table-date .cell.today::after {
+  content: "오늘";
+  color: inherit;
+  font-size: 10px;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.hi-timepicker {
+  display: inline-block;
+}
+.hi-timepicker .mx-icon-calendar svg {
+  display: none;
+}
+.hi-timepicker .mx-datepicker-range {
+  width: 170px;
+}
+.hi-timepicker .mx-input {
+  width: 100%;
+  height: 40px;
+  color: #222;
+  font-size: 15px;
+  background: #fff;
+  background-position: 16px center;
+  padding: 0 8px 0 38px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.hi-timepicker .mx-input:hover, .hi-timepicker .mx-input:focus {
+  border-color: #222;
+}
+.hi-timepicker .mx-input:disabled {
+  color: #888;
+  background-color: #eee;
+}
+.hi-timepicker .mx-input:disabled + .mx-icon-calendar {
+  opacity: 0.35;
+}
+.hi-timepicker .mx-input-wrapper {
+  position: relative;
+}
+.hi-timepicker .mx-icon-calendar {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: calc(100% - 34px);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("~@/assets/img/icon/icon_time.svg") no-repeat;
+}
+.hi-timepicker.mx-datepicker-popup {
+  width: 332px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.hi-timepicker .mx-datepicker-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  border: 0;
+}
+.hi-timepicker .mx-datepicker-header div {
+  width: 50%;
+  color: #222;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.hi-timepicker .mx-time {
+  border: 1px solid #ececec;
+}
+.hi-timepicker .mx-time + .mx-time {
+  border: 1px solid #ececec;
+  margin-left: 8px;
+}
+.hi-timepicker .mx-time-column {
+  border-left: 1px solid #ececec;
+}
+.hi-timepicker .mx-time-column .mx-time-item {
+  color: #9e9e9e;
+  font-size: 13px;
+}
+.hi-timepicker .mx-time-column .mx-time-item.active {
+  color: var(--primary);
+}
+
+/* input-box-wrap */
+.input-box-wrap {position:relative;border:1px solid rgba(0, 0, 0, 0.14);border-radius:4px;overflow:hidden;background:#fff;font-size:13px;}
+// .input-box-wrap.focus {border-color:rgba(234, 236, 241, 0.6);}
+.input-box-wrap:hover {border-color:rgba(66, 103, 178, 0.6);}
+.input-box-wrap.readonly {border:1px solid rgba(0, 0, 0, 0.14);}
+.input-box-wrap.readonly input {background:#eee;cursor:default;}
+.input-box-wrap.readonly2 {border:1px solid rgba(0, 0, 0, 0.14);}
+.input-box-wrap.readonly2 input {background:#eee;cursor:default;color:#888;}
+.input-box-wrap.dis {opacity:0.5;}
+.input-box-wrap input {
+    width: 100%;
+    height: 100%;
+    min-height: 38px;
+    border: 0;
+    padding: 0 13px;
+    color: #2e2e2e;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    vertical-align: top;
+    transform: skew(0);
+    -webkit-transform: skew(0);
+}
+.input-box-wrap .search-icon-btn {
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right:10px;
+  width: 20px;
+  height: 20px;
+  background:url('~@/assets/img/icon_search_icon_24.png');
+  background-size: 58px;}
+.input-box-wrap .search-icon-btn:hover {background-position:-19.3px 0 ;}
+.input-box-wrap.dis .search-icon-btn {background-position:-38.6px 0;}
+.input-box-wrap .input-text-delete-btn {display:none;position:absolute;top: 50%;transform: translateY(-50%);right:44px;width:24px;height:24px;background:url('~@/assets/img/icon_input_text_delete_24.png');}
+.input-box-wrap .input-text-delete-btn:hover {background-position:-24px 0;}
+.input-box-wrap .input-text-delete-btn.dis {background-position:-48px 0;}
+
+/* input validation 텍스트 */
+.input-validation-text {margin:8px 0 0 0;padding: 0 0 8px 0;}
+.input-validation-text.error-text {color: #fe5151;}
+.input-validation-text.good-text {color:#229c47;} 
+
+/* radio */
+.input-radio-wrap {font-size:0;}
+
+.round-search-box {height:36px;  padding: 0 0 0 4px; display: flex; align-items: center;  border-radius:18px;}
+.round-search-box .search-btn {position:absolute;top:2px;right:12px;width:30px;height:30px;background:url('~@/assets/img/icon_header_search_30.png');vertical-align:middle;}
+.round-search-box .search-btn:hover {opacity:0.8;}
+.round-search-box .search-btn.dis {background-position:-60px 0;} 
+
+.round-search-box .btn-search,
+.round-search-box .btn-delete{position: absolute;top: 50%;transform: translateY(-50%);}
+.round-search-box .btn-search{right: 7px;}
+.round-search-box .btn-search i::after{background-color: #222 !important;}
+.round-search-box .btn-search:hover i::after{color:#999 !important;}
+.round-search-box .btn-delete{position: absolute;top: 50%;transform: translateY(-50%);right: 35px;}
+.round-search-box .btn-delete i{padding: 2px;width:11px;height:11px;min-width:11px;min-height:11px;}
+
+/* search-box-wrap */
+.search-box-wrap {padding-right:58px !important;}
+.search-box-wrap.delete-on {padding-right:70px !important;}
+
+
+
+

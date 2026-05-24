@@ -1,0 +1,9 @@
+
+// 수업 교체
+.course-replacement{
+  :global(.h4-tit){
+    :global(.hi-selectbox){
+      width: 480px;
+    }
+  }
+}

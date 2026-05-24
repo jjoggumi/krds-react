@@ -1,0 +1,133 @@
+﻿.sentResultTable {
+  max-height: calc(var(--vh) * 100 - 175px);
+  min-height: calc(var(--vh) * 100 - 415px);
+  thead tr:nth-child(2) th {
+    top: 32px !important;
+  }
+  .resultHeader {
+    height: 32px;
+    line-height: 150%;
+    padding: 5px 12px
+  }
+  table.tableNodata {
+    min-height: calc(var(--vh) * 100 - 415px);
+  }  
+}
+
+.titleTruncate {
+  flex: 0 1 auto;
+  min-width: 0;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 9px;
+}
+
+.titleInner {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+.statusContainer {
+  position: relative;
+  display: inline-flex;
+  .statusPopup {
+    position: absolute;
+    top: calc(100% + 2px);
+    right: -13px;
+    left: auto;
+    width: 400px;
+    border-radius: 12px;
+    border: 1px solid var(--border-neutral-stronger);
+    background: var(--bg-base);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+    padding: 24px;
+    z-index: 60;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+
+      .statusItem {
+        display: flex;
+        align-items: flex-start;
+        // padding: 4px 0;
+        color: var(--text-default);
+        font-size: var(--text-b3);
+        line-height: var(--leading-b3);
+        span{
+          font-size: var(--text-b3);
+          line-height: var(--leading-b3);
+          font-weight: var(--font-normal);
+        }
+        .tit {
+          font-weight: var(--font-weight-bold);
+          width: 72px;
+          min-width: 72px;
+        }
+        .dotBlue,
+        .dotOrange,
+        .dotOrangeDark,
+        .dotGreen,
+        .dotRed {
+          width: 8px;
+          height: 8px;
+          min-width: 8px;
+          min-height: 8px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 4px;
+          margin-top: 6px;
+        }
+        .dotBlue {
+          background: var(--bg-primary-base);
+        }
+        .dotOrange {
+          background: var(--graphic-orange);
+        }
+        .dotOrangeDark {
+          background: var(--graphic-orange);
+        }
+        .dotGreen {
+          background: var(--graphic-green);
+        }
+        .dotRed {
+          background: var(--action-red-base);
+        }
+      }
+    }
+  }
+}
+.sendResultDetailModal{
+  min-width: 1024px !important;
+  max-width: 1350px !important;
+  :global{
+    .side-modal-cont-inner {
+      min-width: 1024px;
+    }
+  }
+}
+@media (max-width: 1350px) {
+  .sendResultDetailModal{
+    max-width: 100% !important;
+    .side-modal-cont-inner {      
+      min-width: 1024px;
+    }
+  }
+}
+

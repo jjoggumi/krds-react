@@ -1,0 +1,194 @@
+[
+  {
+    "grade": 1,
+    "classNumber": 1,
+    "isVirtual": false,
+    "classId": "be92db4b-48c8-4b96-98d6-d19e0e1c4731",
+    "className": "1반",
+    "sortNo": 1
+  },
+  {
+    "grade": 1,
+    "classNumber": 2,
+    "isVirtual": false,
+    "classId": "af4e378a-4aa8-4401-9fee-ae16a0d80b8e",
+    "className": "2반",
+    "sortNo": 2
+  },
+  {
+    "grade": 1,
+    "classNumber": 3,
+    "isVirtual": false,
+    "classId": "881e8ce7-8bb6-4198-8976-3588139c21a5",
+    "className": "3반",
+    "sortNo": 3
+  },
+  {
+    "grade": 1,
+    "classNumber": 4,
+    "isVirtual": false,
+    "classId": "061b8ad2-1b8f-4cc9-9111-cae14bc3f746",
+    "className": "4반",
+    "sortNo": 4
+  },
+  {
+    "grade": 1,
+    "classNumber": 5,
+    "isVirtual": false,
+    "classId": "bd624776-75f2-4a5c-8251-95c5a1ad1f7b",
+    "className": "5반",
+    "sortNo": 5
+  },
+  {
+    "grade": 1,
+    "classNumber": 6,
+    "isVirtual": false,
+    "classId": "e324cbe6-00e2-4952-9309-a101db27a6ae",
+    "className": "6반",
+    "sortNo": 6
+  },
+  {
+    "grade": 1,
+    "classNumber": 7,
+    "isVirtual": false,
+    "classId": "55a2bf23-021a-4b80-943e-d17b326ead17",
+    "className": "7반",
+    "sortNo": 7
+  },
+  {
+    "grade": 1,
+    "classNumber": 8,
+    "isVirtual": false,
+    "classId": "63b7a276-4cc1-4b05-8df9-deaf0f641232",
+    "className": "8반",
+    "sortNo": 8
+  },
+  {
+    "grade": 2,
+    "classNumber": 1,
+    "isVirtual": false,
+    "classId": "8c5ebd84-38ea-482a-b554-7a484b9efa22",
+    "className": "1반",
+    "sortNo": 1
+  },
+  {
+    "grade": 2,
+    "classNumber": 2,
+    "isVirtual": false,
+    "classId": "7ea75650-0093-4a2a-99a8-e32b3eb4ef2b",
+    "className": "2반",
+    "sortNo": 2
+  },
+  {
+    "grade": 2,
+    "classNumber": 3,
+    "isVirtual": false,
+    "classId": "f3318426-0e77-4d17-8069-f4151f24629e",
+    "className": "3반",
+    "sortNo": 3
+  },
+  {
+    "grade": 2,
+    "classNumber": 4,
+    "isVirtual": false,
+    "classId": "07609148-b43a-44d8-8ffe-acdcf21fd4d7",
+    "className": "4반",
+    "sortNo": 4
+  },
+  {
+    "grade": 2,
+    "classNumber": 5,
+    "isVirtual": false,
+    "classId": "ec5ed56e-b037-46b2-84a3-331f9349f609",
+    "className": "5반",
+    "sortNo": 5
+  },
+  {
+    "grade": 2,
+    "classNumber": 6,
+    "isVirtual": false,
+    "classId": "0ff47113-05c9-4ed9-9449-f049144c2a7b",
+    "className": "6반",
+    "sortNo": 6
+  },
+  {
+    "grade": 2,
+    "classNumber": 7,
+    "isVirtual": false,
+    "classId": "16dc2407-51e1-4a4e-876d-6ea2ec24a40c",
+    "className": "7반",
+    "sortNo": 7
+  },
+  {
+    "grade": 2,
+    "classNumber": 8,
+    "isVirtual": false,
+    "classId": "4d23bb14-59b8-4a89-aa01-32ad3cd55630",
+    "className": "8반",
+    "sortNo": 8
+  },
+  {
+    "grade": 2,
+    "classNumber": 1,
+    "isVirtual": true,
+    "classId": "1d923193-97a4-4bf4-8a25-b708aae1c3fc",
+    "className": "가상1반",
+    "sortNo": 1
+  },
+  {
+    "grade": 3,
+    "classNumber": 1,
+    "isVirtual": false,
+    "classId": "a310e29a-870f-4d4b-b656-709d3e478b5f",
+    "className": "1반",
+    "sortNo": 1
+  },
+  {
+    "grade": 3,
+    "classNumber": 2,
+    "isVirtual": false,
+    "classId": "eda4c602-87f2-484b-97f4-0b2d010d1bc9",
+    "className": "2반",
+    "sortNo": 2
+  },
+  {
+    "grade": 3,
+    "classNumber": 3,
+    "isVirtual": false,
+    "classId": "30ba97cf-9878-4e18-9089-0435d59801a3",
+    "className": "3반",
+    "sortNo": 3
+  },
+  {
+    "grade": 3,
+    "classNumber": 4,
+    "isVirtual": false,
+    "classId": "85754f04-676b-4d48-a7b8-412396ed47df",
+    "className": "4반",
+    "sortNo": 4
+  },
+  {
+    "grade": 3,
+    "classNumber": 5,
+    "isVirtual": false,
+    "classId": "44129476-b684-41f7-8a88-83ff1c3e02ea",
+    "className": "5반",
+    "sortNo": 5
+  },
+  {
+    "grade": 3,
+    "classNumber": 6,
+    "isVirtual": false,
+    "classId": "c32cf3ed-66ed-45b1-93bb-13fa28b6bd16",
+    "className": "6반",
+    "sortNo": 6
+  },
+  {
+    "grade": 3,
+    "classNumber": 7,
+    "isVirtual": false,
+    "classId": "195b4221-9c80-4129-8b24-7f93c53d53f9",
+    "className": "7반",
+    "sortNo": 7
+  }
+]

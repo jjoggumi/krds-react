@@ -1,0 +1,75 @@
+// 작업 내역 확인 모달
+.historyModal{
+  :global{
+    .table-content{
+      overflow: hidden;
+      overflow-y: auto;
+      tr:not(:has(.hi-nodata)):hover td,
+      tr.edited td{
+        background: var(--bg-secondary-subtlest);
+        input{
+          padding-right: 60px;
+        }
+        input + span{
+          position: absolute;
+          right: 30px;
+          top: 20px;
+          font-size: 12px;
+          color: var(--text-neutral-base);
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+      tr.selected td{
+        background: var(--bg-secondary-subtlest);
+        &::before{
+          display: block;
+          content: '';
+          border: 1px solid var(--control-secondary-subtle);
+          border-left: 0;
+          border-right: 0;
+          margin: -1px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 0;        
+        }      
+        &:first-child::before{ border-left: 1px solid var(--control-secondary-subtle);}
+        &:last-child::before{border-right: 1px solid var(--control-secondary-subtle); }
+      }
+    }
+    .history-txt{
+      word-break: break-all;
+      line-height: 1.4;
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.disabled-row {
+  color: var(--text-neutral-subtle);
+  background-color: var(--bg-neutral-subtle);
+  cursor: not-allowed;
+  .btn-edit {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  &:hover {
+    background-color: var(--bg-neutral-subtlest);
+  }
+}
+
+.disabled-col {
+  color: var(--text-neutral-subtle);
+  background-color: var(--bg-neutral-subtle);
+  cursor: not-allowed;
+  .btn-edit {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

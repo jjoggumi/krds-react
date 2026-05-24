@@ -1,0 +1,412 @@
+.timetable-root{ 
+  .btn-table-cell{   
+    width: 100%;
+    height: 100%;
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight:  var(--font-weight-medium);
+    transition: all 0.1s ease-in-out; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    span{
+      font-size: 14px;
+    }
+    .course-name{
+      font-size: 14px;
+      font-weight:  var(--font-weight-regular);
+      line-height: 130%;
+      color: var(--text-default);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      
+    }
+    .class-name{      
+      font-size: 13px;
+      font-weight:  var(--font-weight-regular);
+      line-height: 140%;
+      color: var(--text-neutral-stronger);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    &:not(.exchange-direct)
+    :not(.exchange-chain)
+    :not(.edit-course)
+    :not(.consecutive-course)
+    :not(.add):not(.assigned-complete):hover{
+      background-color: var(--bg-yellow-subtlest);
+    }
+  
+    // 선택
+    &.selected{
+      background-color: var(--bg-yellow-subtlest) !important;
+      box-shadow: 0 0 0 1px var(--yellow-300);
+      border: 1px solid var(--yellow-300);
+      .course-name, .class-name{     
+        font-weight:  var(--font-weight-medium);
+      }
+    }
+    // 비활성화 
+    &:disabled, 
+    &.disabled{  
+      pointer-events: none;  
+      background-color: var(--bg-neutral-base) !important;
+      color:var(--text-default) !important;
+      .course-name, .class-name{
+        color: var(--text-neutral-base) !important;
+      } 
+      .badge{
+        background-color: var(--bg-neutral-strong);
+        color: var(--text-base);
+        &.change{
+          background: transparent;
+          color: var(--text-neutral-base);
+          border: 1px solid var(--border-neutral-base);
+        }
+      }
+    }
+    
+    // 수업없음
+    &.no-course{
+      background-color: var(--bg-neutral-base);
+      color:var(--text-default);
+      font-size: 15px;
+      i{
+        display: inline-block;
+        content: '';
+        width:16px;
+        height:16px;
+        mask-image: url(~@/assets/img/icon/ico-close.svg);
+        background-color:  var(--text-neutral-strong);
+        mask-size: 100%;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+      }        
+      &.selected{
+        box-shadow: none;
+      }
+    }
+  
+    // 고정수업
+    &.fixed-course{
+      pointer-events: none;  
+      background-color: var(--bg-neutral-base);    
+    }
+  
+    // 공통과목 (4단계 : 공통과목)
+    &.common-subject{
+      background-color: var(--bg-yellow-subtlest);
+      color: var(--text-default);
+      font-size: 14px;
+      &::after{
+        display: inline-block;
+        content: '';
+        width:16px;
+        height:16px;
+        mask-image: url(~@/assets/img/icon/ico-close.svg);
+        background-color: var(--text-neutral-strong);
+        mask-size: 100%;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+      }
+    }
+  
+    // 연속수업
+    &.consecutive-course{   
+      box-shadow: 0 -1px 0px var(--border-neutral-base), 0 1px 0px var(--graphic-amber),  -1px 0 0px var(--graphic-amber), 1px 0px 0px var(--graphic-amber);
+      background-color: rgba(238, 188, 102, 0.16);
+      &.fst{
+        box-shadow: 0 0 0 1px var(--graphic-amber) !important;
+      }
+      &.assign-complete:not(.fst)::after{
+        display: none;
+      }
+      &.hovered{
+        background-color: var(--bg-yellow-subtlest);
+      }
+      &.selected{
+        border:1px solid var(--yellow-300) !important;
+        box-shadow:  0 -1px var(--yellow-300),0 1px var(--yellow-300),-1px 0 var(--yellow-300),1px 0 var(--yellow-300)!important;
+        z-index: 1;
+        // &.fst{
+        //   border:1px solid var(--yellow-300) !important;
+        //   box-shadow:  0 -1px var(--yellow-300),0 1px var(--yellow-300),-1px 0 var(--yellow-300),1px 0 var(--yellow-300)!important;
+        //   z-index: 1;
+        // }
+      }
+    }
+  
+    // 수업빼기 (7단계 : 수동배정 상세)
+    &.remove-course{
+      background-color: var(--bg-neutral-base);
+      i.ico-close{
+        display: inline-block;
+        width:16px;
+        height:16px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        &::after{
+          background-color: var(--text-neutral-strong);        
+        }
+      }
+    }
+  
+    // 배정완료 (7단계 : 수동배정 상세)
+    &.assign-complete{
+      background: var(--bg-primary-subtlest);  
+      pointer-events: auto;
+      i.ico-close{
+        display: inline-block;
+        width:16px;
+        height:16px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        &::after{
+          background-color: var(--text-neutral-strong);        
+        }
+      }
+    }
+  
+    //배정 불가 (7단계 : 수동배정 상세)
+    &.assign-unavailable{
+      background: var(--bg-neutral-strong);   
+      pointer-events: none;    
+      .course-name, .class-name{
+        color: var(--text-default);
+      }
+    }  
+  
+    // 자동생성 배정불가 (7단계 : 수동배정 상세)  ??!!
+    &.generate-unavailable{     
+      pointer-events: none;  
+      box-shadow: 0 0 0 1px var(--control-red-subtle);
+      background-color: var(--bg-neutral-base);
+    }
+  
+    // 배정 후 (7단계 : 수업변경(연속, 1:1) 모달 / 전체 시간표 수업변경)
+    &.assign-after{
+      pointer-events: none;
+      background: var(--bg-primary-subtlest);  
+    }
+  
+    // 배정 전 (7단계 : 수업변경(연속, 1:1) 모달 / 전체 시간표 수업변경)
+    &.assign-before{
+      pointer-events: none;
+      background: var(--bg-orange-subtler);  
+      .course-name, .class-name{
+        color: var(--text-neutral-base);
+      }
+    }
+    
+    // 배정 대상 (전체 시간표 수업변경)
+    &.assign-target{
+      background: var(--bg-red-subtlest);  
+      .course-name, .class-name{
+        color: var(--text-neutral-base);
+      } 
+    }
+    // 배정 후 수업없음 (전체 시간표 학급일정 변경 : 삭제, 이동)
+    &.assign-target-empty{
+      background: var(--bg-red-subtlest);  
+    }
+  
+    // 교체(전체 시간표 > 수업변경 > 교체 수업)
+    &.edit-course{
+      background: var(--graphic-iceBlue);
+    }
+    
+    // 이미 배정된 교시 (7단계 : 동시수업배정 모달)
+    &.assign-resolved{
+      pointer-events: none;
+      box-shadow: 0 0 0 1px var(--control-red-subtle);
+      background-color: var(--bg-neutral-base);
+      .course-name, .class-name{
+        color: var(--text-neutral-base);
+      }
+    }
+  
+    // 수업선택 (7단계 : 동시수업배정 모달)
+    &.course-select{        
+      &:hover{
+        background-color: var(--bg-yellow-subtlest);
+      }
+      .course-name{
+        color: var(--text-neutral-base);
+      }
+    }
+    // 수업배정 완료 (7단계 : 동시수업배정 모달)
+    &.assigned-complete{
+      background: #FFF2E1;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      > div{
+        gap: 2px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+      }
+      .group-box{
+        padding: 3px 4px 3px 6px;
+        border-radius: 4px;
+        gap: 2px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border-neutral-strong);
+        background: var(--bg-yellow-subtlest) ;
+        font-size: 14px;   
+        font-weight:  var(--font-weight-regular);
+        &:hover{
+          background-color: var(--yellow-200);
+        }
+        .ico.ico-close::after{
+          background-color: var(--text-neutral-strong);
+        }   
+      }
+      &:hover{
+        background-color: var(--bg-orange-subtler);
+      }
+    }
+  
+    // 부가작업(6단계 : 동시수업 내 수업고정)
+    &.additional{
+      position: relative;
+      font-weight:  var(--font-weight-regular);
+      i{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        &::after{
+          background-color: var(--text-neutral-strong);
+        }
+      }
+      &.fixed{  
+        color: var(--text-primary-base);
+        text-decoration: underline;
+      }
+      &.joint{
+        background-color: var(--action-primary-subtler);
+      }
+    }
+    
+    // 전체시간표 행사처리
+    &.event-cell{
+      background-color: var(--bg-green-subtlest);
+    }
+  
+    // badges  
+    .badges{
+      position: absolute;
+      top: 0;
+      left: 0;
+      .badge{
+        width: 22px;
+        height: 18px;    
+        border-radius: 0 4px 4px 0 ;
+        font-size: 10px;      
+        & + .badge{
+          margin-top: 0;
+        }
+      }
+    }
+  
+  }
+  td [class *= 'exchange']{   
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background: var(--bg-base);
+    span{
+      background: var(--bg-base);
+      color: var(--blue-400);
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight:  var(--font-weight-bold);
+      height: 28px;
+      max-width: 82px;
+      width: 85%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;      
+    }
+    &.consecutive-course{    
+      height: 200%; 
+    }
+    &.exchange-direct span{    
+      background: var(--bg-primary-subtlest);
+      color: var(--blue-400);
+      &:hover{background-color: mix(black, #E3F0FF, 2%);}
+    }
+    &.exchange-chain span{    
+      background: var(--bg-orange-subtler);
+      color: var(--orange-400);
+      &:hover{background-color: mix(black, #FFE6DA, 2%);}
+    }
+    &.exchangeable span{    
+      background: var(--bg-mint-subtlest);
+      color: var(--mint-500);
+      &:hover{background-color: mix(black, #E2F6F6, 3%);}
+    }
+  }
+  
+  // 교사 시간표 리스트
+  .teacher-view{
+    pointer-events: none;
+  }
+  .event-none{
+    pointer-events: none;
+  }
+  .read-only{
+    cursor: default;
+  }
+  .event-auto{
+    pointer-events: auto;
+  }
+  
+  // 학급별 시간표
+  .type-class{  
+    pointer-events: none;
+    .btn-table-cell{
+      .course-name{
+        font-size: 13px;
+        font-weight:  var(--font-weight-regular);
+        line-height: 150%;
+        color: var(--text-neutral-stronger);
+      }
+      .teacher-name{    
+        font-size: 14px;
+        font-weight:  var(--font-weight-regular);
+        line-height: 160%;
+        color: var(--text-default);
+      }
+      //수업없음
+      &.no-course{
+        &::after{
+          display: none;
+        }
+      }    
+    }  
+  }
+}

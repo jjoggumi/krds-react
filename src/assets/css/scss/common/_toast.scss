@@ -1,0 +1,68 @@
+@use "@/assets/css/scss/common/var" as *;
+
+/* toast-popup  >> scss 취합 */
+.toast-popup {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 400;
+  border-radius: 12px;
+}
+
+.toasted .primary,
+.toasted.toasted-primary {
+  min-height: 56px !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: #fff;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+  padding: 16px 20px !important;
+  border-radius: 16px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  margin: 0 auto;
+} 
+
+.toasted-container .toasted.type01{
+  width:400px; 
+  min-height: 66px !important;
+  border-radius: 50px !important;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .toasted-container .toasted.type01 {
+    border-radius: 4px !important;
+    min-width: auto;
+    width: calc(100% - 32px);
+    max-width: 420px;
+    padding: 0 16px !important;
+    min-height: 48px !important;
+    justify-content: flex-start;
+    font-size: var(--text-b3);
+    line-height: var(--leading-b3);
+    margin-bottom: 16px;
+  }
+}
+
+//게시글 내보내기 모달내 토스트
+.toasted-container.post-export-bottom-center{
+  bottom: 12%;
+  transform: translate(-50%, 0);
+  left: 50%;
+}
+
+// 버튼 스타일
+.toasted-container .toasted .action.action-btn{
+  font-size: 15px;
+}

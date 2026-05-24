@@ -1,0 +1,372 @@
+@use "@/assets/css/scss/common/var" as *;
+
+.hi-modal-common {
+	.hi-tbl {
+		.desc {
+			color: #888;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 1.4;
+			word-break: break-all;
+			margin-top: 2px;
+		}
+	}
+}
+.hi-tbl{
+	width: 100%;
+	border-bottom: 1px solid #d6d6d6;
+
+	> * > tr > th, 
+	> * > tr > td {
+		color: #222;
+		font-size: 15px;
+		line-height: 1.5;
+		text-align: center;
+		border-top: 1px solid #ececec;		
+		padding: 12px 10px;
+		word-break: break-all;
+	}
+
+	> * > tr > th + th,
+	> * > tr > td + td { border-left: 1px solid #ececec; }
+
+	> * > tr > td {
+		.nodata { color: #9e9e9e; }
+		span { 
+			display: block;
+			line-height: 1.5;
+		}
+		span[role="button"]:hover { text-decoration: underline; }
+		label > span { display: inline-block; }
+		.desc {
+			color: #888;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 1.4;
+			word-break: break-all;
+			margin-top: 2px;
+		}
+	}
+	
+	> thead > tr > th{
+		border-top: 2px solid #616161;
+		border-bottom: 1px solid #d6d6d6;
+		background-color: #fafafa;
+		font-weight: 500;
+	}
+	// > tbody > tr:first-child > td{
+	// 	border-top: 0;
+	// }   학생명단등록에서 학반태그 포커스시 첫줄에 border-top 없어지는 현상으로 주석처리 
+	
+	// 타입별 스타일
+	&.type01, &.type02, &.type03 {
+		> * > tr > th + th,
+		> * > tr > td + td {
+				border-left: 0;
+		}
+	}
+	&.type02{      	
+		> thead > tr > th{
+			border-top: 2px solid #4267b2;
+		}
+	}
+	&.type03{
+		border-top: 0;    
+		> thead > tr > th{
+			border: 1px solid #e0e0e0;
+		}      
+	}
+	&.type04{
+		border-left:1px solid #e0e0e0;         
+		border-right:1px solid #e0e0e0;         
+		> * > tr > th + th,
+		> * > tr > td + td  { 
+			border-left: 1px solid #e0e0e0; 
+		}
+		> thead > tr > th {
+			border-bottom: 1px solid #e0e0e0;
+			border-top: 1px solid #e0e0e0;
+		}      
+	}
+
+	//크기별 스타일
+	&.tbl-sm > * > tr {
+		> th, 
+		> td{
+			padding: 3px;
+			font-size: 13px;
+		}
+	}
+	&.tbl-md > * > tr{
+		> th, 
+		> td{
+			padding: 7px;
+			font-size: 14px;
+		}
+	}
+}
+[class *= "tbl-fixed"]{
+	overflow: auto;	
+	.hi-tbl{
+		border-collapse: separate ;
+	}
+	.fixed-area {
+		position: sticky;
+		z-index: 1;
+	}
+	&::-webkit-scrollbar {
+		background-color: transparent;
+		width: 12px;
+		height: 12px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #cfd3db;
+		background-clip: padding-box;
+		min-height:40px;
+		border: 2px solid transparent;
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-track { background-color: transparent; }
+}
+.tbl-fixed-row{
+	.fixed-area {
+		top: 0;
+	}
+}
+.tbl-fixed-col{
+	.fixed-area {
+		left: 0;
+	}
+}
+
+.hi-nodata{
+	padding: 170px 0; 
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+
+	&.sm::before {
+		width: 35px;
+		height: 35px;
+		font-size: 28px;
+		line-height: 38px;
+		border: 2px solid #cccc;
+}
+	&.sm p{font-size: 14px;}
+	p {
+    color:var(--gray-08);
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.5;
+		text-align: center;
+	}
+}
+
+// 테이블 td input : 무료문자 초대장, 출결알리기 > 학생 명단등록  
+.hp-list-wrap {
+	margin: 36px 0 0 0;
+	.tit{
+		font-size:18px;
+		margin-bottom: 12px;
+	}
+	.table-wrap{
+		height: 312px;
+		overflow: auto;
+		table{
+			border-collapse: separate;
+			border-spacing: 0;
+			thead{
+				position: sticky;
+				top: 0px;
+				overflow: auto;
+				z-index: 1;
+			}
+			tbody tr td{
+				padding: 0;
+				position: relative;          
+				border-left: 1px solid #ececec;
+				&:first-child{
+					border-left: 0;
+				}
+				input{
+					width: 100%;
+					height: 53px;
+					padding: 0 10px;
+					border: 1px solid transparent;
+					font-size: 15px;
+					line-height: 38px;
+					color: #222;
+					background-color: #fff;             
+					text-align: center;   
+				}   
+				input:hover{
+					border: 1px solid var(--primary);
+				}
+				input:focus{
+					border: 1px solid var(--primary);
+					background: rgba(71, 120, 222, 0.16);
+				}
+				input.warning{
+					border: 1px solid #EC1F2D;
+					background: rgba(236, 31, 45, 0.10);
+				}           
+				.tooltip{
+					padding: 8px 10px;
+					border-radius: 5px;
+					z-index: 2;
+					left: 50%;
+					-webkit-transform: translateX(-50%);
+					transform: translateX(-50%);
+					bottom: 100%;
+					margin-bottom: 2px;
+					span{font-size:12px;}
+					&::before{
+						left: 50%;
+						margin-left: -6px;
+					}
+				}
+				input.warning:hover + .tooltip{
+					display: block;
+				}  
+			}  
+		}
+	}
+	.hi-nodata{
+		padding:118px 0;
+		p{font-size:15px;}
+	}
+	.hi-tooltip-wrap{
+		::v-deep .hi-tooltip span{
+			font-size:13px;
+		}
+		&::before{  
+			background:#868E96;
+			mask-image: url(~@/assets/img/svg/ico-warning-circle-fill.svg);
+		}
+	}
+} 
+
+.tbl-excel {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%; 
+    th {
+      + th {
+        border-left: 1px solid #e3e3e3;
+      }
+    }
+    td {
+      + td {
+        border-left: 1px solid #e3e3e3;
+      }
+    }
+    thead {
+      th {
+        font-weight: 700;
+        text-align: center; 
+        background: #f8faff; 
+        padding: 10px 0;
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;        
+      }
+      td {
+        + td {
+          border-left: 1px solid #e3e3e3;
+        }
+      }
+    }
+    tbody {
+      td {
+        border-bottom: 1px solid #e3e3e3;
+        text-align: center;
+        position: relative;
+        height: 38px;
+        word-break: break-all;
+        line-height: 20px;
+        input {
+          width: 100%;
+          text-align: center;
+          display: block;
+          border: 2px solid transparent;
+          height: 38px;
+          background: #fff;
+          &:not([readonly]) {
+            &:focus,
+            &:hover {
+              border: 2px solid #4777de;
+              color: #4777de;
+              background-color: rgba(71,120,222,.08);
+            }
+          }
+          &[readonly] {
+            cursor: default;
+            background: #fff;
+          }
+          &.error {
+            border: 2px solid #ff6a6a;
+            color: #ff6a6a;
+            &:not([readonly]) {
+              &:hover,
+              &:focus {
+                border: 2px solid #ff6a6a;
+                color: #ff6a6a;
+              }
+              &:focus {
+                background:#fff7f7;
+              }
+            }
+            &:hover {
+              + .tooltip {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    .required {
+      &::after {
+        content: "*";
+        color: #ff6a6a;
+      } 
+    }
+    .btn-toggle {
+      &.is-revealed {
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 15px;
+          height: 14px;
+          background: url("~@/assets/img/icon/icon_toggle_pw.png") no-repeat;
+          vertical-align: middle;
+          margin-left: 4px;
+          background-position: left top;
+        }
+      }
+      &.is-hidden {
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 15px;
+          height: 14px;
+          background: url("~@/assets/img/icon/icon_toggle_pw.png") no-repeat;
+          vertical-align: middle;
+          margin-left: 4px;
+          background-position: right top;
+        }
+      }
+    }
+    .tooltip {
+      left: 50%;
+      bottom: calc(100% + 5px);
+      transform: translateX(-50%);
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      span {
+        font-size: 13px;
+      }
+    }
+}

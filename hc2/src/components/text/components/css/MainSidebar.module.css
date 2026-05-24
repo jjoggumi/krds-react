@@ -1,0 +1,712 @@
+@charset "UTF-8";
+.mainSidebar {
+  position: relative;
+  width: 240px;
+  height: calc(100vh - 66px);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-secondary-subtler);
+  color: var(--text-default);
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 0;
+}
+.mainSidebar button,
+.mainSidebar a,
+.mainSidebar div[onClick] {
+  cursor: pointer;
+}
+.mainSidebar .menuBtn {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  right: 10px;
+  top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  border: 1px solid var(--border-secondary-base);
+  background: var(--bg-base);
+  z-index: 1;
+  -webkit-transition: background 0.18s cubic-bezier(0.4, 0, 0.2, 1), border 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.18s cubic-bezier(0.4, 0, 0.2, 1), border 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.mainSidebar .menuBtn:hover {
+  background: var(--bg-primary-base);
+}
+.mainSidebar .menuBtn.toggleCollapsedPos {
+  right: -8px;
+  top: 10px;
+}
+.mainSidebar .schoolHeader {
+  height: 146px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-bottom: 14px;
+}
+.mainSidebar .schoolHeader .schoolInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: transparent;
+  -webkit-transition: -webkit-box-shadow 220ms ease;
+  transition: -webkit-box-shadow 220ms ease;
+  transition: box-shadow 220ms ease;
+  transition: box-shadow 220ms ease, -webkit-box-shadow 220ms ease;
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger.avatarExpanded {
+  cursor: default !important;
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger .avatarExpanded:global(.avatar-img) {
+  min-width: 56px;
+  min-height: 56px;
+  width: 56px;
+  height: 56px;
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger .avatarExpanded:global(.avatar-img) :global(.img-area) {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger .avatarCollapsed:global(.avatar-img) {
+  padding: 7px;
+  min-width: 64px;
+  min-height: 64px;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger .avatarCollapsed:global(.avatar-img) :global(.img-area) {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger .avatarCollapsed:global(.avatar-img):hover :global(.img-area) {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger .avatarCollapsed:global(.avatar-img):active :global(.img-area) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.mainSidebar .schoolHeader .schoolInner .schoolTrigger .avatarActive {
+  border-radius: 8px;
+  background: rgba(143, 167, 219, 0.2);
+}
+.mainSidebar .schoolHeader .schoolInner.schoolInnerExpanded {
+  padding-top: 40px;
+}
+.mainSidebar .schoolHeader .schoolInner.schoolInnerCollapsed {
+  padding-top: 61px;
+  padding-bottom: 8px;
+}
+.mainSidebar .schoolHeader .schoolInner.schoolInnerCollapsed .schoolTrigger {
+  width: 64px;
+  height: 64px;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper .iconWrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper .iconWrapper .schoolIcon {
+  position: absolute;
+  -webkit-transition: opacity 0.15s ease, color 0.15s ease, -webkit-transform 0.15s ease;
+  transition: opacity 0.15s ease, color 0.15s ease, -webkit-transform 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease, color 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease, color 0.15s ease, -webkit-transform 0.15s ease;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper .iconWrapper .schoolIcon.rotated {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.mainSidebar .schoolHeader .schoolNameWrapper .iconWrapper .base {
+  opacity: 1;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper .iconWrapper .filled {
+  opacity: 0;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper:hover .base {
+  opacity: 0;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper:hover .filled {
+  opacity: 1;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper.openIcon .iconWrapper .base {
+  opacity: 0;
+}
+.mainSidebar .schoolHeader .schoolNameWrapper.openIcon .iconWrapper .filled {
+  opacity: 1;
+}
+.mainSidebar .mainSideScroll::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+.mainSidebar .mainSideScroll::-webkit-scrollbar-thumb {
+  background: rgba(99, 131, 202, 0.2);
+  border-radius: 2px;
+}
+.mainSidebar .mainSideScroll::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2px;
+}
+.mainSidebar .mainSideScroll {
+  /* 상하 화살표 버튼 숨기기 */
+}
+.mainSidebar .mainSideScroll::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+.mainSidebar .profileCard {
+  background: var(--bg-secondary-subtlest);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--ocean-300);
+  -webkit-box-shadow: 0 0 2px 0 rgba(96, 173, 255, 0.12);
+          box-shadow: 0 0 2px 0 rgba(96, 173, 255, 0.12);
+}
+.mainSidebar .profileCard .profileTop .profileName {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-b3);
+  color: var(--text-default);
+}
+.mainSidebar .profileCard .profileTop .ownerPill {
+  background: #f4e7ff;
+  color: #7c3aed;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-d1);
+  padding: 4px 8px;
+  border-radius: 9999px;
+}
+.mainSidebar .profileCard .profileDivider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.06);
+  margin: 10px 0;
+  border-radius: 2px;
+}
+.mainSidebar .profileCard .pointsWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mainSidebar .profileCard .pointsWrap .pointsHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 8px;
+  height: 20px;
+}
+.mainSidebar .profileCard .pointsWrap .pointsLabel {
+  color: var(--text-neutral-stronger);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+.mainSidebar .profileCard .pointsWrap .pointsAmount {
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary-base);
+}
+.mainSidebar .profileCard .pointsWrap .pointsBar {
+  height: 12px;
+  background: var(--slate-200);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.mainSidebar .profileCard .pointsWrap .pointsBar .pointsBarFill {
+  height: 100%;
+  width: 52%;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#4578ee), color-stop(114%, #df6fe5));
+  background: linear-gradient(90deg, #4578ee 0%, #df6fe5 114%);
+}
+.mainSidebar .profileCard .pointsWrap .pointsBar .pointsBarFill.warning {
+  background: linear-gradient(104deg, #F41259 9.9%, #C462D3 137.18%);
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem .menuTitle {
+  border-radius: 8px;
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem.active .menuTitle {
+  background: rgba(99, 131, 202, 0.15);
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem.active .menuTitle .menuLabel {
+  font-weight: var(--font-weight-medium);
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem:hover .menuTitle {
+  background: rgba(99, 131, 202, 0.15);
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem.active:hover .menuTitle {
+  background: rgba(99, 131, 202, 0.2);
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem .menuTitle {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem .menuTitle .menuContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 6px;
+}
+.mainSidebar:not(.mainSidebarCollapsed) .menuListWrap .menuList .menuItem .menuTitle .menuContent .menuLabel {
+  font-size: var(--text-b1);
+  font-weight: var(--font-weight-medium);
+}
+.mainSidebar.mainSidebarCollapsed {
+  width: 80px;
+  width: 80px;
+}
+.mainSidebar.mainSidebarCollapsed .profileCard {
+  margin: 8px 4px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  background: var(--bg-base);
+}
+.mainSidebar.mainSidebarCollapsed .profileCard.open {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap {
+  padding: 10px 8px;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle {
+  border-radius: 8px;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem.active .menuTitle, .mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem:hover .menuTitle {
+  background: rgba(99, 131, 202, 0.15);
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem.active .menuLabel, .mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem:hover .menuLabel {
+  font-weight: var(--font-weight-medium);
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle {
+  min-height: 64px;
+  min-width: 64px;
+  height: 64px;
+  width: 64px;
+  padding: 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 4px;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle .menuIcon {
+  margin: 0;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle .menuLabel {
+  display: block;
+  font-size: var(--text-d1);
+  text-align: center;
+  white-space: normal;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle .menuIcon,
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle .menuLabel {
+  -webkit-transition: color 140ms ease, -webkit-transform 140ms ease;
+  transition: color 140ms ease, -webkit-transform 140ms ease;
+  transition: transform 140ms ease, color 140ms ease;
+  transition: transform 140ms ease, color 140ms ease, -webkit-transform 140ms ease;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  display: inline-block;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle .menuIcon,
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle .menuLabel {
+  -webkit-transition: color 140ms ease;
+  transition: color 140ms ease;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  display: inline-block;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle .menuContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 4px;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle:hover .menuContent, .mainSidebar.mainSidebarCollapsed .menuListWrap .menuList .menuItem .menuTitle:active .menuContent {
+  -webkit-transform: translate3d(0, 0, 0) scale(1.06);
+          transform: translate3d(0, 0, 0) scale(1.06);
+}
+.mainSidebar .bottomArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+.mainSidebar .bottomArea .bottomCard {
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  height: 70px;
+  cursor: pointer;
+}
+.mainSidebar .bottomArea .bottomCard.bottomCardText {
+  border: 1px solid rgba(141, 113, 243, 0.34);
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 0 2px 0 rgba(130, 102, 255, 0.12);
+          box-shadow: 0 0 2px 0 rgba(130, 102, 255, 0.12);
+}
+.mainSidebar .bottomArea .bottomCard.bottomCardText:hover {
+  border: 1px solid #8d71f3;
+  -webkit-box-shadow: 0 0 0 4px rgba(130, 102, 255, 0.08);
+          box-shadow: 0 0 0 4px rgba(130, 102, 255, 0.08);
+}
+.mainSidebar .bottomArea .bottomCard.bottomCardPoint {
+  border: 1px solid rgba(0, 73, 224, 0.25);
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 0 2px 0 rgba(96, 173, 255, 0.12);
+          box-shadow: 0 0 2px 0 rgba(96, 173, 255, 0.12);
+}
+.mainSidebar .bottomArea .bottomCard.bottomCardPoint:hover {
+  border: 1px solid rgba(0, 73, 224, 0.7);
+  background: var(--bg-base);
+  -webkit-box-shadow: 0 0 0 4px rgba(96, 173, 255, 0.08);
+          box-shadow: 0 0 0 4px rgba(96, 173, 255, 0.08);
+}
+.mainSidebar .bottomArea .bottomCard .bottomCardLabel {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-b3);
+}
+.mainSidebar .bottomArea .bottomCard .bottomCardLink {
+  color: var(--blue-900);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-b3);
+  line-height: var(--leading-b3);
+  letter-spacing: -0.7px;
+}
+.mainSidebar .bottomArea .bottomCard .bottomCardGradient {
+  background: -webkit-gradient(linear, left top, right top, from(#2563eb), to(#7c3aed));
+  background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.popupBox {
+  position: absolute;
+  background: var(--bg-base);
+  border-radius: 12px;
+  padding: 12px 6px 12px 12px;
+  width: 210px;
+  z-index: 100;
+  border: 1px solid var(--slate-200);
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: calc(100vh - 32px);
+}
+.popupBox .popupList {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 8px;
+  padding: 0 6px 0 0;
+  margin: 0;
+  max-height: 329px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-height: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.popupBox .popupList::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+}
+.popupBox .popupList::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.popupBox .popupList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.popupBox .popupList .popupItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 186px;
+  height: 34px;
+  padding: 0px 10px 0px 15px;
+  border-radius: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-default);
+  font-size: var(--text-b3);
+  line-height: var(--leading-b3);
+  cursor: pointer;
+  overflow: hidden;
+}
+.popupBox .popupList .popupItem:hover {
+  background: var(--action-secondary-subtler);
+}
+.popupBox .popupFooter {
+  padding-right: 6px;
+}
+
+:global(.group:hover) .inquiryIcon {
+  background: var(--bg-primary-base);
+}
+
+.popupRight {
+  top: 0;
+  left: calc(100% + 11px);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+  transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+.popupRight.open {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.popupBelow {
+  top: calc(100% + 8px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+.popupBelow.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.noTransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.noTransition *, .noTransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}/*# sourceMappingURL=MainSidebar.module.css.map */

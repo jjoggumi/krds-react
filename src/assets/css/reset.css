@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import url('https://download.hiclass.net/static/assets/css/nanumsquare.css');
+@import url('https://download.hiclass.net/static/assets/css/SpoqaHanSansNeo.css');
+@import url("https://fonts.googleapis.com/css?family=Noto+Color+Emoji"); 
+@import url('https://download.hiclass.net/static/assets/css/nanumsquareround.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+* {    
+    font-family:var(--font-body) ;
+    color: var(--font-color);
+    font-size: 14px;
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    word-break: keep-all;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+    letter-spacing: -.2px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    height: 100%;
+}
+body{
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #cfd3db;
+        background-clip: padding-box;
+        min-height: 40px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+}
+/* body {overflow-y:scroll;} */
+body.fixed {overflow-y:hidden;}
+div, span, strong, em, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, td, abbr, acronym, address, big, cite, code, ins, small, sub, sup {padding:0; margin:0;font-size:inherit;color:inherit;}
+div img, dl img, dt img, dd img, ul img, ol img, li img, h1 img, h2 img, h3 img, h4 img, h5 img, h6 img, pre img, form img, fieldset img, input img, textarea img, p img, blockquote img, th img, td img{font-size:0; line-height:0;}
+table {border-collapse:collapse; border-spacing:0;}
+ol, ul, li {margin:0;padding:0;list-style:none;}
+ul, menu, dir {-webkit-margin-before:0 !important;-webkit-margin-after:0 !important;-webkit-margin-start:0 !important;-webkit-margin-end:0 !important;}
+h1, h2, h3, h4, h5, h6, th, td {font-weight:normal; font-size:100%;}
+form, fieldset, a img {border:0;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;}
+address, abbr, address, big, cite, code, ins, small, sub, sup, em{font-weight:normal; font-style:normal;}
+sup, sub {color:inherit;}
+blockquote, q {quotes:none;}
+caption {display:none;}
+
+input, textarea, select {background:#fff;}
+input, textarea, select, img {vertical-align:middle;}
+img {background:none;image-rendering:-webkit-optimize-contrast;}
+a img, img {vertical-align:middle;}
+time, progress, mark, output {display:inline;}
+a {text-decoration:none;cursor:pointer;}
+a img {border:0;}
+img, input, select {vertical-align:middle;outline:none;}
+input {color:#000; vertical-align:middle;outline:none;}
+select {font-size:13px; border:0; ;}
+button, textarea {outline:none;}
+button {padding:0;border:0;background:none;cursor:pointer;}
+select {-webkit-border-radius:0;-webkit-appearance:none;appearance:none;}
+select::-ms-expand {display:none;}
+textarea {resize:none;}
+input {border-radius: 0;-webkit-border-radius: 0;-webkit-appearance: none;}
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+    width: 100%;
+    height: 100%;
+}
+
+/* placeholder */
+textarea::placeholder {color: #bdbdbd;}
+textarea:-ms-input-placeholder {color: #bdbdbd;}
+textarea::-ms-input-placeholder {color: #bdbdbd;}
+input[type=text]::placeholder {color: #bdbdbd;}
+input[type=text]:-ms-input-placeholder {color: #bdbdbd;}
+input[type=password]::placeholder {color: #bdbdbd;}
+input[type=password]:-ms-input-placeholder {color: #bdbdbd;}
+input[type=tel]::placeholder {color: #bdbdbd;}
+input[type=tel]:-ms-input-placeholder {color: #bdbdbd;}
+input[type=text]::-ms-clear {display: none;}
+input[type=text]::-ms-reveal {display: none;}
+
+:root {text-underline-position: under;}
+
+.white-space{white-space: pre-line;}
+.clfix {*zoom:1;}
+.clfix:after {content:'';display:block;clear:both;}
+

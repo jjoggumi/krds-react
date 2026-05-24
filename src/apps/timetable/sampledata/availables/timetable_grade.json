@@ -1,0 +1,52 @@
+{
+  "maxGrade": 3,
+  "classDays": [0, 1, 1, 1, 1, 1, 0],
+  "maxPeriod": 7,
+  "grades": [
+    {
+      "grade": 1,
+      "classCount": 8,
+      "virtualClassCount": 0,
+      "timetableStructure": {
+        "startTime": "09:00",
+        "freePeriods": [
+          {
+            "dayOfWeek": 3,
+            "period": 7
+          }
+        ],
+        "beforeLunchPeriod": 4
+      }
+    },
+    {
+      "grade": 2,
+      "classCount": 8,
+      "virtualClassCount": 1,
+      "timetableStructure": {
+        "startTime": "09:00",
+        "freePeriods": [
+          {
+            "dayOfWeek": 3,
+            "period": 7
+          }
+        ],
+        "beforeLunchPeriod": 4
+      }
+    },
+    {
+      "grade": 3,
+      "classCount": 7,
+      "virtualClassCount": 0,
+      "timetableStructure": {
+        "startTime": "09:00",
+        "freePeriods": [
+          {
+            "dayOfWeek": 3,
+            "period": 7
+          }
+        ],
+        "beforeLunchPeriod": 4
+      }
+    }
+  ]
+}

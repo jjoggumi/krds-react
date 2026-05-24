@@ -1,0 +1,335 @@
+:global(.timetable-root) .timetableMain {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding-bottom: 40px;
+}
+:global(.timetable-root) .timetableMain :global .tab-nav.type01 + .tab-con,
+:global(.timetable-root) .timetableMain :global .tab-nav.type01 + .tab-con + .tab-con,
+:global(.timetable-root) .timetableMain :global .tab-nav.type01 + .tab-con + .tab-con + .tab-con {
+  height: calc(100% - 111px);
+  margin-top: 24px;
+}
+:global(.timetable-root) .timetableMain :global .timetable-select .badge {
+  border-radius: 50px;
+  background-color: var(--graphic-coral);
+}
+:global(.timetable-root) .timetableMain :global .timetable-select .selected {
+  border: 0 !important;
+  font-size: 23px;
+  font-weight: var(--font-weight-strong);
+  line-height: 140%;
+  color: var(--font-color);
+  padding: 0 36px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+:global(.timetable-root) .timetableMain :global .timetable-select .selected::after {
+  -webkit-mask-image: none;
+          mask-image: none;
+  content: "";
+  background: none;
+  border: 0;
+  font-size: 10px;
+  text-align: center;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--border-neutral-strongest);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  width: 0px;
+  height: 0;
+}
+:global(.timetable-root) .timetableMain :global .timetable-select .selected .badge {
+  width: 48px;
+  height: 22px;
+}
+:global(.timetable-root) .timetableMain :global .timetable-select.is-opened .selected::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+:global(.timetable-root) .timetableMain :global .operation-period {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-neutral-stronger);
+}
+:global(.timetable-root) .timetableMain :global .operation-period .btn {
+  color: var(--text-neutral-stronger);
+}
+:global(.timetable-root) .timetableMain :global(.form-group-inline) :global(.tooltip-custom) {
+  margin-top: -2px;
+  margin-left: 2px;
+}
+:global(.timetable-root) .timetableMain :global(.form-group-inline) :global(.tooltip-custom) i::after {
+  background-color: var(--action-red-base) !important;
+}
+:global(.timetable-root) .timetableMain :global(.table-content):global(.custom-scr) {
+  width: 100%;
+  overflow: auto;
+}
+:global(.timetable-root) .timetableMain :global(.table-content) td :global(.btn-link):disabled {
+  cursor: auto;
+}
+:global(.timetable-root) .timetableMain :global(.table-content) td :global(.btn-link):disabled i::after {
+  background-color: var(--bg-neutral-strong) !important;
+}
+:global(.timetable-root) .timetableMain :global(.table-content) td :global(.btn-link):not(:disabled):hover i::after {
+  background-color: var(--bg-tertiary-stronger) !important;
+}
+:global(.timetable-root) .timetableMain :global(.timetable-nodata.hi-nodata) {
+  height: 400px;
+  border-radius: 12px;
+  border: 1px solid var(--border-neutral-strong);
+  margin: 20px 0;
+}
+:global(.timetable-root) .timetableManagement :global(.week-select) :global(.hi-selectbox-wrap.lg) :global(.selected) {
+  border: 0 !important;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  line-height: 140%;
+  color: var(--text-default);
+  padding: 0;
+  background-color: transparent;
+  min-width: 290px;
+  text-align: center;
+}
+:global(.timetable-root) .timetableManagement :global(.week-select) :global(.hi-selectbox-wrap.lg) :global(.selected)::after {
+  display: none;
+}
+:global(.timetable-root) .timetableManagement :global(.week-select) :global(.hi-selectbox-wrap.lg) :global(.selected) i {
+  padding: 0 0 3px 5px;
+}
+:global(.timetable-root) .timetableManagement :global(.week-select) :global(.hi-selectbox-wrap.lg):global(.is-opened) :global(.selected) i::after {
+  background-color: var(--bg-primary-base) !important;
+}
+:global(.timetable-root) .timetableManagement :global(.tb-row) :global(.table-content) :global(.h4-tit) :global(.period) {
+  font-size: 16px;
+}
+:global(.timetable-root) .timetableManagement :global(.tb-row) :global(.table-content) table tbody :global(td.th) {
+  background-color: var(--bg-neutral-subtlest);
+}
+:global(.timetable-root) .timetableManagement :global(.select-area) :global(.hi-selectbox) {
+  width: 200px;
+}
+:global(.timetable-root) .timetableManagement :global(.select-area) :global(.hi-selectbox) + :global(.hi-selectbox) {
+  width: 240px;
+}
+:global(.timetable-root) .timetableManagement :global(.is-filtered) :global(.selected) {
+  border: 1px solid var(--control-secondary-subtle);
+}
+:global(.timetable-root) .timetableManagement :global(.option-layer) {
+  min-width: 100%;
+  background: var(--bg-base);
+  border: 1px solid var(--border-neutral-base);
+  border-radius: 8px;
+  width: 170px;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 4px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.side-modal-cont) {
+  margin-bottom: 90px;
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.btns) {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.btns) > button {
+  width: 150px;
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.h4-tit) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid var(--border-neutral-base);
+  padding-bottom: 20px;
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.h4-tit) h4 {
+  font-size: 18px;
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.form-group-inline) :global(.autocomplete-wrap) {
+  max-width: 320px;
+  width: 100%;
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.form-group-inline) :global(.hi-selectbox) {
+  max-width: 320px;
+  width: 100%;
+}
+:global(.timetable-root) .lessonChangeSideModal :global(.form-group-inline) + :global(.hi-nodata) {
+  height: 280px;
+  border-radius: 12px;
+  border: 1px solid var(--border-neutral-strong);
+  margin: 30px 0;
+}
+:global(.timetable-root) .classScheduleChangeSideModal [class*=form-group]:global(.form-group-inline) + :global(.form-group-inline) {
+  margin-top: 36px;
+}
+:global(.timetable-root) .lessonChangeManagement :global(.table-content) td {
+  cursor: pointer;
+}
+:global(.timetable-root) .lessonChangeManagement :global(.table-content) td :global(.btn-xs) {
+  height: 24px;
+}
+:global(.timetable-root) .lessonChangeManagement :global(.table-content) td :global(.text-text-neutral-stronger) {
+  color: var(--text-neutral-stronger);
+}
+:global(.timetable-root) .lessonChangeManagement :global(.table-content) td :global(.break-all) {
+  font-size: var(--text-d2);
+}
+:global(.timetable-root) .lessonChangeManagement :global(.table-content) th :global(.btn):global(.btn-sort)::after {
+  -webkit-mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+          mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+}
+:global(.timetable-root) .lessonChangeManagement :global(.change-list) input[type=checkbox] + label span {
+  font-size: 14px;
+}
+:global(.timetable-root) .lessonChangeRequestModal :global .table-content + .table-content {
+  margin-top: 30px;
+}
+:global(.timetable-root) .classScheduleManagement :global(.table-content) td {
+  cursor: pointer;
+}
+:global(.timetable-root) .classScheduleManagement :global(.table-content) td :global(.break-all) {
+  word-break: break-all;
+}
+:global(.timetable-root) .classScheduleManagement :global(.table-content) th :global(.btn):global(.btn-sort)::after {
+  -webkit-mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+          mask-image: url("@/assets/img/icon/ico-arrow-down-fill.svg");
+}
+:global(.timetable-root) .classScheduleManagement :global(.change-list) input[type=checkbox] + label span {
+  font-size: 14px;
+}
+:global(.timetable-root) .lessonStatsManagement {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+:global(.timetable-root) .lessonStatsManagement :global(.tb-row) {
+  margin: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-height: 0;
+  gap: 20px;
+}
+:global(.timetable-root) .lessonStatsManagement :global(.tb-row) :global(.table-content.date-check) {
+  width: 20%;
+  min-width: 185px;
+  height: 460px;
+}
+:global(.timetable-root) .lessonStatsManagement :global(.tb-row) :global(.table-content.date-check) th {
+  background-color: var(--bg-neutral-subtlest);
+  border-bottom: 1px solid var(--border-neutral-subtler);
+  padding: 8px 16px;
+}
+:global(.timetable-root) .lessonStatsManagement :global(.tb-row) :global(.table-content.date-check) td {
+  padding: 8px;
+}
+:global(.timetable-root) .lessonStatsManagement :global(.tb-row) :global(.table-content.date-check) tr:first-child td {
+  border-top: 0;
+}
+:global(.timetable-root) .lessonStatsManagement :global(.tb-row) :global(.table-content.date-check) + :global(.table-content) {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+:global(.timetable-root) .lessonStatsDetailModal :global(.table-view) td, :global(.timetable-root) .lessonStatsDetailModal :global(.table-view) th {
+  height: 52px;
+}
+:global(.timetable-root) .lessonStatsDetailModal :global(.table-view) tr:last-child td,
+:global(.timetable-root) .lessonStatsDetailModal :global(.table-view) tr:last-child th {
+  border-bottom: 0;
+}
+:global(.timetable-root) .lessonStatsDetailModal :global(.gray-box.table-view.table-content) {
+  padding: 12px 16px;
+  margin-top: 0;
+}
+:global(.timetable-root) .lessonStatsDetailModal :global(.gray-box.table-view.table-content) > table {
+  border-top: 0px !important;
+}
+:global(.timetable-root) .lessonStatsDetailModal :global(.gray-box.table-view.table-content) > table td, :global(.timetable-root) .lessonStatsDetailModal :global(.gray-box.table-view.table-content) > table th {
+  height: 44px;
+  border-bottom: 1px solid var(--border-neutral-subtle);
+}
+:global(.timetable-root) :global .timetable-select-layer .option-list {
+  white-space: nowrap;
+  min-width: 420px;
+}
+:global(.timetable-root) :global .timetable-select-layer .option-list > .flex {
+  position: relative;
+}
+:global(.timetable-root) :global .timetable-select-layer .option-list > .flex .item {
+  padding-right: 40px;
+}
+:global(.timetable-root) :global .timetable-select-layer .option-list > .flex .btn-trash {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+:global(.timetable-root) :global .timetable-select-layer .option-list > .flex .badge {
+  border-radius: 50px;
+  background-color: var(--graphic-coral);
+  width: 42px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-base);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+:global(.timetable-root) :global .timetable-select-layer .list-add {
+  font-size: var(--text-b3);
+  color: var(--text-primary-base);
+  padding: 12px 24px 14px;
+  width: 100%;
+  text-align: left;
+}
+:global(.timetable-root) .baseTimetableModal .btns button {
+  min-width: 135px;
+}
+:global(.timetable-root) .baseTimetableModal .btns span {
+  line-height: 130%;
+}/*# sourceMappingURL=lessonList.module.css.map */

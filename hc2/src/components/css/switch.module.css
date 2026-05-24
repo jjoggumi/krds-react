@@ -1,0 +1,76 @@
+.switch {
+  display: inline-block;
+  position: relative;
+}
+.switch.on .track {
+  border-color: var(--border-primary-base);
+}
+.switch.on .track::before {
+  left: 24px;
+  background-color: var(--bg-primary-base);
+}
+.switch.disabled .track {
+  border-color: var(--border-neutral-strong);
+}
+.switch.disabled .track::before {
+  left: 24px;
+  background-color: var(--control-neutral-stronger);
+}
+.switch.disabled {
+  cursor: not-allowed;
+}
+.switch input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+.switch input[type=checkbox] + label::before {
+  display: none;
+}
+.switch input[type=checkbox] + label::after {
+  display: none;
+}
+.switch input[type=checkbox]:checked + label .track {
+  border-color: var(--border-primary-base);
+}
+.switch input[type=checkbox]:checked + label .track::before {
+  left: 24px;
+  background-color: var(--bg-primary-base);
+}
+.switch input[type=checkbox]:checked + label::after {
+  display: none;
+}
+.switch input[type=checkbox]:disabled + label .track {
+  border-color: var(--border-neutral-strong);
+}
+.switch input[type=checkbox]:disabled + label .track::before {
+  left: 24px;
+  background-color: var(--control-neutral-stronger);
+}
+.switch .track {
+  display: inline-block;
+  position: relative;
+  width: 46px;
+  height: 24px;
+  background-color: var(--bg-base);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 46px;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+  cursor: pointer;
+}
+.switch .track::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--bg-inverse);
+  border-radius: 100%;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
+}/*# sourceMappingURL=switch.module.css.map */

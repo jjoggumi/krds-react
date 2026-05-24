@@ -1,0 +1,45 @@
+.contactTable .leftAlign {
+  text-align: left;
+}
+.contactTable .leftAlign input,
+.contactTable .leftAlign .text-left {
+  text-align: left;
+}
+.contactTable .centerAlign {
+  text-align: center;
+}
+
+.addListTable {
+  max-height: calc(var(--vh) * 100 - 273px);
+  min-height: calc(var(--vh) * 100 - 551px);
+}
+.addListTable :global(thead tr th:first-child) {
+  padding: 0;
+}
+.addListTable.tableNodata {
+  overflow: hidden !important;
+}
+.addListTable.tableNodata .noData {
+  min-height: calc(var(--vh) * 100 - 606px);
+}
+
+.batchImportTable {
+  height: calc(var(--vh) * 100 - 483px);
+}
+.batchImportTable.tableNodata {
+  overflow: hidden !important;
+}
+.batchImportTable.tableNodata .noData {
+  min-height: calc(var(--vh) * 100 - 538px);
+}
+
+.sendBatchImportTable {
+  max-height: calc(var(--vh) * 100 - 445px);
+  min-height: calc(var(--vh) * 100 - 445px);
+}
+.sendBatchImportTable.tableNodata {
+  overflow: hidden !important;
+}
+.sendBatchImportTable.tableNodata .noData {
+  min-height: calc(var(--vh) * 100 - 500px);
+}/*# sourceMappingURL=ContactTable.module.css.map */

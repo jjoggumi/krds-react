@@ -1,0 +1,128 @@
+.report {
+  margin-bottom: 16px;
+  padding: 24px 20px 0;
+}
+
+.question-title {
+  color: var(--web-Text-Gray-10, #222);
+  font-feature-settings: 'liga' off, 'clig' off;
+  
+  /* web/Text-l/Bold */
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.2px;
+  word-break: break-all;
+}
+
+
+.member-report .question-title {
+  font-size: 14px;
+  margin-top: 14px;
+}
+.member-report .report {
+  border-bottom: 1px solid #ECECEC;
+  padding: 24px 0;
+  margin: 0 20px; 
+}
+
+.member-title {
+  margin-bottom: 2px
+}
+
+.item-report :global(.item){
+  border-bottom: 0;
+}
+
+.item-report .item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.item-report .item + .item {
+  border-top: 1px solid #E0E0E0;
+}
+
+.item-report.anonymous-item > :global(.item) {
+  border-bottom: none;
+}
+
+.item-report.anonymous-item .item {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.item-content {
+  color: var(--web-Text-Gray-08, #9E9E9E);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* web/Text-s/Regular */
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+  letter-spacing: -0.2px;
+}
+
+.item-content .item-count {
+  color: var(--web-Text-Gray-10, #222);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* web/Text-s/Regular */
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.2px;
+}
+
+.item-report > :global(div.header) {
+  background-color: white;
+  padding: 0;
+  height: auto;
+}
+
+.item-answers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top:7px;
+  gap: 8px;
+}
+.item-answers :global(.profile){
+  margin-top:0;
+}
+
+.report  :global(.profile) {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.report :global(.profile-info) {
+  height: initial;
+}
+
+.report :global(.profile-name) {
+  color: var(--web-Text-Gray-10, #222);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* web/Text-s/Regular */
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 150% */
+  letter-spacing: -0.2px;
+}
+
+.absentee {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}

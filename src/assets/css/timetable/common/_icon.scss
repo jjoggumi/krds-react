@@ -1,0 +1,161 @@
+
+@use "@/assets/css/scss/common/var" as color;
+
+  /* Icon Style */
+  @mixin iconName($name) {
+    &.ico-#{$name}::after {
+      mask-image: url("~@/assets/img/timetable/ico-#{$name}.svg");
+    }
+  }
+  @mixin iconColor($color-name, $color-value) {
+    &.ico-bg-#{$color-name},
+    &.ico-#{$color-name}::after {
+      background-color:#{$color-value} !important;
+    }
+    &.ico-line-#{$color-name} {
+      border-color: $color-value;
+      &::after {
+        background-color: $color-value !important;
+      }
+    }
+  }
+  .ico {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-color: var(--black);
+      -webkit-mask-image: url("../../img/svg/ico-none.svg");
+      mask-image: url("../../img/svg/ico-none.svg");
+  
+      /* 아이콘 색상 설정 */
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+  
+    /* 아이콘 색상 */
+    @each $name, $color in color.$colors {
+      @include iconColor($name, $color);
+    }
+    // @include iconColor(default, var(--default));
+    // @include iconColor(primary, var(--primary));
+    // @include iconColor(secondary, var(--secondary));
+    // @include iconColor(success, var(--success));
+    // @include iconColor(info, var(--info));
+    // @include iconColor(noti, var(--noti));
+    @include iconColor(gray2, var(--gray-07));
+    // @include iconColor(gray, var(--gray-08));
+    // @include iconColor(warning, var(--warning));
+    // @include iconColor(purple, var(--purple));
+    // @include iconColor(yellow, var(--yellow));
+    // @include iconColor(jungle, var(--jungle));
+    // @include iconColor(orange, var(--orange));
+    // @include iconColor(black, var(--black));
+    // @include iconColor(white, var(--white));
+    @include iconColor(disabled, var(--disabled-bg));
+  
+    $ico-sizes: (  14: (), 16: (), 18: (),  20: (),  24: (),  36: (padding: 5px,),);
+    @each $size, $options in $ico-sizes {
+      &.ico-size-#{$size} {
+        min-width: #{$size}px;
+        min-height: #{$size}px;
+        width: #{$size}px;
+        height: #{$size}px;
+
+        @each $prop, $value in $options {
+          #{$prop}: $value;
+        }
+      }
+    }
+    // 아이콘 사이즈
+    // &.ico-size-16 {
+    //   min-width: 14px;
+    //   min-height: 14px;
+    //   width: 14px;
+    //   height: 14px;
+    // }
+    // &.ico-size-18 {
+    //   min-width: 18px;
+    //   min-height: 18px;
+    //   width: 18px;
+    //   height: 18px;
+    // }
+    // &.ico-size-20 {
+    //   min-width: 20px;
+    //   min-height: 20px;
+    //   width: 20px;
+    //   height: 20px;
+    // }
+    // &.ico-size-24 {
+    //   min-width: 24px;
+    //   min-height: 24px;
+    //   width: 24px;
+    //   height: 24px;
+    // }
+    // &.ico-size-36 {
+    //   min-width: 36px;
+    //   min-height: 36px;
+    //   width: 36px;
+    //   height: 36px;
+    //   padding: 5px;
+    // }
+  
+    //아이콘 이름
+    @include iconName(exit);
+    @include iconName(arrow-left);
+    @include iconName(arrow-right);
+    @include iconName(arrow-down);
+    @include iconName(arrow-down-fill);
+    @include iconName(arrow-up);
+    @include iconName(arrow-up-fill);
+    @include iconName(calendar);
+    @include iconName(close);
+    @include iconName(close-circle-fill);
+    @include iconName(help);
+    @include iconName(info);
+    @include iconName(info-fill);
+    @include iconName(info-warning);
+    @include iconName(info-warning-fill);
+    @include iconName(mobile-check);
+    @include iconName(search);
+    @include iconName(trash);
+    @include iconName(check);   
+    @include iconName(clock);   
+    @include iconName(list);   
+    @include iconName(plus);   
+    @include iconName(download);   
+    @include iconName(upload);   
+    @include iconName(pen);   
+    @include iconName(exchange-chain);   
+    @include iconName(exchange-direct);   
+    @include iconName(email);   
+    @include iconName(hitalk);   
+
+    &.ico-help::before{
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: #fff;
+      left: 5px;
+      top: 5px;
+      border-radius: 50%;
+    }
+    
+  }

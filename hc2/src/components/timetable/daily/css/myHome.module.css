@@ -1,0 +1,196 @@
+.myHomeMain {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding-bottom: 40px;
+}
+.myHomeMain :global .h3-tit h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: var(--text-t3) !important;
+  line-height: 144%;
+  letter-spacing: -0.5px;
+}
+.myHomeMain :global .timetable-nodata.hi-nodata {
+  height: 400px;
+  border-radius: 12px;
+  border: 1px solid var(--border-neutral-strong);
+  margin: 20px 0;
+  width: 100%;
+}
+
+.lessonChangeRequest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.lessonChangeRequest :global .gray-box {
+  width: 60%;
+}
+.lessonChangeRequest :global .gray-box .select-area label {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  margin-right: 16px;
+}
+.lessonChangeRequest :global .gray-box .select-area .hi-selectbox-wrap {
+  width: 240px;
+}
+.lessonChangeRequest :global .gray-box .table-content.basic-line-table {
+  width: 20%;
+  min-width: 185px;
+  height: auto;
+  max-height: calc(100vh - 385px);
+  background-color: var(--bg-base);
+}
+.lessonChangeRequest :global .gray-box .table-content.basic-line-table tr td {
+  cursor: pointer;
+}
+.lessonChangeRequest :global .gray-box .table-content.basic-line-table tr.selected td {
+  background-color: var(--bg-secondary-subtlest);
+}
+.lessonChangeRequest :global .gray-box .table-content.time-table {
+  width: 80%;
+  height: auto;
+  max-height: calc(100vh - 385px);
+}
+.lessonChangeRequest :global .gray-box .table-content.time-table table {
+  height: 100%;
+}
+.lessonChangeRequest :global .gray-box .table-content.time-table tbody > tr > td {
+  height: 66px;
+  white-space: nowrap;
+}
+.lessonChangeRequest :global .gray-box .table-content.time-table tbody.no-data > tr > td:first-child,
+.lessonChangeRequest :global .gray-box .table-content.time-table tbody.no-data > tr > th:first-child {
+  border-right: 1px solid var(--border-neutral-base);
+}
+.lessonChangeRequest :global .gray-box .table-content.time-table tbody.no-data > tr:last-child > td:last-child {
+  border-bottom-right-radius: 0px;
+}
+.lessonChangeRequest :global .gray-box .table-content.time-table tbody.no-data > tr:first-child > td:last-child {
+  border-bottom-right-radius: 10px;
+  color: var(--text-neutral-strong);
+  border-bottom: 0;
+}
+.lessonChangeRequest :global .sidebar-content {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 16px;
+}
+.lessonChangeRequest :global .sidebar-content .panel .panel-body {
+  padding: 20px 24px;
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .divider {
+  width: 1px;
+  height: auto;
+  margin: 0 32px 0 20px;
+  background: var(--border-neutral-base);
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .calendar-wrap {
+  margin-left: -10px;
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .schedule-wrap .schedule-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-primary-base);
+  font-size: 15px;
+  font-weight: var(--font-weight-bold);
+  line-height: 160%;
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .schedule-wrap .event-item-list {
+  height: 262px;
+  overflow-y: auto;
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .schedule-wrap .event-item-list .event-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 12px 12px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2px;
+  font-size: 14px;
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .schedule-wrap .event-item-list .event-item + .event-item {
+  border-top: 1px solid var(--border-neutral-subtler);
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .schedule-wrap .event-item-list .event-item .event-label {
+  line-height: 160%;
+  font-weight: var(--font-weight-bold);
+}
+.lessonChangeRequest :global .sidebar-content .school-calendar .schedule-wrap .event-item-list .event-item p {
+  line-height: 160%;
+  color: var(--text-neutral-strong);
+}
+.lessonChangeRequest :global .sidebar-content .panel > .panel-body > .table-content {
+  max-height: calc(100vh - 368px);
+  height: calc(100vh - 368px);
+}
+.lessonChangeRequest :global .sidebar-content .panel > .panel-body > .table-content p {
+  line-height: 150%;
+}
+.lessonChangeRequest :global .sidebar-content .panel > .panel-body > .table-content::-webkit-scrollbar, .lessonChangeRequest :global .sidebar-content .panel > .panel-body > .table-content::-webkit-scrollbar-track {
+  border-left: 0;
+}
+.lessonChangeRequest :global .my-schedule .gray-box {
+  width: 100%;
+}
+
+:global(.lessonChangeRequest-option-layer) {
+  background: var(--bg-base);
+  border: 1px solid var(--border-neutral-base);
+  border-radius: 8px;
+  width: 170px;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 4px);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.my-schedule :global .datetime-picker {
+  width: 240px;
+}
+
+@container con-container (max-width: 1300px) {
+  .lessonChangeRequest {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .lessonChangeRequest :global .gray-box {
+    width: 100%;
+  }
+  .lessonChangeRequest :global .sidebar-content {
+    width: 100%;
+  }
+}/*# sourceMappingURL=myHome.module.css.map */

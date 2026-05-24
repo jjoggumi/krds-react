@@ -1,0 +1,457 @@
+﻿:global(:root) {
+  --light-gray: #BDBDBD;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-button #text {
+  user-select: none;
+}
+
+.icon-button span {
+  padding: 0px;
+  margin: 0px;
+  width: 26px;
+}
+
+.icon-button :global(.icon) {
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.rounded-button {
+  display: inline-block;
+  width: 150px;
+  height: 36px;
+  margin: 0 4px;
+  border-radius: 18px;
+  background-color: white;
+  color: #4778de;
+  border: 1px solid #4778de;
+}
+
+.rounded-button.filled {
+  background-color: #4778de;
+  color: white;
+  border: none;
+}
+
+.rounded-button.disabled {
+  background-color: #e0e0e0;
+  color: white;
+  border: none;
+  cursor: not-allowed;
+}
+
+button,
+[role='button'] {
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--ctl-md-r);
+  height: var(--ctl-md-h);
+  font-size: var(--ctl-md-f);
+  padding: 0 16px;
+  background-color: #4778de;
+  border: 1px solid #4778de;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.6;
+  font-weight: 400;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+
+  // 버튼 사이즈
+  &.btn-xxs {
+    padding: 0 8px;
+    height: var(--ctl-xxs-h);
+    border-radius: var(--ctl-xxs-r);
+    font-size: var(--ctl-xxs-f);
+  }
+  &.btn-xs {
+    padding: 0 14px;
+    height: var(--ctl-xs-h);
+    border-radius: var(--ctl-xs-r);
+    font-size: var(--ctl-xs-f);
+  }
+  &.btn-sm {
+    padding: 0 16px;
+    height: var(--ctl-sm-h);
+    border-radius: var(--ctl-sm-r);
+    font-size: var(--ctl-sm-f);
+  }
+  &.btn-md {
+    padding: 0 16px;
+    border-radius: var(--ctl-md-r);
+    height: var(--ctl-md-h);
+    font-size: var(--ctl-md-f);
+  }
+  &.btn-lg {
+    padding: 0 24px;
+    border-radius: var(--ctl-lg-r);
+    height: var(--ctl-lg-h);
+    font-size: var(--ctl-lg-f);
+  }
+  &.btn-xl {
+    padding: 0 24px;
+    border-radius: var(--ctl-xl-r);
+    height: var(--ctl-xl-h);
+    font-size: var(--ctl-xl-f);
+  }
+  &.btn-xxl {
+    padding: 0 24px;
+    border-radius: var(--ctl-xxl-r);
+    height: var(--ctl-xxl-h);
+    font-size: var(--ctl-xxl-f);
+  }
+  &.btn-block {
+    width: 100%;
+  }
+  &.btn-ico-left {
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 8px;
+    }
+  }
+  &.btn-ico-right {
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 8px;
+    }
+  }
+
+  &.btn-link {
+    background-color: transparent;
+    color: #1b1b1b;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    height: auto;
+    vertical-align: middle;
+    &:focus:not(:disabled),
+    &:active:not(:disabled),
+    &:hover:not(:disabled),
+    &:disabled {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  &.btn-underline[class*="btn-"] {
+    color: #1b1b1b;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    height: auto;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+    &:hover:not(:disabled) {
+      background-color: transparent;
+    }
+  }
+  
+  &.btn-line-link {
+    color: #1b1b1b;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    height: auto;
+    border-radius: 0;
+    &:hover:not(:disabled) {
+      background-color: transparent;
+    }
+  }
+
+  &.btn-ghost {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    height: auto;
+    color: #1b1b1b;
+    &:hover:not(:disabled) {
+      background-color: color-mix(in srgb, #000000 4%, transparent);
+    }
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: color-mix(in srgb, #000000 4%, transparent);
+    }
+    &:disabled {
+      opacity: 0.4;
+      cursor: auto;
+    }
+  }
+  &.btn-rounded {
+    border-radius: 100px;
+  }
+  &.btn-square {
+    border-radius: 0px;
+  }
+
+  //정렬
+  &.btn-sort {
+    width: 20px;
+    height: 20px;
+    transition: 0.25s ease-in-out;
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-color: #000000;
+      mask-image: url(~@/assets/img/timetable/ico-arrow-down-fill.svg);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+    }
+    &:hover::after {
+      background-color: #616161;
+    }
+    &.desc {
+      transform: rotate(180deg);
+    }
+    &.asc {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+$colors: (
+  primary: #4778de,
+  secondary: #4267b2,
+  success: #00bf40,
+  info: #4778de,
+  noti: #ff6a6a,
+  warning: #ec1f2d,
+  error: #fe5151,
+  navy: #1e3668,
+  purple: #eb6bff,
+  yellow: #ffb600,
+  jungle: #267e4e,
+  orange: #ff8737,
+  default: #616161,
+  gray: #616161,
+  light-gray: #bdbdbd,
+  white: #ffffff,
+  black: #000000,
+  light-primary: #e1e9f9,
+);
+
+@mixin btn-variant($name, $var) {
+  .btn.btn-#{$name} {
+    background-color: #{$var};
+    border: 1px solid #{$var};
+    @if $name == light-gray {
+      color: #ffffff;
+    } @else if $name == light-primary {
+      color: #4778de;
+    } @else if $name == white {
+      color: #1b1b1b;
+      &:disabled {
+        color: #ffffff;
+      }
+    } @else if $name == black {
+      // filled black의 hover가 보이지 않는 문제 해결: 약간 밝게 변하도록 처리
+      color: #ffffff;
+    } @else {
+      color: var(--#{$name}-font, #ffffff);
+    }
+    @if $name == light-gray {
+      &:hover:not(:disabled) {
+        background-color: var(--light-gray-hover, #{unquote('color-mix(in srgb, #{$var} 84%, black 16%)')});
+        border-color: var(--light-gray-hover, #{unquote('color-mix(in srgb, #{$var} 84%, black 16%)')});
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: var(--light-gray-hover, #{unquote('color-mix(in srgb, #{$var} 76%, black 24%)')});
+        border-color: var(--light-gray-hover, #{unquote('color-mix(in srgb, #{$var} 76%, black 24%)')});
+      }
+    } @else if $name == light-primary {
+      &:hover:not(:disabled) {
+        background-color: var(--light-primary-hover, #{unquote('color-mix(in srgb, #{$var} 100%, black 6%)')});
+        border-color: var(--light-primary-hover, #{unquote('color-mix(in srgb, #{$var} 100%, black 6%)')});
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: var(--light-primary-hover, #{unquote('color-mix(in srgb, #{$var} 100%, black 8%)')});
+        border-color: var(--light-primary-hover, #{unquote('color-mix(in srgb, #{$var} 100%, black 8%)')});
+      }
+    } @else if $name == black {
+      &:hover:not(:disabled) {
+        background-color: #{unquote('color-mix(in srgb, #{$var} 92%, white 8%)')};
+        border-color: #{unquote('color-mix(in srgb, #{$var} 92%, white 8%)')};
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: #{unquote('color-mix(in srgb, #{$var} 88%, white 12%)')};
+        border-color: #{unquote('color-mix(in srgb, #{$var} 88%, white 12%)')};
+      }
+    } @else if $name == white {
+      &:hover:not(:disabled) {
+        background-color: #f6f6f6;
+        border-color: #f6f6f6;
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: #f6f6f6;
+        border-color: #f6f6f6;
+      }
+    } @else {
+      &:hover:not(:disabled) {
+        background-color: var(--#{$name}-hover, #{unquote('color-mix(in srgb, #{$var} 84%, black 16%)')});
+        border-color: var(--#{$name}-hover, #{unquote('color-mix(in srgb, #{$var} 84%, black 16%)')});
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: var(--#{$name}-active, #{unquote('color-mix(in srgb, #{$var} 76%, black 24%)')});
+        border-color: var(--#{$name}-active, #{unquote('color-mix(in srgb, #{$var} 76%, black 24%)')});
+      }
+    }
+    &:disabled {
+      background-color: #d6d6d6;
+      border-color: #d6d6d6;
+      color: #ffffff;
+      cursor: auto;
+    }
+  }
+}
+
+@mixin btn-line-variant($name, $var) {
+  .btn.btn-line-#{$name} {
+    background-color: #ffffff;
+    border: 1px solid #{$var};
+    @if $name == light-primary {
+      border: 1px solid #b5c9f2;
+      color: #4267b2;
+    } @else if $name == light-gray {
+      color: #1b1b1b;
+    } @else if $name == white {
+      background-color: transparent;
+    } @else {
+      color: var(--#{$name}-font, #{$var});
+    }
+
+    // icon color is controlled by the `Icon` component via its `color` prop/classes.
+    // Avoid overriding icon color here so JS-driven classes take precedence.
+
+    @if $name == gray or $name == black {
+      &:hover:not(:disabled) {
+        background-color: #f6f6f6;
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: #f6f6f6;
+      }
+    } @else if $name == light-gray {
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, #bdbdbd 16%, transparent);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: color-mix(in srgb, #bdbdbd 24%, transparent);
+      }
+    } @else if $name == light-primary {
+      // light-primary outline 전용 hover/focus 스타일: primary-04 기반의 연한 배경과 보더
+      &:hover:not(:disabled) {
+        background-color: color-mix(in srgb, #4778de 16%, transparent);
+        border-color: color-mix(in srgb, #4778de 16%, transparent);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: color-mix(in srgb, #4778de 24%, transparent);
+        border-color: color-mix(in srgb, #4778de 24%, transparent);
+      }
+    } @else {
+      &:hover:not(:disabled) {
+        background-color: var(--#{$name}-line-hover, #{unquote('rgba(var(--#{$name}-rgb), 0.16)')});
+      }
+
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: var(--#{$name}-line-active, #{unquote('rgba(var(--#{$name}-rgb), 0.24)')});
+      }
+    }
+
+    @if $name == white {
+      &:disabled {
+        background-color: #d6d6d6;
+        border-color: #d6d6d6;
+        opacity: 0.4;
+        cursor: auto;
+      }
+    } @else {
+      &:disabled {
+        opacity: 0.4;
+        cursor: auto;
+      }
+    }
+  }
+}
+
+@mixin btn-underline-variant($name, $var) {
+  .btn.btn-underline-#{$name} {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    height: auto;
+    vertical-align: middle;
+    text-decoration: underline;
+    
+    // 색상 설정
+    @if $name == white {
+      color: #ffffff;
+    } @else if $name == light-gray {
+      color: #bdbdbd;
+    } @else if $name == light-primary {
+      color: #4778de;
+    } @else {
+      color: var(--#{$name}-font, #{$var});
+    }
+
+    &:hover:not(:disabled) {
+      background-color: transparent;
+    }
+    
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      background-color: transparent;
+    }
+
+    &:disabled {
+      color: #d6d6d6;
+      text-decoration: underline;
+      cursor: auto;
+    }
+  }
+}
+
+@each $name, $var in $colors {
+  @include btn-variant($name, $var);
+  @include btn-line-variant($name, $var);
+  @include btn-underline-variant($name, $var);
+}
+

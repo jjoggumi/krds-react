@@ -1,0 +1,71 @@
+.select-box-container {
+  position: relative;
+  width: 50px;
+  border: solid 1px #bdbdbd;
+  font-size: 9px;
+  border-radius: 4px;
+}
+
+.select-box-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  font-size: 12px;
+  color: black;
+  background-color: #ffffff !important;
+  cursor: pointer;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.select-box-container .icon {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff !important;
+  background-size: auto 100%;
+}
+
+span.select-box-label {
+  color: black;
+  margin: 0px;
+  font-size: 15px;
+}
+
+.select-box-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: solid 1px #bdbdbd;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  height: 100px;
+}
+.select-box-popup::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.select-box-popup::-webkit-scrollbar-thumb {
+  background-color: #d5dbe8;
+  background-clip: padding-box;
+  min-height:40px;
+  border: 2px solid transparent;
+  border-radius: 10px;  
+}
+.select-box-popup::-webkit-scrollbar-track { 
+  background-color: transparent; 
+}
+
+.select-box-option {
+  padding-top: 8px;
+  height: 34px;
+  font-size: 15px;
+  border-bottom: solid 1px #eeeeee;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}

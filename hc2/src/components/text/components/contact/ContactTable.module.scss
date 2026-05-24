@@ -1,0 +1,50 @@
+.contactTable{
+  .leftAlign {
+    text-align: left;
+  }
+  .leftAlign input,
+  .leftAlign .text-left {
+    text-align: left;
+  }
+  .centerAlign {
+    text-align: center;
+  }  
+}
+
+// 주소록 리스트
+.addListTable{
+  max-height: calc(var(--vh) * 100 - 273px);
+  min-height: calc(var(--vh) * 100 - 551px);  
+  :global(thead tr th:first-child) {
+    padding: 0;
+  }
+  &.tableNodata {
+    overflow: hidden !important;
+    .noData{
+      min-height: calc(var(--vh) * 100 - 606px);
+    }
+  } 
+}
+
+// 주소록 > 주소록 일괄 등록하기 사이트 모달 리스트
+.batchImportTable {
+  height: calc(var(--vh) * 100 - 483px);
+  &.tableNodata {    
+    overflow: hidden !important;
+    .noData{
+      min-height: calc(var(--vh) * 100 - 538px);
+    }
+  } 
+}
+
+// 문자 > 주소록 일괄 등록하기 사이트 모달 리스트
+.sendBatchImportTable {
+  max-height: calc(var(--vh) * 100 - 445px);
+  min-height: calc(var(--vh) * 100 - 445px);
+  &.tableNodata {  
+    overflow: hidden !important;
+    .noData{
+      min-height: calc(var(--vh) * 100 - 500px);
+    }
+  } 
+}

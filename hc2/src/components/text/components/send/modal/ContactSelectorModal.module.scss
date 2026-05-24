@@ -1,0 +1,10 @@
+.contactSelector {
+  :global(.side-modal-cont-wrap) {
+    :global(.side-modal-cont) {
+      overflow-y: hidden;
+      :global(.menuList) {  
+        height: calc(var(--vh) * 100 - 290px);
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+.side-modal {
+  position: fixed;
+  top: 65px;
+  right: 0;
+  height: calc(100% - 58px);
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  //gap: 10px;
+  transition: width 0.2s ease;
+  width: 480px;
+  min-width: 320px;
+  max-width: calc(100vw - 239px );
+  z-index: 10;
+  // overflow: hidden;
+  border-left: 1px solid var(--border-neutral-base);  
+  transition: 0.5s ease;  
+  transform: translateX(100%);
+  .side-modal-header {
+    flex: 0 0 auto;  
+    margin: 4px 40px 0; 
+    padding: 24px 0px 10px 0px; 
+    border-bottom: 1px solid var(--border-neutral-base);
+    display: flex;
+    gap:2px;
+    flex-flow: column;
+    h2 {
+      margin: 0;
+      color: var(--text-default);
+      font-family: var(--font-family-sans);
+      height: 36px;
+      font-size: var(--text-h1);
+      line-height: var(--leading-h1);
+      font-weight:  var(--font-weight-bold);
+      display: flex;
+      align-items: center;
+    }
+    .desc {
+      font-family: var(--font-family-sans);
+      font-size: var(--text-b3);
+      color: var(--text-neutral-strong);
+      font-weight:  var(--font-weight-medium);
+      line-height: var(--leading-b3);
+    }
+    .btn-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;      
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .side-modal-cont-wrap {
+    flex: 1 1 auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .side-modal-cont {
+      padding: 30px 40px 30px 40px;
+      flex: 1;
+      overflow-y: auto;      
+    }
+    &.has-footer {
+      .side-modal-cont{
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .resize-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 12px;
+    cursor: none;
+    z-index: 200;
+    &:hover .custom-cursor {
+      opacity: 1;
+    }
+  }
+  .custom-cursor-follow {
+    position: fixed;
+    pointer-events: none;
+    width: 40px;
+    height: 40px;
+    z-index: 9999;
+    user-select: none;
+    left: 0;
+    &::after{
+      content: '';
+      display: block;
+      width: 1px;
+      height: 300px;
+      background:linear-gradient(180deg, rgba(71, 120, 222, 0), rgb(71, 120, 222), rgb(71, 120, 222, 0));
+      margin-top: -130px;
+    }
+    .resize-arrow {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+  }  
+  .side-modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+    padding: 0 40px 30px 40px;
+    ::v-deep button{
+      width: 150px;
+    }
+    button {
+      width: 150px;
+    }
+  }
+
+  &.xl{
+    min-width: 1512px;
+    .side-modal-cont-inner {      
+      min-width: 1270px;
+    }
+  }
+  &.lg{
+    min-width: 1200px;        
+    .side-modal-cont-inner {
+      min-width: 1109px;        
+    }
+  }
+  &.md{
+    min-width: 560px;
+    .side-modal-cont-inner {   
+      min-width: 560px;
+    }
+  }
+  &.sm{
+    .side-modal-cont-inner {   
+      min-width: 400px;
+    }
+  }
+}
+
+@container con-container (max-width: 1140px) {
+  .side-modal{
+    &.xl{
+      min-width: 100%;
+      .side-modal-cont-inner {      
+        min-width: 1210px;
+      }
+    }
+  }
+}
+@container con-container (max-width: 1040px) {  
+  .side-modal{
+    &.lg{    
+      min-width: 100%;
+      .side-modal-cont-inner {   
+        min-width: 1060px;
+      }
+    }
+    &.md{    
+      min-width: 100%;
+      .side-modal-cont-inner {   
+        min-width: 560px;
+      }
+    }
+  }
+}
+
+
+:global(.side-modal-footer) {
+  padding-top: 10px !important;
+}
+:global(.slide-modal-enter-done) {
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: 11;
+}
+:global(.slide-modal-enter) {
+  transform: translateX(100%);
+  opacity: 1;
+}
+:global(.slide-modal-enter-active),
+:global(.slide-modal-exit-active) {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+:global(.slide-modal-exit) {
+  transform: translateX(100%);
+  opacity: 1;
+}
+:global(.slide-modal-exit-done) {
+  transform: translateX(100%);
+  opacity: 1;
+}

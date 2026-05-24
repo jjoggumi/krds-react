@@ -1,0 +1,79 @@
+.radio-box-wrap {
+  input{
+    &[type=radio]{
+      position: absolute;
+      left: -999em;
+      width: 0;
+      height: 0; 
+  
+      + label {
+        cursor: pointer;
+        position: relative;
+        font-size: 0;
+        line-height: 20px;
+        vertical-align: middle;
+        transition: all 0.25s ease-in-out;
+        line-height: normal;
+        &::before {
+          border-radius: 50px;
+        }
+        &::after {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 5px;
+          top: 5px;
+          border-radius: 10px;
+        }
+  
+        span{
+          display: inline-block;
+          position: relative;
+          color: var(--font-color);
+          font-size: 14px;
+          line-height: 20px;
+          vertical-align: middle;
+          margin: 0 0 0 6px;
+          font-weight:  var(--font-weight-regular);
+        }
+        &::before {
+          content: "";
+          display: inline-block;      
+          vertical-align: top;
+          width: 20px;
+          min-width: 20px;
+          height: 20px;
+          border: 1px solid var(--border-neutral-strong);
+          background: var(--bg-base);
+        }      
+        &::after {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          opacity: 0;
+          transition: all 0.25s ease-in-out;
+        }
+      }
+      &:checked {
+        + label {
+          &::before {border-color: var(--control-primary);}
+          &::after {background-color: var(--control-primary);opacity: 1;}
+        }
+        &:focus {
+          + label::before { box-shadow: 0 0 0 3px color-mix(in srgb, var(--action-primary-base) 32%, transparent);}
+        }
+      }
+      &:disabled {
+        + label::before {
+          background-color: var(--bg-neutral-base);
+          border-color: var(--border-neutral-base);
+        }
+        &:checked + label::after {background-color: var(--control-neutral-stronger);}
+        &:checked + label::before {
+          background-color: var(--bg-neutral-base);
+          border-color: var(--border-neutral-base);
+        }
+      }  
+    }    
+  }
+}

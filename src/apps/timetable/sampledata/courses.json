@@ -1,0 +1,880 @@
+[
+  {
+    "courseId": "c1675d7a-8b3c-48c2-a406-75c7690494d6",
+    "displayedTitle": "경제",
+    "standardCourseTitle": "경제",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "1a801d23-ce46-4810-a806-e667cae8433b",
+    "displayedTitle": "공국1",
+    "standardCourseTitle": "공국1",
+    "periodCount": 4,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "9451420d-dc48-4cfd-9c9f-72683d9f4792",
+    "displayedTitle": "공수1",
+    "standardCourseTitle": "공수1",
+    "periodCount": 4,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "b6c16a37-97fb-4f68-a6fb-e11901dcb648",
+    "displayedTitle": "공영1",
+    "standardCourseTitle": "공영1",
+    "periodCount": 4,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "9f66e924-c583-4e7d-8d26-910db791b11f",
+    "displayedTitle": "교한",
+    "standardCourseTitle": "교한",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "6b5e755f-7c88-43ab-9b08-89a97bd9bc56",
+    "displayedTitle": "국사1",
+    "standardCourseTitle": "국사1",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "9349c04a-3e16-4523-875d-3b0e86c1cf07",
+    "displayedTitle": "기하",
+    "standardCourseTitle": "기하",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "14592979-4d37-449e-a900-75dd92bb7b5d",
+    "displayedTitle": "동사",
+    "standardCourseTitle": "동사",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "ad015bc7-b88d-410c-a262-7b80e6760cdb",
+    "displayedTitle": "드로",
+    "standardCourseTitle": "드로",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "683657dc-0358-4dbd-a3b2-a52941fc5383",
+    "displayedTitle": "문매",
+    "standardCourseTitle": "문매",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "1e5bbc13-46c9-4399-91e0-97f8375a6c91",
+    "displayedTitle": "문학",
+    "standardCourseTitle": "문학",
+    "periodCount": 4,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "754050d4-0c4a-4149-953f-c6872cab5ce9",
+    "displayedTitle": "물리Ⅰ",
+    "standardCourseTitle": "물리Ⅰ",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "da34c83f-4489-4393-b626-851534f813c3",
+    "displayedTitle": "물리Ⅱ",
+    "standardCourseTitle": "물리Ⅱ",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "dd87384b-e069-4a39-80ec-12220d0f6bc8",
+    "displayedTitle": "미감",
+    "standardCourseTitle": "미감",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "4ac7c794-0a95-4536-a4f7-8b9c67a59b95",
+    "displayedTitle": "미적",
+    "standardCourseTitle": "미적",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "5fe2fd58-0498-471b-b80b-c17126f5a651",
+    "displayedTitle": "사문",
+    "standardCourseTitle": "사문",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "e886d493-f871-4a09-b555-ae9c8ae2b509",
+    "displayedTitle": "사문탐",
+    "standardCourseTitle": "사문탐",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "ba23b893-b5df-4491-bd66-e56ad5c590f4",
+    "displayedTitle": "사탐방",
+    "standardCourseTitle": "사탐방",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "0dabe135-eb22-47c9-8290-5471b1206503",
+    "displayedTitle": "생과",
+    "standardCourseTitle": "생과",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "1db8251d-f7fd-4f81-bb08-03e42c5dc9f6",
+    "displayedTitle": "생과실",
+    "standardCourseTitle": "생과실",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "f610e12d-b60b-42ab-8242-edc91681be08",
+    "displayedTitle": "생명Ⅰ",
+    "standardCourseTitle": "생명Ⅰ",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "b028cf84-97a3-40f3-8478-2ebbb312da6c",
+    "displayedTitle": "생명Ⅱ",
+    "standardCourseTitle": "생명Ⅱ",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "25b6521d-2c12-4bf4-916b-6c7a452e8a33",
+    "displayedTitle": "생윤",
+    "standardCourseTitle": "생윤",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "c1052b62-c573-4aa6-9ddf-62b4ac94e9ec",
+    "displayedTitle": "생한",
+    "standardCourseTitle": "생한",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "ab8697d3-d74b-4ab2-8276-f557c5d7cbfe",
+    "displayedTitle": "생환1",
+    "standardCourseTitle": "생환1",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "b21587aa-84b4-4f5f-92df-a265b08ad8c2",
+    "displayedTitle": "생환3",
+    "standardCourseTitle": "생환3",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "eb4187b2-88de-46c7-8045-525038a912cf",
+    "displayedTitle": "세사",
+    "standardCourseTitle": "세사",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "8bb47376-e3f1-4578-ba11-70387effdf8e",
+    "displayedTitle": "세지",
+    "standardCourseTitle": "세지",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "043b603a-543b-4fee-ad74-bda90c2210e5",
+    "displayedTitle": "수학Ⅰ",
+    "standardCourseTitle": "수학Ⅰ",
+    "periodCount": 4,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "3084cb19-e139-4bdd-911e-9ff749878503",
+    "displayedTitle": "스생",
+    "standardCourseTitle": "스생",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "e5c7fe1b-7051-4d26-83b4-41fc7c2f42fd",
+    "displayedTitle": "실험1",
+    "standardCourseTitle": "실험1",
+    "periodCount": 1,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "afcef03e-5936-452e-94de-53fa52574b3d",
+    "displayedTitle": "심영회",
+    "standardCourseTitle": "심영회",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "63c544b9-67a3-4ee0-bdde-378fd6197547",
+    "displayedTitle": "언매",
+    "standardCourseTitle": "언매",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "69b7bf8f-da7a-4db3-86d6-65f2a1374e27",
+    "displayedTitle": "영독작",
+    "standardCourseTitle": "영독작",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "cb07b2e2-460d-455f-9b82-a2993f642958",
+    "displayedTitle": "영문2",
+    "standardCourseTitle": "영문2",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "7de13a6e-29d9-4ff1-b013-562f7173f1ba",
+    "displayedTitle": "영문3",
+    "standardCourseTitle": "영문3",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "21c8e855-4a3e-493f-b0d6-2d792c07b1ff",
+    "displayedTitle": "영어Ⅰ",
+    "standardCourseTitle": "영어Ⅰ",
+    "periodCount": 4,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "eadbce31-63ba-445b-ba81-054022d21dcd",
+    "displayedTitle": "운건",
+    "standardCourseTitle": "운건",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "0b9945bf-fc8a-44ec-a840-fc7c24c29ae5",
+    "displayedTitle": "윤사",
+    "standardCourseTitle": "윤사",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "097ecebe-9ad0-4531-8fd3-b0eddf50e9a0",
+    "displayedTitle": "음감",
+    "standardCourseTitle": "음감",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "2b4904f9-e8c3-4bcc-9f17-01e226545ef7",
+    "displayedTitle": "인공기",
+    "standardCourseTitle": "인공기",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "3bc84b6d-c6aa-498f-a139-c2cc0e8c7678",
+    "displayedTitle": "인수",
+    "standardCourseTitle": "인수",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "fd75c9ed-0c85-492d-adb3-ff61c70ac981",
+    "displayedTitle": "일회Ⅰ",
+    "standardCourseTitle": "일회Ⅰ",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "15ecb96a-343b-4196-9c8f-3b803d036f83",
+    "displayedTitle": "일Ⅰ",
+    "standardCourseTitle": "일Ⅰ",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "220ee770-f73e-400b-9d5c-0dfc15237974",
+    "displayedTitle": "정법",
+    "standardCourseTitle": "정법",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "de04b90e-9646-4335-8d68-f7aaa8f039a6",
+    "displayedTitle": "정보1",
+    "standardCourseTitle": "정보1",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "350664ec-dc2e-49d0-b781-4652423cf030",
+    "displayedTitle": "정보2",
+    "standardCourseTitle": "정보2",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "54c0b735-5bae-4334-bde2-54b58b3d2f92",
+    "displayedTitle": "중문",
+    "standardCourseTitle": "중문",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "be691dcf-c6a3-4509-8f81-dda16a7e79c4",
+    "displayedTitle": "중회Ⅰ",
+    "standardCourseTitle": "중회Ⅰ",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "4f001ca6-7115-4b83-9120-e1ab28ae6322",
+    "displayedTitle": "중Ⅰ",
+    "standardCourseTitle": "중Ⅰ",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "e4ca762c-9815-43ec-9291-9e1f0f80a929",
+    "displayedTitle": "지구Ⅰ",
+    "standardCourseTitle": "지구Ⅰ",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "f898a61b-a580-46a0-8058-8d07d7f2ed4a",
+    "displayedTitle": "지구Ⅱ",
+    "standardCourseTitle": "지구Ⅱ",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "3f9129b7-2209-4ce6-9c65-bf7715751257",
+    "displayedTitle": "지식",
+    "standardCourseTitle": "지식",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "d12282a9-65be-4313-a633-144dc4e23624",
+    "displayedTitle": "지역",
+    "standardCourseTitle": "지역",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "cedbe912-4154-4a69-b7a5-149c4df71f4a",
+    "displayedTitle": "진로",
+    "standardCourseTitle": "진로",
+    "periodCount": 1,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "dbcf5a01-43ce-4eeb-9024-79d80e92c16a",
+    "displayedTitle": "창의",
+    "standardCourseTitle": "창의",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "0862b2a4-1023-4330-981e-e5a72c3a819e",
+    "displayedTitle": "창체",
+    "standardCourseTitle": "창체",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "de348e79-df74-460a-8b76-6bbb5dbd9b83",
+    "displayedTitle": "체육1",
+    "standardCourseTitle": "체육1",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "8e664c7a-4a78-45c1-b59c-d5098af578be",
+    "displayedTitle": "통과1",
+    "standardCourseTitle": "통과1",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "877b8c1f-2091-4363-a557-4dd4e54843f7",
+    "displayedTitle": "통과1",
+    "standardCourseTitle": "통과1",
+    "periodCount": 1,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "982da1cf-f8f4-494b-8991-ace1063fc5db",
+    "displayedTitle": "통사1",
+    "standardCourseTitle": "통사1",
+    "periodCount": 4,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "2c581b05-57b6-4f48-b9f4-dc0f8e70ca94",
+    "displayedTitle": "프로",
+    "standardCourseTitle": "프로",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "19136d1a-3f53-49e8-825c-1eff841c13dd",
+    "displayedTitle": "한지",
+    "standardCourseTitle": "한지",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "21ba8d4b-0d6f-4f57-a154-4fa835d461e0",
+    "displayedTitle": "현문감",
+    "standardCourseTitle": "현문감",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "07168501-faac-4520-b9d4-51a9d2b3fd1a",
+    "displayedTitle": "화작",
+    "standardCourseTitle": "화작",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "0b9d14ce-4b38-4352-9946-c566a60ac894",
+    "displayedTitle": "화학Ⅰ",
+    "standardCourseTitle": "화학Ⅰ",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "9503ba22-78ff-4518-ba2f-b9ddd4951532",
+    "displayedTitle": "화학Ⅱ",
+    "standardCourseTitle": "화학Ⅱ",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "fd3e4263-db8d-49b3-aa2f-64b3e73961d4",
+    "displayedTitle": "확통",
+    "standardCourseTitle": "확통",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 2,
+    "isUnified": false,
+    "isConcurrent": false
+  },
+  {
+    "courseId": "27f1beea-1db1-4fbd-b3db-b1573cdf3561",
+    "displayedTitle": "2A",
+    "standardCourseTitle": "2A",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "52a04580-8ccb-4414-af49-30798e3e8696",
+    "displayedTitle": "2B",
+    "standardCourseTitle": "2B",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "4046d276-3d05-466d-b8fc-21f858d05ca8",
+    "displayedTitle": "2C",
+    "standardCourseTitle": "2C",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "6fcbd407-fd3e-4421-a701-745e8fc31dd2",
+    "displayedTitle": "2D",
+    "standardCourseTitle": "2D",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "d5710fc7-4a86-491a-89e9-4403fba71d94",
+    "displayedTitle": "2E",
+    "standardCourseTitle": "2E",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "9cd911ae-7216-4416-87ef-723d6cc020ad",
+    "displayedTitle": "2F",
+    "standardCourseTitle": "2F",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "a45592c2-33b4-4e24-b7a0-71df650f12cc",
+    "displayedTitle": "3A",
+    "standardCourseTitle": "3A",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "75e1d88e-558e-49e6-823e-2da35197825a",
+    "displayedTitle": "3B",
+    "standardCourseTitle": "3B",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "506e3c9d-f470-4fe3-863f-f9d70fe27d38",
+    "displayedTitle": "3C",
+    "standardCourseTitle": "3C",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "b238f13b-cb29-48d7-853c-539e76c9e017",
+    "displayedTitle": "3D",
+    "standardCourseTitle": "3D",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "3fca596f-6f2e-4513-9dcd-9a584b6b48fd",
+    "displayedTitle": "3E",
+    "standardCourseTitle": "3E",
+    "periodCount": 2,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "b05c8654-c773-43b5-aca3-373ac4f638c9",
+    "displayedTitle": "3F",
+    "standardCourseTitle": "3F",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "3b29126f-c1f5-4b9f-ad3b-b532a7d7d1f4",
+    "displayedTitle": "3G",
+    "standardCourseTitle": "3G",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "d1912cc9-9212-4b59-95de-e6ebce07f80e",
+    "displayedTitle": "3H",
+    "standardCourseTitle": "3H",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "c3bd5a1b-5622-47f7-ba88-37137d44e4db",
+    "displayedTitle": "3I",
+    "standardCourseTitle": "3I",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "21c18cfa-a2a5-4ada-b055-b8b090061fb6",
+    "displayedTitle": "3J",
+    "standardCourseTitle": "3J",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "e8abe756-76b2-4738-b5cd-20904a50041f",
+    "displayedTitle": "3K",
+    "standardCourseTitle": "3K",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  },
+  {
+    "courseId": "eafd9961-18c8-48af-90ce-c14508ae1c14",
+    "displayedTitle": "3L",
+    "standardCourseTitle": "3L",
+    "periodCount": 3,
+    "isDoubleTeacher": false,
+    "countTeacher": 1,
+    "isUnified": false,
+    "isConcurrent": true,
+    "consecutivePeriod": ""
+  }
+]

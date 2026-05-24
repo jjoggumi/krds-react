@@ -1,0 +1,292 @@
+@use "@/assets/css/scss/common/var" as *;
+
+@mixin iconName($name) {
+	&.ico-#{$name}::after {
+		-webkit-mask-image: url("../../img/svg/ico-#{$name}.svg");
+		mask-image: url("../../img/svg/ico-#{$name}.svg");
+	}
+}
+@mixin iconColor($color-name, $color-value) {
+	&.ico-bg-#{"#{$color-name}"},
+	&.ico-#{"#{$color-name}"}::after {
+		background-color:#{$color-value} !important;
+	}
+	&.ico-line-#{"#{$color-name}"} {
+		border-color: $color-value;
+		&::after {
+			background-color: $color-value !important;
+		}
+	}
+}
+/* Icon Style */
+.hi-ico {
+	display: inline-flex;
+	width: 24px;
+	height: 24px;
+	min-width: 24px;
+	min-height: 24px;
+	border: 2px solid transparent;
+	padding: 3px;
+	box-sizing: content-box;
+	vertical-align: middle;
+	&::after {
+		display: inline-block;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: var(--black);
+		-webkit-mask-image: url("../../img/svg/ico-none.svg");
+		mask-image: url("../../img/svg/ico-none.svg");
+
+		/* 아이콘 색상 설정 */
+		mask-repeat: no-repeat;
+		mask-position: center;
+		mask-size: contain;
+	}
+
+	/* 아이콘 색상 */
+	@each $name, $color in $colors {
+		@include iconColor($name, $color);
+	}
+	//@include iconColor(default, var(--default));
+	@include iconColor(gray2, var(--gray-07));
+	@include iconColor(disabled, var(--disabled-bg));
+	// @include iconColor(gray, var(--gray-08));
+	@include iconColor(transparent, transparent);
+
+	// 아이콘 사이즈
+	$ico-sizes: (  10: (), 14: (),  16: (), 18: (), 20: (),  24: (), 28: (), 32: (),  
+	36: (padding: 5px,),  
+	50: (border-width: 3px, padding: 10px,), 
+	100: (border-width: 5px,padding: 15px,),
+	);
+	@each $size, $options in $ico-sizes {
+		&.ico-size-#{$size} {
+			min-width: #{$size}px;
+			min-height: #{$size}px;
+			width: #{$size}px;
+			height: #{$size}px;
+
+			@each $prop, $value in $options {
+				#{$prop}: $value;
+			}
+		}
+	}
+	// &.ico-size-10 {
+	// 	min-width: 10px;
+	// 	min-height: 10px;
+	// 	width: 10px;
+	// 	height: 10px;
+	// }
+	// &.ico-size-14 {
+	// 	min-width: 14px;
+	// 	min-height: 14px;
+	// 	width: 14px;
+	// 	height: 14px;
+	// }
+	// &.ico-size-16 {
+	// 	min-width: 16px;
+	// 	min-height: 16px;
+	// 	width: 16px;
+	// 	height: 16px;
+	// }
+	// &.ico-size-18 {
+	// 	min-width: 18px;
+	// 	min-height: 18px;
+	// 	width: 18px;
+	// 	height: 18px;
+	// }
+	// &.ico-size-20 {
+	// 	min-width: 20px;
+	// 	min-height: 20px;
+	// 	width: 20px;
+	// 	height: 20px;
+	// }
+	// &.ico-size-24 {
+	// 	min-width: 24px;
+	// 	min-height: 24px;
+	// 	width: 24px;
+	// 	height: 24px;
+	// }
+	// &.ico-size-28 {
+	// 	min-width: 28px;
+	// 	min-height: 28px;
+	// 	width: 28px;
+	// 	height: 28px;
+	// }
+	// &.ico-size-32 {
+	// 	min-width: 32px;
+	// 	min-height: 32px;
+	// 	width: 32px;
+	// 	height: 32px;
+	// }
+	// &.ico-size-36 {
+	// 	min-width: 36px;
+	// 	min-height: 36px;
+	// 	width: 36px;
+	// 	height: 36px;
+	// 	padding: 5px;
+	// }
+	// &.ico-size-50 {
+	// 	min-width: 50px;
+	// 	min-height: 50px;
+	// 	width: 50px;
+	// 	height: 50px;
+	// 	border-width: 3px;
+	// 	padding: 10px;
+	// }
+	// &.ico-size-100 {
+	// 	min-width: 100px;
+	// 	min-height: 100px;
+	// 	width: 100px;
+	// 	height: 100px;
+	// 	border-width: 5px;
+	// 	padding: 15px;
+	// }
+
+	&.ico-rounded {
+		border-radius: 100px;
+	}
+
+	&.ico-bitrounded {
+		border-radius: 4px;
+	}
+
+	//아이콘 이름
+	@include iconName(none);
+	@include iconName(list-move);
+	@include iconName(list2);
+	@include iconName(list2-lock);
+	@include iconName(user);
+	@include iconName(user2);
+	@include iconName(user3);
+	@include iconName(plus);
+	@include iconName(plus2);
+	@include iconName(plus3);
+	@include iconName(minus);
+	@include iconName(minus2);
+	@include iconName(minus3);
+	@include iconName(chart);
+	@include iconName(close-circle-fill);
+	@include iconName(speech-bubble);
+	@include iconName(volume);
+	@include iconName(secret);
+	@include iconName(sort-up);
+	@include iconName(sort-down);
+	@include iconName(printer);
+	@include iconName(printer-thin);
+	@include iconName(pointlist);
+	@include iconName(photo-fill);
+	@include iconName(file-upload);
+	@include iconName(file-down);
+	@include iconName(time-fill);
+	@include iconName(time);
+	@include iconName(refresh);
+	@include iconName(refresh2);
+	@include iconName(expand);
+	@include iconName(shrink);
+	@include iconName(drawnup);
+	@include iconName(close);
+	@include iconName(close2);
+	@include iconName(close3);
+	@include iconName(clip);
+	@include iconName(delete);
+	@include iconName(delete2);
+	@include iconName(star-fill);
+	@include iconName(star);
+	@include iconName(search);
+	@include iconName(search-thin);
+	@include iconName(next);
+	@include iconName(prev);
+	@include iconName(med-fill);
+	@include iconName(pen);
+	@include iconName(pen2);
+	@include iconName(pen3);
+	@include iconName(warning-circle);
+	@include iconName(warning-circle-fill);
+	@include iconName(block);
+	@include iconName(hitalk-thin);
+	@include iconName(hitalk);
+	@include iconName(hitalkshare);
+	@include iconName(noti-thin);
+	@include iconName(noti-thin-off);
+	@include iconName(talk-thin);
+	@include iconName(time-thin);
+	@include iconName(user2);
+	@include iconName(calendar);
+	@include iconName(calendar2);
+	@include iconName(calendar3);
+	@include iconName(no-chat-thin);
+	@include iconName(setting-fill);
+	@include iconName(setting);
+	@include iconName(filter);
+	@include iconName(filter-thin);
+	@include iconName(photo);
+	@include iconName(crown);
+	@include iconName(crown-fill);
+	@include iconName(group);
+	@include iconName(group-thin);
+	@include iconName(group-fill);
+	@include iconName(noti2);
+	@include iconName(sound);
+	@include iconName(sound-off);
+	@include iconName(filter2);
+	@include iconName(document-pdf);
+	@include iconName(check);
+	@include iconName(qr-code);
+	@include iconName(unlink);
+	@include iconName(check);
+	@include iconName(member-mng-fill);
+	@include iconName(school-mng-fill);
+	@include iconName(admin-mng-fill);
+	@include iconName(setting2-fill);
+	@include iconName(more-fill);
+	@include iconName(contact-fill);
+	@include iconName(calendar-fill);
+	@include iconName(up);
+	@include iconName(down);
+	@include iconName(down-circle);
+	@include iconName(down-circle-fill);
+	@include iconName(menu-collapse);
+	@include iconName(menu-expand);
+	@include iconName(talk);
+	@include iconName(board);
+	@include iconName(bell);
+	@include iconName(my);
+	@include iconName(smile);
+	@include iconName(logout);
+	@include iconName(input-search);
+	@include iconName(tel);
+	@include iconName(external-link);
+}
+i.ico-listmove {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url("../../img/icon/ico_listmove.svg");
+}
+i.close-btn01 {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url("../../img/icon/icon_mnclose_24.svg");
+}
+.icon-unlock-fill {
+	display: inline-block;
+	background: url("../../img/icon/ic_unlock_fill_20.svg");
+	width: 20px;
+	height: 20px;
+}
+i.ico-file-pdf {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../img/icon/ico-file-pdf.svg") center center no-repeat;
+  vertical-align: middle;
+  padding: 0;
+  margin-left: -2px;
+  margin-top: -1px;
+}

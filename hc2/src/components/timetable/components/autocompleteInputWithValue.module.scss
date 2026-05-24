@@ -1,0 +1,56 @@
+.autocompleteWrap {
+  height: 100%;
+  position: relative;
+
+  .inputWrap {
+    border: 0;
+  }
+
+  .autocompleteList {
+    top: calc(100% + 4px);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background: var(--bg-base);
+    border: 1px solid var(--border-neutral-subtle);
+    z-index: 100;
+  }
+}
+
+.item {
+  padding: 8px 10px;
+  &.clickable {
+    cursor: pointer;
+  }
+}
+
+.disabledClass {
+  color: var(--text-neutral-subtle);
+  cursor: not-allowed;
+}
+
+.bg-bg-base {
+  background-color: var(--bg-base) !important;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.textBoxWrap {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
+  .textBox {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .delBtn {
+    margin-left: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}

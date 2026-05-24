@@ -1,0 +1,686 @@
+[
+  {
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "d84e1a69-29cc-460b-b07b-62899740bc3b",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "fd991b18-de9d-49f0-b684-01485e1c7569",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "116a22d4-c369-42c6-abec-ab2c989b5f30",
+    "courseId": "59df5add-eac7-4961-9637-2b16ddb2ce66",
+    "coursePeriod": 3,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "coursePeriod": 1,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "ee3a49df-1d07-4844-8fbf-4f452cac0ee3",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "2f1dbb67-c892-4859-aefa-d2da1e0d5c12",
+    "courseId": "61f33769-9f19-4916-aaf4-f2b0370ae774",
+    "coursePeriod": 2,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "02cd25e2-6c8c-4164-b436-29aa777d799e",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "9c711b64-9ca6-4674-b579-f6af992b75e2",
+    "courseId": "58a93dd1-08e4-4a9d-a7cd-a7d7f578c2c5",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "06b12c27-7062-48db-9521-068fa03eb50f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "13b9c52d-f1cd-48e6-89c0-5055ec2a7179",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "ff3fdede-9f0f-4bb0-b132-771d3e11dff8",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "c90b4940-5c03-4a47-bb1d-bb59254d7156",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "f2b5ebd2-85d4-4f76-802f-dc53740869cd",
+    "courseId": "9813bf28-36e1-4b22-8c57-4c7cd0cb164f",
+    "coursePeriod": 3,
+    "sortNo": 5
+  },
+  {
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "170113a8-010c-47e7-8943-1f98738d4f1a",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "f19beffa-1ded-48c3-b5a3-2bb6d4746d7a",
+    "courseId": "51319b23-b625-484c-b810-c2814c570e6b",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "b2faf0c0-29e9-4e41-a1ef-06a2df3e4e4c",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "4416be38-646f-4cd6-9ca2-4abdbc927a4a",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "e9448317-0bd3-4619-8c94-47f28c44b9de",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "6f86e7ef-bacc-430a-acd0-bc9d7e63ff87",
+    "courseId": "1a084163-73f2-46be-8d8b-4d9204cc58ce",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "20edefad-76dc-4e14-8dd8-1f8f427bca91",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "df274f80-328c-4093-a10b-09d83ec82c68",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "160c9766-47fe-4b5d-b809-746455ec2c60",
+    "courseId": "f3a7c3dc-3bed-4043-b8d2-c15733a924f3",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "d4d07f56-79f7-4460-8dc8-796d7465675a",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "1bef778c-f245-406a-81f7-546ae6752af3",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "b0b2b9a8-dcd2-4be0-a94f-d5c2bc564820",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "95a3b8fa-5d2d-4071-9dd7-c1d373c5c747",
+    "courseId": "8ad563f4-8a31-4267-895c-9d7093fcddbb",
+    "coursePeriod": 3,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "e739840b-29a5-4eef-a6c4-2f51f1ad242b",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "e739840b-29a5-4eef-a6c4-2f51f1ad242b",
+    "courseId": "5a0b96c3-1d78-4759-9a54-6a3943b2a93e",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "66801f0a-4af7-4630-b1ec-e185c46b373f",
+    "courseId": "170113a8-010c-47e7-8943-1f98738d4f1a",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "f09a5162-d31e-43df-a9d6-dc372111aaea",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "2aecd4a7-36d6-4f73-b317-46135ad7c8fd",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "courseId": "902f0d44-f9b0-4c0b-9321-95ee4e2bebd4",
+    "coursePeriod": 2,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "b916c3ab-4e7d-4569-b7a7-a2ecb944ccbb",
+    "courseId": "78e229ad-35b5-402b-9396-b4d0db005477",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "6d1a8619-79cb-493e-b664-0f393c1aa970",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "999dde69-4a2a-457d-ba57-9b7db3754d30",
+    "coursePeriod": 1,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "courseId": "c68ffc0f-5e02-4385-a463-b304503e8c1c",
+    "coursePeriod": 2,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "cbabf7da-4595-428e-b81e-f4711eb542a8",
+    "courseId": "31dfc5d2-4df3-44c9-941e-4a81cf20e4b8",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "4de82a00-36f6-47f1-946b-d51b4c316355",
+    "courseId": "78e229ad-35b5-402b-9396-b4d0db005477",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "1ff08d72-63ba-4657-9909-ab9eb9f185a5",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "66367f5c-42fd-435d-b9cc-15be79354ec7",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "coursePeriod": 1,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "8f3aa8f7-2ad7-4414-bc07-e78c71c6bf47",
+    "courseId": "5a1692c9-e7f6-4fef-970a-38f2a9ccd72e",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "8f3aa8f7-2ad7-4414-bc07-e78c71c6bf47",
+    "courseId": "5a0b96c3-1d78-4759-9a54-6a3943b2a93e",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "cd0caf03-60c2-435f-acc8-dbd23e87e769",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "cd0caf03-60c2-435f-acc8-dbd23e87e769",
+    "courseId": "9777c6ea-5245-4195-8584-e5b90c14a7ac",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "bb168756-1a64-4f12-a1a2-f2e176752383",
+    "courseId": "16797531-c190-450f-9ec6-b668d5d39b47",
+    "coursePeriod": 1,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "346783e9-cec8-48ab-a483-79966bfc81f3",
+    "courseId": "c4d99662-b254-4358-b232-500d5811716f",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "22af131f-fff3-4d2c-ba9e-64292e10af38",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "1dd4a852-f812-4748-8e59-e7e20691211f",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "7994e762-de8f-4b23-ae6d-c949bb7f92db",
+    "courseId": "58e043dd-1354-4e50-a35e-9bd87baf6658",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "3a96e17c-3095-455c-ace3-2c0d1feca8e4",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "3a96e17c-3095-455c-ace3-2c0d1feca8e4",
+    "courseId": "fd36301f-c8ae-4a1d-8ac9-1a3fc59ec7d5",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "coursePeriod": 1,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "6d64ef64-115f-4a7f-b3f8-4b46f8cf4c1b",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "129ed495-4f0a-4070-bcd7-7807b9febe2b",
+    "courseId": "85413f4a-bc6e-4f34-89bd-49811a3d2d29",
+    "coursePeriod": 3,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "fdcf1260-de34-4292-82dd-c72408a77b80",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "0daff310-f3bb-45a4-ad71-dbb61f488939",
+    "courseId": "9813bf28-36e1-4b22-8c57-4c7cd0cb164f",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "7ea6030e-f2f3-44a8-9bd5-40f121f25e44",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "d4d07f56-79f7-4460-8dc8-796d7465675a",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "1bef778c-f245-406a-81f7-546ae6752af3",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "b0b2b9a8-dcd2-4be0-a94f-d5c2bc564820",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "f92b6edb-0914-419d-888d-14c4f485a549",
+    "coursePeriod": 3,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "4d5d8bdf-fdaf-4ce5-9393-4f17d7f78d07",
+    "courseId": "7657f135-7331-462a-8b5a-c3ad5afd2dee",
+    "coursePeriod": 3,
+    "sortNo": 5
+  },
+  {
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "670cac28-8337-46d1-b426-2767139f32ee",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "ba062514-5e7d-4342-b5d0-8dfa1af8eaca",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "75b11e5e-6261-473c-aca1-d9ec40dbb634",
+    "courseId": "f145fa32-431f-4795-8d33-2d7071f980d1",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "f2b68f33-f9ca-4bae-aaa0-0b1eed92a670",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "73b759fe-5a65-425f-8fac-5ecbb3eabdb9",
+    "courseId": "c125b182-581d-490a-bd01-b1ac89317803",
+    "coursePeriod": 4,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "5c95b594-e5b7-4e68-a4dd-9c8ce9a0b6f2",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "992b64be-d3e5-4fa2-ba15-870b598784d3",
+    "courseId": "8c37a38a-a138-4c45-8f9a-a6a4f4c23a25",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "a108e3a2-6944-4b77-8c80-894dd98f53f8",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "cc2b7dbc-d6ac-4068-b09c-879bbc312b4a",
+    "courseId": "d0f0e7f7-cd85-4cdd-9ca3-0d33f8750a0e",
+    "coursePeriod": 1,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "ddcc7a69-b110-4746-8cc9-b1575b18ed23",
+    "coursePeriod": 1,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "f9ef75a0-6597-459a-a5ef-d1c687885ab1",
+    "courseId": "1ef4c15e-fbbf-44f4-b944-378feb0d2bd6",
+    "coursePeriod": 4,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "8293ea17-ef70-4399-84ab-712ef0457653",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "b5b4caba-50fc-4675-8d92-03ee9249afba",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "ceb48b5a-12b9-46bf-ad83-1e4ea0ecb909",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "34e5c94f-146b-4ec0-934d-50b6e1807066",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "3c4e3c4d-29bf-4136-8ae3-9850d09d02df",
+    "coursePeriod": 2,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "0036b7aa-21c6-4028-adf1-e2be902db20d",
+    "courseId": "979aa689-ea7b-4c51-ba9b-873b4b78d8b1",
+    "coursePeriod": 1,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "aaa5edd5-fdc3-44de-b4db-c61332b2ad84",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "ca4b7b31-d817-4f99-bd05-ae06f4c5f475",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "ee3d911f-953e-4458-8d56-3cee6af3562d",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "courseId": "e684a249-56a1-4fa0-ae8e-f78085ff3025",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "courseId": "276ab148-ffe9-4f2d-9b45-901179e3c321",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "bcb038fa-81e4-42de-b195-db7bebc992d3",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "courseId": "e1d9b171-93a6-4909-b4c6-bf32925f5c89",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "1ffb3162-75d6-4a84-a164-d28750e15098",
+    "courseId": "2b52456f-77f6-4f5f-9051-18edee6797cc",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "4372861a-bcb0-4c68-a4d0-dfa6d3538ae3",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "f3a7c3dc-3bed-4043-b8d2-c15733a924f3",
+    "coursePeriod": 3,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "f85d8f48-753b-4bf5-a4f2-1d1f8a6174bb",
+    "courseId": "dea58cc4-6831-456b-b50a-eae09c455648",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "d1ca0147-598d-4410-9d67-445d7162199a",
+    "coursePeriod": 3,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "b4b61db4-aceb-4859-aa66-1fb9a2f5169a",
+    "coursePeriod": 2,
+    "sortNo": 2
+  },
+  {
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "bfe9bce3-5d82-493e-a41d-9d0e12cfe3cf",
+    "coursePeriod": 3,
+    "sortNo": 3
+  },
+  {
+    "teacherId": "9bccefd5-999b-4d11-ae07-e2fb5763362d",
+    "courseId": "5e72114f-e25a-4e67-a3de-24f33a938be2",
+    "coursePeriod": 1,
+    "sortNo": 4
+  },
+  {
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "8323ecad-9033-4669-bcb9-b144d7d64624",
+    "coursePeriod": 4,
+    "sortNo": 1
+  },
+  {
+    "teacherId": "f1f0521a-55b8-4749-ad12-1f3231ba9625",
+    "courseId": "16797531-c190-450f-9ec6-b668d5d39b47",
+    "coursePeriod": 1,
+    "sortNo": 2
+  }
+]

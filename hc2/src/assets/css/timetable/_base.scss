@@ -1,0 +1,198 @@
+﻿//base에 모든 클래스는 tailwind와 같음
+.timetable-root{
+  // .text-primary {
+  //   color: var(--primary) !important;
+  // }
+  // .text-warning {
+  //   color: var(--warning) !important;
+  // }
+  // .text-disabled {
+  //   color: var(--gray-08) !important;
+  // }
+  // .text-desc {
+  //   color: var(--gray-09) !important;
+  // }
+  
+  // Spacing scale (Tailwind 유사) : 숫자 → px 값
+  $spacing-scale: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    7: 28px,
+    8: 32px,
+    9: 36px,
+    10: 40px,
+    11: 44px,
+    12: 48px,
+    13: 52px,
+    14: 56px,
+    15: 60px,
+  );
+  
+  // 단일 방향 유틸 생성 (예: mt-1, pr-4)
+  @mixin generate-dir-spacing($short, $css-prop) {
+    @each $key, $val in $spacing-scale {
+      .#{$short}-#{$key} {
+        #{$css-prop}: $val !important;
+      }
+    }
+  }
+  
+  // 2방향(x,y) 유틸 생성 (예: mx-2 → margin-left/right)
+  @mixin generate-axis-spacing($short, $css-prop-1, $css-prop-2) {
+    @each $key, $val in $spacing-scale {
+      .#{$short}-#{$key} {
+        #{$css-prop-1}: $val !important;
+        #{$css-prop-2}: $val !important;
+      }
+    }
+  }
+  
+  // 전체(p 혹은 m) 유틸 생성 (예: p-4 → padding:16px)
+  @mixin generate-all-spacing($short, $css-prop) {
+    @each $key, $val in $spacing-scale {
+      .#{$short}-#{$key} {
+        #{$css-prop}: $val !important;
+      }
+    }
+  }
+  
+  // Margin Utilities
+  @include generate-all-spacing(m, margin);
+  @include generate-dir-spacing(mt, margin-top);
+  @include generate-dir-spacing(mr, margin-right);
+  @include generate-dir-spacing(mb, margin-bottom);
+  @include generate-dir-spacing(ml, margin-left);
+  @include generate-axis-spacing(mx, margin-left, margin-right);
+  @include generate-axis-spacing(my, margin-top, margin-bottom);
+  .ml-auto {
+    margin-left: auto !important;
+  }
+  .mr-auto {
+    margin-right: auto !important;
+  }
+  .mt-auto {
+    margin-top: auto !important;
+  }
+  .mb-auto {
+    margin-bottom: auto !important;
+  }
+  .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .m-auto {
+    margin: auto !important;
+  }
+  
+  // Padding Utilities
+  @include generate-all-spacing(p, padding);
+  @include generate-dir-spacing(pt, padding-top);
+  @include generate-dir-spacing(pr, padding-right);
+  @include generate-dir-spacing(pb, padding-bottom);
+  @include generate-dir-spacing(pl, padding-left);
+  @include generate-axis-spacing(px, padding-left, padding-right);
+  @include generate-axis-spacing(py, padding-top, padding-bottom);
+  
+  @include generate-all-spacing(gap, gap); // .gap-0 ~ .gap-12
+  @include generate-dir-spacing(gap-x, column-gap); // .gap-x-0 ~ .gap-x-12
+  @include generate-dir-spacing(gap-y, row-gap); // .gap-y-0 ~ .gap-y-12
+  
+  /* width */
+  .w-1 {
+    width: 4px !important;
+  }
+  .w-10 {
+    width: 40px !important;
+  }
+  .w-18 {
+    width: 72px !important;
+  }
+  .w-full {
+    width: 100% !important;
+  }
+  .w-auto {
+    width: auto !important;
+  }
+  
+  /* text-align */
+  .text-center {
+    text-align: center !important;
+  }
+  .text-left {
+    text-align: left !important;
+  }
+  
+  /* justify-content */
+  .justify-between {
+    justify-content: space-between !important;
+  }
+  .justify-center {
+    justify-content: center !important;
+  }
+  .justify-end {
+    justify-content: flex-end !important;
+  }
+  .justify-start {
+    justify-content: flex-start !important;
+  }
+  
+  /* align-items */
+  .items-start {
+    align-items: flex-start !important;
+  }
+  .items-center {
+    align-items: center !important;
+  }
+  
+  /* flex wrap / grow / direction */
+  .flex-wrap {
+    flex-wrap: wrap !important;
+  }
+  
+  .flex-col {
+    flex-direction: column !important;
+  }
+  .flex-row {
+    flex-direction: row !important;
+  }
+  
+  /* cursor */
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
+  .cursor-default {
+    cursor: default !important;
+  }
+  .cursor-auto {
+    cursor: auto !important;
+  }
+  
+  /* text overflow (Tailwind 호환 유틸) */
+  .truncate {
+    /* 한 줄 말줄임 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  
+  /* 여러 줄 말줄임: line-clamp-n */
+  @mixin line-clamp($lines) {
+    /* 표준(지원 브라우저에서만 반영) */
+    line-clamp: $lines;
+    /* WebKit 방식 */
+    display: -webkit-box !important;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden !important;
+  }
+  @for $i from 1 through 10 {
+    .line-clamp-#{$i} {
+      @include line-clamp($i);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.radioGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.radioItem label {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #1b1b1b;
+  cursor: pointer;
+}
+
+.radioBtn {
+  display: inline-block;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  border: solid 1px #e0e0e0;
+  cursor: pointer;
+}
+
+.radioBtn.selected {
+  border: solid 6px #4778de;
+  color: white;
+}
+
+.radioBtn.disabled {
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+}

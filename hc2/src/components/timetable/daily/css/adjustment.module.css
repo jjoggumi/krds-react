@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* 결, 보강 */
+.course-supplement .selected-row td {
+  background-color: var(--bg-secondary-subtlest) !important;
+}
+.course-supplement .panel-tit .tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--font-color);
+  font-weight: var(--font-weight-bold);
+  line-height: 150%;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--ctl-xl-f);
+}/*# sourceMappingURL=adjustment.module.css.map */

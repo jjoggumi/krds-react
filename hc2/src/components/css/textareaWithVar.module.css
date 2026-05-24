@@ -1,0 +1,104 @@
+.textareaWith_wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background: var(--bg-base);
+  border: 1px solid var(--border-neutral-base);
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.textareaWith_wrapper.focused {
+  border-color: var(--control-secondary-subtle);
+}
+.textareaWith_wrapper .mainArea {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.textareaWith_wrapper .mainArea .overlayText,
+.textareaWith_wrapper .mainArea .textarea_field {
+  width: 100%;
+  padding: 16px;
+  font-size: var(--text-b2);
+  line-height: var(--leading-b2);
+  font-family: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+  box-sizing: border-box;
+}
+.textareaWith_wrapper .mainArea .overlayText {
+  position: relative;
+  z-index: 1;
+  color: var(--text-default);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.textareaWith_wrapper .mainArea .overlayText .variableTag {
+  display: inline-block;
+  color: var(--text-primary-base);
+  background-color: var(--bg-primary-subtlest);
+  border-radius: 2px;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+.textareaWith_wrapper .mainArea .textarea_field {
+  position: relative;
+  z-index: 2;
+  display: block;
+  color: transparent;
+  caret-color: var(--text-default);
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-transition: none;
+  transition: none;
+}
+.textareaWith_wrapper .footerBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 16px 16px 16px;
+  background: inherit;
+}
+.textareaWith_wrapper .footerBar .byte_footer {
+  font-size: var(--text-b3);
+}
+.textareaWith_wrapper .footerBar .byte_footer .current {
+  color: var(--text-primary-base);
+}
+.textareaWith_wrapper .footerBar .byte_footer .total {
+  color: var(--text-neutral-stronger);
+}
+.textareaWith_wrapper .footerBar .etcArea {
+  width: 100%;
+}/*# sourceMappingURL=textareaWithVar.module.css.map */

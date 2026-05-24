@@ -1,0 +1,34 @@
+.classScheduleChangeSideModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.classScheduleChangeSideModal [class*=form-group]:global(.form-group-inline) + :global(.form-group-inline) {
+  margin-top: 36px;
+}
+.classScheduleChangeSideModal :global .tab-nav > button {
+  width: 50%;
+  height: 48px;
+  background-color: var(--bg-base);
+  border: 1px solid var(--border-neutral-strong);
+  color: var(--text-neutral-strong);
+  border: 1px solid var(--border-neutral-strong);
+  font-size: var(--font-text-b3);
+  font-weight: var(--font-regular);
+  border-radius: 12px 12px 0 0;
+}
+.classScheduleChangeSideModal :global .tab-nav > button.active {
+  border: 1px solid var(--ocean-950);
+  color: var(--text-base);
+  background-color: var(--ocean-950);
+  font-weight: var(--font-medium);
+}
+.classScheduleChangeSideModal :global .tab-nav + .tab-con {
+  border: 1px solid var(--border-neutral-strong);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+}/*# sourceMappingURL=changeClassScheduleModal.module.css.map */

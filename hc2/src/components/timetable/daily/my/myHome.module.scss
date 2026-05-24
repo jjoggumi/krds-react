@@ -1,0 +1,200 @@
+﻿.myHomeMain{
+  flex: 1;
+  width: 100%;
+  padding-bottom: 40px;
+
+  :global{
+    .h3-tit{
+      h3{
+        display: flex;
+        align-items: center;
+        font-size: var(--text-t3) !important;
+        line-height: 144%;
+        letter-spacing: -0.5px;
+      }
+    }  
+    .timetable-nodata.hi-nodata {
+      height: 400px;
+      border-radius: 12px;
+      border: 1px solid var(--border-neutral-strong);
+      margin: 20px 0;
+      width: 100%;
+    }
+  }
+}
+.lessonChangeRequest{
+  display: flex;
+  gap: 16px;
+  :global{
+    // .timetable-nodata.hi-nodata {
+    //   height: 400px;
+    //   border-radius: 12px;
+    //   border: 1px solid var(--border-neutral-strong);
+    //   margin: 20px 0;
+    //   width: 100%;
+    // }
+    .gray-box{
+      width: 60%; 
+      .select-area{
+        label{
+          font-size: 14px;
+          font-weight:  var(--font-weight-bold);
+          margin-right: 16px;          
+        }
+        .hi-selectbox-wrap {
+          width:240px;
+        }
+      }
+      .table-content.basic-line-table{
+        width: 20%;
+        min-width: 185px;
+        height: auto;
+        max-height: calc(100vh - 385px);
+        background-color: var(--bg-base);
+        tr{
+          td{
+            cursor: pointer;
+          }
+        }
+        tr.selected{
+          td{
+            background-color: var(--bg-secondary-subtlest);
+          }
+        }
+      }
+      .table-content.time-table{
+        width: 80%;
+        height: auto;
+        max-height: calc(100vh - 385px); 
+        table{            
+          height: 100%;
+        }
+        tbody>tr>td{
+          height:66px;
+        }
+        // tbody>tr>td button{
+        //   cursor: auto;
+        // }
+        tbody.no-data{
+          >tr>td:first-child,
+          >tr>th:first-child{
+            border-right: 1px solid var(--border-neutral-base);
+          }
+          >tr:last-child>td:last-child{
+            border-bottom-right-radius: 0px;
+          }
+          >tr:first-child>td:last-child{
+            border-bottom-right-radius: 10px;
+            color:var(--text-neutral-strong);
+            border-bottom: 0;
+          }
+        }        
+      }
+    }
+    .sidebar-content{
+      width: 40%;
+      display: flex;
+      //display: none;
+      flex-flow: column;
+      gap: 16px;
+      .panel .panel-body{
+        padding: 20px 24px;
+      }
+      .school-calendar{
+        display: flex;
+        .divider{width: 1px; height:auto;margin:0 32px 0 20px;background: var(--border-neutral-base);}
+        .calendar-wrap{    margin-left: -10px;}
+        .schedule-wrap{
+          .schedule-day{
+            display: flex;
+            align-items: center;
+            color:var(--text-primary-base);
+            font-size: 15px;
+            font-weight:  var(--font-weight-bold);
+            line-height: 160%;
+          }
+          .event-item-list{
+            height: 262px; 
+            overflow-y: auto;
+            .event-item{
+              display: flex;
+              padding: 12px 12px 12px 0;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              gap: 2px;
+              font-size: 14px;
+              & + .event-item{
+                border-top: 1px solid var(--border-neutral-subtler);
+              }
+              .event-label{
+                line-height: 160%;
+                font-weight:  var(--font-weight-bold);
+              }
+              p{
+                line-height: 160%;
+                color: var(--text-neutral-strong);
+              }
+            }
+          }
+        }
+      }
+      .panel > .panel-body > .table-content{
+        // height: 175px; 2차
+        max-height: calc(100vh - 368px);
+        height: calc(100vh - 368px);
+        p{
+          line-height: 150%;
+        }
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-track{
+          border-left: 0;
+        }
+      }
+    }
+    .my-schedule{
+      .gray-box{width: 100%;}
+    }
+  }
+
+}
+// :global {
+//   @container con-container (max-width: 1300px){
+//     .gray-box{
+//         width: 100%;
+//       }
+//   }
+// }
+
+:global(.lessonChangeRequest-option-layer){
+  background: var(--bg-base);
+  border: 1px solid var(--border-neutral-base);
+  border-radius: 8px;
+  width: 170px;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 4px);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+//일정 등록 모달
+.my-schedule{
+  :global{
+    .datetime-picker{width:240px;}
+  }
+}
+@container con-container (max-width: 1300px) {
+  .lessonChangeRequest{   
+    flex-wrap: wrap;
+    :global{
+      .gray-box{
+        width: 100%;
+      }
+      .sidebar-content{
+        width: 100%;
+      }
+    }
+  }
+}

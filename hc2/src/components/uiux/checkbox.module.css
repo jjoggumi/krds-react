@@ -1,0 +1,77 @@
+.check-box-wrap{
+  input{
+    &[type=checkbox]{
+      position: absolute;
+      left: -999em;
+      width: 0;
+      height: 0; 
+  
+      + label {
+        cursor: pointer;
+        position: relative;
+        font-size: 0;
+        line-height: 20px;
+        vertical-align: middle;
+        transition: all 0.25s ease-in-out;
+        line-height: normal;
+        &::before {
+          border-radius: 4px;        
+          content: "";
+          display: inline-block;      
+          vertical-align: top;
+          width: 20px;
+          min-width: 20px;
+          height: 20px;
+          border: 1px solid #bdbdbd;
+          background: #fff;
+          box-sizing: border-box;
+        }
+        &::after {
+          width: 20px;
+          height: 20px;
+          mask-size: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: #fff;        
+          display: inline-block;
+          content: "";
+          position: absolute;
+          opacity: 0;
+          transition: all 0.25s ease-in-out;
+          box-sizing: border-box;
+        } 
+  
+        span{
+          display: inline-block;
+          position: relative;
+          color: #222;
+          font-size: 14px;
+          line-height: 20px;
+          vertical-align: middle;
+          margin: 0 0 0 6px;
+          font-weight: 400;
+        }
+      }
+      &:checked {
+        + label {
+          &::before {background-color: #4778de; border-color: #4778de;}
+          &::after { mask-image: url("@/assets/img/icon/ico-check.svg");opacity: 1;}
+        }
+        &:focus {
+          + label::before { box-shadow: 0 0 0 3px color-mix(in srgb, #4778de 32%, transparent);}
+        }
+      }
+    
+      &:disabled {
+        + label::before {
+          background-color: #eeeeee;
+        }
+        &:checked + label::before {
+          background-color: #d6d6d6;
+          border-color: #d6d6d6;
+        }
+      }    
+    }  
+  }
+}

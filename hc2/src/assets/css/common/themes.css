@@ -1,0 +1,379 @@
+@theme {
+  --color-bg-base:                    var(--bg-base);
+  --color-bg-primary-subtlest:        var(--bg-primary-subtlest);
+  --color-bg-primary-subtler:         var(--bg-primary-subtler);
+  --color-bg-primary-base:            var(--bg-primary-base);
+  --color-bg-secondary-subtlest:      var(--bg-secondary-subtlest);
+  --color-bg-secondary-subtler:       var(--bg-secondary-subtler);
+  --color-bg-secondary-base:          var(--bg-secondary-base);
+  --color-bg-tertiary-stronger:       var(--bg-tertiary-stronger);
+  --color-bg-neutral-subtlest:        var(--bg-neutral-subtlest);
+  --color-bg-neutral-subtler:         var(--bg-neutral-subtler);
+  --color-bg-neutral-subtle:          var(--bg-neutral-subtle);
+  --color-bg-neutral-base:            var(--bg-neutral-base);
+  --color-bg-neutral-strong:          var(--bg-neutral-strong);
+  --color-bg-red-subtlest:            var(--bg-red-subtlest);
+  --color-bg-green-subtlest:          var(--bg-green-subtlest);
+  --color-bg-yellow-subtler:          var(--bg-yellow-subtler);
+  --color-bg-yellow-subtlest:         var(--bg-yellow-subtlest);
+  --color-bg-orange-subtlest:         var(--bg-orange-subtlest);
+  --color-bg-orange-subtler:          var(--bg-orange-subtler);
+  --color-bg-mint-subtlest:           var(--bg-mint-subtlest);
+  --color-bg-fixed-white:             var(--bg-fixed-white);
+  --color-bg-fixed-black:             var(--bg-fixed-black);
+  --color-bg-inverse:                 var(--bg-inverse);
+  --color-bg-dim:                     var(--bg-dim);
+
+  --color-border-primary-subtlest:    var(--border-primary-subtlest);
+  --color-border-primary-base:        var(--border-primary-base);
+  --color-border-secondary-subtlest:  var(--border-secondary-subtlest);
+  --color-border-secondary-subtler:   var(--border-secondary-subtler);
+  --color-border-tertiary-subtler:    var(--border-tertiary-subtler);
+  --color-border-secondary-base:      var(--border-secondary-base);
+  --color-border-neutral-subtlest:    var(--border-neutral-subtlest);
+  --color-border-neutral-subtler:     var(--border-neutral-subtler);
+  --color-border-neutral-subtle:      var(--border-neutral-subtle);
+  --color-border-neutral-base:        var(--border-neutral-base);
+  --color-border-neutral-strong:      var(--border-neutral-strong);
+  --color-border-neutral-stronger:    var(--border-neutral-stronger);
+  --color-border-neutral-strongest:   var(--border-neutral-strongest);
+
+  --color-text-base:                  var(--text-base);
+  --color-text-inverse:               var(--text-inverse);
+  --color-text-default:               var(--text-default);
+  --color-text-neutral-stronger:      var(--text-neutral-stronger);
+  --color-text-neutral-strong:        var(--text-neutral-strong);
+  --color-text-neutral-subtle:        var(--text-neutral-subtle);
+  --color-text-neutral-base:          var(--text-neutral-base);
+  --color-text-primary-base:          var(--text-primary-base);
+  --color-text-secondary-base:        var(--text-secondary-base);
+  --color-text-secondary-stronger:    var(--text-secondary-stronger);
+  --color-text-secondary-strongest:   var(--text-secondary-strongest);
+
+  --color-control-base:                var(--control-base);
+  --color-control-neutral-base:        var(--control-neutral-base);
+  --color-control-neutral-strong:      var(--control-neutral-strong);
+  --color-control-neutral-stronger:    var(--control-neutral-stronger);
+  --color-control-primary:             var(--control-primary);
+  --color-control-secondary-subtlest:  var(--control-secondary-subtlest);
+  --color-control-secondary-subtle:    var(--control-secondary-subtle);
+  --color-control-red-subtlest:        var(--control-red-subtlest);
+  --color-control-red-subtle:          var(--control-red-subtle);
+  --color-control-red-base:            var(--color-red-600);
+
+  --color-action-base:                var(--action-base);
+  --color-action-primary-subtler:     var(--action-primary-subtler);
+  --color-action-primary-base:        var(--action-primary-base);
+  --color-action-neutral-strong:      var(--action-neutral-strong);
+  --color-action-neutral-stronger:    var(--action-neutral-stronger);
+  --color-action-secondary-subtler:   var(--action-secondary-subtler);
+  --color-action-secondary-stronger:  var(--action-secondary-stronger);
+  --color-action-secondary-strongest: var(--action-secondary-strongest);
+  --color-action-red-base:            var(--action-red-base);
+
+  --color-graphic-iceBlue:  var(--graphic-iceBlue);
+  --color-graphic-blue:     var(--graphic-blue);
+  --color-graphic-mint:     var(--graphic-mint);
+  --color-graphic-emerald:  var(--graphic-emerald);
+  --color-graphic-green:    var(--graphic-green);
+  --color-graphic-forest:   var(--graphic-forest);
+  --color-graphic-amber:    var(--graphic-amber);
+  --color-graphic-yellow:    var(--graphic-yellow);
+  --color-graphic-orange:   var(--graphic-orange);
+  --color-graphic-coral:    var(--graphic-coral);
+  --color-graphic-red:      var(--graphic-red);
+  --color-graphic-magenta:  var(--graphic-magenta);
+  --color-graphic-lavender: var(--graphic-lavender);
+  --color-graphic-violet:   var(--graphic-violet);
+
+  --color-alpha-base10:     var(--color-alpha-white-10);
+  --color-alpha-base20:     var(--color-alpha-white-20);
+  --color-alpha-base40:     var(--color-alpha-white-40);
+  --color-alpha-base60:     var(--color-alpha-white-60);
+  --color-alpha-base80:     var(--color-alpha-white-80);
+  --color-alpha-inverse10:  var(--color-alpha-black-10);
+  --color-alpha-inverse20:  var(--color-alpha-black-20);
+  --color-alpha-inverse40:  var(--color-alpha-black-40);
+  --color-alpha-inverse60:  var(--color-alpha-black-60);
+  --color-alpha-inverse80:  var(--color-alpha-black-80);
+
+    /* Font Weight */
+	--font-weight-regular: var(--font-weight-regular);
+	--font-weight-medium: var(--font-weight-medium);
+	--font-weight-bold: var(--font-weight-bold);
+	--font-weight-strong: var(--font-weight-strong);
+
+  /* Font-size / Line-height */  
+  --text-t1: var(--font-size-t1);
+  --leading-t1: var(--font-leading-140);
+
+  --text-t2: var(--font-size-t2);
+  --leading-t2: var(--font-leading-140);
+
+  --text-t3: var(--font-size-t3);
+  --leading-t3: var(--font-leading-140);
+
+  --text-h1: var(--font-size-h1);
+  --leading-h1: var(--font-leading-140);
+  
+  --text-h2: var(--font-size-h2);
+  --leading-h2: var(--font-leading-140);
+  
+  --text-h3: var(--font-size-h3);
+  --leading-h3: var(--font-leading-150);
+
+  --text-h4: var(--font-size-h4);
+  --leading-h4: var(--font-leading-150);
+
+  --text-b1: var(--font-size-b1);
+  --leading-b1: var(--font-leading-150);
+  
+  --text-b2: var(--font-size-b2);
+  --leading-b2: var(--font-leading-150);
+  
+  --text-b3: var(--font-size-b3);
+  --leading-b3: var(--font-leading-150);
+  
+  --text-d1: var(--font-size-d1);
+  --leading-d1: var(--font-leading-150);
+
+  --text-d2: var(--font-size-d2);
+  --leading-d2: var(--font-leading-150);
+  
+  --text-d3: var(--font-size-d3);
+  --leading-d3: var(--font-leading-150);
+
+}
+
+@theme {
+
+  /* 추후 삭제될 예정 
+  --color-primary: var(--primary); 05 primary 컬러 코드 수정
+  */
+  
+  /*  06 primary 외 컬러 코드 수정
+  --color-primary-01: var(--primary-01);
+  --color-primary-02: var(--primary-02);
+  --color-secondary: var(--secondary);
+  --color-success: var(--success);
+  --color-info: var(--info);
+  --color-noti: var(--noti);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-navy: var(--navy);
+  --color-purple: var(--purple);
+  --color-yellow: var(--yellow);
+  --color-jungle: var(--jungle);
+  --color-orange: var(--orange);
+  --color-default: var(--default);
+  --color-gray: var(--gray-09);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  */
+  /* 07 gray 컬러 코드 수정
+  --color-gray-01: var(--gray-01); 
+  --color-gray-02: var(--gray-02); 
+  --color-gray-04: var(--gray-04); 
+  --color-gray-07: var(--gray-07); 
+  --color-gray-05: var(--gray-05);
+  --color-gray-06: var(--gray-06);
+  --color-gray-08: var(--gray-08);
+  --color-gray-09: var(--gray-09); 
+  --color-gray-10: var(--gray-10);  
+  --color-light-coral: var(--light-coral);  
+  */  
+
+}
+
+:root {
+
+/* 
+--primary: #4778DE;   05 primary 컬러 코드 수정
+*/
+/*
+06 primary 외 컬러 코드 수정
+--secondary: #4267B2;
+--primary-01: #F8F9FC;
+--primary-02: #EBEEF4;
+--primary-03: #E9F3FF;
+--primary-04: #E1E9F9;
+--primary-05: #B5C9F2;
+--success: #00BF40;
+--info: #4778DE;
+--noti: #FF6A6A;
+--warning: #EC1F2D;
+--error: #FE5151;
+--navy: #1E3668;
+--purple: #EB6BFF;  
+--yellow: #FFB600;  
+--jungle: #267E4E;  
+--orange: #FF8737;  
+--light-green: #F6FFD7;  
+--light-yellow: #FFF5D1;  
+--light-orange: #FFF2E1;  
+--light-jungle: #E5FDFC;  
+--light-coral: #FFE7E7;  
+--gray01: #FAFAFA;  
+--gray02: #F6F6F6;  
+--gray03: #F3F3F3;  
+--gray-04: #EEEEEE;  
+  --gray-05: #E0E0E0;  
+  --gray-06: #D6D6D6;  
+  --gray-07: #BDBDBD;  
+  --gray-08: #9E9E9E;  
+  --gray-09: #616161;  
+  --gray-10: #1D1D1D;  
+  --black: #000000;  
+  --white: #FFFFFF;
+  */
+
+    
+   /*
+	--default:             var(--gray-09);
+	--disabled:            var(--gray-07);
+	--disabled-bg:         var(--gray-06);
+   */
+
+
+  /* 04 rgb 컬러 코드 name 수정  - 추후 삭제될 예정(코드 내 영향 받을 내용 삭제 완료)
+  --primary-rgb: 71, 120, 222;
+  --secondary-rgb: 66, 103, 178;
+  --primary-01-rgb: 248, 249, 252;
+  --primary-02-rgb: 235, 238, 244;
+  --primary-03-rgb: 233, 243, 255;
+  --primary-04-rgb: 225, 233, 249;
+  --primary-05-rgb: 181, 201, 242;
+  --success-rgb: 0, 191, 64;
+  --info-rgb: 71, 120, 222;
+  --noti-rgb: 255, 106, 106;
+  --warning-rgb: 236, 31, 45;
+  --error-rgb: 254, 81, 81;
+  --navy-rgb: 30, 54, 104;
+  --purple-rgb: 235, 107, 255;
+  --yellow-rgb: 255, 182, 0;
+  --jungle-rgb: 38, 126, 78;
+  --orange-rgb: 255, 135, 55;
+  --light-green-rgb: 246, 255, 215;
+  --light-yellow-rgb: 255, 245, 209;
+  --light-orange-rgb: 255, 242, 225;
+  --light-jungle-rgb: 229, 253, 252;
+  --light-coral-rgb: 255, 231, 231;
+  --gray01-rgb: 250, 250, 250;
+  --gray02-rgb: 246, 246, 246;
+  --gray03-rgb: 243, 243, 243;
+  --gray-04-rgb: 238, 238, 238;
+  --gray-05-rgb: 224, 224, 224;
+  --gray-06-rgb: 214, 214, 214;
+  --gray-07-rgb: 189, 189, 189;
+  --gray-08-rgb: 158, 158, 158;
+  --gray-09-rgb: 97, 97, 97;
+  --gray-10-rgb: 29, 29, 29;
+  --black-rgb: 0, 0, 0;
+ --white-rgb: 255, 255, 255;
+   */
+   
+ 
+
+	/* 02 폰트정의 코드 name 수정  - 추후 삭제될 예정(코드 내 영향 받을 내용 삭제 완료)
+  // --font-body:  "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "NanumSquareRound", "Noto Color Emoji", sans-serif;
+	// --font-tit:   "Pretendard Variable", "NanumSquare", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "segoe ui emoji", sans-serif;
+	//--font-color: var(--gray-10);
+
+	//--font-regular:  400;
+	//--font-medium:   500;
+	//--font-bold: 700;
+   */
+
+  /* 03 폰트 사이즈 높이 정의 코드 name 수정  - 추후 삭제될 예정(코드 내 영향 받을 내용 삭제 완료)
+  --font-text-t1: 28px;
+  --font-leading-t1: 1.4;
+
+  --font-text-t2: 24px;
+  --font-leading-t2: 1.4;
+
+  --font-text-t3: 23px;
+  --font-leading-t3: 1.4;
+
+  --font-text-h1: 22px;
+  --font-leading-h1: 1.4;
+
+  --font-text-h2: 20px;
+  --font-leading-h2: 1.4;
+
+  --font-text-h3: 18px;
+  --font-leading-h3: 1.5;
+
+  --font-text-h4: 17px;
+  --font-leading-h4: 1.5;
+
+  --font-text-b1: 16px;
+  --font-leading-b1: 1.5;
+
+  --font-text-b2: 15px;
+  --font-leading-b2: 1.5;
+
+  --font-text-b3: 14px;
+  --font-leading-b3: 1.5;
+
+  --font-text-d1: 13px;
+  --font-leading-d1: 1.5;
+
+  --font-text-d2: 12px;
+  --font-leading-d2: 1.5;
+
+  --font-text-d3: 11px;
+  --font-leading-d3: 1.5;
+
+   */
+
+/* 01 class로 정의 됐던 코드 name 수정  - 추후 삭제될 예정(코드 내 영향 받을 내용 삭제 완료)
+//.bg-base { background-color: var(--bg-base); }
+//.bg-primary-subtlest { background-color: var(--bg-primary-subtlest); }
+//.bg-primary-subtler { background-color: var(--bg-primary-subtler); }
+//.bg-primary-base { background-color: var(--bg-primary-base); }
+//.bg-secondary-subtlest { background-color: var(--bg-secondary-subtlest); }
+//.bg-secondary-subtler { background-color: var(--bg-secondary-subtler); }
+//.bg-neutral-subtlest { background-color: var(--bg-neutral-subtlest); }
+//.bg-neutral-subtle { background-color: var(--bg-neutral-subtle); }
+//.bg-neutral-base { background-color: var(--bg-neutral-base); }
+//.bg-neutral-strong { background-color: var(--bg-neutral-strong); }
+//.bg-red-subtlest { background-color: var(--bg-red-subtlest); }
+//.bg-red-subtle { background-color: var(--bg-red-subtle); }
+//.bg-red-base { background-color: var(--bg-red-base); }
+//.bg-green-subtlest { background-color: var(--bg-green-subtlest); }
+//.bg-green-base { background-color: var(--bg-green-base); }
+//.bg-yellow-subtlest { background-color: var(--bg-yellow-subtlest); }
+//.bg-mint-subtlest { background-color: var(--bg-mint-subtlest); }
+//.bg-fixed-white { background-color: var(--bg-fixed-white); }
+//.bg-fixed-black { background-color: var(--bg-fixed-black); }
+//.bg-dim { background-color: var(--bg-dim); }
+
+//.border-primary-subtlest { border-color: var(--border-primary-subtlest); }
+//.border-primary-base { border-color: var(--border-primary-base); }
+//.border-secondary-subtlest { border-color: var(--border-secondary-subtlest); }
+//.border-secondary-base { border-color: var(--border-secondary-base); }
+//.border-neutral-subtler { border-color: var(--border-neutral-subtler); }
+//.border-neutral-subtle { border-color: var(--border-neutral-subtle); }
+//.border-neutral-base { border-color: var(--border-neutral-base); }
+//.border-neutral-strong { border-color: var(--border-neutral-strong); }
+//.border-neutral-stronger { border-color: var(--border-neutral-stronger); }
+//.border-neutral-strongest { border-color: var(--border-neutral-strongest); }
+//.border-red-subtle { border-color: var(--border-red-subtle); }
+//.border-red-base { border-color: var(--border-red-base); }
+//.border-green-base { border-color: var(--border-green-base); }
+
+//.text-base { color: var(--text-base); }
+//.text-inverse { color: var(--text-inverse); }
+//.text-default { color: var(--text-default); }
+//.text-muted { color: var(--text-muted); }
+//.text-caption { color: var(--text-caption); }
+//.text-disabled-icon { color: var(--text-disabled-icon); }
+//.text-disabled-text { color: var(--text-disabled-text); }
+//.text-primary-base { color: var(--text-primary); }
+//.text-secondary-base { color: var(--text-secondary); }
+//.text-secondary-stronger { color: var(--text-secondary-stronger); }
+//.text-secondary-strongest { color: var(--text-secondary-strongest); }
+//.text-warning { color: var(--text-warning); }
+//.text-success { color: var(--text-success); }
+
+ */}

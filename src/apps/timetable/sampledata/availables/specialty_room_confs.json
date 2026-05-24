@@ -1,0 +1,42 @@
+[
+  {
+    "specialtyRoomConfId": "ede39a36-a485-4e8c-89d7-df2705867c31",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "courseId": "6d1a8619-79cb-493e-b664-0f393c1aa970",
+    "teacherId": "a0d1b673-5365-4fa6-9e8d-7d8d50362bfe",
+    "concurrentCourseId": "",
+    "grade": 1
+  },
+  {
+    "specialtyRoomConfId": "4663b71f-74d2-4862-b056-adee9cf13480",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "courseId": "999dde69-4a2a-457d-ba57-9b7db3754d30",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "concurrentCourseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "grade": 2
+  },
+  {
+    "specialtyRoomConfId": "b8c585ed-0079-4445-8262-c2702f438ddf",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "courseId": "999dde69-4a2a-457d-ba57-9b7db3754d30",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "concurrentCourseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "grade": 2
+  },
+  {
+    "specialtyRoomConfId": "8ee50b11-73bf-4112-920f-c353a18a0dc3",
+    "specialtyRoomId": "460667ab-7c6d-4dd4-a873-5f8fc564858e",
+    "courseId": "902f0d44-f9b0-4c0b-9321-95ee4e2bebd4",
+    "teacherId": "a68562c2-6146-443a-aa75-cd371636716c",
+    "concurrentCourseId": "",
+    "grade": 3
+  },
+  {
+    "specialtyRoomConfId": "e294848c-0c83-4a55-8cf8-bb1a5a01098b",
+    "specialtyRoomId": "99294a11-19ba-44bd-a6ea-e8fc321cad23",
+    "courseId": "276ab148-ffe9-4f2d-9b45-901179e3c321",
+    "teacherId": "df794355-920d-4d98-82c0-c872471f4036",
+    "concurrentCourseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "grade": 2
+  }
+]

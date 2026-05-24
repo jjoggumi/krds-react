@@ -1,0 +1,11 @@
+// 수업 변경 신청 모달
+.lessonChangeRequestModal{
+  :global{
+    .table-content + .table-content{
+      margin-top: 30px;
+    }
+    .form-group-inline .tooltip-custom i:after {
+        background-color: var(--action-red-base) !important;
+    }
+  }
+}

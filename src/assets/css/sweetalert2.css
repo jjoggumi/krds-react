@@ -1,0 +1,125 @@
+/* sweet alert */
+.swal2-custom-class.swal2-popup {padding: 40px 0 35px;border-radius: 20px;max-width:32em;width:95%;}
+.swal2-custom-class.swal2-popup.sm {max-width:400px;}
+.swal2-custom-class.swal2-popup.xs {max-width:360px;}
+.swal2-custom-class.swal2-html-container {color: #2e2e2e;font-size: 17px;font-weight: 600;line-height: 1.4;}
+.swal2-custom-class.swal2-actions {margin: 28px auto 0;}
+.swal2-custom-class.swal2-styled.swal2-confirm {width: 180px;height: 36px;border-radius: 18px;font-size: 14px;font-weight: 600;background-color: #4275df;transform: skew(.2deg);}
+.swal2-custom-class.swal2-styled.swal2-confirm:hover{background: #265ed3; border-color: #265ed3;}
+.swal2-custom-class.swal2-styled.swal2-cancel,
+.swal2-custom-class.swal2-styled.swal2-deny{width: 180px;height: 36px;border-radius: 18px;font-size: 14px;font-weight: 600;background-color: #fff;color: #3867c6;transform: skew(.2deg);border: 1px solid rgba(66, 103, 178, 0.4);}
+.swal2-custom-class.swal2-styled.swal2-cancel:hover,
+.swal2-custom-class.swal2-styled.swal2-deny:hover{background: #F6F6F6;}
+
+.swal2-content.swal2-html-container {font-size: 17px;} 
+
+.swal2-actions{}
+
+/* icons */
+.swal2-icon{margin-top: 10px;}
+.swal2-icon.swal2-success [class^=swal2-success-line]{
+  background-color: #a5dc86;
+}
+.swal2-icon.swal2-success .swal2-success-ring{    
+  border: .25em solid rgba(165, 220, 134, .3);
+}
+.swal2-icon.swal2-info{
+  border-color: #9de0f6;
+  color: #3fc3ee;
+}
+.swal2-icon.swal2-warning{
+  border-color: #facea8;
+  color: #f8bb86;
+}
+.swal2-icon.swal2-error {
+  border-color: #f27474;
+  color: #f27474;
+}
+
+/* button */
+.swal2-custom-class.swal2-popup .swal2-actions button{
+  font-size: 16px;
+  min-height: 44px;
+  line-height: 1.2;
+  min-width: 145px;
+  margin: 0 4px;
+  width: auto;
+  padding: 0 30px;
+  border-radius: 100px;
+}
+.swal2-custom-class.swal2-popup .swal2-actions button:focus {
+  box-shadow: none;
+}
+.swal2-show{
+  animation:none;
+}
+
+/* 공통 alert */
+/* sweet alert */
+.swal2-custom-class.swal2-popup {padding: 40px 0 35px;border-radius: 20px;max-width:32em;width:95%;}
+.swal2-custom-class.swal2-popup.sm {max-width:400px;}
+.swal2-custom-class.swal2-popup.xs {max-width:360px;}
+.swal2-custom-class.swal2-html-container {color: #2e2e2e;font-size: 17px;font-weight: 600;line-height: 1.4;}
+.swal2-custom-class.swal2-actions {margin: 28px auto 0;}
+.swal2-custom-class.swal2-styled.swal2-confirm {width: 180px;height: 36px;border-radius: 18px;font-size: 14px;font-weight: 600;background-color: #4275df;transform: skew(.2deg);}
+.swal2-custom-class.swal2-styled.swal2-confirm:hover{background: #265ed3; border-color: #265ed3;}
+.swal2-custom-class.swal2-styled.swal2-cancel,
+.swal2-custom-class.swal2-styled.swal2-deny{width: 180px;height: 36px;border-radius: 18px;font-size: 14px;font-weight: 600;background-color: #fff;color: #3867c6;transform: skew(.2deg);border: 1px solid rgba(66, 103, 178, 0.4);}
+.swal2-custom-class.swal2-styled.swal2-cancel:hover,
+.swal2-custom-class.swal2-styled.swal2-deny:hover{background: #F6F6F6;}
+
+.swal2-content.swal2-html-container {font-size: 17px;} 
+
+/* icons */
+.swal2-icon{margin-top: 10px;}
+.swal2-icon.swal2-success [class^=swal2-success-line]{
+  background-color: #a5dc86;
+}
+.swal2-icon.swal2-success .swal2-success-ring{    
+  border: .25em solid rgba(165, 220, 134, .3);
+}
+.swal2-icon.swal2-info{
+  border-color: #9de0f6;
+  color: #3fc3ee;
+}
+.swal2-icon.swal2-warning{
+  border-color: #facea8;
+  color: #f8bb86;
+}
+.swal2-icon.swal2-error {
+  border-color: #f27474;
+  color: #f27474;
+}
+
+/* button */
+.swal2-custom-class.swal2-popup .swal2-actions button{
+  font-size: 16px;
+  min-height: 44px;
+  line-height: 1.2;
+  min-width: 145px;
+  margin: 0 4px;
+  width: auto;
+  padding: 0 30px;
+  border-radius: 100px;
+}
+.swal2-custom-class.swal2-popup .swal2-actions button:focus {
+  box-shadow: none;
+}
+.swal2-show{
+  animation:none;
+}
+
+/* 공통 alert */
+.swal2-popup.hc-confirm{padding:35px 30px;border-radius: 20px;max-width:400px;width:95%;}
+.swal2-popup.hc-confirm.sm {max-width:360px;}
+.swal2-popup.hc-confirm .swal2-header .swal2-title{font-size: 18px;font-weight:600; line-height: 1.5;color:#222;margin-bottom: 12px;}
+.swal2-popup.hc-confirm .swal2-content {padding:0;}
+.swal2-popup.hc-confirm .swal2-content .swal2-html-container{font-size: 16px; color:#222; line-height: 1.5;}
+.swal2-popup.hc-confirm .swal2-actions{margin-top:24px;}
+.swal2-popup.hc-confirm .swal2-actions button{width:140px;height:44px;margin: 0 4px;font-size: 15px;border-radius: 50px;}
+.swal2-popup.hc-confirm .swal2-actions button.swal2-cancel{background-color: #fff;border: 1px solid #d6d6d6;  color: #616161; margin: 0 4px;}
+.swal2-popup.hc-confirm .swal2-actions button.swal2-cancel:focus{box-shadow: 0 0 0 3px rgba(231, 231, 231, .5);}
+
+.swal2-popup.hc-confirm.only-text{ padding-top:40px }
+.swal2-popup.hc-confirm.only-text .swal2-content .swal2-html-container{font-size: 16px;line-height: 1.5;color:#222}
+.swal2-popup.hc-confirm.only-text .swal2-actions{margin-top:24px;}

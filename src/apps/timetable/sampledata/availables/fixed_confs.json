@@ -1,0 +1,331 @@
+[
+  {
+    "courseId": "fde888c6-5c59-4077-a590-fab463ad91e6",
+    "grade": 1,
+    "dayOfWeek": 3,
+    "period": 5,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "fde888c6-5c59-4077-a590-fab463ad91e6",
+    "grade": 1,
+    "dayOfWeek": 3,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "fde888c6-5c59-4077-a590-fab463ad91e6",
+    "grade": 2,
+    "dayOfWeek": 3,
+    "period": 5,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "fde888c6-5c59-4077-a590-fab463ad91e6",
+    "grade": 2,
+    "dayOfWeek": 3,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "fde888c6-5c59-4077-a590-fab463ad91e6",
+    "grade": 3,
+    "dayOfWeek": 3,
+    "period": 5,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "fde888c6-5c59-4077-a590-fab463ad91e6",
+    "grade": 3,
+    "dayOfWeek": 3,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "1ac87511-5ded-4298-b5f4-110b823e564f",
+    "grade": 2,
+    "dayOfWeek": 1,
+    "period": 1,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "grade": 2,
+    "dayOfWeek": 1,
+    "period": 4,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "grade": 2,
+    "dayOfWeek": 4,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "a7135048-bc92-4ad8-9a7d-ce75ecff1d74",
+    "grade": 2,
+    "dayOfWeek": 5,
+    "period": 4,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "grade": 2,
+    "dayOfWeek": 1,
+    "period": 7,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "grade": 2,
+    "dayOfWeek": 4,
+    "period": 3,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "38a3eaf9-1889-4da6-86c7-548a30f81d3c",
+    "grade": 2,
+    "dayOfWeek": 5,
+    "period": 1,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "grade": 2,
+    "dayOfWeek": 2,
+    "period": 3,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "grade": 2,
+    "dayOfWeek": 4,
+    "period": 1,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "3d22545e-8094-4442-969a-47f5ab7239ac",
+    "grade": 2,
+    "dayOfWeek": 5,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "grade": 2,
+    "dayOfWeek": 2,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "e7348b44-85bb-4835-bf56-d83ddbc1ff9c",
+    "grade": 2,
+    "dayOfWeek": 2,
+    "period": 7,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "grade": 3,
+    "dayOfWeek": 1,
+    "period": 2,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "grade": 3,
+    "dayOfWeek": 4,
+    "period": 2,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "c24395bf-3bc5-44e7-8a63-89e6f9fc63f0",
+    "grade": 3,
+    "dayOfWeek": 5,
+    "period": 5,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "grade": 3,
+    "dayOfWeek": 1,
+    "period": 3,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "grade": 3,
+    "dayOfWeek": 3,
+    "period": 1,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "3076660b-2b22-4939-942e-167f0138fdce",
+    "grade": 3,
+    "dayOfWeek": 4,
+    "period": 5,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "grade": 3,
+    "dayOfWeek": 1,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "grade": 3,
+    "dayOfWeek": 2,
+    "period": 1,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "49f7a193-1f57-4425-a4c8-3fe689a6728e",
+    "grade": 3,
+    "dayOfWeek": 3,
+    "period": 3,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "grade": 3,
+    "dayOfWeek": 2,
+    "period": 4,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "grade": 3,
+    "dayOfWeek": 3,
+    "period": 4,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "84748b87-7a8a-4b00-b5d0-a31b418da53f",
+    "grade": 3,
+    "dayOfWeek": 5,
+    "period": 7,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "grade": 3,
+    "dayOfWeek": 2,
+    "period": 5,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "grade": 3,
+    "dayOfWeek": 3,
+    "period": 2,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "c6d4dc14-faa4-42a0-9460-c02b33105451",
+    "grade": 3,
+    "dayOfWeek": 5,
+    "period": 3,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "1fd27a0b-60ee-4c2f-ba8d-002f4626335e",
+    "grade": 3,
+    "dayOfWeek": 1,
+    "period": 5,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "1fd27a0b-60ee-4c2f-ba8d-002f4626335e",
+    "grade": 3,
+    "dayOfWeek": 2,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "1fd27a0b-60ee-4c2f-ba8d-002f4626335e",
+    "grade": 3,
+    "dayOfWeek": 4,
+    "period": 4,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "0ecbe8e1-61a1-441c-8a38-58ef08877026",
+    "grade": 3,
+    "dayOfWeek": 2,
+    "period": 7,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "0ecbe8e1-61a1-441c-8a38-58ef08877026",
+    "grade": 3,
+    "dayOfWeek": 4,
+    "period": 1,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "0ecbe8e1-61a1-441c-8a38-58ef08877026",
+    "grade": 3,
+    "dayOfWeek": 5,
+    "period": 4,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "eff1d28e-0a01-4a31-9560-6c2c1cc634b2",
+    "grade": 3,
+    "dayOfWeek": 1,
+    "period": 1,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "eff1d28e-0a01-4a31-9560-6c2c1cc634b2",
+    "grade": 3,
+    "dayOfWeek": 5,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "6cfe5604-831a-48f5-94a1-d6b5b5017469",
+    "grade": 3,
+    "dayOfWeek": 1,
+    "period": 7,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "6cfe5604-831a-48f5-94a1-d6b5b5017469",
+    "grade": 3,
+    "dayOfWeek": 5,
+    "period": 2,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "4f0e6e5e-eca5-48a3-a224-57e50f23acfa",
+    "grade": 3,
+    "dayOfWeek": 2,
+    "period": 6,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "4f0e6e5e-eca5-48a3-a224-57e50f23acfa",
+    "grade": 3,
+    "dayOfWeek": 4,
+    "period": 7,
+    "consecutiveGroupId": ""
+  },
+  {
+    "courseId": "3e10fd58-2ec5-4187-ad86-58206d21918f",
+    "grade": 3,
+    "dayOfWeek": 4,
+    "period": 6,
+    "consecutiveGroupId": "4351cffb-5420-4fe4-83c8-28afba43cf30"
+  },
+  {
+    "courseId": "3e10fd58-2ec5-4187-ad86-58206d21918f",
+    "grade": 3,
+    "dayOfWeek": 4,
+    "period": 7,
+    "consecutiveGroupId": "4351cffb-5420-4fe4-83c8-28afba43cf30"
+  }
+]

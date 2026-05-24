@@ -1,0 +1,299 @@
+:root {
+
+	/* =========================
+		Color Palette
+		========================= */
+
+	/* Main Color */
+  --primary: #4778DE;
+  --primary-rgb: 71, 120, 222;
+
+  --secondary: #4267B2;
+  --secondary-rgb: 66, 103, 178;
+
+  --primary-01: #F8F9FC;
+  --primary-01-rgb: 248, 249, 252;
+
+  --primary-02: #EBEEF4;
+  --primary-02-rgb: 235, 238, 244;
+
+  --primary-03: #E9F3FF;
+  --primary-03-rgb: 233, 243, 255;
+
+  --primary-04: #E1E9F9;
+  --primary-04-rgb: 225, 233, 249;
+
+  --primary-05: #B5C9F2;
+  --primary-05-rgb: 181, 201, 242;
+
+  /* State Color */
+  --success: #00BF40;
+  --success-rgb: 0, 191, 64;
+
+  --info: #4778DE;
+  --info-rgb: 71, 120, 222;
+
+  --noti: #FF6A6A;
+  --noti-rgb: 255, 106, 106;
+
+  --warning: #EC1F2D;
+  --warning-rgb: 236, 31, 45;
+
+  --error: #FE5151;
+  --error-rgb: 254, 81, 81;
+
+  /* Sub Color */
+  --navy: #1E3668;
+  --navy-rgb: 30, 54, 104;
+
+  --purple: #EB6BFF;
+  --purple-rgb: 235, 107, 255;
+
+  --yellow: #FFB600;
+  --yellow-rgb: 255, 182, 0;
+
+  --jungle: #267E4E;
+  --jungle-rgb: 38, 126, 78;
+
+  --orange: #FF8737;
+  --orange-rgb: 255, 135, 55;
+
+  --light-green: #F6FFD7;
+  --light-green-rgb: 246, 255, 215;
+
+  --light-yellow: #FFF5D1;
+  --light-yellow-rgb: 255, 245, 209;
+
+  --light-orange: #FFF2E1;
+  --light-orange-rgb: 255, 242, 225;
+
+  --light-jungle: #E5FDFC;
+  --light-jungle-rgb: 229, 253, 252;
+
+  --light-coral: #FFE7E7;
+  --light-coral-rgb: 255, 231, 231;
+
+  /* Gray Color */
+  --gray-01: #FAFAFA;
+  --gray-01-rgb: 250, 250, 250;
+
+  --gray-02: #F6F6F6;
+  --gray-02-rgb: 246, 246, 246;
+
+  --gray-03: #F3F3F3;
+  --gray-03-rgb: 243, 243, 243;
+
+  --gray-04: #EEEEEE;
+  --gray-04-rgb: 238, 238, 238;
+
+  --gray-05: #E0E0E0;
+  --gray-05-rgb: 224, 224, 224;
+
+  --gray-06: #D6D6D6;
+  --gray-06-rgb: 214, 214, 214;
+
+  --gray-07: #BDBDBD;
+  --gray-07-rgb: 189, 189, 189;
+
+  --gray-08: #9E9E9E;
+  --gray-08-rgb: 158, 158, 158;
+
+  --gray-09: #616161;
+  --gray-09-rgb: 97, 97, 97;
+
+  --gray-10: #1D1D1D;
+  --gray-10-rgb: 29, 29, 29;
+
+  --black: #000000;
+  --black-rgb: 0, 0, 0;
+
+  --white: #FFFFFF;
+  --white-rgb: 255, 255, 255;
+
+  --transparent: transparent;
+
+	--default:             var(--gray-09);
+	--disabled:            var(--gray-07);
+	--disabled-bg:         var(--gray-06);
+
+	--Txt-Black:           var(--black);			//title
+	--Txt-Gray-10:         var(--gray-10);		//body
+	--Txt-Gray-09:         var(--gray-09);		//sub
+	--Txt-Gray-08:         var(--gray-08);		//desc
+	--Txt-Gray-07:         var(--gray-07);	  //disabled
+
+	--Bg-Gray-06:          var(--gray-06);
+	--Bg-Gray-04:          var(--gray-04);		// disabled - input
+	--Bg-Gray-03:          var(--gray-03);		// bg
+	--Bg-Gray-01:          var(--gray-01);		// light bg
+
+	--Line-Gray-07:				var(--gray-07); 		// btn
+	--Line-Gray-06:				var(--gray-06);  		// input  table
+	--Line-Gray-04:				var(--gray-04);  		// disabled
+
+	/* =========================
+    Font Settings
+    ========================= */
+	--font-body:  "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "NanumSquareRound", "Noto Color Emoji", sans-serif;
+	--font-tit:   "Pretendard Variable", "NanumSquare", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "segoe ui emoji", sans-serif;
+	--font-color: var(--gray-10);
+
+	/* Font Weight */
+	--font-normal:  400;
+	--font-bold:   500;
+	--font-semibold: 600;
+	--font-strong: 700;
+
+  /* Font-size / Line-height */
+  --t1-size: 28px;
+  --t1-line: 1.36;
+
+  --t2-size: 24px;
+  --t2-line: 1.33;
+
+  --t3-size: 23px;
+  --t3-line: 1.40;
+
+  --h1-size: 22px;
+  --h1-line: 1.37;
+
+  --h2-size: 20px;
+  --h2-line: 1.4;
+
+  --h3-size: 18px;
+  --h3-line: 1.44;
+
+  --h4-size: 17px;
+  --h4-line: 1.44;
+
+  --b1-size: 16px;
+  --b1-line: 1.50;
+
+  --b2-size: 15px;
+  --b2-line: 1.60;
+
+  --b3-size: 14px;
+  --b3-line: 1.60;
+
+  --d1-size: 13px;
+  --d1-line: 1.50;
+
+  --d2-size: 12px;
+  --d2-line: 1.50;
+
+  --d3-size: 11px;
+  --d3-line: 1.30;
+
+  // 요소(button, selectbox, input) 공통 사이즈(height, radius, font)
+  // 아직 사용되는곳 없음 디자인에서 정의 나오면 반영하기
+
+  --xs-height: 32px;
+  --xs-radius: 4px;
+  --xs-font: 14px; //우리학교 신청서 양식 에서 14포인트로 사용중
+
+  --sm-height: 36px;
+  --sm-radius: 4px;
+  --sm-font: 14px;
+
+  --md-height: 40px;
+  --md-radius: 4px;
+  --md-font: 15px;
+
+  --lg-height: 44px;
+  --lg-radius: 4px;
+  --lg-font: 16px;
+
+  --xl-height: 48px;
+  --xl-radius: 8px;
+  --xl-font: 18px;
+}
+
+// bg, text, border, icon, tooltip, badge(작업안함)
+$colors: (
+	primary: var(--primary),
+  secondary: var(--secondary),
+  success: var(--success),
+  info: var(--info),
+  noti: var(--noti),
+  warning: var(--warning),
+  error: var(--error),
+  navy: var(--navy),
+  purple: var(--purple),
+  yellow: var(--yellow),
+  jungle: var(--jungle),
+  orange: var(--orange),
+  default: var(--default),
+  gray: var(--gray-08),
+  white: var(--white),
+  black: var(--black),
+);
+
+/* Main Color */
+$primary:       #4778DE !default;
+$secondary:     #4267B2 !default;
+
+// $primary-01:    #F8F9FC !default;  // [bg] 웹 홈 메인> 나의 클래스/학교 및 	서브페이지 배경
+// $primary-02:    #EBEEF4 !default;  // [bg] 첨부파일, 알림장 읽은 사람 표기
+// $primary-03:    #E9F3FF !default;  // [bg] 상단공지
+$primary-04:    #E1E9F9 !default;  // [bg] 급식 상세 알레르기 정보
+// $primary-05:  	#B5C9F2 !default;
+
+/* State Color */
+$success:       #00bf40 !default;	 // 미사용  확인, 성공, 긍정적 (색상변경)
+$info:          #4778DE !default;  // 정보, 긍정적
+$noti:          #FF6A6A !default;  // 공지, 알럿,  긍정적
+$warning:       #EC1F2D !default;  // 경고, 오류, 부정적
+$error:         #EC1F2D !default;  // 경고, 오류, 부정적
+
+/* Sub Color */
+$navy:       	#1e3668 !default;   // 추가됨
+$purple:        #EB6BFF !default;   // 미사용
+$yellow:        #FFB600 !default;
+$light-yellow:  #FFF5D1 !default;   // 추가됨
+$jungle:        #267E4E !default;
+$orange:        #FF8737 !default;
+
+/* gray Color */
+// $gray-01:       #FAFAFA !default;   // [bg] 전체 두번째 배경
+// $gray-02:       #F6F6F6 !default;
+$gray-03:       #F3F3F3 !default;   // [bg] 구성항목 구분 배경
+// $gray-04:       #EEE !default;      // [bg] 인풋박스 비활성화 배경
+// $gray-05:       #E0E0E0 !default;   // [border] 셀렉박스, 텍스트박스 테두리
+// $gray-06:       #D6D6D6 !default;   // [bg] 버튼, 아이콘, 비활성화 배경
+// $gray-07:       #BDBDBD !default;   // [text] 비활성화, 입력제한 텍스트
+// $gray-08:       #9E9E9E !default;   // [text] 설명 텍스트
+// $gray-09:       #616161 !default;   // [text] 보조 텍스트
+$gray-10:       #1d1d1d !default;      // [text] 본문 텍스트
+
+$black:         #000 !default;      // [text] 타이틀 텍스트
+$white:         #fff !default;
+// $transparent: transparent !default;
+
+$default:       #616161 !default;
+// $disabled:      $gray-07 !default;
+// $disabled-bg:   $gray-06 !default;
+
+/* font */
+// $font-body:  "Pretendard Variable", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "NanumSquareRound", "Noto Color Emoji", sans-serif !default;
+// $font-tit:   "Pretendard Variable", "NanumSquare", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "segoe ui emoji", sans-serif !default;
+// $font-nomal:  400 !default;
+// $font-bold:   500 !default;
+// $font-strong: 700 !default;
+// $font-color: $gray-10 !default;
+// $font-sub: #616161 !default;
+// $font-desc: #9E9E9E !default;
+
+// $Txt-Black:           $black !default;			//title
+// $Txt-Gray-10:         $gray-10 !default;		//body
+// $Txt-Gray-09:         $gray-09 !default;		//sub
+// $Txt-Gray-08:         $gray-08 !default;		//desc
+// $Txt-Gray-07:         $gray-07 !default;	  //disabled
+
+// $Bg-Gray-06:          $gray-06 !default;
+// $Bg-Gray-04:          $gray-04 !default;		// disabled - input
+// $Bg-Gray-03:          $gray-03 !default;		// bg
+// $Bg-Gray-01:          $gray-01 !default;		// light bg
+
+// $Line-Gray-07:				$gray-07 !default;  // btn
+// $Line-Gray-06:				$gray-06 !default;  // input
+// $Line-Gray-04:				$gray-04 !default;  // disabled

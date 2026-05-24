@@ -1,0 +1,27 @@
+.courseChange :global(.additional) {
+  background: var(--bg-primary-subtlest);
+}
+.courseChange :global(.autocomplete-wrap) :global(.text-input) input {
+  font-size: 14px;
+}
+.courseChange :global(.autocomplete-wrap) :global(.text-input) input:hover:not(:disabled) {
+  background-color: var(--bg-yellow-subtlest);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.courseChange :global(.autocomplete-wrap) :global(.text-input) input:focus:not(:disabled) {
+  background-color: var(--bg-yellow-subtlest);
+  -webkit-box-shadow: 0 0 0 1px var(--yellow-300);
+          box-shadow: 0 0 0 1px var(--yellow-300);
+}
+.courseChange :global(.tb-row) {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.courseChange :global(.tb-row) :global(.tb-col) {
+  width: 100%;
+  padding: 10px 20px;
+}/*# sourceMappingURL=replacement.module.css.map */

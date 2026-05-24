@@ -1,0 +1,92 @@
+
+@use './timetable/_table' as *;
+
+:root {
+}
+.text-root {
+  font-size: var(--text-b1);
+  overflow: hidden;
+  #cont-wrap {
+    overflow: hidden;
+  }
+
+  // vue랑 공용으로 사용되는 이용약관 대응
+  .safety-num-modal{
+    .mt-20{
+      margin-top:20px !important;
+    }
+    .mt-05{margin-top:5px !important;}
+    .mt-10{margin-top:10px !important;} 
+    .mt-20{margin-top:20px !important;}
+    .mt-30{margin-top:30px !important;}
+    .mt-40{margin-top:40px !important;}
+    .ml-10{margin-left:10px !important;}
+    .ml-20{margin-left:20px !important;}
+  }
+}
+.hc2-text-wrap{
+  .text-con{
+  container-type: inline-size;
+  container-name: con-container;
+  }
+}
+
+// 옵션 리스트
+// .option-list{ 
+//   min-width: 100%;
+//   max-height: 230px;
+//   padding: 16px 6px 16px 16px;
+//   overflow-y: scroll;     
+//   &.custom-scr::-webkit-scrollbar-track {
+//     margin-top: 20px;
+//     margin-bottom: 20px; 
+//   }
+//   .item{      
+//     padding: 8px 16px;
+//     border-radius: var(--ctl-md-r);
+//     font-size: var(--ctl-md-f);          
+//     min-height: var(--ctl-md-h);
+//     line-height: 160%;
+//     text-align: left;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     width: 100%;
+//     &.selected,
+//     &:hover:not(.hi-nodata){
+//       background: var(--gray-02);
+//     }
+//   }
+//   .hi-nodata{
+//     padding:8px 0;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;
+//   }
+// }
+
+// .option-list.sm > .item {
+//   min-height: var(--ctl-xs-h);
+//   border-radius: var(--ctl-sm-r);
+//   font-size: var(--ctl-sm-f);
+//   padding: 4px 16px;
+// }
+// .option-list.md .item{
+//   min-height: var(--ctl-md-h);
+//   border-radius: var(--ctl-md-r);
+//   font-size: var(--ctl-md-f);
+//   padding: 8px 16px;
+// }
+// .option-list.lg .item{
+//   min-height: var(--ctl-lg-h);
+//   border-radius: var(--ctl-lg-r);
+//   font-size: var(--ctl-lg-f);
+//   padding: 12px 16px;
+// }
+// .option-list.xl .item{
+//   min-height: var(--ctl-xl-h);
+//   border-radius: var(--ctl-xl-r);
+//   font-size: var(--ctl-xl-f);
+//   padding: 12px 16px;
+// }

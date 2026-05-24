@@ -1,0 +1,8 @@
+@import './common/vars.css';                /* 글로벌 CSS 변수 */
+@import './common/tokens.css';              /* 디자인 토큰 정의 */
+@import 'tailwindcss/theme';                /* tailwind 변수 정의 */
+@import './common/vars.css';                /* 변수 정의 */
+@import './common/themes.css';              /* tailwind themes 정의 */
+@import 'tailwindcss/preflight';            /* tailwind 기본 스타일 초기화 */
+@import './common/components.css';          /* 컴포넌트 스타일 정의 */
+@import 'tailwindcss/utilities';            /* tailwind 유틸리티 클래스 정의 : 레이아웃, 사이즈, 타이포, 색상, 상태 등 */

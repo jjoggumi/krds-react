@@ -1,0 +1,376 @@
+
+@use 'sass:color';
+
+.timetable-root{
+  $primary:       #4778DE !default;
+  $secondary:     #4267B2 !default;
+  $primary-04:    #E1E9F9 !default; 
+  $success:       #00bf40 !default;	
+  $info:          #4778DE !default;  
+  $noti:          #FF6A6A !default;  
+  $warning:       #EC1F2D !default;  
+  $error:         #EC1F2D !default;  
+  $navy:       	#1e3668 !default;  
+  $purple:        #EB6BFF !default;  
+  $yellow:        #FFB600 !default;
+  $light-yellow:  #FFF5D1 !default;   
+  $jungle:        #267E4E !default;
+  $orange:        #FF8737 !default;
+  $gray-03:       #F3F3F3 !default;   
+  $gray-10:       #1d1d1d !default; 
+  $black:         #000 !default;    
+  $white:         #fff !default;
+  $default:       #616161 !default;  
+  button,
+  [role=button] {
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
+  }
+  
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;  
+    border-radius: var(--ctl-md-r);
+    height: var(--ctl-md-h);
+    font-size: var(--ctl-md-f);
+    padding:0 16px;    
+    background-color: var(--action-primary-base);
+    border: 1px solid var(--action-primary-base);
+    text-align: center;
+    color: var(--text-base);
+    line-height: 1.6;
+    font-weight:  var(--font-weight-medium);
+    transition: all 0.1s ease-in-out;
+    position: relative;
+    
+    // 버튼 사이즈 
+    &.btn-xs {
+      padding: 0 14px;
+      height: var(--ctl-xs-h);
+      border-radius: var(--ctl-xs-r);
+      font-size: var(--ctl-xs-f);
+    }    
+    &.btn-sm {      
+      padding: 0 16px;
+      height: var(--ctl-sm-h);
+      border-radius: var(--ctl-sm-r);
+      font-size: var(--ctl-sm-f);
+    }
+    &.btn-md {
+      padding:0 16px;
+      border-radius: var(--ctl-md-r);
+      height: var(--ctl-md-h);
+      font-size: var(--ctl-md-f);
+    }  
+    &.btn-lg {
+      padding:0 24px;
+      border-radius: var(--ctl-lg-r);
+      height: var(--ctl-lg-h);
+      font-size: var(--ctl-lg-f);
+    }  
+    &.btn-xl {
+      padding:0 24px;
+      border-radius: var(--ctl-xl-r);
+      height: var(--ctl-xl-h);
+      font-size: var(--ctl-xl-f);
+    }  
+    &.btn-block { 
+      width: 100%;
+    } 
+    &.btn-ico-left{
+      &::after{
+        display: inline-block;
+        content: '';
+        width: 8px;
+      }
+    }
+    &.btn-ico-right{
+      &::before{
+        display: inline-block;
+        content: '';
+        width: 8px;
+      }
+    }
+    
+    &.btn-primary {
+      background-color: var(--action-primary-base);
+      border: 1px solid var(--action-primary-base);
+      color: var(--text-base);
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--text-base);}
+      }
+      &:hover:not(:disabled) {
+        background-color: color.mix(black, $primary, 16%);
+        border-color: color.mix(black, $primary, 16%);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: color.mix(black, $primary, 24%);
+        border-color: color.mix(black, $primary, 24%);
+      }
+      &:disabled {
+        background-color: var(--control-neutral-strong);
+        border-color: var(--control-neutral-strong);
+        cursor: auto;
+      }
+    }
+    &.btn-noti {
+      background-color: var(--control-red-subtle);
+      border: 1px solid var(--control-red-subtle);
+      color: var(--text-base);
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--text-base);}
+      }
+      &:hover:not(:disabled) {
+        background-color: color.mix(black, $noti, 16%);
+        border-color: color.mix(black, $noti, 16%);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: color.mix(black, $noti, 24%);
+        border-color: color.mix(black, $noti, 24%);
+      }
+      &:disabled {
+        background-color: var(--control-neutral-strong);
+        border-color: var(--control-neutral-strong);
+        cursor: auto;
+      }
+    }
+    &.btn-secondary {
+      background-color: var(--action-primary-subtler);
+      border: 1px solid var(--action-primary-subtler);
+      color: var(--text-primary-base);      
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--text-primary-base);}
+      }
+      &:hover:not(:disabled) {
+        background-color: color.mix(black, $primary-04, 4%);
+        border-color: color.mix(black, $primary-04, 4%);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: color.mix(black, $primary-04, 8%);
+        border-color: color.mix(black, $primary-04, 8%);
+      }
+      &:disabled {
+        background-color: var(--control-neutral-strong);
+        border-color: var(--control-neutral-strong);
+        color: var(--text-base);
+        cursor: auto;           
+        &[class *= 'btn-ico']{
+          i::after {background-color:var(--text-base);}
+        }
+      }      
+    }   
+    &.btn-tertiary-blue {
+      background-color: var(--bg-base);
+      border: 1px solid var(--border-primary-base);
+      color: var(--text-primary-base);  
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--text-primary-base);}
+      }
+      &:hover:not(:disabled) {
+        background-color: rgba(71, 120, 222, 0.16);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: rgba(71, 120, 222, 0.24);
+      }
+      &:disabled {
+        opacity: 0.40;
+        cursor: auto;
+      }   
+    }   
+    &.btn-tertiary{
+      background-color: var(--bg-base);
+      border: 1px solid var(--border-neutral-base);
+      color: var(--text-default);      
+      &[class *= 'btn-ico']{
+        i::after {background-color: var(--text-default);}
+      }
+      &:hover:not(:disabled) {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+      &:disabled {
+        border-color: var(--border-neutral-subtle);
+        color: var(--text-neutral-base);
+        cursor: auto;        
+        &[class *= 'btn-ico']{
+          i::after {background-color: var(--text-neutral-base);}
+        }
+      }    
+    }
+    &.btn-success{
+      background-color: var(--green-600);
+      border: 1px solid var(--green-600);
+      color: var(--text-base);
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--text-base);}
+      }
+      &:hover:not(:disabled) {
+        background-color: color.mix(black, $success, 16%);
+        border-color: color.mix(black, $success, 16%);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: color.mix(black, $success, 24%);
+        border-color: color.mix(black, $success, 24%);
+      }
+      &:disabled {
+        background-color: var(--control-neutral-strong);
+        border-color: var(--control-neutral-strong);
+        cursor: auto;
+      }
+    }
+    &.btn-line-warning{
+      background-color: var(--bg-base);
+      border: 1px solid var(--action-red-base);
+      color: var(--action-red-base);  
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--action-red-base);}
+      }
+      &:hover:not(:disabled) {
+        background-color: rgba(236, 31, 45, 0.16);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: rgba(236, 31, 45, 0.24);
+      }
+      &:disabled {
+        opacity: 0.40;
+        cursor: auto;
+      }   
+    } 
+    &.btn-warning{
+      background-color: var(--action-red-base);
+      border: 1px solid var(--action-red-base);
+      color: var(--text-base);  
+      &[class *= 'btn-ico']{
+        i::after {background-color:var(--text-base);}
+      }
+      &:hover:not(:disabled) {
+        background-color: color.mix(black, $warning, 16%);
+        border-color: color.mix(black, $warning, 16%);
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: color.mix(black, $warning, 24%);
+        border-color: color.mix(black, $warning, 24%);
+      }    
+      &:disabled {
+        background-color: var(--control-neutral-strong);
+        border-color: var(--control-neutral-strong);
+        cursor: auto;
+      }   
+    } 
+    &.btn-link{
+      padding:0;
+      background-color: transparent;
+      color: inherit;
+      border: 0;
+      height: auto;
+      vertical-align: middle;
+      &:focus:not(:disabled),
+      &:active:not(:disabled),
+      &:hover:not(:disabled),
+      &:disabled {
+        background-color: transparent;
+        border: 0;
+      }
+    }
+  
+    // 도움말
+    &[class*="btn-help"]{
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      border: 0px solid rgba(71, 120, 222, 0.5);
+      &::before{    
+        display: inline-block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        background: var(--bg-base);
+        left: 3px;
+        top: 3px;
+        border-radius: 50%;
+      }
+      &::after{
+        display: inline-block;
+        content: "";
+        width: 22px;
+        height: 22px;
+        background-color: var(--text-neutral-base);
+        mask-image: url(~@/assets/img/icon/ico-help.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 20px;
+        transition: all 0.25s ease-in-out;
+        border-radius: 20px;
+      }  
+      &:hover::after{
+        background-color: var(--text-neutral-strong);
+      }
+      &.help-on{
+        animation: helpOn-ani 1s ease-in-out infinite;
+        &::after{
+          background-color: var(--text-primary-base);
+        }
+      }
+    }
+    &[class*="btn-help-w"]{    
+      border: 0px solid rgba(var(255, 255, 255), 0.5);
+      &::after{
+        background-color: var(--text-base);
+      } 
+      &::before {
+        background: var(--action-primary-base);
+      }
+      &.help-on{
+          animation: helpOn-ani-w 1s ease-in-out infinite reverse;
+        &::after{
+          background-color: var(--text-base);
+        }
+      }
+    }      
+  
+    //정렬
+    &.btn-sort{
+      width: 20px;
+      height: 20px;
+      transition: 0.25s ease-in-out;
+      &::after{
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: var(--text-default);
+        mask-image: url(~@/assets/img/icon/ico-arrow-down-fill.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;     
+      }  
+      &:hover::after{
+        background-color: var(--text-neutral-stronger);      
+      }
+      &.desc{
+        transform: rotate(180deg);
+      }
+      &.asc{
+        transform: rotate(0deg);
+      }
+      
+    }
+  }
+}
