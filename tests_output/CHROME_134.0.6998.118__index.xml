@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="10"
+            failures="0"
+            tests="1">
+
+  <testsuite name="index"
+    errors="10" failures="0" hostname="" id="" package="index" skipped="0"
+    tests="1" time="170.8" timestamp="">
+  
+    <testcase name="스크린샷 생성" classname="index" time="85.42" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <error message="Timed out while waiting for element &#34;By(css selector, .modal__layer button.btn-close)&#34; to be present for 5000 milliseconds." type="error"><![CDATA[
+    NoSuchElementError: Timed out while waiting for element &#34;By(css selector, .modal__layer button.btn-close)&#34; to be present for 5000 milliseconds.
+    at createNarrowedError (C:\prj\hi-class-ui\src\node\node_modules\nightwatch\lib\api\web-element\scoped-element.js:353:17)
+    at C:\prj\hi-class-ui\src\node\node_modules\nightwatch\lib\api\web-element\scoped-element.js:187:31
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .modal__layer button.btn-close)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .modal__layer button.btn-close)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .title-wrap button.btn-setting)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .title-wrap button.btn-setting)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, #chat-room-more-btn button)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .noti-setting-wrap .tit-noti .modal-close-btn)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .write-comment-btm-wrap button)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .write-comment-btm-wrap button)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .add-reservation button)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchElementError
+   Timed out while waiting for element &#34;By(css selector, .modal__layer button.btn-close)&#34; to be present for 5000 milliseconds.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

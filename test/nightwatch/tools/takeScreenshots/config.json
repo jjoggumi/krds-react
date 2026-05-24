@@ -1,0 +1,16 @@
+{
+  "안내사항": [
+    "2025년 4월 3일 현재 전체 동작하는 조건",
+    " - dev, hiclass09 계정, 신사중학교1학년 1반이 클래스 목록 제일 앞에 있어야 합니다.",
+    " - 위와 같은 전제 조건은 차차 완화 되도록 개선예정입니다."
+  ],
+  "output": "C:/hiclass-screenshots",
+  "targets": {
+    "홈": "test/nightwatch/tools/takeScreenshots/selectorConfig/home.json",
+    "클래스": "test/nightwatch/tools/takeScreenshots/selectorConfig/class.json",
+    "클래스 게시판 관리": "test/nightwatch/tools/takeScreenshots/selectorConfig/classBoard.json",
+    "마이페이지": "test/nightwatch/tools/takeScreenshots/selectorConfig/myPage.json",
+    "출결알리기": "test/nightwatch/tools/takeScreenshots/selectorConfig/attendance.json",
+    "하이톡": "test/nightwatch/tools/takeScreenshots/selectorConfig/hiTalk.json"
+  }
+}

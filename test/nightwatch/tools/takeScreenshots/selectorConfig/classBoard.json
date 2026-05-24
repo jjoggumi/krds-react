@@ -1,0 +1,23 @@
+[
+  {
+    "name": "목록",
+    "path": [{"action": "click", "selector": ".heading-board .btn-setting"}]
+  },
+  {
+    "name": "게시판 유형 선택",
+    "path": [{"action": "click", "selector": ".page-sub-heading .group-btn button:nth-child(2)"}],
+    "after": [{"action": "click", "selector": ".board-add .modal__footer button:nth-child(2)"}]
+  },
+  {
+    "name": "일반게시판 생성1",
+    "path": [{"action": "", "selector": ""}]
+  },
+  {
+    "name": "일반게시판 생성2",
+    "path": [{"action": "scrollToElement", "selector": ".admin-option__box .box:nth-child(3) .text-refer"}]
+  },
+  {
+    "name": "이용안내 모달",
+    "path": [{"action": "click", "selector": ".admin-option__box .box:nth-child(2) .heading-sub .hi-btn"}]
+  }
+]

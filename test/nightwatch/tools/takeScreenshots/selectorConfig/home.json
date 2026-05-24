@@ -1,0 +1,6 @@
+[
+  {
+    "name": "메인",
+    "path": [{"action": "click", "selector": "#mainSlb .open-btn-wrap"}]
+  }
+]

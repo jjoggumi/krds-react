@@ -1,0 +1,97 @@
+[
+  {
+    "name": "메인",
+    "path": [
+      {"action": "click", "selector": ".main-myclass__list .main-myclass__item:nth-child(1) a"},
+      {"action": "waitForElementPresent", "selector": ".column-content div .hi-board.board__item:nth-child(1) .hi-kebabmenu .btn-kebab"}
+    ]
+  },
+  {
+    "name": "첫번째 게시판",
+    "path": [{"action": "click", "selector": ".heading-board+.lnb__list .lnb__item:nth-child(2)"}]
+  },
+  {
+    "name": "게시글작성",
+    "path": [
+      {"action": "click", "selector": ".column-aside .btn-write"},
+      {"action": "setValue", "selector": ".input-box-wrap.input-title .input-textarea", "value": "제목입니다."}
+    ]
+  },
+  {
+    "name": "게시글 작성 알럿",
+    "path": [{"action": "click", "selector": ".column-right .group-btn .hi-btn.btn-lg:nth-child(3)"}],
+    "after": [{"action": "click", "selector": ".swal2-confirm"}]
+  },
+  {
+    "name": "게시글 등록",
+    "path": [
+      {"action": "sendKeys", "selector": ".fr-element.fr-view", "value":  "내용입니다."},
+      {"action": "click", "selector": ".column-right .group-btn .hi-btn.btn-lg:nth-child(3)"},
+      {"action": "click", "selector": ".swal2-container .swal2-confirm"}
+    ]
+  },
+  {
+    "name": "게시글 케밥",
+    "path": [{"action": "click", "selector": ".column-content div .hi-board.board__item:nth-child(1) .hi-kebabmenu .btn-kebab"}]
+  },
+  {
+    "name": "게시글 복사",
+    "path": [
+      {"action": "click", "selector": ".column-content div .hi-board.board__item:nth-child(1) .hi-kebabmenu .kebabmenu__layer .btn-copy"},
+      {"action": "waitForElementPresent", "selector": ".modal-board-move-container"}
+    ]
+  },
+  {
+    "name": "게시글 복사 폴더목록",
+    "path": [{"action": "click", "selector": ".modal-board-move-container .hi-selectbox .selected"}],
+    "after": [{"action": "click", "selector": ".modal__footer .btn-line-default"}]
+  },
+  {
+    "name": "게시글 내보내기",
+    "path": [
+      {"action": "click", "selector": ".column-content div .hi-board.board__item:nth-child(1) .hi-kebabmenu .btn-kebab"},
+      {"action": "click", "selector": ".column-content div .hi-board.board__item:nth-child(1) .hi-kebabmenu .kebabmenu__layer .btn-export"},
+      {"action": "waitForElementPresent", "selector": ".post-export-wrap"}
+    ]
+  },
+  {
+    "name": "게시글 내보내기 그룹 목록",
+    "path": [{"action": "click", "selector": ".post-export-wrap .modal__content .hi-row .hi-btn"}],
+    "after": [{"action": "click", "selector": ".post-export-wrap .modal__layer .modal__header .btn-close"}]
+  },
+  {
+    "name": "알림함",
+    "path": [
+      {"action": "click", "selector": "#alarmBtn"},
+      {"action": "waitForElementPresent", "selector": ".alarm-popup-box div.cont-wrap ul li:nth-child(1) span.date"}
+    ],
+    "after": [{"action": "click", "selector": ".class-top-heading"}]
+  },
+  {
+    "name": "우리반 일정 등록",
+    "path": [
+      {"action": "scrollToElement", "selector": ".column__inner .right-btm-btn-wrap button:nth-child(2)"},
+      {"action": "waitForElementPresent", "selector": ".column__inner .right-btm-btn-wrap .add-schedule-btn"},
+      {"action": "click", "selector": ".column__inner .right-btm-btn-wrap .add-schedule-btn"},
+      {"action": "setValue", "selector": ".add-class-schedule-modal .input-box-wrap textarea", "value": "우리반 일정이에요."}
+    ],
+    "after": [{"action": "click", "selector": ".add-class-schedule-modal .confirm-btn-wrap .btn-bg-c"}]
+  },
+  {
+    "name": "우리반 일정 삭제",
+    "path": [{"action": "click", "selector": ".calendar-detail-info-wrap ul li:nth-child(1) .delete-btn"}],
+    "after": [{"action": "click", "selector": ".swal2-popup.swal2-modal .swal2-actions .swal2-confirm"}]
+  },
+  {
+    "name": "게시글 검색",
+    "path": [{"action": "click", "selector": ".board__filter.board__filter-fixed .searchbox__select .selected"}]
+  },
+  {
+    "name": "수업 관리",
+    "path": [{"action": "click", "selector": ".heading-board+.lnb__list+.heading-admin .btn-setting"}]
+  },
+  {
+    "name": "초대하기",
+    "path": [{"action": "click", "selector": ".class-top-heading .btn-invite"}]
+  }
+]

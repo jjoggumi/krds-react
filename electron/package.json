@@ -1,0 +1,59 @@
+{
+  "name": "HiTalk",
+  "version": "1.0.6-3",
+  "description": "HiTalk",
+  "author": "i-Screammedia",
+  "private": true,
+  "main": "main.mjs",
+  "build": {
+    "productName": "HiTalk",
+    "artifactName": "HiTalk",
+    "appId": "net.hiclass.hitalk.app",
+    "files": [
+      "node_modules/**/*",
+      "resource/**/*",
+      "src/**/*",
+      "preload.js",
+      "main.mjs"
+    ],
+    "asarUnpack": [
+      "resource/images/icon.png",
+      "resource/images/icon.svg"
+    ],
+    "win": {
+      "target": "msi",
+      "icon": "resource/images/icon.ico"
+    },
+    "protocols": [
+      {
+        "name": "hitalk",
+        "schemes": [
+          "hitalk"
+        ]
+      }
+    ],
+    "publish": {
+      "provider": "generic",
+      "url": "https://download.hiclass.net/static/files/hitalk/release/windows/board/"
+    }
+  },
+  "scripts": {
+    "start": "electron . --trace-warnings",
+    "build": "cross-env MODE=production node --experimental-modules electron-builder.mjs",
+    "build-dev": "cross-env MODE=dev node --experimental-modules electron-builder.mjs",
+    "build-board": "cross-env MODE=board node --experimental-modules electron-builder.mjs",
+    "build-stage": "cross-env MODE=stage node --experimental-modules electron-builder.mjs"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "canvas": "^3.1.0",
+    "electron-updater": "^6.6.2",
+    "get-port": "^7.1.0",
+    "push-receiver-v2": "^2.2.0",
+    "ws": "^8.18.1"
+  }
+}

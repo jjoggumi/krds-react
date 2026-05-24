@@ -1,0 +1,204 @@
+[
+  {            
+    "name": "출결 알리기 첫 시작 모달",
+    "path": [
+      {"action": "navigateTo", "selector": "", "value":"/main/clazzes/28c79ff7-6c75-4e58-b524-3708bf1d50d7"},
+      {"action": "click", "selector": ".hi-lnb > h2 + ul + div + .lnb__list > li:first-child > span"}
+    ]
+  },
+  {            
+    "name": "학생명단 등록하기 모달",
+    "path": [{"action": "click", "selector": ".modal__footer .btn-primary"}]
+  },
+  {            
+    "name": "학생명단 입력",
+    "path": [
+      {"action": "setValue", "selector": ".hi-modal-common .hi-tbl tbody tr:first-child td:nth-child(2) input", "value": "1학년2반"},
+      {"action": "setValue", "selector": ".hi-modal-common .hi-tbl tbody tr:first-child td:nth-child(3) > input", "value": "10"},
+      {"action": "setValue", "selector": ".hi-modal-common .hi-tbl tbody tr:first-child td:nth-child(4) > input", "value": "김학생"},
+      {"action": "setValue", "selector": ".hi-modal-common .hi-tbl tbody tr:nth-child(2) td:nth-child(2) input", "value": "1학년2반"},
+      {"action": "setValue", "selector": ".hi-modal-common .hi-tbl tbody tr:nth-child(2) td:nth-child(3) > input", "value": "12"},
+      {"action": "setValue", "selector": ".hi-modal-common .hi-tbl tbody tr:nth-child(2) td:nth-child(4) > input", "value": "이학생"},
+      {"action": "click", "selector": ".table-wrap"}
+    ]
+  },
+  {            
+    "name": "학생명단등록 등록확인 알림",
+    "path": [{"action": "click", "selector": ".modal__footer .btn-primary"}]
+  },
+  {            
+    "name": "학생명단 - 리스트",
+    "path": [{"action": "click", "selector": ".modal__footer button"}]
+  },
+  {            
+    "name": "학생명단 - 학생추가수정",
+    "path": [{"action": "click", "selector": ".attendance-search-group-n2 button"}]
+  },
+  {             
+    "name": "학생명단 - 미사용변경확인 알림",
+    "path": [
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"},
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p"}
+    ]
+  },
+  {            
+    "name": "학생명단 - 미사용변경 후 리스트",
+    "path": [
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"}
+    ]
+  },
+  {            
+    "name": "학생명단 - 삭제확인 알림",
+    "path": [
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-last-child(2) .use-p.del"}
+    ],
+    "after": [
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"}
+    ]
+  },
+  {            
+    "name": "학생명단 - 학반태그 추가",
+    "path": [{"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(2) td:nth-child(1) input"}]
+  },
+  {            
+    "name": "학생명단 - 반번호 학생명 추가",
+    "path": [
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(2) td:nth-child(1) input", "value": "1-1"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(2) td:nth-child(2) input", "value": "15"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(2) td:nth-child(3) input", "value": "홍길동"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(3) td:nth-child(1) input", "value": "2-1"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(3) td:nth-child(2) input", "value": "12"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(3) td:nth-child(3) input", "value": "김학생"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(4) td:nth-child(1) input", "value": "2-3"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(4) td:nth-child(2) input", "value": "5"},
+      {"action": "setValue", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(4) td:nth-child(3) input", "value": "김수한무거북이와두루미긴이십자이름입니다"}
+    ]
+  },
+  {            
+    "name": "학생명단 - 저장",
+    "path": [
+      {"action": "click", "selector": ".attendance-search-group-n2 button.btn-line-primary"}
+    ]
+  }, 
+  {            
+    "name": "학생명단 - 삭제",
+    "path": [{"action": "click", "selector": ".attendance-search-group-n2 .btn-line-primary"}]
+  },
+  {            
+    "name": "학생명단 - 삭제",
+    "path": [
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"},
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"},
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"}
+    ]
+  },
+  {            
+    "name": "학생명단 - 삭제",
+    "path": [
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p.del"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"},
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p.del"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"},
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p.del"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"},
+      {"action": "click", "selector": ".attendance-tbl-contatiner tbody tr:nth-child(1) .use-p.del"},
+      {"action": "click", "selector": ".modal__footer .btn-mb:not(.btn-line)"},
+      {"action": "click", "selector": ".attendance-search-group-n2 .btn-line-primary"}
+    ]
+  },
+  {            
+    "name": "수업관리 설정",
+    "path": [
+      {"action": "click", "selector": ".info .underline"}
+    ]
+  },
+  {            
+    "name": "수업관리 설정 - 출결알리기 off",
+    "path": [
+      {"action": "click", "selector": ".admin-option + .admin-option input + label"}
+    ]
+  },
+  {            
+    "name": "제출내역-리스트",
+    "path": [{"action": "navigateTo", "selector": "", "value":"/main/clazzes/7c6fdc4f-8d85-4d07-aaab-9668505c67f7/attendance"}]
+  },
+  {
+    "name": "제출내역-달력클릭",
+    "path": [{"action": "click", "selector": ".calendar-select"}],
+    "after": [{"action": "click", "selector": ".calendar-select"}]
+  },
+  {
+    "name": "제출내역-검색바",
+    "path": [ {"action": "setValue", "selector": ".input-box-wrap.round-search-box > input", "value": "#"}]
+  },
+  {
+    "name": "제출내역-학반태그",
+    "path": [ {"action": "click", "selector": ".filter-box .selected"}]
+  },
+  {
+    "name": "제출내역-학반태그 선택",
+    "path": [ 
+      {"action": "click", "selector": ".option-list ul li:nth-child(1) input + label"},
+      {"action": "click", "selector": ".option-list ul li:nth-child(2) input + label"}
+    ],
+    "after": [{"action": "click", "selector": ".option-list .btns .btn-primary"}]
+  },
+  {
+    "name": "리스트 사유클릭",
+    "path": [{"action": "click", "selector": "tr:not(:has(.uncheck)) .reason-area"}],
+    "after": [{"action": "click", "selector": "button.btn-close"}]
+  },
+  {
+    "name": "리스트 미확인사유클릭",
+    "path": [
+      {"action": "click", "selector": "tr:has(.uncheck) .reason-area"}
+    ]
+  },
+  {
+    "name": "리스트 미확인사유클릭 출결확인 수정",
+    "path": [
+      {"action": "click", "selector": "button.btn-noti"}
+    ]
+  }, 
+  {
+    "name": "리스트 미확인사유클릭 출결확인 체크",        
+    "path": [{"action": "click", "selector": "input[value='NOT_ACCEPT'] + label"}],
+    "after": [{"action": "click", "selector": ".btn-line-light-primary"}]
+  }, 
+  {
+    "name": "첨부파일",
+    "path": [          
+      {"action": "click", "selector": ".file-n"}
+    ]
+  },
+  {
+    "name": "첨부파일 미리보기",
+    "path": [
+      {"action": "click", "selector": ".attaching-file-atd:first-of-type"}
+    ],
+    "after": [{"action": "click", "selector": ".modal-close-btn"}]
+  },
+  {
+    "name": "첨부파일 전체 다운로드",
+    "path": [
+      {"action": "click", "selector": ".modal__footer .btn-line-default"}
+    ],
+    "after": [{"action": "click", "selector": ".swal2-confirm"}]
+  },
+  {
+    "name": "첨부파일 관리",
+    "path": [
+      {"action": "click", "selector": ".modal__footer .btn-primary"}
+    ]
+  },
+  {
+    "name": "첨부파일 관리 완료",
+    "path": [
+      {"action": "click", "selector": ".modal__footer .btn-primary"}
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {"name": "메인", "path": [{"action": "navigateTo", "value": "/hitalk"}]},
+  {
+    "name": "상담가능시간설정",
+    "path": [{"action": "click", "selector": "button.icon.time-setting"}],
+    "after": [{"action": "click", "selector": ".modal__layer button.hi-btn.btn-primary"}]
+  },
+  {
+    "name": "차단목록관리",
+    "path": [{"action": "click", "selector": ".tab-cont-title.c-opponent button.hi-btn.btn-link"}],
+    "after": [{"action": "click", "selector": ".modal__layer button.btn-close"}]
+  },
+  {
+    "name": "공지하기사용안내",
+    "path": [{"action": "click", "selector": ".list-title-wrap button.btn-guide"}],
+    "after": [{"action": "click", "selector": ".modal .modal-close-btn"}]
+  },
+  {
+    "name": "일괄메시지작성",
+    "path": [{"action": "click", "selector": ".profile-btn-wrap button.btn-message"}],
+    "after": [{"action": "click", "selector": ".modal__layer button.btn-close"}]
+  },
+  {
+    "name": "단체방만들기",
+    "path": [{"action": "click", "selector": ".profile-btn-wrap button.btn-notice"}],
+    "after": [{"action": "click", "selector": ".modal__layer button.btn-close"}]
+  },
+  {"name": "예약메시지목록", "path": [
+    {"action": "click", "selector": "button.icon.c-reservation"}
+  ]},
+  {"name": "대화목록", "path": [
+    {"action": "click", "selector": "button.icon.c-list"}
+  ]},
+  {
+    "name": "대화목록 설정팝업",
+    "path": [{"action": "click", "selector": ".title-wrap button.btn-setting"}],
+    "after": [{"action": "click", "selector": ".title-wrap button.btn-setting"}]
+  },
+  {"name": "가장 첫번째 대화방", "path": [ {"action": "click", "selector": ".list-cont-wrap li"}]},
+  {
+    "name": "대화방 더 보기",
+    "path": [{"action": "click", "selector": "#chat-room-more-btn button"}],
+    "after": [{"action": "click", "selector": ".noti-setting-wrap .tit-noti .modal-close-btn"}]
+  },
+  {
+    "name": "이모티콘 선택",
+    "path": [{"action": "click", "selector": ".write-comment-btm-wrap button"}],
+    "after": [{"action": "click", "selector": ".write-comment-btm-wrap button"}]
+  },
+  {
+    "name": "예약 메시지 작성",
+    "path": [{"action": "click", "selector": ".add-reservation button"}],
+    "after": [{"action": "click", "selector": ".modal__layer button.btn-close"}]
+  }
+]

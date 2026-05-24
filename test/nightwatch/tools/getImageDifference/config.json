@@ -1,0 +1,8 @@
+{
+  "screenshots": "C:/hiclass-screenshots",
+  "output": "C:/hiclass-screenshots/diff",
+  "baseFolder": "master",
+  "compareFolders": [
+    "#73562"
+  ]
+}

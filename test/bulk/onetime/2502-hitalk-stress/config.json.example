@@ -1,0 +1,12 @@
+{
+  "messageCounts": 5,
+  "messageInterval": 300,
+  "stompServerUrl": "wss://devchat.hiclass.net/connect/websocket",
+  "roomId": "5401e3c2-f433-4518-b431-98a5f916a66b",
+  "users": [
+    [
+      "6c962eea-ef12-455a-9629-c4aa05d771c9",
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJjbGllbnRSZWdpc3RyYXRpb25JZCI6ImhpQ2xhc3MiLCJoIjoidC5pS0JhSjNZVWdZVzJNQnZuUzliZWpnUUFhWER0U0lkSW1sQTRPMVRBOUFRMXlHZEZKVkciLCJwaG90byI6IiIsInByaW5jaXBhbE5hbWUiOiJoaWNsYXNzMzgwMTAiLCJ1dWlkIjoiNmM5NjJlZWEtZWYxMi00NTVhLTk2MjktYzRhYTA1ZDc3MWM5IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9TVFVERU5UIl0sIm9jcklkIjoiaGlDbGFzcyIsImFjY2Vzc1Rva2VuQXQiOnsiaXNzdWVkQXQiOiIyNS4gMi4gMjUg7Jik7KCEIDEwOjIxIiwiZXhwaXJlc0F0IjoiNDQuIDMuIDEg7Jik7ZuEIDk6MDEifSwibmFtZSI6IiIsImV4cCI6MTc0MDYxOTI4NSwiaWF0IjoxNzQwNDQ2NDg1LCJpZFRva2VuQXQiOnsiaXNzdWVkQXQiOiIyNS4gMi4gMjUg7Jik7KCEIDEwOjIxIiwiZXhwaXJlc0F0IjoiMjUuIDIuIDI3IOyYpOyghCAxMDoyMSJ9LCJlbWFpbCI6IiJ9.aSJ9s-PNkJID0WmeC2PjFtfwiqXEC9wvxx2kjOfAcQxmzw_jJ8EtF1ZhNDlXB_BEF7eYqVbVj5RRts2d7oU8yFSkSAz_OUZpABVUL--Cgxd96sqnNpZWnv_QwkQ6RJ13KMUuEvLddbnGTD3w5vH9gcb7ZkAQrIO3McY-7xj-IyEuoJWGce8h4qygq6zQnyh_RStFc2tK6LjMMm7dGSE0pNJTWexr7TXfrzjdvnyZGNgFgEmkUiwJ8fmGy_xBJiKJ4jgkiRtNPubyhqqbqNpz06o9f2vqIB6fm5fe4IgsK7SyHjSa4lcZm1oC8YFn3EoKjYZhK4O2Sug4mP3CHL9X-A"
+    ]
+  ]
+}

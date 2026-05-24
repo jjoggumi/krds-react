@@ -1,0 +1,10 @@
+module.exports = {
+  teacher: {
+    username: 'hiclassuer',
+    password: 'hiclasspw'
+  },
+  student: {
+    username: 'hiclassuer',
+    password: 'hiclasspw'
+  }
+}

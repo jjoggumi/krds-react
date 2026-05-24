@@ -1,0 +1,22 @@
+[
+  {
+    "name": "내정보",
+    "path": [{"action": "navigateTo", "selector": "", "value": "main/mypage/info"}]
+  },
+  {
+    "name": "내정보 휴대폰변경",
+    "path": [{"action": "click", "selector": ".right-wrap .info-category:nth-child(3) .btn-bg-c"}]
+  },
+  {
+    "name": "나의학교",
+    "path": [{"action": "navigateTo", "selector": "", "value": "main/mypage/schools"}]
+  },
+  {
+    "name": "나의클래스",
+    "path": [{"action":"navigateTo", "selector": "", "value": "main/mypage/clazzes"}]
+  },
+  {
+    "name": "나의스크랩",
+    "path": [{"action": "navigateTo", "selector": "", "value": "main/mypage/scrap"}]
+  }
+]
